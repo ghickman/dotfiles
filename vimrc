@@ -1,7 +1,7 @@
 set nocompatible
 
-"filetype off
-"call pathogen#runtime_append_all_bundles()
+filetype off
+call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 set number
@@ -54,7 +54,7 @@ let g:CommandTMaxHeight=20
 " CTags
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 
-" Load plugins, etc..
+" Load plugins
 filetype plugin indent on
 
 " Remember last location in file
@@ -70,6 +70,9 @@ au FileType php set tabstop=4 softtabstop=4 shiftwidth=4
 " Additional files that should be Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru} set ft=ruby
 
+" Additional files that should be Python
+au BufRead,BufNewFile {requirements.txt} set ft=python
+
 " Backspace
 set backspace=indent,eol,start
 
@@ -80,7 +83,6 @@ set noerrorbells
 " PHP highlight settings
 au FileType php let php_sql_query=1
 au FileType php let php_htmlInStrings=1
-
 
 " Bind some nicer mappings for bubbling text up and down.
 nmap <C-Up> [e
@@ -100,11 +102,6 @@ command RMTWS :execute '%s/\s\+$//e'
 
 " Colour scheme
 colorscheme vwilight
-"if has("gui_running")
-"	colorscheme railscasts
-"else
-"	colorscheme railscasts_term
-"endif
 
 " Highlight long lines - only care about this in Vim 7.3+ now
 if version >= 703
@@ -112,11 +109,11 @@ if version >= 703
   set cc=+1 tw=80
   " Provide a way to turn it off and on
   nnoremap <Leader>l
-        \ :if &cc != '0'<Bar>
-        \   set cc=0<Bar>
-        \ else<Bar>
-        \   set cc=+5<Bar>
-        \ endif<CR>
+    \ :if &cc != '0'<Bar>
+    \   set cc=0<Bar>
+    \ else<Bar>
+    \   set cc=+5<Bar>
+    \ endif<CR>
 endif
 
 " Highlight trailing whitespace.
@@ -124,12 +121,12 @@ hi link TrailingWhiteSpace Search
 au BufWinEnter * let w:twsm=matchadd('TrailingWhiteSpace', '\s\+$')
 " Setup a toggle.
 nnoremap <silent> <Leader>w
-            \ :if exists('w:twsm') <Bar>
-            \   silent! call matchdelete(w:twsm) <Bar>
-            \   unlet w:twsm <Bar>
-            \ else <Bar>
-            \   let w:twsm = matchadd('TrailingWhiteSpace', '\s\+$') <Bar>
-            \ endif<CR>
+  \ :if exists('w:twsm') <Bar>
+  \   silent! call matchdelete(w:twsm) <Bar>
+  \   unlet w:twsm <Bar>
+  \ else <Bar>
+  \   let w:twsm = matchadd('TrailingWhiteSpace', '\s\+$') <Bar>
+  \ endif<CR>
 
 hi CursorColumn term=underline cterm=underline guibg=#333435
 " hidden carriage return character
