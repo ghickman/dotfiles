@@ -28,6 +28,9 @@ set smartcase
 " Clear search highlighting.
 map <Leader>sc :nohls<CR><C-L>
 
+" Preserve resource fork
+set backupcopy=yes
+
 " Tab complietion.
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.class
