@@ -43,8 +43,18 @@ set laststatus=2
 " Syntax error signs
 let g:syntastic_enable_signs=1
 
+" More syntax highlighting for Python
+let python_highlight_all = 1
+
 " Keep a long history.
 set history=1000
+
+" Backspace
+set backspace=indent,eol,start
+
+" Remove bells
+set novisualbell
+set noerrorbells
 
 " NERDTree.
 map <Leader>n :NERDTreeToggle<CR>
@@ -75,12 +85,8 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru} set ft=ruby
 " Additional files that should be Python
 au BufRead,BufNewFile {requirements.txt} set ft=python
 
-" Backspace
-set backspace=indent,eol,start
-
-" Remove bells
-set novisualbell
-set noerrorbells
+" Smart indenting
+set smartindent cinwords=class,elif,else,except,def,finally,for,if,try,while
 
 " PHP highlight settings
 au FileType php let php_sql_query=1
@@ -135,4 +141,9 @@ hi CursorColumn term=underline cterm=underline guibg=#333435
 hi NonText ctermbg=NONE ctermfg=235 guifg=#424242 gui=NONE
 " hidden tab character
 hi SpecialKey ctermbg=NONE ctermfg=235 guifg=#424242 gui=NONE
+
+" Use :make to see syntax errors. (:cn and :cp to move around, :dist to see
+" all errors)
+set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
+set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
