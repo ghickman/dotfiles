@@ -1,8 +1,10 @@
 set nocompatible
 
-filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+if version >= 703
+  filetype off
+  call pathogen#runtime_append_all_bundles()
+  call pathogen#helptags()
+endif
 
 set number
 set ruler
