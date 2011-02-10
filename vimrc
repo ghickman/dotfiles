@@ -13,6 +13,8 @@ syntax on
 " Spelling off
 set nospell
 
+set tw=0
+
 " Tab settings.
 set nowrap
 set tabstop=2
@@ -114,7 +116,7 @@ colorscheme vwilight
 " Highlight long lines - only care about this in Vim 7.3+ now
 if version >= 703
   highlight ColorColumn ctermbg=lightgrey guibg=#464646
-  set cc=+1 tw=80
+  "set cc=+1 tw=80
   " Provide a way to turn it off and on
   nnoremap <Leader>l
     \ :if &cc != '0'<Bar>
