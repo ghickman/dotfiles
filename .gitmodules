@@ -67,3 +67,6 @@
 [submodule "bundle/unimpaired"]
   path = bundle/unimpaired
   url = https://github.com/tpope/vim-unimpaired.git
+[submodule "bundle/pyflakes-vim"]
+  path = bundle/pyflakes-vim
+  url = https://github.com/kevinw/pyflakes-vim.git
