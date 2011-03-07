@@ -110,6 +110,8 @@ map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 " Remove trailing whitespace
 command RMTWS :execute '%s/\s\+$//e'
 
+command SFTD :execute 'setfiletype htmldjango'
+
 " Colour scheme
 colorscheme vwilight
 
