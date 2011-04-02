@@ -10,9 +10,6 @@
 [submodule "bundle/fugitive"]
   path = bundle/fugitive
   url = https://github.com/vim-scripts/fugitive.vim.git
-[submodule "bundle/snipMate"]
-  path = bundle/snipMate
-  url = https://github.com/vim-scripts/snipMate.git
 [submodule "bundle/taglist"]
   path = bundle/taglist
   url = https://github.com/vim-scripts/taglist.vim.git
@@ -70,3 +67,6 @@
 [submodule "bundle/pyflakes-vim"]
   path = bundle/pyflakes-vim
   url = https://github.com/kevinw/pyflakes-vim.git
+[submodule "bundle/nginx"]
+	path = bundle/nginx
+	url = https://github.com/vim-scripts/nginx.vim.git
