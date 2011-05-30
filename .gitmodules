@@ -60,4 +60,7 @@
 	url = https://github.com/vim-scripts/nginx.vim.git
 [submodule "bundle/simplenote"]
 	path = bundle/simplenote
-	url = https://github.com/mrtazz/simplenote.vim.git
+	url = /Users/george/Projects/simplenote.vim
+[submodule "bundle/autoclose"]
+	path = bundle/autoclose
+	url = https://github.com/vim-scripts/AutoClose--Alves.git
