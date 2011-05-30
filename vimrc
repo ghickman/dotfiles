@@ -96,13 +96,6 @@ set smartindent cinwords=class,elif,else,except,def,finally,for,if,try,while
 au FileType php let php_sql_query=1
 au FileType php let php_htmlInStrings=1
 
-" Bind some nicer mappings for bubbling text up and down.
-nmap <C-Up> [e
-nmap <C-Down> ]e
-" Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
-
 " Mappings to expand the current path (edit, split, vsplit)
 map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
