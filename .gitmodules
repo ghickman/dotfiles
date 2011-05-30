@@ -7,9 +7,6 @@
 [submodule "bundle/nerd-tree"]
   path = bundle/nerd-tree
   url = https://github.com/vim-scripts/The-NERD-tree.git
-[submodule "bundle/fugitive"]
-  path = bundle/fugitive
-  url = https://github.com/vim-scripts/fugitive.vim.git
 [submodule "bundle/taglist"]
   path = bundle/taglist
   url = https://github.com/vim-scripts/taglist.vim.git
