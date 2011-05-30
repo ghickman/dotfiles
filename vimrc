@@ -77,6 +77,8 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
+au FileType markdown set wrap
+
 " Python/PHP have different indent settings.
 au FileType python set tabstop=4 softtabstop=4 shiftwidth=4
 au FileType php set tabstop=4 softtabstop=4 shiftwidth=4
