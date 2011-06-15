@@ -146,5 +146,5 @@ hi SpecialKey ctermbg=NONE ctermfg=235 guifg=#424242 gui=NONE
 set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
 set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
-let g:SimplenoteUsername = "george+simplenote@ghickman.co.uk"
-let g:SimplenotePassword = "J62.DYN7a3{ni/=e"
+let g:SimpleNoteUserName = "george+simplenote@ghickman.co.uk"
+let g:SimpleNotePassword = "J62.DYN7a3{ni/=e"
