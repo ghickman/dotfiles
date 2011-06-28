@@ -61,3 +61,6 @@
 [submodule "bundle/closetag"]
 	path = bundle/closetag
 	url = https://github.com/vim-scripts/closetag.vim.git
+[submodule "bundle/vim-mru"]
+	path = bundle/vim-mru
+	url = https://github.com/ornicar/vim-mru.git
