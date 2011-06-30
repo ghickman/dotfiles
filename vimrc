@@ -2,31 +2,86 @@ set nocompatible
 
 " Load plugins
 if version >= 703
-  filetype on
-  filetype plugin on
-  filetype plugin indent on
+  filetype off
   call pathogen#runtime_append_all_bundles()
   call pathogen#helptags()
+  filetype plugin indent on
 endif
 
-" Basics
-set number
-set ruler
-syntax on
-
-" Spelling off
-set nospell
-
-set tw=0
+set modelines=0
 
 " Tab settings.
 set nowrap
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
-" Show tabs and new line 'hidden' characters.
-set list listchars=tab:▸\
+
+set tw=0
+
+" Basics
+set autoindent
+set backspace=indent,eol,start
+set backupcopy=yes " Preserve resource fork
+set encoding=utf-8
+set hidden
+set history=1000
+set laststatus=2
+set nospell
+set relativenumber
+set ruler
+set scrolloff=3
+set showcmd
+set showmode
+set ttyfast
+set undofile
+set visualbell
+set wildmenu
+set wildignore+=*.o,*.obj,.git,*.class
+set wildmode=list:longest
+
+" Set the leader to ,
+let mapleader = ","
+
+" Destroy the use of arrow keys
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
+
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
+" remap ; -> : to make commands easier to type
+nnoremap ; :
+
+" Save on lost focus
+au FocusLost * :wa
+
+" Show tabs
+set list
+set listchars=tab:▸\
+
+" Sort!
+nnoremap <leader>s ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
+
+" Remove trailing whitespace
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" Set filetype to htmldjango
+nnoremap <leader>sd :set ft=htmldjango<CR>
+
+" Colour scheme
+colorscheme vwilight
+
+"syntax on
 
 " Searching.
 set hlsearch
@@ -34,17 +89,7 @@ set incsearch
 set ignorecase
 set smartcase
 " Clear search highlighting.
-map <Leader>sc :nohls<CR><C-L>
-
-" Preserve resource fork
-set backupcopy=yes
-
-" Tab complietion.
-set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.class
-
-" Status bar.
-set laststatus=2
+map <leader><space> :nohls<CR><C-L>
 
 " Syntax error signs
 let g:syntastic_enable_signs=1
@@ -53,7 +98,6 @@ let g:syntastic_enable_signs=1
 let python_highlight_all = 1
 
 " Keep a long history.
-set history=1000
 
 " Backspace
 set backspace=indent,eol,start
@@ -80,9 +124,8 @@ endif
 
 au FileType markdown set wrap
 
-" Python/PHP have different indent settings.
-au FileType python set tabstop=4 softtabstop=4 shiftwidth=4
-au FileType php set tabstop=4 softtabstop=4 shiftwidth=4
+" Ruby have different indent settings.
+au FileType ruby set tabstop=2 softtabstop=2 shiftwidth=2
 
 " Additional files that should be Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru} set ft=ruby
@@ -102,14 +145,6 @@ map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
-
-" Remove trailing whitespace
-command RMTWS :execute '%s/\s\+$//e'
-
-command SFTD :execute 'setfiletype htmldjango'
-
-" Colour scheme
-colorscheme vwilight
 
 " Highlight long lines - only care about this in Vim 7.3+ now
 if version >= 703
