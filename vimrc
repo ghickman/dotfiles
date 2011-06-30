@@ -27,8 +27,6 @@ set encoding=utf-8
 set hidden
 set history=1000
 set laststatus=2
-set nospell
-"set relativenumber
 set number
 set ruler
 set scrolloff=3
@@ -36,10 +34,15 @@ set showcmd
 set showmode
 set ttyfast
 set undofile
-set visualbell
+"set visualbell
 set wildmenu
 set wildignore+=*.o,*.obj,.git,*.class
 set wildmode=list:longest
+
+" Turn off basics
+set noerrorbells
+set nospell
+set novisualbell
 
 " Set the leader to ,
 let mapleader = ","
@@ -102,10 +105,6 @@ let python_highlight_all = 1
 
 " Backspace
 set backspace=indent,eol,start
-
-" Remove bells
-set novisualbell
-set noerrorbells
 
 " NERDTree.
 map <Leader>n :NERDTreeToggle<CR>
