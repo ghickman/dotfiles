@@ -1,11 +1,15 @@
 set nocompatible
 
+" Load plugins
 if version >= 703
-  filetype off
+  filetype on
+  filetype plugin on
+  filetype plugin indent on
   call pathogen#runtime_append_all_bundles()
   call pathogen#helptags()
 endif
 
+" Basics
 set number
 set ruler
 syntax on
@@ -67,9 +71,6 @@ let g:CommandTMaxHeight=20
 
 " CTags
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
-
-" Load plugins
-filetype plugin indent on
 
 " Remember last location in file
 if has("autocmd")
@@ -141,10 +142,6 @@ hi NonText ctermbg=NONE ctermfg=235 guifg=#424242 gui=NONE
 " hidden tab character
 hi SpecialKey ctermbg=NONE ctermfg=235 guifg=#424242 gui=NONE
 
-" Use :make to see syntax errors. (:cn and :cp to move around, :dist to see
-" all errors)
-set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
-set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
-
 let g:SimpleNoteUserName = "george+simplenote@ghickman.co.uk"
 let g:SimpleNotePassword = "J62.DYN7a3{ni/=e"
+
