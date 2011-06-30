@@ -28,7 +28,8 @@ set hidden
 set history=1000
 set laststatus=2
 set nospell
-set relativenumber
+"set relativenumber
+set number
 set ruler
 set scrolloff=3
 set showcmd
