@@ -49,12 +49,12 @@
 [submodule "bundle/pyflakes-vim"]
   path = bundle/pyflakes-vim
   url = https://github.com/kevinw/pyflakes-vim.git
+[submodule "bundle/simplenote"]
+	path = bundle/simplenote
+	url = https://github.com/ghickman/simplenote.vim
 [submodule "bundle/nginx"]
 	path = bundle/nginx
 	url = https://github.com/vim-scripts/nginx.vim.git
-[submodule "bundle/simplenote"]
-	path = bundle/simplenote
-	url = /Users/george/Projects/simplenote.vim
 [submodule "bundle/autoclose"]
 	path = bundle/autoclose
 	url = https://github.com/vim-scripts/AutoClose--Alves.git
