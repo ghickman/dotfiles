@@ -12,12 +12,13 @@ if has("gui_macvim")
 " `gf` jumps to the filename under the cursor. Point at an import statement
 " and jump to it!
 python << EOF
-import os
-import sys
-import vim
-for p in sys.path:
-    if os.path.isdir(p):
-        vim.command(r"set path+=%s" % (p.replace(" ", r"\ ")))
+from os.path import isdir
+from sys import path
+
+from vim import command
+for p in path:
+    if isdir(p):
+        command(r'set path+=%s' % (p.replace(' ', r'\ ')))
 EOF
 
 " Execute a selection of code. Select a range and use ctrl-h to execute it.
