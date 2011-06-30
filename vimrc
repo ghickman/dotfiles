@@ -19,7 +19,7 @@ set expandtab
 
 set tw=0
 
-" Basics
+" Turn basics on
 set autoindent
 set backspace=indent,eol,start
 set backupcopy=yes " Preserve resource fork
@@ -84,8 +84,6 @@ nnoremap <leader>sd :set ft=htmldjango<CR>
 
 " Colour scheme
 colorscheme vwilight
-
-"syntax on
 
 " Searching.
 set hlsearch
