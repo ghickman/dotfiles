@@ -175,6 +175,6 @@ hi NonText ctermbg=NONE ctermfg=235 guifg=#424242 gui=NONE
 " hidden tab character
 hi SpecialKey ctermbg=NONE ctermfg=235 guifg=#424242 gui=NONE
 
-let g:SimpleNoteUserName = "george+simplenote@ghickman.co.uk"
-let g:SimpleNotePassword = "J62.DYN7a3{ni/=e"
+let g:SimplenoteUsername = "george+simplenote@ghickman.co.uk"
+let g:SimplenotePassword = "J62.DYN7a3{ni/=e"
 
