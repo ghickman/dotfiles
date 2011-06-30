@@ -82,9 +82,6 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " Set filetype to htmldjango
 nnoremap <leader>sd :set ft=htmldjango<CR>
 
-" Colour scheme
-colorscheme vwilight
-
 " Searching.
 set hlsearch
 set incsearch
