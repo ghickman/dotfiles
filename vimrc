@@ -102,14 +102,14 @@ let python_highlight_all = 1
 set backspace=indent,eol,start
 
 " NERDTree.
-map <Leader>n :NERDTreeToggle<CR>
-map <Leader>N :NERDTreeFind<CR>
+map <leader>n :NERDTreeToggle<CR>
+map <leader>N :NERDTreeFind<CR>
 
 " Command-T.
 let g:CommandTMaxHeight=20
 
 " CTags
-map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
+map <leader>rt :!ctags --extra=+f -R *<CR><CR>
 
 " Remember last location in file
 if has("autocmd")
@@ -119,7 +119,6 @@ endif
 
 au FileType markdown set wrap
 
-" Ruby have different indent settings.
 au FileType ruby set tabstop=2 softtabstop=2 shiftwidth=2
 
 " Additional files that should be Ruby
