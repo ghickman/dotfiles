@@ -1,5 +1,7 @@
 set nocompatible
 
+colorscheme vwilight
+
 " Load plugins
 if version >= 703
   filetype off
