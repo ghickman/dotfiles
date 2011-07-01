@@ -73,6 +73,10 @@ au FocusLost * :wa
 set list
 set listchars=tab:▸\
 
+" colour the status line
+au InsertEnter * hi StatusLine term=reverse ctermbg=5
+au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
+
 " Sort!
 nnoremap <leader>s ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
 
