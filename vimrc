@@ -36,6 +36,7 @@ set showcmd
 set showmode
 set ttyfast
 set undofile
+set undoreload=10000
 "set visualbell
 set wildmenu
 set wildignore+=*.o,*.obj,.git,*.class
