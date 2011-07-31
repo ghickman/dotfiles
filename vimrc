@@ -39,7 +39,7 @@ set undofile
 set undoreload=10000
 "set visualbell
 set wildmenu
-set wildignore+=*.o,*.obj,.git,*.class
+set wildignore+=*.o,*.obj,.git,*.class,.hg,.pyc
 set wildmode=list:longest
 
 " Turn off basics
@@ -62,6 +62,7 @@ inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
+" Map f1 to leave insert/visual mode
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
@@ -71,6 +72,12 @@ nnoremap ; :
 
 " Save on lost focus
 au FocusLost * :wa
+
+" Backups
+set undodir=~/.vim/tmp/undo//     " undo files
+set backupdir=~/.vim/tmp/backup// " backups
+set directory=~/.vim/tmp/swap//   " swap files
+set backup                        " enable backups
 
 " Show tabs
 set list
