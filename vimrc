@@ -103,6 +103,7 @@ map <leader><space> :nohls<CR><C-L>
 
 " Syntax error signs
 let g:syntastic_enable_signs=1
+let g:syntastic_disabled_filetypes=['javascript',]
 
 " More syntax highlighting for Python
 let python_highlight_all = 1
