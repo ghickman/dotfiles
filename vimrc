@@ -70,9 +70,6 @@ vnoremap <F1> <ESC>
 " remap ; -> : to make commands easier to type
 nnoremap ; :
 
-" Save on lost focus
-au FocusLost * :wa
-
 " Backups
 set undodir=~/.vim/tmp/undo//     " undo files
 set backupdir=~/.vim/tmp/backup// " backups
