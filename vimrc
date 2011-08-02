@@ -128,7 +128,10 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
-au FileType markdown set wrap
+au FileType markdown setlocal wrap
+au FileType markdown map j gj
+au FileType markdown map k gk
+au FileType markdown setlocal spell spelllang=en_gb
 
 au FileType ruby set tabstop=2 softtabstop=2 shiftwidth=2
 
