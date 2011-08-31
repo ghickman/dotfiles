@@ -189,3 +189,4 @@ hi SpecialKey ctermbg=NONE ctermfg=235 guifg=#424242 gui=NONE
 let g:SimpleNoteUserName = "george+simplenote@ghickman.co.uk"
 let g:SimpleNotePassword = "J62.DYN7a3{ni/=e"
 
+nnoremap <leader>u :GundoToggle<CR>
