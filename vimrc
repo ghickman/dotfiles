@@ -101,6 +101,9 @@ set smartcase
 " Clear search highlighting.
 map <leader><space> :nohls<CR><C-L>
 
+" Set hypenated css declarations as key words
+au Filetype css setlocal iskeyword+=-
+
 " Syntax error signs
 let g:syntastic_enable_signs=1
 let g:syntastic_disabled_filetypes=['javascript',]
