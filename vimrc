@@ -104,6 +104,9 @@ map <leader><space> :nohls<CR><C-L>
 " Set hypenated css declarations as key words
 au Filetype css setlocal iskeyword+=-
 
+" Dictionary words!
+:set dictionary=/usr/share/dict/words
+
 " Syntax error signs
 let g:syntastic_enable_signs=1
 let g:syntastic_disabled_filetypes=['javascript',]
