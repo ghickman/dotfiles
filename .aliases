@@ -7,6 +7,10 @@ alias -- -="cd -"
 # Vim
 alias vim="/usr/local/Cellar/macvim/v7.3-53/MacVim.app/Contents/MacOS/Vim"
 
+# Shortcuts
+alias m="mvim"
+alias v="vim"
+
 # Django
 alias pym="python manage.py"
 alias pymrs="python manage.py runserver"
