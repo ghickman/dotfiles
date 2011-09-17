@@ -1,0 +1,94 @@
+# Easier navigation: .., ..., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -- -="cd -"
+
+# Vim
+alias vim="/usr/local/Cellar/macvim/v7.3-53/MacVim.app/Contents/MacOS/Vim"
+
+# Django
+alias pym="python manage.py"
+alias pymrs="python manage.py runserver"
+alias pymsp="python manage.py shell_plus"
+
+# Pip
+alias pipr="pip install -r requirements.txt"
+alias pipd="pip install -r dev_requirements.txt"
+
+# Git Achievements
+#alias git="git-achievements"
+
+# Virtualenv modded cd
+#alias cd="venv_cd"
+
+# Re-attach or start new Screen
+alias scr="screen -R"
+
+# Run status on a given selection of repositories
+function status {
+  cwd=`pwd`;
+  for dir in ${@:-./src/*}; do
+    cd $dir;
+    echo "Checking $dir";
+    if [ -e .svn ]; then svn st -u; fi;
+    if [ -e .hg ]; then hg status; hg incoming; fi;
+    if [ -e .git ]; then git status; git fetch && git log ..origin/master; fi;
+    cd $cwd;
+  done;
+}
+
+# Run update on a given selection of repositories
+function update {
+  cwd=`pwd`;
+  for dir in ${@:-./src/*}; do
+    cd $dir;
+    echo "Updating $dir";
+    if [ -e .svn ]; then svn update; fi;
+    if [ -e .hg ]; then hg pull -u; fi;
+    if [ -e .git ]; then git pull; fi;
+    cd $cwd;
+  done;
+}
+
+# share keys to a given host
+function key-share {
+  if [ "${1}" == "" ] ; then
+    echo "Host not specified";
+    echo "Usage key-share [user]@[host]";
+    return 1
+  fi
+
+  host=${1}
+  echo "${host}" | grep -q "@"
+  if [ $? == 1 ] ; then
+    host="incuna@${host}"
+  fi
+
+  cat ~/.ssh/id_george.pub | ssh ${host} 'cat - >> ~/.ssh/authorized_keys'
+}
+
+# add all files to svn
+function svnaddall {
+  svn status $@ | egrep '^\?' | sed -e 's/^\?\s*//' | xargs svn add
+}
+
+
+# make a python virtualenv with extra options
+function mkvenv {
+  name=""
+  if [ "${1}" == "" ]; then
+    PWD=`pwd`
+    name=`basename $PWD`
+    echo "Name not specified, using current dir: $name"
+  else
+    name=${1}
+  fi
+
+  mkvirtualenv --no-site-packages $name
+
+  # symlink the venv to the current dir
+  ln -s "$WORKON_HOME/$name" venv
+  echo "Symlinked $WORKON_HOME/$name to ./venv"
+}
+
