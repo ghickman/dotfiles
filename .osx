@@ -1,0 +1,2 @@
+# Disable the Lion window effects
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool NO
