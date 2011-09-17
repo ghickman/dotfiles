@@ -16,14 +16,11 @@ alias pymsp="python manage.py shell_plus"
 alias pipr="pip install -r requirements.txt"
 alias pipd="pip install -r dev_requirements.txt"
 
-# Git Achievements
-#alias git="git-achievements"
-
-# Virtualenv modded cd
-#alias cd="venv_cd"
-
 # Re-attach or start new Screen
 alias scr="screen -R"
+
+# Flush Directory Service cache
+alias flush="dscacheutil -flushcache"
 
 # Run status on a given selection of repositories
 function status {
