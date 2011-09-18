@@ -1,0 +1,8 @@
+.DS_Store
+*.pyc
+*.sw[o|p]
+*.un~
+.project
+.rvmrc
+._*
+venv
