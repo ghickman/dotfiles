@@ -3,3 +3,4 @@ set completion-ignore-case on
 
 # Append a slash when autocompleting symbolic links to directories
 set mark-symlinked-directories on
+
