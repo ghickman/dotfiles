@@ -1,2 +1,5 @@
 # Disable the Lion window effects
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool NO
+
+# Re-enable key repeat
+defaults write -g ApplePressAndHoldEnabled -bool false
