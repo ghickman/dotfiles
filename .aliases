@@ -4,9 +4,6 @@ alias ...="cd ../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
-# Vim
-alias vim="/usr/local/Cellar/macvim/v7.3-53/MacVim.app/Contents/MacOS/Vim"
-
 # Shortcuts
 alias m="mvim"
 alias v="vim"
