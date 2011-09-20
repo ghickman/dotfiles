@@ -1,0 +1,13 @@
+syntax: glob
+*.un~
+*.orig
+.DS_Store
+*.sw[o|p]
+*.pyc
+.git/
+.gitignore
+.svn/
+venv
+*.egg-info/
+tests.sqlite
+dist
