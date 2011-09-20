@@ -1,6 +1,6 @@
 [ui]
 username = George Hickman <george@incuna.com>
-editor = /usr/local/Cellar/macvim/v7.3-53/MacVim.app/Contents/MacOS/Vim
+editor = vim
 ignore = /Users/george/.hgignore
 
 [extensions]
