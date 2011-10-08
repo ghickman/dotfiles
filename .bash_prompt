@@ -7,6 +7,10 @@ elif infocmp xterm-256color >/dev/null 2>&1; then
   export TERM=xterm-256color
 fi
 
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
 GREEN="\[\033[0;32m\]"
 WHITE="\[\033[0;37m\]"
 YELLOW="\[\033[0;33m\]"
