@@ -13,6 +13,7 @@
   dc = diff --cached
   ld = log ORIG_HEAD.. --stat --no-merges
   mnff = merge --no-ff
+    pl = log --decorate --stat --graph --pretty=format:'%C(yellow)%h%Creset (%ar - %Cred%an%Creset), %s%n'`
   s = status
 
 [color]
@@ -44,6 +45,7 @@
 
 [push]
     default = current
+
 [status]
   relativePaths = true
 
