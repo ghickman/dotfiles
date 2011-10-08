@@ -8,6 +8,7 @@
   email = george@ghickman.co.uk
 
 [alias]
+    ap = add -p
   c = commit
   d = diff
   dc = diff --cached
