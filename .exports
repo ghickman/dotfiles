@@ -10,7 +10,7 @@ export LS_COLORS='di=01;34'
 export DJANGO_COLORS="light"
 
 # force the use of correct arch flags
-export ARCHFLAGS="-arch i386 -arch x86_64"
+export ARCHFLAGS="-arch x86_64"
 
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
