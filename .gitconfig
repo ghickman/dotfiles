@@ -1,61 +1,61 @@
 [core]
-  editor = vim
-  excludesfile = /Users/george/.gitignore
-  whitespace = trailing-space
+    editor = vim
+    excludesfile = /Users/george/.gitignore
+    whitespace = trailing-space
 
 [user]
-  name = George Hickman
-  email = george@ghickman.co.uk
+    name = George Hickman
+    email = george@ghickman.co.uk
 
 [alias]
     ap = add -p
-  c = commit
+    c = commit
     cv = commit -v
-  d = diff
-  dc = diff --cached
-  ld = log ORIG_HEAD.. --stat --no-merges
-  mnff = merge --no-ff
+    d = diff
+    dc = diff --cached
+    ld = log ORIG_HEAD.. --stat --no-merges
+    mnff = merge --no-ff
     pl = log --decorate --stat --graph --pretty=format:'%C(yellow)%h%Creset (%ar - %Cred%an%Creset), %s%n'`
-  s = status
+    s = status
 
 [color]
-  branch = auto
-  diff = auto
-  status = auto
+    branch = auto
+    diff = auto
+    status = auto
 
 [color "branch"]
-  current = yellow reverse
-  local = yellow
+    current = yellow reverse
+    local = yellow
 
 [color "diff"]
-  meta = yellow
-  frag = magenta bold
-  old = red bold
-  new = green bold
+    meta = yellow
+    frag = magenta bold
+    old = red bold
+    new = green bold
 
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
 
 [merge]
-  tool = threesome
+    tool = threesome
 
 [mergetool "threesome"]
-  cmd = "mvim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
-  trustExitCode = true
+    cmd = "mvim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
+    trustExitCode = true
 
 [push]
     default = current
 
 [status]
-  relativePaths = true
+    relativePaths = true
 
 [github]
-  user = ghickman
-  name = George Hickman
-  email = george@ghickman.co.uk
-  token = 14b77215fb43ed5f5db56e58a26dbd7c
+    user = ghickman
+    name = George Hickman
+    email = george@ghickman.co.uk
+    token = 14b77215fb43ed5f5db56e58a26dbd7c
 
 [achievement]
-  upload = true
+    upload = true
