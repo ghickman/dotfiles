@@ -90,6 +90,15 @@ set listchars=tab:▸\
 au InsertEnter * hi StatusLine term=reverse ctermbg=5
 au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
 
+
+" MAPPINGS
+
+" Edit vimrc
+nnoremap <leader>ev <c-w>v:edit $MYVIMRC<cr>
+
+" Source vimrc
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
 " Sort!
 nnoremap <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
 
