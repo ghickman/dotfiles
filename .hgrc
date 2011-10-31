@@ -54,3 +54,9 @@ opts.sourcetreediff=
 
 [pager]
 pager = LESS='FSRX' less
+
+[merge-tools]
+threesome.executable = mvim
+threesome.args = -f $base $local $other $output -c 'ThreesomeInit'
+threesome.premerge = keep
+threesome.priority = 1
