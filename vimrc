@@ -73,8 +73,6 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
-" map commenting
-nnoremap <localleader>c \\\
 
 " Backups
 set undodir=~/.vim/tmp/undo//     " undo files
@@ -169,6 +167,9 @@ hi SpecialKey ctermbg=NONE ctermfg=235 guifg=#424242 gui=NONE
 " PLUGIN SPECIFIC BITS
 " Command-T.
 let g:CommandTMaxHeight=20
+
+" Commenting
+nnoremap <localleader>c \\\
 
 " Gundo Toggle
 nnoremap <leader>u :GundoToggle<cr>
