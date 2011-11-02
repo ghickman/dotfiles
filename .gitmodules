@@ -79,3 +79,6 @@
 [submodule "bundle/gundo.vim"]
 	path = bundle/gundo.vim
 	url = http://github.com/sjl/gundo.vim.git
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
