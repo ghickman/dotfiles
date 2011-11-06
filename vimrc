@@ -219,3 +219,6 @@ let g:SimpleNotePassword = "J62.DYN7a3{ni/=e"
 let g:syntastic_enable_signs=1
 let g:syntastic_disabled_filetypes=['javascript',]
 
+" Pyflakes don't use quickfix list
+let g:pyflakes_use_quickfix = 0
+
