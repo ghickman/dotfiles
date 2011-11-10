@@ -159,9 +159,6 @@ au Filetype css setlocal iskeyword+=-
 " More syntax highlighting for Python
 let python_highlight_all = 1
 
-" Backspace
-set backspace=indent,eol,start
-
 au FileType markdown setlocal wrap
 au FileType markdown map j gj
 au FileType markdown map k gk
