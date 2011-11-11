@@ -123,6 +123,8 @@ au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
 
 
 " MAPPINGS
+" Sudo to write
+cmap w!! w !sudo tee % >/dev/null
 
 " Edit vimrc
 nnoremap <leader>ev <c-w>v:edit $MYVIMRC<cr>
