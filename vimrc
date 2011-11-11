@@ -204,7 +204,9 @@ map <leader>a :Ack<space>
 let g:CommandTMaxHeight=20
 
 " Commenting
-nnoremap <localleader>c \\\
+nmap <leader>c <Plug>CommentaryLine
+xmap <leader>c <Plug>Commentary
+au FileType htmldjango setlocal commentstring={#\ %s\ #}
 
 " Gundo Toggle
 nnoremap <leader>u :GundoToggle<cr>
