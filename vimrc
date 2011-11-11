@@ -226,3 +226,9 @@ let g:syntastic_disabled_filetypes=['javascript',]
 " Pyflakes don't use quickfix list
 let g:pyflakes_use_quickfix = 0
 
+" Threesome
+" See https://bitbucket.org/sjl/dotfiles/src/b5e60ade957d/vim/.vimrc#cl-1087
+" for more!
+let g:threesome_initial_mode = "grid"
+let g:threesome_wrap = "nowrap"
+
