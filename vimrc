@@ -41,6 +41,8 @@ set ruler
 set scrolloff=3
 set showcmd
 set showmode
+set splitbelow
+set splitright
 set ttyfast
 set undofile
 set undoreload=10000
