@@ -38,9 +38,18 @@ set splitright
 set ttyfast
 set undofile
 set undoreload=10000
+
+" Wildmenu Completion ---------------------------------------------------- {{{
+
 set wildmenu
-set wildignore+=*.o,*.obj,.git,*.class,.hg,.pyc
 set wildmode=list:longest
+
+set wildignore+=.git,.hg,.svn                            " Version control
+set wildignore+=*.bmp,*.gif,*.jpg,*.jpeg,*.png           " Binary images
+set wildignore+=*.class,*.dll,*.exe,*.manifest,*.o,*.obj " Compiled object files
+set wildignore+=*.spl                                    " Compile spelling word lists
+set wildignore+=*.DS_Store                               " OSX
+set wildignore+=*.pyc                                    " Python byte code
 
 " }}}
 " Tabs, spacing, etc ----------------------------------------------------- {{{
