@@ -193,6 +193,50 @@ inoremap jk <esc>
 cnoremap <c-a> <home>
 cnoremap <c-e> <end>
 
+" Map f1 to leave insert/visual mode
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
+" Quick return
+inoremap <c-cr> <esc>A<cr>
+inoremap <s-cr> <esc>A:<cr>
+
+" Split/Join {{{
+"
+" Basically this splits the current line into two new ones at the cursor position,
+" then joins the second one with whatever comes next.
+"
+" Example:                      Cursor Here
+"                                    |
+"                                    V
+" foo = ('hello', 'world', 'a', 'b', 'c',
+"        'd', 'e')
+"
+"            becomes
+"
+" foo = ('hello', 'world', 'a', 'b',
+"        'c', 'd', 'e')
+"
+" Especially useful for adding items in the middle of long lists/tuples in Python
+" while maintaining a sane text width.
+nnoremap K h/[^ ]<cr>"zd$jyyP^v$h"zpJk:s/\v +$//<cr>:noh<cr>j^
+" }}}
+" Handle URL {{{
+" Stolen from https://github.com/askedrelic/homedir/blob/master/.vimrc
+" OSX only: Open a web-browser with the URL in the current line
+function! HandleURI()
+    let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ >,;]*')
+    echo s:uri
+    if s:uri != ""
+        exec "!open \"" . s:uri . "\""
+    else
+        echo "No URI found in line."
+    endif
+endfunction
+map <leader>u :call HandleURI()<CR>
+" }}}
+
 " }}}
 " Quick Editing ---------------------------------------------------------- {{{
 
@@ -463,44 +507,6 @@ let g:threesome_wrap = "nowrap"
 " }}}
 
 " }}}
-
-" Split/Join {{{
-"
-" Basically this splits the current line into two new ones at the cursor position,
-" then joins the second one with whatever comes next.
-"
-" Example:                      Cursor Here
-"                                    |
-"                                    V
-" foo = ('hello', 'world', 'a', 'b', 'c',
-"        'd', 'e')
-"
-"            becomes
-"
-" foo = ('hello', 'world', 'a', 'b',
-"        'c', 'd', 'e')
-"
-" Especially useful for adding items in the middle of long lists/tuples in Python
-" while maintaining a sane text width.
-nnoremap K h/[^ ]<cr>"zd$jyyP^v$h"zpJk:s/\v +$//<cr>:noh<cr>j^
-" }}}
-" Handle URL {{{
-" Stolen from https://github.com/askedrelic/homedir/blob/master/.vimrc
-" OSX only: Open a web-browser with the URL in the current line
-function! HandleURI()
-    let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ >,;]*')
-    echo s:uri
-    if s:uri != ""
-        exec "!open \"" . s:uri . "\""
-    else
-        echo "No URI found in line."
-    endif
-endfunction
-map <leader>u :call HandleURI()<CR>
-" }}}
-
-" Smart indenting
-set smartindent cinwords=class,elif,else,except,def,finally,for,if,try,while
 
 " Highlight trailing whitespace.
 hi link TrailingWhiteSpace Search
