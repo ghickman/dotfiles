@@ -86,6 +86,8 @@ syntax on
 colorscheme vwilight
 
 " }}}
+
+" }}}
 " Movement --------------------------------------------------------------- {{{
 
 " Destroy the arrow keys
