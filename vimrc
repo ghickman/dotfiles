@@ -244,7 +244,7 @@ nnoremap <leader>ev <c-w>v:edit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " }}}
-" Various filetype-specific stuff ----------------------------------------- {{{
+" Filetype Specific Stuff ------------------------------------------------ {{{
 
 " CSS and SCSS {{{
 
@@ -455,7 +455,7 @@ augroup END
 " }}}
 
 " }}}
-" Plugin-specific stuff -------------------------------------------------- {{{
+" Plugin Specific stuff -------------------------------------------------- {{{
 
 " Ack {{{
 
