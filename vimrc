@@ -434,12 +434,6 @@ map <leader>n :NERDTreeToggle<CR>
 map <leader>N :NERDTreeFind<CR>
 
 " }}}
-" SimpleNote {{{
-
-let g:SimpleNoteUserName = "george+simplenote@ghickman.co.uk"
-let g:SimpleNotePassword = "J62.DYN7a3{ni/=e"
-
-" }}}
 " Syntastic {{{
 
 let g:syntastic_enable_signs=1
