@@ -65,9 +65,6 @@
     path = bundle/vim-commentary
     url = git://github.com/tpope/vim-commentary.git
     ignore = untracked
-[submodule "bundle/gundo.vim"]
-    path = bundle/gundo.vim
-    url = http://github.com/sjl/gundo.vim.git
     ignore = untracked
 [submodule "bundle/fugitive"]
     path = bundle/fugitive
