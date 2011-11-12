@@ -52,6 +52,10 @@ set wildignore+=*.DS_Store                               " OSX
 set wildignore+=*.pyc                                    " Python byte code
 
 " }}}
+
+" Resize splits when the window is resized
+au VimResized * exe "normal! \<c-w>="
+
 " Tabs, spacing, etc ----------------------------------------------------- {{{
 
 set nowrap
