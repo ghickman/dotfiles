@@ -127,12 +127,6 @@ set smartcase
 map <leader><space> :nohls<cr>:call clearmatches()<cr>
 
 " }}}
-
-" Map f1 to leave insert/visual mode
-inoremap <F1> <ESC>
-nnoremap <F1> <ESC>
-vnoremap <F1> <ESC>
-
 " Status Line {{{
 
 set statusline=%f    " Path.
