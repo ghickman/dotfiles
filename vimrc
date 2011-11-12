@@ -161,9 +161,13 @@ set statusline+=%{&ft}                        " Type (python).
 
 set statusline+=\ \  " Space.
 
-" colour the status line
-au InsertEnter * hi StatusLine term=reverse ctermbg=5
-au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
+augroup ft_statuslinecolor
+    au!
+
+    " colour the status line
+    au InsertEnter * hi StatusLine term=reverse ctermbg=5
+    au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
+augroup END
 
 " }}}
 " Convenience mappings --------------------------------------------------- {{{
