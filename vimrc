@@ -6,15 +6,13 @@ call pathogen#helptags()
 filetype plugin indent on
 set nocompatible
 
-" }}}
-
 " Remember last location in file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
 endif
 
-
+" }}}
 " Basics ------------------------------------------------------------------ {{{
 
 set autoindent
