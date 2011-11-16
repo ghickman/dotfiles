@@ -243,12 +243,12 @@ function! HandleURI()
 endfunction
 map <leader>u :call HandleURI()<CR>
 " }}}
+" Quick Editing {{{
+
+nnoremap <leader>ev <c-w>s:edit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " }}}
-" Quick Editing ---------------------------------------------------------- {{{
-
-nnoremap <leader>ev <c-w>v:edit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " }}}
 " Filetype Specific Stuff ------------------------------------------------ {{{
