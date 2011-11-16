@@ -190,6 +190,9 @@ nnoremap <leader>jl JxJxj<cr>
 " Toggle a fold
 nnoremap <leader>f za
 
+" Open all Folds
+nnoremap <leader>F zR
+
 " Faster Esc
 inoremap jk <esc>
 
