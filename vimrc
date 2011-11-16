@@ -474,6 +474,7 @@ map <leader>a :Ack<space>
 " Command-T {{{
 
 let g:CommandTMaxHeight=20
+nnoremap <leader>T :CommandTFlush<cr>:CommandT<cr>
 
 " }}}
 " Commentary {{{
