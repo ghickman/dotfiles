@@ -17,14 +17,6 @@ for p in path:
         command(r'set path+=%s' % (p.replace(' ', r'\ ')))
 EOF
 
-" Execute a selection of code. Select a range and use ctrl-h to execute it.
-python << EOL
-import vim
-def EvaluateCurrentRange():
-    eval(compile('\n'.join(vim.current.range),'','exec'),globals())
-EOL
-map <C-h> :py EvaluateCurrentRange()
-
 endif
 
 " Start without the toolbar
