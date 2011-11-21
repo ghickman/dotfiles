@@ -127,7 +127,7 @@ set smartcase
 map <leader><space> :nohls<cr>
 
 " }}}
-" Status Line {{{
+" Status Line ------------------------------------------------------------ {{{
 
 set statusline=%f    " Path.
 set statusline+=%m   " Modified flag.
@@ -247,6 +247,12 @@ map <leader>u :call HandleURI()<CR>
 
 nnoremap <leader>ev <c-w>s:edit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" }}}
+" Help {{{
+
+nnoremap <buffer> <cr> <c-]>
+nnoremap <buffer> <bs> <c-t>
 
 " }}}
 
