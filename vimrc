@@ -124,7 +124,7 @@ set ignorecase
 set smartcase
 
 " Clear search highlighting.
-map <leader><space> :nohls<cr>:call clearmatches()<cr>
+map <leader><space> :nohls<cr>
 
 " }}}
 " Status Line {{{
