@@ -437,10 +437,11 @@ augroup ft_ruby
     au!
 
     " Additional files that should be Ruby
-    au BufNewFile,BufRead {Gemfile,Rakefile,Thorfile,config.ru} set filetype=ruby
+    au BufNewFile,BufRead {Gemfile,Rakefile,Thorfile,config.ru} setlocal filetype=ruby
+    au BufNewFile,BufRead *.sass setlocal filetype=scss
 
-    au Filetype ruby setlocal foldmethod=syntax
-    au FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    au Filetype ruby,sass setlocal foldmethod=syntax
+    au FileType ruby,sass setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
 " }}}
