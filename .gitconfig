@@ -4,8 +4,8 @@
     whitespace = trailing-space
 
 [user]
-    name = George Hickman
-    email = george@ghickman.co.uk
+	name = George Hickman
+	email = george@ghickman.co.uk
 
 [alias]
     ap = add -p
