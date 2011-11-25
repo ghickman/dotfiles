@@ -16,6 +16,17 @@ function mkvenv {
   echo "Symlinked $WORKON_HOME/$name to ./venv"
 }
 
+function pipr {
+    local run_requirements="pip install -r ../requirements.txt"
+    top_level=`/usr/bin/git rev-parse --show-toplevel`
+    if [ $? -ne 0 ]; then
+        top_level=`hg root`
+        if [ $? -ne 0 ]; then
+            echo "Could not detect git or hg so trying in current directory"
+        fi
+    fi
+    cd $top_level
+    $run_requirements
 }
 
 # share keys to a given host
