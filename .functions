@@ -16,30 +16,6 @@ function mkvenv {
   echo "Symlinked $WORKON_HOME/$name to ./venv"
 }
 
-# Run status on a given selection of repositories
-function status {
-  cwd=`pwd`;
-  for dir in ${@:-./src/*}; do
-    cd $dir;
-    echo "Checking $dir";
-    if [ -e .svn ]; then svn st -u; fi;
-    if [ -e .hg ]; then hg status; hg incoming; fi;
-    if [ -e .git ]; then git status; git fetch && git log ..origin/master; fi;
-    cd $cwd;
-  done;
-}
-
-# Run update on a given selection of repositories
-function update {
-  cwd=`pwd`;
-  for dir in ${@:-./src/*}; do
-    cd $dir;
-    echo "Updating $dir";
-    if [ -e .svn ]; then svn update; fi;
-    if [ -e .hg ]; then hg pull -u; fi;
-    if [ -e .git ]; then git pull; fi;
-    cd $cwd;
-  done;
 }
 
 # share keys to a given host
@@ -57,10 +33,5 @@ function key-share {
   fi
 
   cat ~/.ssh/id_george.pub | ssh ${host} 'cat - >> ~/.ssh/authorized_keys'
-}
-
-# add all files to svn
-function svnaddall {
-  svn status $@ | egrep '^\?' | sed -e 's/^\?\s*//' | xargs svn add
 }
 
