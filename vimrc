@@ -505,6 +505,8 @@ nnoremap <leader>gco :Gcheckout<cr>
 nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gl :Shell git gl -18<cr>:wincmd \|<cr>
 nnoremap <leader>gm :Gmove<cr>
+nnoremap <leader>gp :Git push<cr>
+nnoremap <leader>gpl :Git pull<cr>
 nnoremap <leader>gr :Gremove<cr>
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gw :Gwrite<cr>
