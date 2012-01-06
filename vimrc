@@ -209,6 +209,10 @@ vnoremap <F1> <ESC>
 inoremap <c-cr> <esc>A<cr>
 inoremap <s-cr> <esc>A:<cr>
 
+" Send visual selection to gist.github.com
+" Requires gist (brew install gist)
+vnoremap <leader>G :w !gist -p -t %:e \| pbcopy<cr>
+
 " Split/Join {{{
 "
 " Basically this splits the current line into two new ones at the cursor position,
