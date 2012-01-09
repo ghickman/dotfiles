@@ -476,6 +476,7 @@ nnoremap <leader>T :CommandTFlush<cr>:CommandT<cr>
 nmap <leader>c <Plug>CommentaryLine
 xmap <leader>c <Plug>Commentary
 au FileType htmldjango setlocal commentstring={#\ %s\ #}
+au FileType python setlocal commentstring=#\ %s
 
 " }}}
 " Fugitive --------------------------------------------------------------- {{{
