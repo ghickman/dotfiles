@@ -294,7 +294,7 @@ augroup ft_css
 
     " Make {<cr> insert a pair of brackets in such a way that the cursor is correctly
     " positioned inside of them AND the following code doesn't get unfolded.
-    au BufNewFile,BufRead *.less,*.css inoremap <buffer> {<cr> {}<left><cr><space><space><space><space>.<cr><esc>kA<bs>
+    au BufNewFile,BufRead *.sass,*.css inoremap <buffer> {<cr> {}<left><cr><space><space><space><space>.<cr><esc>kA<bs>
 augroup END
 
 " }}}
@@ -426,7 +426,7 @@ augroup ft_ruby
 
     " Additional files that should be Ruby
     au BufNewFile,BufRead {Gemfile,Rakefile,Thorfile,config.ru} setlocal filetype=ruby
-    au BufNewFile,BufRead *.sass setlocal filetype=scss
+    au BufNewFile,BufRead *.sass setlocal filetype=sass
 
     au Filetype ruby,sass setlocal foldmethod=syntax
     au FileType ruby,sass setlocal tabstop=2 softtabstop=2 shiftwidth=2
