@@ -100,6 +100,8 @@ nnoremap <leader>f za
 nnoremap <leader>F zR
 
 " }}}
+
+" }}}
 " Movement --------------------------------------------------------------- {{{
 
 " Destroy the arrow keys
