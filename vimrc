@@ -86,6 +86,18 @@ syntax on
 colorscheme vwilight
 
 " }}}
+" Folding ---------------------------------------------------------------- {{{
+
+set foldlevelstart=0
+
+" Sane current location
+nnoremap <c-cr> zvzz
+
+" Toggle a fold
+nnoremap <leader>f za
+
+" Open all Folds
+nnoremap <leader>F zR
 
 " }}}
 " Movement --------------------------------------------------------------- {{{
@@ -186,12 +198,6 @@ nnoremap <leader>sd setlocal ft=htmldjango<CR>
 
 " Add the two lines below to this one and get rid of the fucking spaces.
 nnoremap <leader>jl JxJxj<cr>
-
-" Toggle a fold
-nnoremap <leader>f za
-
-" Open all Folds
-nnoremap <leader>F zR
 
 " Faster Esc
 inoremap jk <esc>
