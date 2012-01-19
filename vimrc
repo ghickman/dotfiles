@@ -403,8 +403,6 @@ augroup ft_python
 
     au FileType python setlocal omnifunc=pythoncomplete#Complete
     au FileType python setlocal define=^\s*\\(def\\\\|class\\)
-    au FileType python setlocal foldmethod=indent
-    au FileType python setlocal foldnestmax=1
     " au FileType python compiler nose
     " au FileType man nnoremap <buffer> <cr> :q<cr>
 
