@@ -203,6 +203,7 @@ nnoremap <leader>jl JxJxj<cr>
 
 " Faster Esc
 inoremap jk <esc>
+inoremap JK <esc>
 
 " Emacs bindings in command line mode
 cnoremap <c-a> <home>
