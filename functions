@@ -29,6 +29,20 @@ function pipr {
     $run_requirements
 }
 
+# cd up to given directory, default to the root of a repository
+function cdup () {
+    DIR=$PWD
+    if [ "$1" != "" ]; then
+        TARGET=$1
+    else
+        TARGET=.git
+    fi
+    while [ ! -e $DIR/$TARGET -a $DIR != "/" ]; do
+        DIR=$(dirname $DIR)
+    done
+    test $DIR != "/" && cd $DIR
+}
+
 # share keys to a given host
 function key-share {
   if [ "${1}" == "" ] ; then
