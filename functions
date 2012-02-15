@@ -9,7 +9,10 @@ function mkvenv {
     name=${1}
   fi
 
-  mkvirtualenv --no-site-packages $name
+  mkvirtualenv $name
+
+  # make a .env in the virtualenv to aid activating
+  echo $PWD > "$WORKON_HOME/$name/.env"
 
   # symlink the venv to the current dir
   ln -s "$WORKON_HOME/$name" venv
