@@ -43,6 +43,9 @@
     changed = green
     untracked = cyan
 
+[help]
+    autocorrect = 1
+
 [merge]
     tool = threesome
 
