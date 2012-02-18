@@ -396,7 +396,6 @@ augroup ft_python
 
     " Additional files that should be Python
     au BufNewFile,BufRead {dev_,}requirements.txt setlocal filetype=python
-    " au BufNewFile,BufRead dev_requirements.txt setlocal filetype=python
 
     " au Filetype python noremap  <buffer> <localleader>rr :RopeRename<CR>
     " au Filetype python vnoremap <buffer> <localleader>rm :RopeExtractMethod<CR>
