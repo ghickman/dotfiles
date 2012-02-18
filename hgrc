@@ -1,6 +1,6 @@
 [ui]
 username = George Hickman <george@incuna.com>
-editor = vim
+editor = "mvim -v"
 ignore = /Users/george/.hgignore
 
 [extensions]
