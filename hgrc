@@ -16,11 +16,7 @@ record =
 transplant =
 
 # pales into significance of git's squash
-#attic = /Users/george/Sources/hgattic/attic.py
-collapse = /Users/george/Sources/hgcollapse/hgext/collapse.py
-hgsubversion = /Users/george/Sources/hgsubversion/hgsubversion
 prompt = /Users/george/Sources/hg-prompt/prompt.py
-shelve = /Users/george/Sources/hgshelve/hgshelve.py
 
 [alias]
 lb = log -b .
