@@ -9,7 +9,8 @@ alias j=jobs
 
 # Vim
 alias m="mvim"
-alias v="vim"
+alias v="mvim -v"
+alias vim="mvim -v"
 
 # Django
 alias pym="python manage.py"
