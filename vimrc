@@ -524,16 +524,23 @@ map <leader>n :NERDTreeToggle<CR>
 map <leader>N :NERDTreeFind<CR>
 
 " }}}
-" Syntastic {{{
+" Python Mode {{{
 
-let g:syntastic_enable_signs=1
-let g:syntastic_disabled_filetypes=['javascript',]
+" Python docs
+" let g:pymode_doc = 1
+" let g:pymode_doc_key = '<leader>k'
 
 " }}}
 " Pyflakes {{{
 
 " Don't use quickfix list, it interferes with Ack
 let g:pyflakes_use_quickfix = 0
+
+" }}}
+" Syntastic {{{
+
+let g:syntastic_enable_signs=1
+let g:syntastic_disabled_filetypes=['javascript',]
 
 " }}}
 " Threesome {{{
