@@ -541,8 +541,6 @@ let g:pymode_doc = 1
 let g:pymode_doc_key = '<leader>k'
 let g:pydoc = 'pydoc'
 
-" Linting
-
 " Rope
 let g:pymode_rope = 1
 let g:pymode_rope_global_prefix = '<localleader>R'
@@ -560,6 +558,8 @@ let g:pymode_rope_vim_completion = 1
 let g:pymode_rope_guess_project = 1
 let g:pymode_rope_goto_def_newwin = 0
 let g:pymode_rope_always_show_complete_menu = 0
+
+map <leader>g :call RopeGotoDefinition()<cr>
 
 " Syntax Highlighting
 let g:pymode_syntax = 1
