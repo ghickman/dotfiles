@@ -409,6 +409,9 @@ augroup ft_python
 
     " More syntax highlighting for Python
     let python_highlight_all = 1
+
+    " Run nosetests
+    au Filetype python noremap <leader>r :!nosetests %<cr>
 augroup END
 
 " }}}
