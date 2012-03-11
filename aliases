@@ -4,6 +4,9 @@ alias ...="cd ../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+# Use Hub
+alias git=hub
+
 # Jobs
 alias j=jobs
 
