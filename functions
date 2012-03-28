@@ -9,7 +9,7 @@ function mkvenv {
     name=${1}
   fi
 
-  mkvirtualenv $name
+  mkvirtualenv $name --distribute
 
   # make a .env in the virtualenv to aid activating
   echo $PWD > "$WORKON_HOME/$name/.env"
