@@ -17,6 +17,7 @@ function mkvenv {
   # symlink the venv to the current dir
   ln -s "$WORKON_HOME/$name" venv
   echo "Symlinked $WORKON_HOME/$name to ./venv"
+  workon $name
 }
 
 function pipr {
