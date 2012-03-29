@@ -1,5 +1,6 @@
 # virtualenvwrapper
 export WORKON_HOME=~/.venvs
+export PROJECT_HOME=~/Projects
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Automatically change to the virtualenv for the directory
