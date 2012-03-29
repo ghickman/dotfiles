@@ -9,7 +9,7 @@ function mkvenv {
     name=${1}
   fi
 
-  mkvirtualenv $name
+  mkvirtualenv $name --distribute
 
   # make a .env in the virtualenv to aid activating
   echo $PWD > "$WORKON_HOME/$name/.env"
@@ -17,6 +17,7 @@ function mkvenv {
   # symlink the venv to the current dir
   ln -s "$WORKON_HOME/$name" venv
   echo "Symlinked $WORKON_HOME/$name to ./venv"
+  workon $name
 }
 
 function pipr {
