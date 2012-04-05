@@ -38,6 +38,7 @@ set splitright
 set ttyfast
 set undofile
 set undoreload=10000
+set winwidth=79
 
 " Wildmenu Completion ---------------------------------------------------- {{{
 
