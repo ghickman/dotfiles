@@ -1,7 +1,7 @@
-# Disable the Lion window effects
+echo "Disable the Lion window effects"
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool NO
 
-# Re-enable key repeat
+echo "Re-enable key repeat"
 defaults write -g ApplePressAndHoldEnabled -bool false
 
 echo "Hide the dock"
