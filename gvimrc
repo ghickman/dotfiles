@@ -17,5 +17,5 @@ set guioptions-=L
 set guioptions-=b
 
 set guifont=Monaco:h12
-set vb
+set novb
 
