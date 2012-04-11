@@ -16,6 +16,6 @@ set guioptions-=l
 set guioptions-=L
 set guioptions-=b
 
-set guifont=Monaco:h12
+set guifont=Menlo:h13
 set novb
 

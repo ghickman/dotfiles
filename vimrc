@@ -84,7 +84,8 @@ let mapleader = ","
 " Color Scheme ----------------------------------------------------------- {{{
 
 syntax on
-colorscheme vwilight
+set background=dark
+colorscheme solarized
 
 " }}}
 " Folding ---------------------------------------------------------------- {{{
