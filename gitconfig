@@ -60,11 +60,8 @@
 [status]
     relativePaths = true
 
-[github]
-    user = ghickman
-    name = George Hickman
-    email = george@ghickman.co.uk
-    token = 2902d56ca54e9c339262a9336f96c075
+[include]
+    path = /Users/george/.github
 
 [achievement]
   upload = true
