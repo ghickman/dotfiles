@@ -1,6 +1,4 @@
-# Dot Files
-
-My dotfiles repo. 
+My dotfiles repo.
 
 ## Installation
 
