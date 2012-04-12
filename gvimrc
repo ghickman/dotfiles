@@ -1,5 +1,5 @@
 " Colour scheme
-colorscheme vwilight
+colorscheme solarized
 
 if has("gui_macvim")
   " Fullscreen takes up entire screen
@@ -16,6 +16,6 @@ set guioptions-=l
 set guioptions-=L
 set guioptions-=b
 
-set guifont=Menlo:h13
+set guifont=Monaco:h13
 set novb
 
