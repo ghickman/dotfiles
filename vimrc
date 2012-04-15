@@ -565,7 +565,7 @@ map <leader>g :call RopeGotoDefinition()<cr>
 
 " Syntax Highlighting
 let g:pymode_syntax = 1
-let g:pymode_syntax_all = 0
+let g:pymode_syntax_all = 1
 let g:pymode_syntax_builtin_objs = 1
 let g:pymode_syntax_highlight_exceptions = 1
 let g:pymode_syntax_indent_errors = 1
