@@ -15,8 +15,8 @@ function mkvenv {
   echo $PWD > "$WORKON_HOME/$name/.env"
 
   # symlink the venv to the current dir
-  ln -s "$WORKON_HOME/$name" venv
-  echo "Symlinked $WORKON_HOME/$name to ./venv"
+  ln -s "$WORKON_HOME/$name" .venv
+  echo "Symlinked $WORKON_HOME/$name to ./.venv"
   workon $name
 }
 
