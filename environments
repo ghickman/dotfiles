@@ -4,7 +4,7 @@ source /usr/local/Cellar/autoenv/0.1.0/activate.sh
 # virtualenvwrapper
 export WORKON_HOME=~/.venvs
 export PROJECT_HOME=~/Projects
-source /usr/local/bin/virtualenvwrapper.sh
+source ~/Sources/dotfiles/venvwrapper-preloader.sh
 
 # make a python virtualenv with extra options
 function mkvenv {
