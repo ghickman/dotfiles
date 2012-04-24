@@ -18,7 +18,9 @@ alias vim="mvim -v"
 # Django
 alias pym="python manage.py"
 alias pymrs="python manage.py runserver"
-alias pymsp="python manage.py shell_plus"
+alias pymrs+="python manage.py runserver_plus"
+alias pyms="python manage.py shell"
+alias pyms+="python manage.py shell_plus"
 
 # Pip
 alias pipr="pip install -r requirements.txt"
