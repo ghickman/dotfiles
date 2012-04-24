@@ -3,42 +3,28 @@ export WORKON_HOME=~/.venvs
 export PROJECT_HOME=~/Projects
 source /usr/local/bin/virtualenvwrapper.sh
 
-# Automatically change to the virtualenv for the directory
-# use a venv file regardless
-# if the bin folder exists, activate from that, else try using workon
-function workon_cwd {
-  PROJECT_ROOT=`hg prompt '{root}' 2> /dev/null`
-  if [ $? == 0 ]; then
-    ENV_NAME=`basename "$PROJECT_ROOT"`
-
-    #echo $PROJECT_ROOT
-    #echo $ENV_NAME
-
-    #if [ "$WORKON_HOME" ]; then
-      ## virtualenvwrapper is installed
-    #fi
-
-    # If the venv file exists, override the project root
-    if [ -f "$PROJECT_ROOT/.venv" ]; then
-      ENV_NAME=`cat "$PROJECT_ROOT/.venv"`
+# make a python virtualenv with extra options
+function mkvenv {
+    name=""
+    if [ "${1}" == "" ]; then
+        PWD=`pwd`
+        name=`basename $PWD`
+        echo "Name not specified, using current dir: $name"
+    else
+        name=${1}
     fi
 
-    # Activate the environment only if it is not already active
-    if [ "$VIRTUAL_ENV" != "$WORKON_HOME/$ENV_NAME" ]; then
-      if [ -e "$WORKON_HOME/$ENV_NAME/bin/activate" ]; then
-        workon "$ENV_NAME" && export CD_VIRTUAL_ENV="$ENV_NAME"
-      fi
-    fi
-  elif [ $CD_VIRTUAL_ENV ]; then
-    # We've just left the repo, deactivate the environment
-    # Note: this only happens if the virtualenv was activated automatically
-    deactivate && unset CD_VIRTUAL_ENV
-  fi
-}
+    mkvirtualenv $name --distribute
 
-function venv_cd {
-  #echo "$@"
-  \cd "$@" && workon_cwd
+    # make a .env in the virtualenv to aid activating
+    echo $PWD > "$WORKON_HOME/$name/.env"
+
+    # symlink the venv to the current dir
+    ln -s "$WORKON_HOME/$name" .venv
+    echo "Symlinked $WORKON_HOME/$name to ./.venv"
+
+    # using mkvirtualenv this way seems to break workon
+    workon $name
 }
 
 # RVM

@@ -1,25 +1,3 @@
-# make a python virtualenv with extra options
-function mkvenv {
-  name=""
-  if [ "${1}" == "" ]; then
-    PWD=`pwd`
-    name=`basename $PWD`
-    echo "Name not specified, using current dir: $name"
-  else
-    name=${1}
-  fi
-
-  mkvirtualenv $name --distribute
-
-  # make a .env in the virtualenv to aid activating
-  echo $PWD > "$WORKON_HOME/$name/.env"
-
-  # symlink the venv to the current dir
-  ln -s "$WORKON_HOME/$name" venv
-  echo "Symlinked $WORKON_HOME/$name to ./venv"
-  workon $name
-}
-
 function pipr {
     local run_requirements="pip install -r ../requirements.txt"
     top_level=`/usr/bin/git rev-parse --show-toplevel`

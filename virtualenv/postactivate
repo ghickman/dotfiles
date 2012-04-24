@@ -1,0 +1,13 @@
+#!/bin/bash
+# This hook is run after every virtualenv is activated.
+
+if [ -e $VIRTUAL_ENV/.env ]; then
+    # change to the project directory
+    cd `cat $VIRTUAL_ENV/.env`
+
+    # export shell variables in the project .env
+    if [ -e `pwd`/.env ]; then
+        export $(cat .env)
+    fi
+fi
+
