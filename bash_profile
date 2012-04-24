@@ -1,6 +1,6 @@
 # Load ~/.bash_prompt, ~/.exports, ~/.aliases, ~/.functions and ~/.extra
 # ~/.extra can be used for settings you don’t want to commit
-for file in prompt exports aliases functions virtualenvs extra; do
+for file in prompt exports aliases functions environments extra; do
   file="$HOME/.$file"
   [ -e "$file" ] && source "$file"
 done
