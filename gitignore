@@ -8,3 +8,4 @@
 .venv
 .ropeproject
 .sass-cache
+.env
