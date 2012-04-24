@@ -5,6 +5,6 @@
 .project
 .rvmrc
 ._*
-venv
+.venv
 .ropeproject
 .sass-cache
