@@ -1,3 +1,6 @@
+# autoenv
+source /usr/local/Cellar/autoenv/0.1.0/activate.sh
+
 # virtualenvwrapper
 export WORKON_HOME=~/.venvs
 export PROJECT_HOME=~/Projects
