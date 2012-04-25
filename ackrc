@@ -5,3 +5,4 @@
 --type-set=sass=.sass,.scss
 --type-set=json=.json
 --ignore-dir=migrations
+--ignore-dir=projectmigrations
