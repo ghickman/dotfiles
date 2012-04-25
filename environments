@@ -30,6 +30,3 @@ function mkvenv {
     workon $name
 }
 
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
