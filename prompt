@@ -18,5 +18,5 @@ function parse_hg_branch() {
   hg prompt " ({branch}){status}" 2> /dev/null
 }
 
-PS1="\[\033[G\]$GREEN\h $WHITE\W$YELLOW\$(parse_git_branch)$YELLOW\$(parse_hg_branch)$WHITE: "
+PS1="$GREEN\h $WHITE\W$YELLOW\$(parse_git_branch)$YELLOW\$(parse_hg_branch)$WHITE: "
 
