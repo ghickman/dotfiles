@@ -7,7 +7,7 @@
 
 # Python virtualenvwrapper loads really slowly, so load it on demand.
 if [[ $(type -t workon) != function ]]; then
-  virtualenv_funcs=( workon deactivate mkvirtualenv )
+  virtualenv_funcs=( workon deactivate mkvirtualenv rmvirtualenv )
 
   load_virtualenv() {
     # If these already exist, then virtualenvwrapper won't override them.
