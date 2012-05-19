@@ -23,4 +23,3 @@ export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 
-export NODE_PATH=$(npm root -g)
