@@ -22,10 +22,6 @@ alias pymrs+="python manage.py runserver_plus"
 alias pyms="python manage.py shell"
 alias pyms+="python manage.py shell_plus"
 
-# Pip
-alias pipr="pip install -r requirements.txt"
-alias pipd="pip install -r dev_requirements.txt"
-
 # Re-attach or start new Screen
 alias scr="screen -R"
 

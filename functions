@@ -1,14 +1,23 @@
-function pipr {
-    local run_requirements="pip install -r ../requirements.txt"
-    top_level=`/usr/bin/git rev-parse --show-toplevel`
-    if [ $? -ne 0 ]; then
-        top_level=`hg root`
-        if [ $? -ne 0 ]; then
-            echo "Could not detect git or hg so trying in current directory"
-        fi
+function run_at_repo_top_level {
+    start=`pwd`
+    top_level=`/usr/local/bin/git rev-parse --show-toplevel`
+    if [ $? -eq 0 ]; then
+        cd $top_level
     fi
-    cd $top_level
-    $run_requirements
+
+    $1
+
+    if [ "`pwd`" != "$start" ]; then
+        cd $start
+    fi
+}
+
+function pipr {
+    run_at_repo_top_level "pip install -r requirements.txt"
+}
+
+function pipd {
+    run_at_repo_top_level "pip install -r dev_requirements.txt"
 }
 
 # cd up to given directory, default to the root of a repository
