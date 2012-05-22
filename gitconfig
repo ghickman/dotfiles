@@ -49,6 +49,7 @@
 
 [merge]
     tool = threesome
+    conflictstyle = diff3
 
 [mergetool "threesome"]
     cmd = "mvim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
