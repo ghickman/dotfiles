@@ -9,3 +9,5 @@
 .ropeproject
 .sass-cache
 .env
+*.egg-info
+dist
