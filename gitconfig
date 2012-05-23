@@ -48,8 +48,8 @@
     autocorrect = 1
 
 [merge]
-    tool = threesome
     conflictstyle = diff3
+    tool = threesome
 
 [mergetool "threesome"]
     cmd = "mvim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
@@ -57,6 +57,9 @@
 
 [push]
     default = current
+
+[rerere]
+    enabled = 1
 
 [status]
     relativePaths = true
