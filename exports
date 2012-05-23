@@ -24,4 +24,5 @@ export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 
 export SOLR_CONF=`brew --prefix`/Cellar/solr/3.5.0/libexec/example/solr/
+export SOLR_SCHEMA=`brew --prefix`/Cellar/solr/3.5.0/libexec/example/solr/conf/schema.xml
 
