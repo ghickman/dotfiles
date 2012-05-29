@@ -1,5 +1,5 @@
 # Path
-export PATH=$PATH\:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin
+export PATH=$PATH\:/usr/local/bin:/usr/local/sbin:/Applications/Postgres.app/Contents/MacOS/bin
 
 # Vim as Default Editor
 export EDITOR=`which vim`
