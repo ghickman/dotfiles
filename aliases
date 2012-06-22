@@ -4,9 +4,6 @@ alias ...="cd ../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
-# coloured grep
-alias grep="grep color=auto"
-
 # Use Hub
 alias git=hub
 
