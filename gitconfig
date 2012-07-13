@@ -49,7 +49,6 @@
     autocorrect = 1
 
 [merge]
-    conflictstyle = diff3
     tool = threesome
 
 [mergetool "threesome"]
