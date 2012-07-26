@@ -1,6 +1,6 @@
 # Path
 # base
-PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin"
+PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin"
 
 # postgres
 PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
