@@ -56,7 +56,7 @@
     trustExitCode = true
 
 [push]
-    default = current
+    default = upstream
 
 [rerere]
     enabled = 1
