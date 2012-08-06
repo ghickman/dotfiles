@@ -1,5 +1,8 @@
 # Path
-PATH="$PATH\:/usr/local/bin:/usr/local/sbin"
+# base
+PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin"
+
+# postgres
 PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 # Vim as Default Editor
