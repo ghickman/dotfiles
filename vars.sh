@@ -1,32 +1,32 @@
 # Path
 # base
-PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin"
 
 # postgres
-PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 # Vim as Default Editor
-EDITOR=`which vim`
+export EDITOR=`which vim`
 
 # Colours
-CLICOLOR=1
-LS_COLORS='di=01;34'
-DJANGO_COLORS="light"
+export CLICOLOR=1
+export LS_COLORS='di=01;34'
+export DJANGO_COLORS="light"
 
 # force the use of correct arch flags
-ARCHFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch x86_64"
 
 # Don’t clear the screen after quitting a manual page
-MANPAGER="less -X"
+export MANPAGER="less -X"
 
 # Global Bash History
-PROMPT_COMMAND="history -a"
+export PROMPT_COMMAND="history -a"
 
 # Larger bash history (allow 32³ entries; default is 500)
-HISTSIZE=32768
-HISTFILESIZE=$HISTSIZE
-HISTCONTROL=ignoredups
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+export HISTCONTROL=ignoredups
 
-SOLR_CONF=`brew --prefix`/Cellar/solr/3.5.0/libexec/example/solr/
-SOLR_SCHEMA=`brew --prefix`/Cellar/solr/3.5.0/libexec/example/solr/conf/schema.xml
+export SOLR_CONF=`brew --prefix`/Cellar/solr/3.5.0/libexec/example/solr/
+export SOLR_SCHEMA=`brew --prefix`/Cellar/solr/3.5.0/libexec/example/solr/conf/schema.xml
 
