@@ -3,23 +3,15 @@
 function run_at_repo_top_level {
     start=`pwd`
     top_level=`/usr/local/bin/git rev-parse --show-toplevel`
-    if [ $? -eq 0 ]; then
-        cd $top_level
-    fi
-
-    $1
-
-    if [ "`pwd`" != "$start" ]; then
-        cd $start
-    fi
+    /usr/local/bin/pip install -r $top_level/$1
 }
 
 function pipr {
-    run_at_repo_top_level "pip install -r requirements.txt"
+    run_at_repo_top_level "requirements.txt"
 }
 
 function pipd {
-    run_at_repo_top_level "pip install -r dev_requirements.txt"
+    run_at_repo_top_level "dev_requirements.txt"
 }
 
 # cd up to given directory, default to the root of a repository
