@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # autoenv
 source /usr/local/Cellar/autoenv/0.1.0/activate.sh
 
