@@ -24,6 +24,9 @@ alias pymrs+="python manage.py runserver_plus"
 alias pyms="python manage.py shell"
 alias pyms+="python manage.py shell_plus"
 
+# Heroku
+alias hpym="heroku run python manage.py"
+
 # Re-attach or start new Screen
 alias scr="screen -R"
 
