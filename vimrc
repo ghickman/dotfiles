@@ -38,7 +38,6 @@ set splitright
 set ttyfast
 set undofile
 set undoreload=10000
-set winwidth=79
 
 " Wildmenu Completion ---------------------------------------------------- {{{
 
@@ -100,6 +99,13 @@ nnoremap <leader>f za
 
 " Open all Folds
 nnoremap <leader>F zR
+
+" }}}
+" Buffer/Window Width --------------------------------------------------- {{{
+
+set winwidth=80
+autocmd WinEnter * wincmd =
+autocmd VimResized * wincmd =
 
 " }}}
 
