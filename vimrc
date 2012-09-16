@@ -484,11 +484,9 @@ augroup END
 map <leader>a :Ack<space>
 
 " }}}
-" Command-T {{{
+" CtrlP {{{
 
-let g:CommandTMaxHeight=20
-nnoremap <leader>t :CommandT<cr>
-nnoremap <leader>T :CommandTFlush<cr>:CommandT<cr>
+let g:ctrlp_map = '<leader>p'
 
 " }}}
 " Commentary {{{
