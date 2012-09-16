@@ -27,7 +27,11 @@ function mkvenv {
 
     # symlink the venv to the current dir
     ln -s "$WORKON_HOME/$name" .venv
-    echo "Symlinked $WORKON_HOME/$name to ./.venv"
+    echo "Symlinked $WORKON_HOME/$name to .venv"
+
+    # symlink the venv lib to current dir
+    ln -s "$WORKON_HOME/$name/lib/python2.7/site-packages" .lib
+    echo "Symlinked $WORKON_HOME/$name/lib/python2.7/site-packages to .lib"
 
     # using mkvirtualenv this way seems to break workon
     workon $name
