@@ -6,6 +6,7 @@
 .rvmrc
 ._*
 .venv
+.lib
 .ropeproject
 .sass-cache
 .env
