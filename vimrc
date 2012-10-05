@@ -230,6 +230,10 @@ inoremap <s-cr> <esc>A:<cr>
 " Requires gist (brew install gist)
 vnoremap <leader>G :w !gist -p -t %:e \| pbcopy<cr>
 
+inoremap <leader>s :Sscratch<cr>
+nnoremap <leader>s :Sscratch<cr>
+vnoremap <leader>s :Sscratch<cr>
+
 " Split/Join {{{
 "
 " Basically this splits the current line into two new ones at the cursor position,
