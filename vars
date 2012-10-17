@@ -15,6 +15,9 @@ export CLICOLOR=1
 export LS_COLORS='di=01;34'
 export DJANGO_COLORS="light"
 
+# Cache pip downloads
+export PIP_DOWNLOAD_CACHE=$HOME/.pip_cache
+
 # force the use of correct arch flags
 export ARCHFLAGS="-arch x86_64"
 
