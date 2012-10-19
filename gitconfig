@@ -64,9 +64,6 @@
 [status]
     relativePaths = true
 
-[include]
-    path = /Users/george/.github
-
 [achievement]
   upload = true
 
