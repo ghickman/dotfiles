@@ -1,6 +1,6 @@
 [core]
-    editor = "mvim -v"
     excludesfile = /Users/george/.gitignore
+    editor = vim
     whitespace = trailing-space
 
 [user]
