@@ -67,3 +67,13 @@
 [achievement]
   upload = true
 
+[gist]
+    private = yes
+
+[github]
+	user = ghickman
+
+[include]
+    path = .heroku/accounts/config
+    path = .ghi
+
