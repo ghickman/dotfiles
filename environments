@@ -35,5 +35,11 @@ function mkvenv {
 
     # using mkvirtualenv this way seems to break workon
     workon $name
+
+    if [ -e "dev_requirements.txt" ]; then
+        pip install -r dev_requirements.txt
+    elif [ -e "requirements.txt" ]; then
+        pip install -r requirements.txt
+    fi
 }
 
