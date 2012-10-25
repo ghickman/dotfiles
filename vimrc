@@ -490,7 +490,7 @@ map <leader>a :Ack<space>
 " }}}
 " CtrlP {{{
 
-let g:ctrlp_map = '<leader>p'
+let g:ctrlp_map = '<leader>t'
 
 " }}}
 " Commentary {{{
