@@ -540,7 +540,7 @@ au FileType htmldjango setlocal commentstring={#\ %s\ #}
 au FileType python setlocal commentstring=#\ %s
 
 " }}}
-" Fugitive --------------------------------------------------------------- {{{
+" Fugitive {{{
 
 nnoremap <leader>ga :Gadd<cr>
 nnoremap <leader>gb :Gblame<cr>
