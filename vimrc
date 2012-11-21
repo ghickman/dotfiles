@@ -149,6 +149,25 @@ autocmd VimResized * wincmd =
 " }}}
 
 " }}}
+" GUI -------------------------------------------------------------------- {{{
+
+if has('gui_running')
+    set guifont=Monaco\ for\ Powerline:h13
+
+    " Get rid of UI cruft
+    set guioptions-=b
+    set guioptions-=l
+    set guioptions-=L
+    set guioptions-=r
+    set guioptions-=R
+    set guioptions-=T
+
+    if has('gui_macvim')
+        " Fullscreen takes up entire screen
+        set fuoptions=maxhorz,maxvert
+    end
+end
+" }}}
 " Movement --------------------------------------------------------------- {{{
 
 " Destroy the arrow keys
