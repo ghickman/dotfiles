@@ -588,6 +588,7 @@ nnoremap <leader>u :GundoToggle<cr>
 " Powerline {{{
 
 let g:Powerline_colorscheme = 'solarized256'
+let g:Powerline_symbols = 'fancy'
 
 " }}}
 " Python Mode {{{
