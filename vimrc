@@ -150,6 +150,20 @@ autocmd WinEnter * wincmd =
 autocmd VimResized * wincmd =
 
 " }}}
+" Trailing Whitespace ---------------------------------------------------- {{{
+
+hi link TrailingWhiteSpace Search
+au BufWinEnter * let w:twsm=matchadd('TrailingWhiteSpace', '\s\+$')
+" Setup a toggle.
+nnoremap <silent> <Leader>w
+  \ :if exists('w:twsm') <Bar>
+  \   silent! call matchdelete(w:twsm) <Bar>
+  \   unlet w:twsm <Bar>
+  \ else <Bar>
+  \   let w:twsm = matchadd('TrailingWhiteSpace', '\s\+$') <Bar>
+  \ endif<CR>
+
+" }}}
 
 " }}}
 " GUI -------------------------------------------------------------------- {{{
@@ -623,18 +637,6 @@ let g:threesome_wrap = "nowrap"
 " }}}
 
 " }}}
-
-" Highlight trailing whitespace.
-hi link TrailingWhiteSpace Search
-au BufWinEnter * let w:twsm=matchadd('TrailingWhiteSpace', '\s\+$')
-" Setup a toggle.
-nnoremap <silent> <Leader>w
-  \ :if exists('w:twsm') <Bar>
-  \   silent! call matchdelete(w:twsm) <Bar>
-  \   unlet w:twsm <Bar>
-  \ else <Bar>
-  \   let w:twsm = matchadd('TrailingWhiteSpace', '\s\+$') <Bar>
-  \ endif<CR>
 
 hi CursorColumn term=underline cterm=underline guibg=#333435
 " hidden carriage return character
