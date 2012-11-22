@@ -505,6 +505,7 @@ map <leader>a :Ack<space>
 " CtrlP {{{
 
 let g:ctrlp_map = '<leader>t'
+let g:ctrlp_working_path_mode = 0
 
 " }}}
 " Commentary {{{
