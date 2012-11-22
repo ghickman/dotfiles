@@ -66,7 +66,7 @@ set expandtab
 set textwidth=0
 
 " }}}
-" Backups {{{
+" Backups ---------------------------------------------------------------- {{{
 
 set undodir=~/.vim/tmp/undo//     " undo files
 set backupdir=~/.vim/tmp/backup// " backups
