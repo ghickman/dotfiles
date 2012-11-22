@@ -85,7 +85,7 @@ if !isdirectory(expand(&directory))
 endif
 
 " }}}
-" Leader ------------------------------------------------------------===== {{{
+" Leader ----------------------------------------------------------------- {{{
 
 let mapleader = ","
 " let localleader = "\\"
@@ -140,7 +140,7 @@ function! MyFoldText() " {{{
 endfunction " }}}
 set foldtext=MyFoldText()
 " }}}
-" Buffer/Window Width --------------------------------------------------- {{{
+" Buffer/Window Width ---------------------------------------------------- {{{
 
 set winwidth=80
 autocmd WinEnter * wincmd =
