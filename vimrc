@@ -97,6 +97,9 @@ syntax on
 set background=dark
 colorscheme solarized
 
+" Highlight VCS conflict markers
+match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
+
 " }}}
 " Folding ---------------------------------------------------------------- {{{
 
