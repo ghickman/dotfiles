@@ -638,9 +638,3 @@ let g:threesome_wrap = "nowrap"
 
 " }}}
 
-hi CursorColumn term=underline cterm=underline guibg=#333435
-" hidden carriage return character
-hi NonText ctermbg=NONE ctermfg=235 guifg=#424242 gui=NONE
-" hidden tab character
-hi SpecialKey ctermbg=NONE ctermfg=235 guifg=#424242 gui=NONE
-
