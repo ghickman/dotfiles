@@ -70,7 +70,6 @@ set textwidth=0
 
 set backup                        " enable backups
 set noswapfile                    " apparently it's 2012
-
 set undodir=~/.vim/tmp/undo//     " undo files
 set backupdir=~/.vim/tmp/backup// " backups
 set directory=~/.vim/tmp/swap//   " swap files
