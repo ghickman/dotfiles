@@ -264,9 +264,6 @@ inoremap <s-cr> <esc>A:<cr>
 " Requires gist (brew install gist)
 vnoremap <leader>G :w !gist -p -t %:e \| pbcopy<cr>
 
-nnoremap <leader>s :Sscratch<cr>
-vnoremap <leader>s :Sscratch<cr>
-
 " Split/Join {{{
 "
 " Basically this splits the current line into two new ones at the cursor position,
@@ -621,6 +618,11 @@ let g:pymode_syntax_string_formatting = 1
 
 " Don't use quickfix list, it interferes with Ack
 let g:pyflakes_use_quickfix = 0
+
+" }}}
+" Scratch {{{
+
+nnoremap <silent> <leader><tab> :Sscratch<cr>
 
 " }}}
 " SuperTab {{{
