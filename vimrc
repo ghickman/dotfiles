@@ -623,6 +623,12 @@ let g:pymode_syntax_string_formatting = 1
 let g:pyflakes_use_quickfix = 0
 
 " }}}
+" SuperTab {{{
+
+let g:SuperTabDefaultCompletionType = "<c-p><c-n>"
+let g:SuperTabLongestHighlight = 1
+
+" }}}
 " Syntastic {{{
 
 let g:syntastic_enable_signs=1
