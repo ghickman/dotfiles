@@ -184,6 +184,11 @@ if has('gui_running')
         " Fullscreen takes up entire screen
         set fuoptions=maxhorz,maxvert
     end
+else
+    " Console vim
+
+    " Mouse support
+    set mouse=a
 end
 " }}}
 " Movement --------------------------------------------------------------- {{{
