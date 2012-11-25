@@ -23,6 +23,7 @@ set encoding=utf-8
 set hidden
 set history=1000
 set laststatus=2
+set linebreak
 set list
 set listchars=tab:▸\ ,extends:❯,precedes:❮
 set modelines=0
