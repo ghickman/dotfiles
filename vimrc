@@ -40,6 +40,9 @@ set ttyfast
 set undofile
 set undoreload=10000
 
+" Resize splits when the window is resized
+au VimResized * exe "normal! \<c-w>="
+
 " Wildmenu Completion ---------------------------------------------------- {{{
 
 set wildmenu
@@ -53,10 +56,6 @@ set wildignore+=*.DS_Store                               " OSX
 set wildignore+=*.pyc                                    " Python byte code
 
 " }}}
-
-" Resize splits when the window is resized
-au VimResized * exe "normal! \<c-w>="
-
 " Tabs, spacing, etc ----------------------------------------------------- {{{
 
 set nowrap
