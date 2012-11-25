@@ -43,6 +43,11 @@ set undoreload=10000
 " Resize splits when the window is resized
 au VimResized * exe "normal! \<c-w>="
 
+" Time out on key codes but not mappings.
+set notimeout
+set ttimeout
+set ttimeoutlen=10
+
 " Wildmenu Completion ---------------------------------------------------- {{{
 
 set wildmenu
