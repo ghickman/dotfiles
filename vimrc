@@ -391,6 +391,12 @@ augroup END
 augroup ft_javascript
     au!
 
+    au BufNewFile,BufRead *.json setlocal filetype=javascript
+
+    " Pretty-print JSON files with Python (& remove the trailing whitespace that
+    " Python <2.7 json module adds, sigh)
+    nmap <leader>j :%!python -m json.tool<CR>:%s/\s\+$//g<CR>
+
     au FileType javascript setlocal foldmethod=marker
     au FileType javascript setlocal foldmarker={,}
 augroup END
