@@ -636,7 +636,7 @@ nnoremap <silent> <leader><tab> :Sscratch<cr>
 " }}}
 " SuperTab {{{
 
-let g:SuperTabDefaultCompletionType = "<c-p><c-n>"
+let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:SuperTabLongestHighlight = 1
 
 " }}}
