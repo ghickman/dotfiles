@@ -71,7 +71,7 @@
     private = yes
 
 [github]
-	user = ghickman
+    user = ghickman
 
 [include]
     path = .heroku/accounts/config
