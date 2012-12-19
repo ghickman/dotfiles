@@ -6,5 +6,6 @@
 --type-set=json=.json
 --ignore-dir=migrations
 --ignore-dir=projectmigrations
+--ignore-dir=.lib
 --ignore-dir=.ropeproject
 --ignore-dir=.venv
