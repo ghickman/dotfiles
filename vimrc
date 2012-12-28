@@ -188,6 +188,9 @@ if has('gui_running')
     if has('gui_macvim')
         " Fullscreen takes up entire screen
         set fuoptions=maxhorz,maxvert
+
+        " Remove the tab bar
+        set showtabline=0
     end
 else
     " Console vim
