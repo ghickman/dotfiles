@@ -276,6 +276,13 @@ inoremap <s-cr> <esc>A:<cr>
 " Requires gist (brew install gist)
 vnoremap <leader>G :w !gist -p -t %:e \| pbcopy<cr>
 
+" Nicked from SJL and stripped further.
+" >For some reason ctags refuses to ignore Python variables, so I'll just hack
+" >the tags file with sed and strip them out myself.
+"
+" >Sigh.
+nnoremap <leader><cr> :silent !/usr/bin/find . -name "*.py" -exec /usr/local/bin/ctags {} + && sed -i .bak -E -e '/	v	class/d' -e '/	v$/d' -e '/import/d' tags<cr>
+
 " Split/Join {{{
 "
 " Basically this splits the current line into two new ones at the cursor position,
@@ -540,6 +547,9 @@ map <leader>a :Ack<space>
 
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_extensions = ['tag']
+
+nnoremap <leader>. :CtrlPTag<cr>
 
 " }}}
 " Commentary {{{
