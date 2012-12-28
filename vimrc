@@ -611,9 +611,9 @@ let g:pymode_rope_extended_complete = 1
 let g:pymode_rope_autoimport_modules = ['os', 'shutil', 'datetime']
 let g:pymode_rope_confirm_saving = 1
 let g:pymode_rope_vim_completion = 1
-let g:pymode_rope_guess_project = 1
 let g:pymode_rope_goto_def_newwin = 0
 let g:pymode_rope_always_show_complete_menu = 0
+let g:pymode_rope_guess_project = 0
 
 map <leader>g :call RopeGotoDefinition()<cr>
 
