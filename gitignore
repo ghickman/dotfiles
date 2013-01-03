@@ -12,3 +12,5 @@
 .env
 *.egg-info
 dist
+tags
+tags.bak
