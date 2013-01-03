@@ -8,17 +8,8 @@ GREEN="\[\033[0;32m\]"
 WHITE="\[\033[0;37m\]"
 YELLOW="\[\033[0;33m\]"
 
-function parse_git_dirty() {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
-}
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
 
-function parse_git_branch() {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ (\1)$(parse_git_dirty)/"
-}
-
-function parse_hg_branch() {
-  hg prompt " ({branch}){status}" 2> /dev/null
-}
-
-PS1="$GREEN\h $WHITE\W$YELLOW\$(parse_git_branch)$YELLOW\$(parse_hg_branch)$WHITE: "
+PS1="$GREEN\h $WHITE\W$YELLOW\$(__git_ps1)$WHITE: "
 
