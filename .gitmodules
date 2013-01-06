@@ -8,7 +8,7 @@
     ignore = untracked
 [submodule "vim/bundle/surround"]
     path = vim/bundle/surround
-    url = https://github.com/tpope/vim-surround.git
+    url = git://github.com/tpope/vim-surround.git
     ignore = untracked
 [submodule "vim/bundle/haml"]
     path = vim/bundle/haml
