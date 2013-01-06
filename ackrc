@@ -2,6 +2,7 @@
 --follow
 --no-group
 --sort-files
+--type-set=markdown=.md
 --type-set=sass=.sass,.scss
 --type-set=json=.json
 --ignore-dir=migrations
