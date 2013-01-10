@@ -45,6 +45,9 @@
 [submodule "vim/bundle/pydoc"]
     path = vim/bundle/pydoc
     url = https://github.com/fs111/pydoc.vim.git
+[submodule "vim/bundle/pyflakes"]
+    path = vim/bundle/pyflakes
+    url = https://github.com/kevinw/pyflakes-vim.git
 [submodule "vim/bundle/python-mode"]
     path = vim/bundle/python-mode
     url = git://github.com/klen/python-mode.git
