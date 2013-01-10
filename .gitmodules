@@ -57,9 +57,6 @@
     path = vim/bundle/fugitive
     url = git://github.com/tpope/vim-fugitive.git
     ignore = untracked
-[submodule "vim/bundle/command-t"]
-	path = vim/bundle/command-t
-	url = https://github.com/wincent/Command-T.git
 [submodule "vim/bundle/pydoc"]
 	path = vim/bundle/pydoc
 	url = https://github.com/fs111/pydoc.vim.git
