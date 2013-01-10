@@ -6,10 +6,6 @@
     path = vim/bundle/surround
     url = git://github.com/tpope/vim-surround.git
     ignore = untracked
-[submodule "vim/bundle/haml"]
-    path = vim/bundle/haml
-    url = https://github.com/vim-scripts/Haml.git
-    ignore = untracked
 [submodule "vim/bundle/supertab"]
     path = vim/bundle/supertab
     url = https://github.com/ervandew/supertab.git
