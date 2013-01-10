@@ -53,10 +53,6 @@
 [submodule "vim/bundle/jslint"]
 	path = vim/bundle/jslint
 	url = https://github.com/hallettj/jslint.vim.git
-[submodule "vim/bundle/threesome"]
-    path = vim/bundle/threesome
-    url = https://github.com/sjl/threesome.vim.git
-    ignore = untracked
 [submodule "vim/bundle/syntastic"]
     path = vim/bundle/syntastic
     url = https://github.com/scrooloose/syntastic.git
@@ -93,3 +89,6 @@
 [submodule "vim/bundle/powerline"]
 	path = vim/bundle/powerline
 	url = https://github.com/Lokaltog/vim-powerline
+[submodule "vim/bundle/splice"]
+	path = vim/bundle/splice
+	url = https://github.com/sjl/splice.vim.git
