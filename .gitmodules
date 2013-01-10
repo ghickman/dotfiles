@@ -33,7 +33,6 @@
 [submodule "vim/bundle/autoclose"]
     path = vim/bundle/autoclose
     url = https://github.com/Townk/vim-autoclose.git
-    ignore = untracked
 [submodule "vim/bundle/closetag"]
     path = vim/bundle/closetag
     url = https://github.com/docunext/closetag.vim.git
