@@ -76,3 +76,6 @@
     path = vim/bundle/unimpaired
     url = https://github.com/tpope/vim-unimpaired.git
     ignore = untracked
+[submodule "vim/bundle/strftimedammit"]
+	path = vim/bundle/strftimedammit
+	url = https://github.com/sjl/strftimedammit.vim.git
