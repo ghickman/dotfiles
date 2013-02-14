@@ -15,10 +15,5 @@ for fn in listdir('.'):
     except OSError:
         print('{0} already exists, skipping.'.format(fn))
 
-try:
-    symlink('bin/ghi', '/usr/local/bin/ghi')
-except OSError:
-    print('ghi already linked')
-
 system('/bin/sh ~/.osx')
 
