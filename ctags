@@ -1,0 +1,8 @@
+--exclude=.tox
+--exclude=.venv
+--exclude=*.pyc
+--exclude=distribute*
+--exclude=virtualenv*
+--exclude=tags
+--language-force=python
+--recurse
