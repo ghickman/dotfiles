@@ -75,3 +75,5 @@
     path = .heroku/accounts/config
     path = .ghi
 
+[init]
+	templatedir = ~/.git_template
