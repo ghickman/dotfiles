@@ -4,4 +4,4 @@ trap "rm -f .git/tags.$$" EXIT
 ctags --exclude={.tox,.venv,tags,.git} --exclude={distribute,virtualenv}* --exclude={*.pyc}  -f.git/tags.$$ --recurse --language-force=python
 LANG=C sed -i .bak -E -e '/	v	class/d' -e '/	v$/d' -e '/import/d' .git/tags.$$
 rm .git/tags.$$.bak
-mv .git/tags.$$ .git/tags
+mv .git/tags.$$ tags
