@@ -4,5 +4,6 @@
 --exclude=distribute*
 --exclude=virtualenv*
 --exclude=tags
+--exclude=.git
 --language-force=python
 --recurse

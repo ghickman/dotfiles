@@ -24,6 +24,7 @@
     mnff = merge --no-ff
     pl = log --decorate --stat --graph --pretty=format:'%C(yellow)%h%Creset (%ar - %Cred%an%Creset), %s%n'`
     s = status
+	ctags = !.git/hooks/ctags
 
 [color]
     branch = auto

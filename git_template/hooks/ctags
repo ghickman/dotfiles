@@ -1,6 +1,7 @@
 #!/bin/sh
 set -e
 trap "rm -f .git/tags.$$" EXIT
-ctags --tag-relative -Rf.git/tags.$$ --exclude=.git --languages=-javascript,sql
-sed blah blah
+ctags --options=$HOME/.ctags -f.git/tags.$$
+sed -i .bak -E -e '/	v	class/d' -e '/	v$/d' -e '/import/d' .git/tags.$$
+rm tags.bak
 mv .git/tags.$$ .git/tags
