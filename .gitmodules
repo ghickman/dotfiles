@@ -79,3 +79,6 @@
 [submodule "vim/bundle/strftimedammit"]
 	path = vim/bundle/strftimedammit
 	url = https://github.com/sjl/strftimedammit.vim.git
+[submodule "vim/bundle/keyboard_cat"]
+	path = vim/bundle/keyboard_cat
+	url = https://github.com/natw/keyboard_cat.vim.git
