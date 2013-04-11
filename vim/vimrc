@@ -194,11 +194,6 @@ if has('gui_running')
         " Remove the tab bar
         set showtabline=0
     end
-else
-    " Console vim
-
-    " Mouse support
-    set mouse=a
 end
 " }}}
 " Movement --------------------------------------------------------------- {{{
