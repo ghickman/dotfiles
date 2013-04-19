@@ -500,7 +500,7 @@ augroup ft_ruby
     au BufNewFile,BufRead *.sass setlocal filetype=sass
 
     au Filetype ruby,sass setlocal foldmethod=syntax
-    au FileType ruby,sass setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    au FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
 " }}}
