@@ -130,9 +130,7 @@ nnoremap <leader>F zR
 " 4. Pulse the cursor line.  My eyes are bad.
 "
 " This mapping wipes out the z mark, which I never use.
-"
-" I use :sus for the rare times I want to actually background Vim.
-nnoremap <c-z> mzzMzvzz15<c-e>`z:Pulse<cr>
+nnoremap <leader>w mzzMzvzz15<c-e>`z:Pulse<cr>
 
 function! MyFoldText() " {{{
     let line = getline(v:foldstart)
@@ -500,7 +498,7 @@ augroup ft_ruby
     au BufNewFile,BufRead *.sass setlocal filetype=sass
 
     au Filetype ruby,sass setlocal foldmethod=syntax
-    au FileType ruby,sass setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    au FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
 " }}}
@@ -705,4 +703,3 @@ endfunction " }}}
 command! -nargs=0 Pulse call s:Pulse()
 
 " }}}
-
