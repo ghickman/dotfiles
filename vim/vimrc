@@ -61,6 +61,7 @@ set wildignore+=*.DS_Store                               " OSX
 set wildignore+=*.pyc                                    " Python byte code
 set wildignore+=*.egg-info                               " Python deployment info
 set wildignore+=.tox                                     " Tox (virtualenv testing)
+set wildignore+=.sass-cache                              " Sass cache folder
 
 " }}}
 " Tabs, spacing, etc ----------------------------------------------------- {{{
