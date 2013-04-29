@@ -10,3 +10,4 @@
 --ignore-dir=.lib
 --ignore-dir=.ropeproject
 --ignore-dir=.venv
+--ignore-file=tags
