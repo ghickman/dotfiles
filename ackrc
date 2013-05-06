@@ -2,11 +2,13 @@
 --follow
 --no-group
 --sort-files
+--type-set=ctags:is:tags
+--type-set=json=.json
 --type-set=markdown=.md
 --type-set=sass=.sass,.scss
---type-set=json=.json
 --ignore-dir=migrations
 --ignore-dir=projectmigrations
 --ignore-dir=.lib
 --ignore-dir=.ropeproject
 --ignore-dir=.venv
+--noctags
