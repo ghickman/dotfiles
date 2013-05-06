@@ -437,16 +437,6 @@ augroup ft_nginx
 augroup END
 
 " }}}
-" Puppet {{{
-
-augroup ft_puppet
-    au!
-
-    au Filetype puppet setlocal foldmethod=marker
-    au Filetype puppet setlocal foldmarker={,}
-augroup END
-
-" }}}
 " Python {{{
 
 augroup ft_python
@@ -500,15 +490,6 @@ augroup ft_ruby
 
     au Filetype ruby,sass setlocal foldmethod=syntax
     au FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
-augroup END
-
-" }}}
-" Vagrant {{{
-
-augroup ft_vagrant
-    au!
-
-    au BufRead,BufNewFile Vagrantfile set ft=ruby
 augroup END
 
 " }}}
