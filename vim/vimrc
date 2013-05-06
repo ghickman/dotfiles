@@ -506,6 +506,16 @@ augroup ft_vim
 augroup END
 
 " }}}
+" YAML {{{
+
+augroup ft_yaml
+    au!
+
+    au FileType yaml,yml setlocal tabstop=2 softtabstop=2 shiftwidth=2
+augroup END
+
+" }}}
+
 
 " }}}
 " Plugin Specific stuff -------------------------------------------------- {{{
