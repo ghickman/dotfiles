@@ -533,6 +533,9 @@ augroup END
 
 map <leader>a :Ack<space>
 
+" Use ag
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 " }}}
 " CtrlP {{{
 
