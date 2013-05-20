@@ -97,7 +97,7 @@ endif
 " Leader ----------------------------------------------------------------- {{{
 
 let mapleader = ","
-" let localleader = "\\"
+" let maplocalleader = "\\"
 
 " }}}
 " Color Scheme ----------------------------------------------------------- {{{
@@ -437,16 +437,6 @@ augroup ft_nginx
 augroup END
 
 " }}}
-" Puppet {{{
-
-augroup ft_puppet
-    au!
-
-    au Filetype puppet setlocal foldmethod=marker
-    au Filetype puppet setlocal foldmarker={,}
-augroup END
-
-" }}}
 " Python {{{
 
 augroup ft_python
@@ -503,15 +493,6 @@ augroup ft_ruby
 augroup END
 
 " }}}
-" Vagrant {{{
-
-augroup ft_vagrant
-    au!
-
-    au BufRead,BufNewFile Vagrantfile set ft=ruby
-augroup END
-
-" }}}
 " Vim {{{
 
 augroup ft_vim
@@ -525,6 +506,16 @@ augroup ft_vim
 augroup END
 
 " }}}
+" YAML {{{
+
+augroup ft_yaml
+    au!
+
+    au FileType yaml,yml setlocal tabstop=2 softtabstop=2 shiftwidth=2
+augroup END
+
+" }}}
+
 
 " }}}
 " Plugin Specific stuff -------------------------------------------------- {{{
