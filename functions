@@ -45,3 +45,6 @@ function key-share {
   cat ~/.ssh/id_george.pub | ssh ${host} 'cat - >> ~/.ssh/authorized_keys'
 }
 
+function man() {
+    open dash://manpages:$1
+}
