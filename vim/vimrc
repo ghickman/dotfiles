@@ -396,7 +396,7 @@ augroup ft_javascript
 
     " Pretty-print JSON files with Python (& remove the trailing whitespace that
     " Python <2.7 json module adds, sigh)
-    nmap <leader>j :%!python -m json.tool<CR>:%s/\s\+$//g<CR>
+    nmap <leader>J :%!python -m json.tool<CR>:%s/\s\+$//g<CR>
 
     au FileType javascript setlocal foldmethod=marker
     au FileType javascript setlocal foldmarker={,}
@@ -523,6 +523,9 @@ augroup END
 " Ack {{{
 
 map <leader>a :Ack<space>
+
+" Use ag
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " }}}
 " CtrlP {{{
