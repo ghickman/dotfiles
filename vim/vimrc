@@ -432,6 +432,7 @@ augroup ft_nginx
     au BufRead,BufNewFile /etc/nginx/sites-available/*           set ft=nginx
     au BufRead,BufNewFile /usr/local/etc/nginx/sites-available/* set ft=nginx
     au BufRead,BufNewFile vhost.nginx                            set ft=nginx
+    au BufRead,BufNewFile nginx_conf_live,nginx_conf_staging     set ft=nginx
 
     au FileType nginx setlocal foldmethod=marker foldmarker={,}
 augroup END
