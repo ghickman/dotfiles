@@ -24,7 +24,8 @@
     mnff = merge --no-ff
     pl = log --decorate --stat --graph --pretty=format:'%C(yellow)%h%Creset (%ar - %Cred%an%Creset), %s%n'`
     s = status
-	ctags = !.git/hooks/ctags
+    ctags = !.git/hooks/ctags
+    prune = remote prune origin
 
 [color]
     branch = auto
@@ -77,6 +78,7 @@
     path = .ghi
 
 [init]
-	templatedir = ~/.git_template
+    templatedir = ~/.git_template
+
 [heroku]
-	account = me
+    account = me
