@@ -1,5 +1,6 @@
 .lib
 .ropeproject
+.sass-cache
 .venv
 migrations
 projectmigrations

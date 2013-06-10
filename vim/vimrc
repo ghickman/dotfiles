@@ -274,6 +274,8 @@ vnoremap <leader>G :w !gist -p -t %:e \| pbcopy<cr>
 
 nnoremap <leader>d oimport pdb;pdb.set_trace()<esc>
 
+nnoremap <leader>b :b#<cr>
+
 " Split/Join {{{
 "
 " Basically this splits the current line into two new ones at the cursor position,
