@@ -28,9 +28,10 @@ export MANPAGER="less -X"
 export PROMPT_COMMAND="history -a"
 
 # Larger bash history (allow 32³ entries; default is 500)
-export HISTSIZE=32768
-export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
+export HISTFILESIZE=$HISTSIZE
+export HISTSIZE=32768
+export HISTTIMEFORMAT="%F %T"
 
 export SOLR_CONF=`brew --prefix`/Cellar/solr/3.5.0/libexec/example/solr/
 export SOLR_SCHEMA=`brew --prefix`/Cellar/solr/3.5.0/libexec/example/solr/conf/schema.xml
