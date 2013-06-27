@@ -46,5 +46,5 @@ function key-share {
 }
 
 function man() {
-    open dash://manpages:$1
+    open dash://man:$1
 }
