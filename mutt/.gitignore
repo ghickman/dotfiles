@@ -1,0 +1,4 @@
+cache/*
+!cache/.placeholder
+tmp/*
+!tmp/.placeholder

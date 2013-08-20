@@ -3,8 +3,8 @@ from os.path import abspath, basename, expanduser, join
 
 
 EXEMPT = (
-    'bin',
-    'osx'
+    'osx',
+    'README.md',
 )
 
 for fn in listdir('.'):
