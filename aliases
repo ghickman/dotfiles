@@ -36,3 +36,5 @@ alias flush="dscacheutil -flushcache"
 # Solr
 alias solr="/usr/local/bin/solr $SOLR_CONF"
 
+# Mutt
+alias mutt="cd ~/Desktop && /usr/local/bin/mutt"

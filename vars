@@ -2,7 +2,7 @@
 
 # Path
 # base
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # postgres
 export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
