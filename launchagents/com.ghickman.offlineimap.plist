@@ -8,7 +8,7 @@
         <integer>300</integer>
         <key>ProgramArguments</key>
         <array>
-            <string>/usr/local/bin/offlineimap -o -q -u quiet</string>
+            <string>/usr/local/bin/offlineimap -o -q -l ~/Library/Logs/offlineimap.log</string>
         </array>
     </dict>
 </plist>
