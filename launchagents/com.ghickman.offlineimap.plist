@@ -4,11 +4,16 @@
     <dict>
         <key>Label</key>
         <string>com.ghickman.offlineimap</string>
+        <key>RunAtLoad</key>
+        <true />
         <key>StartInterval</key>
-        <integer>60</integer>
+        <integer>180</integer>
         <key>ProgramArguments</key>
         <array>
-            <string>/usr/local/bin/offlineimap -o -l /Users/george/Library/Logs/offlineimap.log</string>
+            <string>/usr/local/bin/offlineimap</string>
+            <string>-o</string>
+            <string>-l</string>
+            <string>/Users/george/Library/Logs/offlineimap.log</string>
         </array>
     </dict>
 </plist>
