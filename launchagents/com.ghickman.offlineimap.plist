@@ -10,10 +10,7 @@
         <integer>180</integer>
         <key>ProgramArguments</key>
         <array>
-            <string>/usr/local/bin/offlineimap</string>
-            <string>-o</string>
-            <string>-l</string>
-            <string>/Users/george/Library/Logs/offlineimap.log</string>
+            <string>/Users/george/.mutt/offlineimap.sh</string>
         </array>
     </dict>
 </plist>
