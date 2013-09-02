@@ -6,42 +6,43 @@ if [ -d "/usr/local/Cellar/autoenv" ]; then
 fi
 
 # virtualenvwrapper
-export WORKON_HOME=~/.venvs
-export PROJECT_HOME=~/Projects
-export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
-source /usr/local/bin/virtualenvwrapper_lazy.sh
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    export WORKON_HOME=~/.venvs
+    export PROJECT_HOME=~/Projects
+    export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+    source /usr/local/bin/virtualenvwrapper_lazy.sh
 
-# make a python virtualenv with extra options
-function mkvenv {
-    name=""
-    if [ "${1}" == "" ]; then
-        PWD=`pwd`
-        name=`basename $PWD`
-        echo "Name not specified, using current dir: $name"
-    else
-        name=${1}
-    fi
+    # make a python virtualenv with extra options
+    function mkvenv {
+        name=""
+        if [ "${1}" == "" ]; then
+            PWD=`pwd`
+            name=`basename $PWD`
+            echo "Name not specified, using current dir: $name"
+        else
+            name=${1}
+        fi
 
-    mkvirtualenv $name --distribute
+        mkvirtualenv $name --distribute
 
-    # make a .env in the current directory for autoenv magic
-    echo "workon $name" > .env
+        # make a .env in the current directory for autoenv magic
+        echo "workon $name" > .env
 
-    # symlink the venv to the current dir
-    ln -s "$WORKON_HOME/$name" .venv
-    echo "Symlinked $WORKON_HOME/$name to .venv"
+        # symlink the venv to the current dir
+        ln -s "$WORKON_HOME/$name" .venv
+        echo "Symlinked $WORKON_HOME/$name to .venv"
 
-    # symlink the venv lib to current dir
-    ln -s "$WORKON_HOME/$name/lib/python2.7/site-packages" .lib
-    echo "Symlinked $WORKON_HOME/$name/lib/python2.7/site-packages to .lib"
+        # symlink the venv lib to current dir
+        ln -s "$WORKON_HOME/$name/lib/python2.7/site-packages" .lib
+        echo "Symlinked $WORKON_HOME/$name/lib/python2.7/site-packages to .lib"
 
-    # using mkvirtualenv this way seems to break workon
-    workon $name
+        # using mkvirtualenv this way seems to break workon
+        workon $name
 
-    if [ -e "dev_requirements.txt" ]; then
-        pip install -r dev_requirements.txt
-    elif [ -e "requirements.txt" ]; then
-        pip install -r requirements.txt
-    fi
-}
-
+        if [ -e "dev_requirements.txt" ]; then
+            pip install -r dev_requirements.txt
+        elif [ -e "requirements.txt" ]; then
+            pip install -r requirements.txt
+        fi
+    }
+fi
