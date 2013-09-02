@@ -1,7 +1,9 @@
 #!/bin/bash
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
+if [ x`which brew` != x ]; then
+    if [ -f `brew --prefix`/etc/bash_completion ]; then
+      . `brew --prefix`/etc/bash_completion
+    fi
 fi
 
 GREEN="\[\033[0;32m\]"
@@ -12,4 +14,3 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
 
 PS1="$GREEN\h $WHITE\W$YELLOW\$(__git_ps1)$WHITE: "
-
