@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # autoenv
-source /usr/local/Cellar/autoenv/0.1.0/activate.sh
+if [ -d "/usr/local/Cellar/autoenv" ]; then
+    source /usr/local/Cellar/autoenv/0.1.0/activate.sh
+fi
 
 # virtualenvwrapper
 export WORKON_HOME=~/.venvs
