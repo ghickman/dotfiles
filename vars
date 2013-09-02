@@ -5,7 +5,9 @@
 export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # postgres
-export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+if [ -d "/Applications/Postgres.app" ]; then
+    export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+fi
 
 # Vim as Default Editor
 export EDITOR=`which vim`
