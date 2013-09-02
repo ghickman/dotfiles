@@ -7,7 +7,9 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Use Hub
-alias git=hub
+if [ x`which hub` != x ]; then
+    alias git=hub
+fi
 
 # Jobs
 alias j=jobs
