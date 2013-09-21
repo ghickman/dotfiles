@@ -1,15 +1,16 @@
 #!/bin/sh
 
+LOGFILE="/Users/george/.offlineimap/sync.log"
 PID=`cat ~/.offlineimap/pid`
 ps aux | grep "[ ]$PID" && kill $PID
 
 function sync_normal {
     echo "NORMAL Sync"
-    /usr/local/bin/offlineimap -o
+    /usr/local/bin/offlineimap -o >> $LOGFILE
 }
 function sync_quick {
     echo "QUICK Sync"
-    /usr/local/bin/offlineimap -o -q
+    /usr/local/bin/offlineimap -o -q >> $LOGFILE
 }
 
 # This is silly.
