@@ -30,7 +30,7 @@ export PROMPT_COMMAND="history -a"
 export HISTCONTROL=ignoredups
 export HISTFILESIZE=$HISTSIZE
 export HISTSIZE=32768
-export HISTTIMEFORMAT="%F %T"
+export HISTTIMEFORMAT="%F %T "
 
 if [ x`which brew` != x ]; then
     export SOLR_CONF=`brew --prefix`/Cellar/solr/3.5.0/libexec/example/solr/
