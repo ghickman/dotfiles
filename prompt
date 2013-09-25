@@ -14,6 +14,6 @@ YELLOW="\[\033[0;33m\]"
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
 
-TIME="$RED\[$(date +%H:%M:%S)\]"
+TIME="$RED\[\$(date +%H:%M:%S)\]"
 
 PS1="$TIME $GREEN\h $WHITE\W$YELLOW\$(__git_ps1)$WHITE\n$ "
