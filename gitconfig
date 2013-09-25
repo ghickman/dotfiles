@@ -27,6 +27,9 @@
     ctags = !.git/hooks/ctags
     prune = remote prune origin
 
+[branch]
+    autosetuprebase = always
+
 [color]
     branch = auto
     diff = auto
