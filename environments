@@ -23,7 +23,7 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
             name=${1}
         fi
 
-        mkvirtualenv $name --distribute
+        mkvirtualenv $name
 
         # make a .env in the current directory for autoenv magic
         echo "workon $name" > .env
