@@ -67,7 +67,7 @@ set mbox      = '+george-ghickman.co.uk/archive'
 set postponed = '+george-ghickman.co.uk/drafts'
 
 # Colours -------------------------------------------
-source ~/.mutt/themes/solarized-dark-16.muttrc
+source ~/.mutt/themes/solarized-light-16.muttrc
 
 # Index View Options ---------------------------------
 set date_format = "%Y/%m/%d"
