@@ -48,6 +48,9 @@ set notimeout
 set ttimeout
 set ttimeoutlen=10
 
+" Save when losing focus
+au FocusLost * :silent! wall
+
 " Wildmenu Completion ---------------------------------------------------- {{{
 
 set wildmenu
