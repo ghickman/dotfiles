@@ -534,15 +534,6 @@ map <leader>a :Ack<space>
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " }}}
-" CtrlP {{{
-
-let g:ctrlp_map = '<leader>t'
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_extensions = ['tag']
-
-nnoremap <leader>. :CtrlPTag<cr>
-
-" }}}
 " Commentary {{{
 
 nmap <leader>c <Plug>CommentaryLine
@@ -644,6 +635,29 @@ let g:pyflakes_use_quickfix = 0
 " Scratch {{{
 
 nnoremap <silent> <leader><tab> :Sscratch<cr>
+
+" }}}
+" Selecta ---------------------------------------------------------------- {{{
+
+" Run a given vim command on the results of fuzzy selecting from a given shell
+" command. See usage below.
+function! SelectaCommand(choice_command, vim_command)
+  try
+    silent! exec a:vim_command . " " . system(a:choice_command . " | selecta")
+  catch /Vim:Interrupt/
+    " Swallow the ^C so that the redraw below happens; otherwise there will be
+    " leftovers from selecta on the screen
+  endtry
+  redraw!
+endfunction
+
+" Find all files in all non-dot directories starting in the working directory.
+" Fuzzy select one of those. Open the selected file with :e.
+map <leader>t :call SelectaCommand("find * -type f", ":e")<cr>
+
+" Find all tags in the tags database, then open the tag that the user selects
+command! SelectaTag :call SelectaCommand("awk '{print $1}' tags | sort -u | grep -v '^!'", ":tag")
+map <leader>. :SelectaTag<cr>
 
 " }}}
 " SuperTab {{{
