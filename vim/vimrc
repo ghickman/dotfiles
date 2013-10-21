@@ -183,6 +183,13 @@ augroup CursorLine
 augroup END
 
 " }}}
+" Toggle Paste Mode ------------------------------------------------------ {{{
+
+nnoremap <leader>p :set invpaste paste?<cr>
+set pastetoggle=<leader>p
+set showmode
+
+" }}}
 
 " }}}
 " GUI -------------------------------------------------------------------- {{{
