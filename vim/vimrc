@@ -48,9 +48,20 @@ set notimeout
 set ttimeout
 set ttimeoutlen=10
 
-" Save when losing focus
+" Autosave --------------------------------------------------------------- {{{
+
+" Save all buffers on GUI window focus lost
 au FocusLost * :silent! wall
 
+" Write to disk when navigating file
+set autowrite
+
+" Write when leaving a buffer
+augroup AutoWrite
+    autocmd! BufLeave * :update
+augroup END
+
+" }}}
 " Wildmenu Completion ---------------------------------------------------- {{{
 
 set wildmenu
