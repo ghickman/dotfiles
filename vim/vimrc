@@ -567,6 +567,15 @@ au FileType htmldjango setlocal commentstring={#\ %s\ #}
 au FileType python setlocal commentstring=#\ %s
 
 " }}}
+" CtrlP {{{
+
+let g:ctrlp_map = '<leader>t'
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_extensions = ['tag']
+
+ nnoremap <leader>. :CtrlPTag<cr>
+
+" }}}
 " Fugitive {{{
 
 nnoremap <leader>ga :Gadd<cr>
