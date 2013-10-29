@@ -569,6 +569,15 @@ au FileType htmldjango setlocal commentstring={#\ %s\ #}
 au FileType python setlocal commentstring=#\ %s
 
 " }}}
+" CtrlP {{{
+
+let g:ctrlp_map = '<leader>t'
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_extensions = ['tag']
+
+nnoremap <leader>. :CtrlPTag<cr>
+
+" }}}
 " Fugitive {{{
 
 nnoremap <leader>ga :Gadd<cr>
@@ -664,7 +673,7 @@ let g:pyflakes_use_quickfix = 0
 nnoremap <silent> <leader><tab> :Sscratch<cr>
 
 " }}}
-" Selecta ---------------------------------------------------------------- {{{
+" Selecta {{{
 
 " Run a given vim command on the results of fuzzy selecting from a given shell
 " command. See usage below.
@@ -680,11 +689,11 @@ endfunction
 
 " Find all files in all non-dot directories starting in the working directory.
 " Fuzzy select one of those. Open the selected file with :e.
-map <leader>t :call SelectaCommand("find * -type f", ":e")<cr>
+" map <leader>t :call SelectaCommand("find * -type f", ":e")<cr>
 
 " Find all tags in the tags database, then open the tag that the user selects
 command! SelectaTag :call SelectaCommand("awk '{print $1}' tags | sort -u | grep -v '^!'", ":tag")
-map <leader>. :SelectaTag<cr>
+" map <leader>. :SelectaTag<cr>
 
 " }}}
 " SuperTab {{{
