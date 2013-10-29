@@ -197,8 +197,6 @@ augroup END
 " Toggle Paste Mode ------------------------------------------------------ {{{
 
 nnoremap <leader>p :set invpaste paste?<cr>
-set pastetoggle=<leader>p
-set showmode
 
 " }}}
 
@@ -575,7 +573,7 @@ let g:ctrlp_map = '<leader>t'
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_extensions = ['tag']
 
-nnoremap <leader>. :CtrlPTag<cr>
+ nnoremap <leader>. :CtrlPTag<cr>
 
 " }}}
 " Fugitive {{{
