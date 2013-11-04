@@ -49,13 +49,14 @@ set spoolfile = "+george-ghickman.co.uk/INBOX"
 mailboxes +george-ghickman.co.uk/INBOX \
           +george-ghickman.co.uk/django-dev \
           +george-ghickman.co.uk/archive \
-          +george-ghickman.co.uk/finance \
+          +george-ghickman.co.uk/house \
           +george-ghickman.co.uk/folks \
+          +george-ghickman.co.uk/ghickman-ltd \
+          +george-ghickman.co.uk/finance \
           +george-ghickman.co.uk/hack-days \
           +george-ghickman.co.uk/holidays/pycon-2012 \
           +george-ghickman.co.uk/holidays/pycon-2013 \
           +george-ghickman.co.uk/holidays/thailand-2013 \
-          +george-ghickman.co.uk/house \
           +george-ghickman.co.uk/oxford \
           +george-ghickman.co.uk/work \
           +george-ghickman.co.uk/sent \
