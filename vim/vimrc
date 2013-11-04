@@ -117,7 +117,7 @@ let mapleader = ","
 " Color Scheme ----------------------------------------------------------- {{{
 
 syntax on
-set background=light
+set background=dark
 colorscheme solarized
 
 " Highlight VCS conflict markers
@@ -605,7 +605,7 @@ nnoremap <leader>u :GundoToggle<cr>
 " }}}
 " Powerline {{{
 
-let g:Powerline_colorscheme = 'solarized'
+let g:Powerline_colorscheme = 'solarized256'
 let g:Powerline_symbols = 'fancy'
 
 " }}}
