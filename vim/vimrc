@@ -279,10 +279,6 @@ nnoremap <leader>sd setlocal ft=htmldjango<CR>
 " Add the two lines below to this one and get rid of the fucking spaces.
 nnoremap <leader>jl JxJxj<cr>
 
-" Faster Esc
-inoremap jk <esc>
-inoremap JK <esc>
-
 " Emacs bindings in command line mode
 cnoremap <c-a> <home>
 cnoremap <c-e> <end>
