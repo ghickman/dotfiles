@@ -487,6 +487,9 @@ augroup ft_python
 
     " Run nosetests
     au Filetype python noremap <leader>r :!nosetests %<cr>
+
+    " Insert a docstring
+    au Filetype python nnoremap <leader>" o""""""<esc>hhi
 augroup END
 
 " }}}
