@@ -1,0 +1,9 @@
+git=`which git`
+$git checkout master
+$git pull
+
+branches=`$git remote prune origin | grep \* | awk '{print $3}' | awk -F '/' '{print $2}'`
+
+for b in $branches; do
+    git branch -d $b;
+done
