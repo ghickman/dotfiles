@@ -10,7 +10,7 @@ ctags \
     --exclude={*.pyc} \
     -f.git/tags.$$ \
     --language-force=python \
-    --python-kinds=-ivmf
+    --python-kinds=-ivm \
     $files
 
 rm .git/tags.$$.bak
