@@ -1,7 +1,17 @@
 #!/bin/sh
 set -e
 trap "rm -f .git/tags.$$" EXIT
-ctags --exclude={.tox,.venv,tags,.git,.sass-cache,.lib} --exclude={distribute,virtualenv}* --exclude={*.pyc} -f.git/tags.$$ --recurse --language-force=python
-LANG=C sed -i .bak -E -e '/	v	class/d' -e '/	v$/d' -e '/import/d' .git/tags.$$
+
+files=`find . -path *migrations -prune -o -name "*.py"`
+ctags \
+    --exclude={.tox,.venv,tags,.git,.sass-cache,.lib} \
+    --exclude=
+    --exclude={distribute,virtualenv}* \
+    --exclude={*.pyc} \
+    -f.git/tags.$$ \
+    --language-force=python \
+    --python-kinds=-ivmf
+    $files
+
 rm .git/tags.$$.bak
 mv .git/tags.$$ tags
