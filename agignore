@@ -2,7 +2,5 @@
 .ropeproject
 .sass-cache
 .venv
-migrations
-projectmigrations
 tags
 tags.bak
