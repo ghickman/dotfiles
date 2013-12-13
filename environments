@@ -7,7 +7,7 @@ fi
 
 # virtualenvwrapper
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    export WORKON_HOME=~/.virtualenvs
+    export WORKON_HOME=~/.venvs
     export PROJECT_HOME=~/Projects
     export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
     source /usr/local/bin/virtualenvwrapper_lazy.sh
