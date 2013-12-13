@@ -17,4 +17,7 @@ brew install ack the_silver_searcher
 brew install contacts msmtp mutt --sidebar-patch notmuch offline-imap sqlite urlview
 
 # Dev
-brew install libmemcached markdown memcached pypy python3 redis solr
+brew install libmemcached markdown memcached redis solr
+
+# Python
+brew install python python3 pypy
