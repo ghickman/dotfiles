@@ -1,5 +1,8 @@
+# Taps
+brew tap nvie/autoenv
+
 # Basics
-brew install autoenv bash-completion cowsay gnu-typist mobile-shell mtr nmap s3cmd watch wget
+brew install nvie-autoenv bash-completion cowsay gnu-typist mobile-shell mtr nmap s3cmd watch wget
 
 # Git
 brew install git git-extras hub
