@@ -694,9 +694,6 @@ if executable('ag')
     set grepprg=ag\ --nogroup\ --nocolor
 
     nnoremap <leader>a :Ag<space>
-
-    " bind \ (backward slash) to grep shortcut
-    command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 endif
 
 " }}}
