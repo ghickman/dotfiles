@@ -598,6 +598,11 @@ augroup END
 nnoremap <leader>u :GundoToggle<cr>
 
 " }}}
+" Khuno {{{
+
+let g:khuno_max_line_length=99
+
+" }}}
 " Powerline {{{
 
 let g:Powerline_colorscheme = 'solarized256'
@@ -655,12 +660,6 @@ let g:pymode_syntax_string_format = 1
 let g:pymode_syntax_string_formatting = 1
 
 " }}}
-" Pyflakes {{{
-
-" Don't use quickfix list, it interferes with Ack
-let g:pyflakes_use_quickfix = 0
-
-" }}}
 " Scratch {{{
 
 nnoremap <silent> <leader><tab> :Sscratch<cr>
@@ -705,12 +704,6 @@ endif
 
 let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:SuperTabLongestHighlight = 1
-
-" }}}
-" Syntastic {{{
-
-let g:syntastic_enable_signs=1
-let g:syntastic_disabled_filetypes=['javascript', 'python']
 
 " }}}
 " Threesome {{{

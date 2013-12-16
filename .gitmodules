@@ -45,9 +45,6 @@
 [submodule "vim/bundle/pydoc"]
     path = vim/bundle/pydoc
     url = https://github.com/fs111/pydoc.vim.git
-[submodule "vim/bundle/pyflakes"]
-    path = vim/bundle/pyflakes
-    url = https://github.com/kevinw/pyflakes-vim.git
 [submodule "vim/bundle/python-mode"]
     path = vim/bundle/python-mode
     url = git://github.com/klen/python-mode.git
@@ -68,10 +65,6 @@
     path = vim/bundle/surround
     url = git://github.com/tpope/vim-surround.git
     ignore = untracked
-[submodule "vim/bundle/syntastic"]
-    path = vim/bundle/syntastic
-    url = https://github.com/scrooloose/syntastic.git
-    ignore = untracked
 [submodule "vim/bundle/unimpaired"]
     path = vim/bundle/unimpaired
     url = https://github.com/tpope/vim-unimpaired.git
@@ -82,3 +75,6 @@
 [submodule "vim/bundle/keyboard_cat"]
 	path = vim/bundle/keyboard_cat
 	url = https://github.com/natw/keyboard_cat.vim.git
+[submodule "vim/bundle/khuno"]
+	path = vim/bundle/khuno
+	url = https://github.com/alfredodeza/khuno.vim.git
