@@ -13,3 +13,5 @@ shopt -s nocaseglob
 # treat slashes as a delimiter with C-w
 stty werase undef
 bind '"\C-w": unix-filename-rubout'
+
+eval "$(direnv hook bash)"
