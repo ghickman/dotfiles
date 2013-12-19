@@ -601,6 +601,7 @@ nnoremap <leader>u :GundoToggle<cr>
 " Khuno {{{
 
 let g:khuno_max_line_length=99
+let g:khuno_ignore="E501"
 
 " }}}
 " Powerline {{{
