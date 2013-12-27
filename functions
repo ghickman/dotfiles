@@ -14,37 +14,6 @@ function pipd {
     run_at_repo_top_level "dev_requirements.txt"
 }
 
-# cd up to given directory, default to the root of a repository
-function cdup () {
-    DIR=$PWD
-    if [ "$1" != "" ]; then
-        TARGET=$1
-    else
-        TARGET=.git
-    fi
-    while [ ! -e $DIR/$TARGET -a $DIR != "/" ]; do
-        DIR=$(dirname $DIR)
-    done
-    test $DIR != "/" && cd $DIR
-}
-
-# share keys to a given host
-function key-share {
-  if [ "${1}" == "" ] ; then
-    echo "Host not specified";
-    echo "Usage key-share [user]@[host]";
-    return 1
-  fi
-
-  host=${1}
-  echo "${host}" | grep -q "@"
-  if [ $? == 1 ] ; then
-    host="incuna@${host}"
-  fi
-
-  cat ~/.ssh/id_george.pub | ssh ${host} 'cat - >> ~/.ssh/authorized_keys'
-}
-
 function man() {
     open dash://man:$1
 }

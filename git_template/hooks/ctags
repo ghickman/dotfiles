@@ -5,7 +5,6 @@ trap "rm -f .git/tags.$$" EXIT
 files=`find . -path *migrations -prune -o -name "*.py"`
 ctags \
     --exclude={.tox,.venv,tags,.git,.sass-cache,.lib} \
-    --exclude=
     --exclude={distribute,virtualenv}* \
     --exclude={*.pyc} \
     -f.git/tags.$$ \
