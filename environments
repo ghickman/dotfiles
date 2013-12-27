@@ -14,13 +14,11 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
 
     # make a python virtualenv with extra options
     function mkvenv {
-        name=""
-        if [ "${1}" == "" ]; then
+        name="${1}"
+        if [ "$name" == "" ]; then
             PWD=`pwd`
             name=`basename $PWD`
             echo "Name not specified, using current dir: $name"
-        else
-            name=${1}
         fi
 
         mkvirtualenv "$name"
