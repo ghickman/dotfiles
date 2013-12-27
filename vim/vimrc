@@ -694,18 +694,18 @@ if executable('ag')
 endif
 
 " }}}
+" Splice {{{
+
+" See https://bitbucket.org/sjl/dotfiles/src/b5e60ade957d/vim/.vimrc#cl-1087
+" for more!
+let g:splice_initial_mode = "grid"
+let g:splice_wrap = "nowrap"
+
+" }}}
 " SuperTab {{{
 
 let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:SuperTabLongestHighlight = 1
-
-" }}}
-" Threesome {{{
-
-" See https://bitbucket.org/sjl/dotfiles/src/b5e60ade957d/vim/.vimrc#cl-1087
-" for more!
-let g:threesome_initial_mode = "grid"
-let g:threesome_wrap = "nowrap"
 
 " }}}
 
