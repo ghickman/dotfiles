@@ -340,12 +340,6 @@ nnoremap <leader>ev <c-w>v:edit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " }}}
-" Help {{{
-
-nnoremap <buffer> <cr> <c-]>
-nnoremap <buffer> <bs> <c-t>
-
-" }}}
 
 " }}}
 " Filetype Specific Stuff ------------------------------------------------ {{{
