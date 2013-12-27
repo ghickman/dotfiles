@@ -2,15 +2,15 @@
 
 # autoenv
 if [ -d "/usr/local/opt/nvie-autoenv/autoenv" ]; then
-    source /usr/local/opt/nvie-autoenv/activate.sh
+    source "/usr/local/opt/nvie-autoenv/activate.sh"
 fi
 
 # virtualenvwrapper
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    export WORKON_HOME=~/.venvs
-    export PROJECT_HOME=~/Projects
-    export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
-    source /usr/local/bin/virtualenvwrapper_lazy.sh
+    export WORKON_HOME="~/.venvs"
+    export PROJECT_HOME="~/Projects"
+    export VIRTUALENVWRAPPER_SCRIPT="/usr/local/bin/virtualenvwrapper.sh"
+    source "/usr/local/bin/virtualenvwrapper_lazy.sh"
 
     # make a python virtualenv with extra options
     function mkvenv {
@@ -23,7 +23,7 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
             name=${1}
         fi
 
-        mkvirtualenv $name
+        mkvirtualenv "$name"
 
         # make a .env in the current directory for autoenv magic
         echo "workon $name" > .env
@@ -37,7 +37,7 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
         echo "Symlinked $WORKON_HOME/$name/lib/python2.7/site-packages to .lib"
 
         # using mkvirtualenv this way seems to break workon
-        workon $name
+        workon "$name"
 
         if [ -e "dev_requirements.txt" ]; then
             pip install -r dev_requirements.txt

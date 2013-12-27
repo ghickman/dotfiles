@@ -20,4 +20,4 @@ TIME="$RED\[\$(date +%H:%M:%S)\]"
 light="$TIME $GREEN\h $BLACK\W$YELLOW\$(__git_ps1)$BLACK\n$ "
 dark="$TIME $GREEN\h $WHITE\W$YELLOW\$(__git_ps1)$WHITE\n$ "
 
-PS1=$dark
+PS1="$dark"
