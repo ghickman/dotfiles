@@ -1,0 +1,36 @@
+#!/bin/bash
+brew cask install \
+alfred \
+appcleaner \
+arq \
+cloudapp \
+colorschemer-studio \
+daisydisk \
+dash \
+dropbox \
+evernote \
+f-lux \
+firefox \
+google-chrome \
+handbrake \
+hipchat \
+inc \
+iterm2 \
+keyremap4macbook \
+lastfm \
+licecap \
+limechat \
+mactracker \
+minecraft \
+moom \
+mumble \
+onepassword \
+rdio \
+sketchup \
+skype \
+sqwiggle \
+steam \
+the-unarchiver \
+unrarx \
+utorrent \
+vlc
