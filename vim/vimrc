@@ -685,12 +685,12 @@ command! SelectaTag :call SelectaCommand("awk '{print $1}' tags | sort -u | grep
 " map <leader>. :SelectaTag<cr>
 
 " }}}
-" Silver Search {{{
+" Silver Searcher {{{
 
-if executable('ag')
+if executable("ag")
     set grepprg=ag\ --nogroup\ --nocolor
 
-    nnoremap <leader>a :Ag<space>
+    nnoremap <leader>g :grep<space>
 endif
 
 " }}}
