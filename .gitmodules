@@ -78,3 +78,6 @@
 [submodule "vim/bundle/khuno"]
 	path = vim/bundle/khuno
 	url = https://github.com/alfredodeza/khuno.vim.git
+[submodule "vim/bundle/ag"]
+	path = vim/bundle/ag
+	url = https://github.com/rking/ag.vim

@@ -544,6 +544,14 @@ augroup END
 " }}}
 " Plugin Specific stuff -------------------------------------------------- {{{
 
+" Ag {{{
+
+if executable("ag")
+    set grepprg=ag\ --nogroup\ --nocolor
+    nnoremap <leader>a :Ag<space>
+endif
+
+" }}}
 " Commentary {{{
 
 nmap <leader>c <Plug>CommentaryLine
@@ -683,15 +691,6 @@ endfunction
 " Find all tags in the tags database, then open the tag that the user selects
 command! SelectaTag :call SelectaCommand("awk '{print $1}' tags | sort -u | grep -v '^!'", ":tag")
 " map <leader>. :SelectaTag<cr>
-
-" }}}
-" Silver Searcher {{{
-
-if executable("ag")
-    set grepprg=ag\ --nogroup\ --nocolor
-
-    nnoremap <leader>g :grep<space>
-endif
 
 " }}}
 " Splice {{{
