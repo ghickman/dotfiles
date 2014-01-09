@@ -8,7 +8,7 @@ brew install nvie-autoenv bash-completion cowsay gnu-typist mobile-shell mtr nma
 brew install git git-extras hub
 
 # Vim
-brew install ctags macvim
+brew install ctags macvim v8
 
 # Search
 brew install ack the_silver_searcher

@@ -87,3 +87,6 @@
 [submodule "vim/bundle/webapi"]
 	path = vim/bundle/webapi
 	url = https://github.com/mattn/webapi-vim.git
+[submodule "vim/bundle/lint"]
+	path = vim/bundle/lint
+	url = https://github.com/joestelmach/lint.vim.git
