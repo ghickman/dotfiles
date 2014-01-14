@@ -90,3 +90,6 @@
 [submodule "vim/bundle/lint"]
 	path = vim/bundle/lint
 	url = https://github.com/joestelmach/lint.vim.git
+[submodule "vim/bundle/vim-less"]
+	path = vim/bundle/vim-less
+	url = https://github.com/groenewege/vim-less
