@@ -4,3 +4,4 @@
 .venv
 tags
 tags.bak
+node_modules
