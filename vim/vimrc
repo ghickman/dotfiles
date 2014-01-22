@@ -384,6 +384,8 @@ augroup END
 augroup ft_html
     au!
 
+    au FileType less setlocal tabstop=2 softtabstop=2 shiftwidth=2
+
     au BufNewFile,BufRead *.html setlocal filetype=htmldjango
     au FileType html,jinja,htmldjango setlocal foldmethod=manual
 
@@ -420,6 +422,15 @@ augroup ft_javascript
 
     au FileType javascript setlocal foldmethod=marker
     au FileType javascript setlocal foldmarker={,}
+augroup END
+
+" }}}
+" LESS {{{
+
+augroup ft_less
+    au!
+
+    au FileType less setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
 " }}}
@@ -539,7 +550,6 @@ augroup ft_yaml
 augroup END
 
 " }}}
-
 
 " }}}
 " Plugin Specific stuff -------------------------------------------------- {{{
