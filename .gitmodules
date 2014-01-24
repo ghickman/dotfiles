@@ -93,3 +93,6 @@
 [submodule "vim/bundle/vim-less"]
 	path = vim/bundle/vim-less
 	url = https://github.com/groenewege/vim-less
+[submodule "vim/bundle/eunuch"]
+	path = vim/bundle/eunuch
+	url = https://github.com/tpope/vim-eunuch.git
