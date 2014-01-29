@@ -253,10 +253,20 @@ set sidescrolloff=10
 " }}}
 " Search ----------------------------------------------------------------- {{{
 
-set hlsearch
-set incsearch
+" http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+
+" Use perl/python style regex in searches
+nnoremap / /\v
+vnoremap / /\v
+
+" Case-sensitive search only with caps in search string
 set ignorecase
 set smartcase
+
+" Match while typing
+set hlsearch
+set incsearch
+set showmatch
 
 " Clear search highlighting.
 map <leader><space> :nohls<cr>
@@ -384,9 +394,9 @@ augroup END
 augroup ft_html
     au!
 
-    au FileType less setlocal tabstop=2 softtabstop=2 shiftwidth=2
-
     au BufNewFile,BufRead *.html setlocal filetype=htmldjango
+
+    au FileType html,jinja,htmldjango setlocal tabstop=2 softtabstop=2 shiftwidth=2
     au FileType html,jinja,htmldjango setlocal foldmethod=manual
 
     " Use <localleader>f to fold the current tag.
