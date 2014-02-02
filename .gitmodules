@@ -99,3 +99,6 @@
 [submodule "vim/bundle/swap-parameters"]
 	path = vim/bundle/swap-parameters
 	url = https://github.com/vim-scripts/swap-parameters.git
+[submodule "vim/bundle/isort"]
+	path = vim/bundle/isort
+	url = https://github.com/fisadev/vim-isort.git
