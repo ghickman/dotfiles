@@ -53,6 +53,9 @@
 [help]
     autocorrect = 1
 
+[diff]
+    algorithm = patience
+
 [merge]
     conflictstyle = diff3
     tool = splice
