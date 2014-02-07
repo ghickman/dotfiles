@@ -75,9 +75,6 @@
 [submodule "vim/bundle/keyboard_cat"]
 	path = vim/bundle/keyboard_cat
 	url = https://github.com/natw/keyboard_cat.vim.git
-[submodule "vim/bundle/khuno"]
-	path = vim/bundle/khuno
-	url = https://github.com/alfredodeza/khuno.vim.git
 [submodule "vim/bundle/ag"]
 	path = vim/bundle/ag
 	url = https://github.com/rking/ag.vim
@@ -102,3 +99,6 @@
 [submodule "vim/bundle/isort"]
 	path = vim/bundle/isort
 	url = https://github.com/fisadev/vim-isort.git
+[submodule "vim/bundle/flake8"]
+	path = vim/bundle/flake8
+	url = https://github.com/nvie/vim-flake8.git
