@@ -28,6 +28,7 @@ set list
 set listchars=tab:▸\ ,extends:❯,precedes:❮
 set modelines=0
 set noerrorbells
+set nojoinspaces
 set nospell
 set novisualbell
 set number
