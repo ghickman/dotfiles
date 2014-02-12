@@ -13,7 +13,6 @@ brew cask install dropbox
 brew cask install evernote
 brew cask install f-lux
 brew cask install firefox
-brew cask install google-chrome
 brew cask install handbrake
 brew cask install hipchat
 brew cask install inc
