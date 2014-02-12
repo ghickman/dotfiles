@@ -1,9 +1,8 @@
 #!/bin/bash
 
-# Load ~/.bash_prompt, ~/.vars, ~/.aliases, ~/.functions and ~/.extra
-# ~/.extra can be used for settings you don’t want to commit
-for file in functions prompt vars aliases environments extra; do
-  file="$HOME/.$file"
+configs="$HOME/.bash"
+for file in `ls -1 $configs`; do
+  file="$configs/$file"
   [ -e "$file" ] && source "$file"
 done
 
