@@ -2,7 +2,7 @@ My dotfiles repo.
 
 ## Installation
 
-    git clone git://github.com/ghickman/dotfiles.git
+    git clone git@github.com:ghickman/dotfiles
 
-    python bootstrap.py
+    ./bootstrap.sh
 
