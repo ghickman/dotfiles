@@ -1,33 +1,36 @@
 #!/bin/bash
-brew cask install \
-alfred \
-appcleaner \
-arq \
-cloudapp \
-colorschemer-studio \
-daisydisk \
-dropbox \
-evernote \
-f-lux \
-firefox \
-google-chrome \
-handbrake \
-hipchat \
-inc \
-iterm2 \
-keyremap4macbook \
-lastfm \
-licecap \
-limechat \
-mactracker \
-minecraft \
-mumble \
-rdio \
-sketchup \
-skype \
-sqwiggle \
-steam \
-the-unarchiver \
-unrarx \
-utorrent \
-vlc
+
+brew tap phinze/homebrew-cask
+brew install brew-cask
+
+brew cask install alfred
+brew cask install appcleaner
+brew cask install arq
+brew cask install cloudapp
+brew cask install colorschemer-studio
+brew cask install daisydisk
+brew cask install dropbox
+brew cask install evernote
+brew cask install f-lux
+brew cask install firefox
+brew cask install google-chrome
+brew cask install handbrake
+brew cask install hipchat
+brew cask install inc
+brew cask install iterm2
+brew cask install keyremap4macbook
+brew cask install lastfm
+brew cask install licecap
+brew cask install limechat
+brew cask install mactracker
+brew cask install minecraft
+brew cask install mumble
+brew cask install rdio
+brew cask install sketchup
+brew cask install skype
+brew cask install sqwiggle
+brew cask install steam
+brew cask install the-unarchiver
+brew cask install unrarx
+brew cask install utorrent
+brew cask install vlc

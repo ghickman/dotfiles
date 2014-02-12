@@ -1,25 +1,50 @@
+#!/bin/bash
+
 # Taps
 brew tap nvie/autoenv
-brew tap phinze/homebrew-cask
-brew install brew-cask
 
 # Basics
-brew install nvie-autoenv bash-completion cowsay gnu-typist mobile-shell mtr nmap s3cmd watch wget
+brew install nvie-autoenv
+brew install bash-completion
+brew install cowsay
+brew install gnu-typist
+brew install mobile-shell
+brew install mtr
+brew install nmap
+brew install s3cmd
+brew install watch
+brew install wget
 
 # Git
-brew install git git-extras hub
+brew install git
+brew install git-extras
+brew install hub
 
 # Vim
-brew install ctags macvim v8
+brew install ctags
+brew install macvim
 
 # Search
-brew install ack the_silver_searcher
+brew install ack
+brew install the_silver_searcher
 
 # Mutt
-brew install contacts msmtp mutt --sidebar-patch notmuch offline-imap sqlite urlview
+brew install contacts
+brew install msmtp
+brew install mutt --sidebar-patch
+brew install notmuch
+brew install offline-imap
+brew install sqlite
+brew install urlview
 
 # Dev
-brew install libmemcached markdown memcached redis solr
+brew install libmemcached
+brew install markdown
+brew install memcached
+brew install redis
+brew install solr
 
 # Python
-brew install python python3 pypy
+brew install python
+brew install python3
+brew install pypy
