@@ -1,0 +1,66 @@
+defaults:
+  extension:
+    - .avi
+    - .mp4
+    - .mkv
+  format: '%n - %s%e - %t%x'
+  ignore:
+    - .DS_Store
+    - thumbs.db
+  library: thetvdb
+  organise: yes
+  renamed: /Volumes/Media/TV/
+  the: true
+  deluge:
+    share ratio: '2.0'
+    finished: yes
+
+'24':
+  format: '%n - %s%e'
+
+american dad:
+  canonical: American Dad!
+
+archer 2009:
+  canonical: Archer (2009)
+
+battlestar galactica blood and chrome:
+  canonical: 'Battlestar Galactica: Blood & Chrome'
+
+castle 2009:
+  canonical: Castle (2009)
+
+csi:
+  canonical: 'CSI: Crime Scene Investigation'
+  output: 'CSI, Crime Scene Investigation'
+
+doctor who 2005:
+  canonical: Doctor Who (2005)
+
+'highlander - the animated series':
+  canonical: 'Highlander: The Animated Series'
+  format: '%n.-.%sx%e.-.'
+
+'marvels agents of s h i e l d':
+  canonical: "Marvel's Agents of S.H.I.E.L.D."
+
+once upon a time:
+  canonical: 'Once Upon a Time (2011)'
+
+'the newsroom 2012':
+  canonical: The Newsroom (2012)
+
+"the avengers earths mightiest heroes":
+  canonical: "The Avengers: Earth's Mightiest Heroes"
+
+the it crowd:
+  the: false
+
+the killing:
+  canonical: The Killing (2011)
+
+the simpsons:
+  the: false
+
+thundercats 2011:
+  canonical: ThunderCats (2011)
