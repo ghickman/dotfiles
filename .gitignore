@@ -1,4 +1,6 @@
 bash/local
-pip/{cache,wheels,pip.log}
+pip/cache
+pip/wheels
+pip/pip.log
 tvrenamr/cache
 tvrenamr/*.log*
