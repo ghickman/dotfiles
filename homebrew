@@ -1,5 +1,7 @@
 # Taps
-brew tap nvie/autoenv phinze/homebrew-cask
+brew tap nvie/autoenv
+brew tap phinze/homebrew-cask
+brew install brew-cask
 
 # Basics
 brew install nvie-autoenv bash-completion cowsay gnu-typist mobile-shell mtr nmap s3cmd watch wget
