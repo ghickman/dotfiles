@@ -9,6 +9,12 @@ if [ -d "/Applications/Postgres93.app" ]; then
     export PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
 fi
 
+# Heroku Toolbelt
+heroku="/usr/local/heroku/bin"
+if [ -d "$heroku" ]; then
+    export PATH="$heroku:$PATH"
+fi
+
 # Vim as Default Editor
 export EDITOR=`which vim`
 
