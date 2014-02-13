@@ -25,3 +25,11 @@ done < "$PWD/link-files"
 
 echo "========== configure preferences"
 ./osx
+
+echo "========== install root cert bundle"
+certs_home="/System/Library/OpenSSL/certs/"
+if [ ! -d "$certs_home/cacert.org" ]; then
+    curl -O https://s3-eu-west-1.amazonaws.com/ghickman-misc/install/certs.tar.gz
+    tar xzf certs.tar.gz
+    sudo mv certs/* $certs_home
+fi
