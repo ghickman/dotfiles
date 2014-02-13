@@ -24,6 +24,7 @@ brew cask install limechat
 brew cask install mactracker
 brew cask install minecraft
 brew cask install mumble
+brew cask install pixelstick
 brew cask install rdio
 brew cask install sketchup
 brew cask install skype
