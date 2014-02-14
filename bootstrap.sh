@@ -33,8 +33,8 @@ fi
 
 echo "========== install monaco powerline font"
 font="Monaco-Powerline.otf"
-fonts_location="~/Library/Fonts"
-if [ ! -d "$fonts_location/$font" ]; then
+fonts_location="~/Library/Fonts/"
+if [ ! -d "$fonts_location$font" ]; then
     curl -O https://s3-eu-west-1.amazonaws.com/ghickman-misc/install/Monaco-Powerline.otf
     mv $font $fonts_location
 fi
