@@ -39,5 +39,9 @@ if [ ! -d "$fonts_location$font" ]; then
     mv $font $fonts_location
 fi
 
+echo "========== init vim submodules"
+cd ~/.files
+git submodule init --update
+
 echo "========== configure preferences"
 ./osx
