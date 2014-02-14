@@ -23,9 +23,6 @@ while read name; do
 
 done < "$PWD/link-files"
 
-echo "========== configure preferences"
-./osx
-
 echo "========== install root cert bundle"
 certs_home="/System/Library/OpenSSL/certs/"
 if [ ! -d "$certs_home/cacert.org" ]; then
@@ -41,3 +38,6 @@ if [ ! -d "$fonts_location/$font" ]; then
     curl -O https://s3-eu-west-1.amazonaws.com/ghickman-misc/install/Monaco-Powerline.otf
     mv $font $fonts_location
 fi
+
+echo "========== configure preferences"
+./osx
