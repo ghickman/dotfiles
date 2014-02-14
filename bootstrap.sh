@@ -29,6 +29,7 @@ if [ ! -d "$certs_home/cacert.org" ]; then
     curl -O https://s3-eu-west-1.amazonaws.com/ghickman-misc/install/certs.tar.gz
     tar xzf certs.tar.gz
     sudo mv certs/* $certs_home
+    rm certs.tar.gz
 fi
 
 echo "========== install monaco powerline font"
