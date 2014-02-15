@@ -49,7 +49,7 @@ fi
 
 echo "========== init vim submodules"
 cd ~/.files
-git submodule init --update
+git submodule update --init
 
 echo "========== configure preferences"
 ./osx
