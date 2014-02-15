@@ -1,5 +1,7 @@
 echo "========== install homebrew"
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+if ! hash brew 2>/dev/null; then
+    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+fi
 
 echo "========== brew the world"
 ./homebrew
