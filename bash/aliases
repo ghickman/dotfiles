@@ -5,7 +5,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 
 # Use Hub
-if [ x`which hub` != x ]; then
+if hash brew 2>/dev/null; then
     alias git=hub
 fi
 
@@ -39,6 +39,6 @@ alias solr="/usr/local/bin/solr $SOLR_CONF"
 # Mutt
 alias mutt="cd ~/Desktop && /usr/local/bin/mutt"
 
-if [ x`which brew` != x ]; then
+if hash brew 2>/dev/null; then
     alias cask="brew cask"
 fi
