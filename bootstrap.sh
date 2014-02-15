@@ -29,10 +29,11 @@ echo "========== install limechat theme"
 themes="~/Library/Application\ Support/LimeChat/Themes/"
 ln -s limechat/solarized-dark.* $themes
 
+$bucket="https://s3-eu-west-1.amazonaws.com/ghickman-misc/install"
 echo "========== install root cert bundle"
 certs_home="/System/Library/OpenSSL/certs/"
 if [ ! -d "$certs_home/cacert.org" ]; then
-    curl -O https://s3-eu-west-1.amazonaws.com/ghickman-misc/install/certs.tar.gz
+    curl -O --silent "$bucket/certs.tar.gz"
     tar xzf certs.tar.gz
     sudo mv certs/* $certs_home
     rm certs.tar.gz
@@ -42,7 +43,7 @@ echo "========== install monaco powerline font"
 font="Monaco-Powerline.otf"
 fonts_location="~/Library/Fonts/"
 if [ ! -d "$fonts_location$font" ]; then
-    curl -O https://s3-eu-west-1.amazonaws.com/ghickman-misc/install/Monaco-Powerline.otf
+    curl -O --silent "$bucket/Monaco-Powerline.otf"
     mv $font $fonts_location
 fi
 
