@@ -29,7 +29,7 @@ echo "========== install limechat theme"
 themes="~/Library/Application\ Support/LimeChat/Themes/"
 ln -s limechat/solarized-dark.* $themes
 
-$bucket="https://s3-eu-west-1.amazonaws.com/ghickman-misc/install"
+bucket="https://s3-eu-west-1.amazonaws.com/ghickman-misc/install"
 echo "========== install root cert bundle"
 certs_home="/System/Library/OpenSSL/certs/"
 if [ ! -d "$certs_home/cacert.org" ]; then
