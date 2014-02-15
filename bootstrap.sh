@@ -23,6 +23,10 @@ while read name; do
 
 done < "$PWD/link-files"
 
+echo "========== install limechat theme"
+themes="~/Library/Application\ Support/LimeChat/Themes/"
+ln -s limechat/solarized-dark.* $themes
+
 echo "========== configure preferences"
 ./osx
 
