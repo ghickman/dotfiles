@@ -47,6 +47,11 @@ if [ ! -d "$fonts_location$font" ]; then
     mv $font $fonts_location
 fi
 
+# Install pretty iTerm colors
+curl -O --silent "$bucket/solarized-dark.itermcolors"
+open "solarized-dark.itermcolors"
+rm "solarized-dark.itermcolors"
+
 echo "========== init vim submodules"
 cd ~/.files
 git submodule update --init

@@ -350,11 +350,6 @@ defaults write com.apple.terminal StringEncodings -array 4
 defaults write com.apple.terminal "Default Window Settings" -string "Pro"
 defaults write com.apple.terminal "Startup Window Settings" -string "Pro"
 
-# Install pretty iTerm colors
-curl -O "https://s3-eu-west-1.amazonaws.com/ghickman-misc/install/solarized-dark.itermcolors"
-open "solarized-dark.itermcolors"
-rm "solarized-dark.itermcolors"
-
 ###############################################################################
 # Activity Monitor                                                            #
 ###############################################################################
