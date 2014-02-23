@@ -1,0 +1,6 @@
+isort
+pip
+tvrenamr
+twine
+virtualenv
+virtualenvwrapper
