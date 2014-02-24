@@ -5,6 +5,7 @@ brew tap nvie/autoenv
 
 # Basics
 brew install nvie-autoenv
+brew install bash
 brew install bash-completion
 brew install cowsay
 brew install gnu-typist
