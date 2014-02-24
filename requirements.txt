@@ -1,0 +1,8 @@
+git+https://github.com/nvie/pyflakes  # fixes issue with python3 checking
+flake8
+isort
+pip
+tvrenamr
+twine
+virtualenv
+virtualenvwrapper
