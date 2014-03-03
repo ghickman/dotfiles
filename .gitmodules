@@ -102,3 +102,6 @@
 [submodule "vim/bundle/khuno"]
 	path = vim/bundle/khuno
 	url = https://github.com/alfredodeza/khuno.vim.git
+[submodule "vim/bundle/angular-template"]
+	path = vim/bundle/angular-template
+	url = https://github.com/curist/vim-angular-template.git
