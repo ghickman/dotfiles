@@ -20,4 +20,10 @@ syn region angularVarBlock start="{{" end="}}" display
 " Keywords to highlight within comments
 syn keyword angularTodo contained TODO FIXME XXX
 
+" Set up the highlights
+highlight def link angularVarBlock PreProc
+highlight def link angularStatement Statement
+highlight def link angularError Error
+highlight def link angularTodo Todo
+
 let b:current_syntax = "angular"
