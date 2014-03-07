@@ -6,7 +6,6 @@ brew install brew-cask
 brew cask install alfred
 brew cask install appcleaner
 brew cask install arq
-brew cask install cloudapp
 brew cask install colorschemer-studio
 brew cask install daisydisk
 brew cask install dropbox

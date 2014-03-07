@@ -390,18 +390,21 @@ augroup ft_css
 augroup END
 
 " }}}
-" HTML and HTMLDjango {{{
+" HTML and HTML derivatives {{{
 
 augroup ft_html
     au!
 
-    au BufNewFile,BufRead *.html setlocal filetype=htmldjango
+    au BufNewFile,BufRead *.html setlocal filetype=angular
+    au BufNewFile,BufRead *jinja2.html setlocal filetype=htmldjango
 
-    au FileType html,jinja,htmldjango setlocal tabstop=2 softtabstop=2 shiftwidth=2
-    au FileType html,jinja,htmldjango setlocal foldmethod=manual
+    au FileType angular,html,htmldjango setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    au FileType angular,html,htmldjango setlocal foldmethod=manual
+
+    autocmd FileType angular set commentstring=<!--\ %s\ -->
 
     " Use <localleader>f to fold the current tag.
-    au FileType html,jinja,htmldjango nnoremap <buffer> <localleader>f Vatzf
+    au FileType angular,html,htmldjango nnoremap <buffer> <localleader>f Vatzf
 
     " Use Shift-Return to turn this:
     "     <tag>|</tag>
@@ -410,13 +413,13 @@ augroup ft_html
     "     <tag>
     "         |
     "     </tag>
-    au FileType html,jinja,htmldjango nnoremap <buffer> <s-cr> vit<esc>a<cr><esc>vito<esc>i<cr><esc>
+    au FileType angular,html,htmldjango nnoremap <buffer> <s-cr> vit<esc>a<cr><esc>vito<esc>i<cr><esc>
 
     " Django tags
-    au FileType jinja,htmldjango inoremap <buffer> <c-t> {%<space><space>%}<left><left><left>
+    au FileType htmldjango inoremap <buffer> <c-t> {%<space><space>%}<left><left><left>
 
-    " Django variables
-    au FileType jinja,htmldjango inoremap <buffer> <c-f> {{<space><space>}}<left><left><left>
+    " Angular and Django variables
+    au FileType angular,htmldjango inoremap <buffer> <c-f> {{<space><space>}}<left><left><left>
 augroup END
 
 " }}}

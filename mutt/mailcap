@@ -1,3 +1,6 @@
+# TXT documents
+text/plain; ~/.mutt/view_attachment.sh %s txt
+
 # MS Word documents
 application/msword; ~/.mutt/view_attachment.sh %s "-" '/Applications/TextEdit.app'
 
