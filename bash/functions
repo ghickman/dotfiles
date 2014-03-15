@@ -17,3 +17,8 @@ function pipd {
 function man() {
     open dash://man:$1
 }
+
+function take() {
+    mkdir -p "$1"
+    cd "$1"
+}
