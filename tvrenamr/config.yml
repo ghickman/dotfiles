@@ -12,9 +12,6 @@ defaults:
   renamed: /Volumes/Media/TV/
   specials_folder: Specials
   the: true
-  deluge:
-    share ratio: '2.0'
-    finished: yes
 
 '24':
   format: '%n - %s%e'
