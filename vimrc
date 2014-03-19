@@ -731,6 +731,7 @@ command! SelectaTag :call SelectaCommand("awk '{print $1}' tags | sort -u | grep
 " See https://bitbucket.org/sjl/dotfiles/src/b5e60ade957d/vim/.vimrc#cl-1087
 " for more!
 let g:splice_initial_mode = "grid"
+let g:splice_initial_layout_grid = "1"
 let g:splice_wrap = "nowrap"
 
 " }}}
