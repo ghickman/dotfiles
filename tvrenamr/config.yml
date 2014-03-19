@@ -10,6 +10,7 @@ defaults:
   library: thetvdb
   organise: yes
   renamed: /Volumes/Media/TV/
+  specials_folder: Specials
   the: true
   deluge:
     share ratio: '2.0'
