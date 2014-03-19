@@ -56,5 +56,8 @@ echo "========== init vim submodules"
 cd ~/.files
 git submodule update --init
 
+echo "========== install pip requirements"
+sudo pip install -r requirements.txt
+
 echo "========== configure preferences"
 ./osx
