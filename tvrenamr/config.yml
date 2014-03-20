@@ -42,6 +42,10 @@ doctor who 2005:
 'marvels agents of s h i e l d':
   canonical: "Marvel's Agents of S.H.I.E.L.D."
 
+"marvel's avengers assemble":
+  canonical: 'avengers assemble'
+  library: 'tvrage'
+
 once upon a time:
   canonical: 'Once Upon a Time (2011)'
 
