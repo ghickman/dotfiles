@@ -647,57 +647,6 @@ let g:Powerline_colorscheme = 'solarized256'
 let g:Powerline_symbols = 'fancy'
 
 " }}}
-" Python Mode {{{
-
-" General
-let g:pymode_breakpoint = 0
-let g:pymode_lint = 0
-let g:pymode_options_fold = 0
-let g:pymode_options_indent = 0
-let g:pymode_options_other = 0
-let g:pymode_run = 1
-let g:pymode_utils_whitespaces = 0
-let g:pymode_virtualenv = 1
-
-" Docs
-let g:pymode_doc = 1
-let g:pymode_doc_key = '<leader>k'
-let g:pydoc = 'pydoc'
-
-" Rope
-let g:pymode_rope = 1
-let g:pymode_rope_always_show_complete_menu = 0
-let g:pymode_rope_autoimport_generate = 1
-let g:pymode_rope_autoimport_modules = ['os', 'shutil', 'datetime']
-let g:pymode_rope_autoimport_underlineds = 0
-let g:pymode_rope_codeassist_maxfixes = 10
-let g:pymode_rope_confirm_saving = 1
-let g:pymode_rope_enable_autoimport = 0
-let g:pymode_rope_global_prefix = '<localleader>R'
-let g:pymode_rope_goto_def_newwin = 0
-let g:pymode_rope_local_prefix = '<localleader>r'
-
-" Force creation/usage of .ropeproject files for sanity
-let g:pymode_rope_guess_project = 0
-
-" Disable rope code completion
-let g:pymode_rope_extended_complete = 0
-let g:pymode_rope_vim_completion = 0
-
-map <leader>g :call RopeGotoDefinition()<cr>
-
-" Syntax Highlighting
-let g:pymode_syntax = 1
-let g:pymode_syntax_all = 1
-let g:pymode_syntax_builtin_objs = 1
-let g:pymode_syntax_highlight_exceptions = 1
-let g:pymode_syntax_indent_errors = 1
-let g:pymode_syntax_print_as_function = 1
-let g:pymode_syntax_slow_sync = 0
-let g:pymode_syntax_string_format = 1
-let g:pymode_syntax_string_formatting = 1
-
-" }}}
 " Scratch {{{
 
 nnoremap <silent> <leader><tab> :Sscratch<cr>
