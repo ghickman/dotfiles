@@ -6,6 +6,7 @@ fi
 echo "========== brew the world"
 ./homebrew
 
+sudo /usr/bin/xcodebuild -license
 
 echo "========== link files"
 while read name; do
