@@ -46,7 +46,6 @@ brew install mutt --sidebar-patch
 # Dev
 brew install libmemcached
 brew install markdown
-brew install memcached
 brew install redis
 brew install solr
 
