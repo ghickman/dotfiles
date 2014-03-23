@@ -57,6 +57,7 @@ cd ~/.files
 git submodule update --init
 
 echo "========== install pip requirements"
+mkdir ~/.pip/{cache,wheels}
 sudo pip install -r requirements.txt
 
 echo "========== configure preferences"
