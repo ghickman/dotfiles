@@ -33,3 +33,5 @@ brew cask install the-unarchiver
 brew cask install unrarx
 brew cask install utorrent
 brew cask install vlc
+
+brew cask alfred link
