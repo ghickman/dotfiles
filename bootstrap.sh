@@ -63,5 +63,10 @@ echo "========== install pip requirements"
 mkdir ~/.pip/{cache,wheels}
 pip install --upgrade -r requirements.txt
 
+echo "========== textmate"
+curl -O --silent "http://archive.textmate.org/TextMate_1.5.11_r1635.zip"
+curl -O --silent "https://raw.githubusercontent.com/altercation/solarized/master/textmate-colors-solarized/Solarized%20(dark).tmTheme"
+open "~/Downloads/"
+
 echo "========== configure preferences"
 ./osx
