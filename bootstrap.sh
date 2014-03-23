@@ -28,7 +28,8 @@ echo "========== cask all the things"
 ./casks
 
 echo "========== install limechat theme"
-themes="~/Library/Application\ Support/LimeChat/Themes/"
+themes="~/Library/Application Support/LimeChat/Themes/"
+mkdir $themes
 ln -s limechat/solarized-dark.* $themes
 
 bucket="https://s3-eu-west-1.amazonaws.com/ghickman-misc/install"
