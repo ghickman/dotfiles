@@ -10,7 +10,7 @@ brew cask install colorschemer-studio
 brew cask install daisydisk
 brew cask install dropbox
 brew cask install evernote
-brew cask install f-lux
+brew cask install flux
 brew cask install firefox
 brew cask install handbrake
 brew cask install hipchat
