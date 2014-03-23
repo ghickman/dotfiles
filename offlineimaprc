@@ -25,7 +25,7 @@ nametrans = lambda folder: {
 [Repository ghickman-remote]
 maxconnections = 1
 type = Gmail
-sslcacertfile = /System/Library/OpenSSL/certs/cacert.org/cacert.org.crt
+sslcacertfile = /System/Library/OpenSSL/certs/ca-certificates.crt
 remoteuser = george@ghickman.co.uk
 remotepasseval = get_keychain_pass(account="george@ghickman.co.uk", server="imap.gmail.com")
 realdelete = no
