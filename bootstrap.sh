@@ -6,8 +6,6 @@ fi
 echo "========== brew the world"
 ./homebrew
 
-echo "========== cask all the things"
-./casks
 
 echo "========== link files"
 while read name; do
@@ -24,6 +22,9 @@ while read name; do
     echo "Linked $source to $target"
 
 done < "$PWD/link-files"
+
+echo "========== cask all the things"
+./casks
 
 echo "========== install limechat theme"
 themes="~/Library/Application\ Support/LimeChat/Themes/"
