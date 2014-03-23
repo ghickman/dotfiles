@@ -60,7 +60,7 @@ git submodule update --init
 
 echo "========== install pip requirements"
 mkdir ~/.pip/{cache,wheels}
-sudo pip install --upgrade -r requirements.txt
+pip install --upgrade -r requirements.txt
 
 echo "========== configure preferences"
 ./osx
