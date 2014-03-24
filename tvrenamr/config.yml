@@ -32,6 +32,10 @@ csi:
   canonical: 'CSI: Crime Scene Investigation'
   output: 'CSI, Crime Scene Investigation'
 
+cosmos a space time odyssey:
+  canonical: 'Cosmos: A Spacetime Odyssey'
+  output: 'Cosmos, A Spacetime Odyssey'
+
 doctor who 2005:
   canonical: Doctor Who (2005)
 
