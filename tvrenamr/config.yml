@@ -50,6 +50,9 @@ doctor who 2005:
   canonical: 'avengers assemble'
   library: 'tvrage'
 
+NTSF SD SUV:
+  canonical: 'NTSF:SD:SUV::'
+
 once upon a time:
   canonical: 'Once Upon a Time (2011)'
 
