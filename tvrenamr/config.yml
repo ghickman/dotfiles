@@ -47,8 +47,7 @@ doctor who 2005:
   canonical: "Marvel's Agents of S.H.I.E.L.D."
 
 "marvel's avengers assemble":
-  canonical: 'avengers assemble'
-  library: 'tvrage'
+  canonical: 'avengers assemble (2013)'
 
 NTSF SD SUV:
   canonical: 'NTSF:SD:SUV::'
