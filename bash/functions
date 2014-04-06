@@ -22,3 +22,11 @@ function take() {
     mkdir -p "$1"
     cd "$1"
 }
+
+function vc() {
+    if [ git-modified ]; then
+        mvim `git-modified`;
+    else
+        echo "(nothing changed)"
+    fi
+}

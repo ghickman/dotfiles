@@ -102,3 +102,6 @@
 [submodule "vim/bundle/angular-template"]
 	path = vim/bundle/angular-template
 	url = https://github.com/curist/vim-angular-template.git
+[submodule "git-toolbelt"]
+	path = git-toolbelt
+	url = git@github.com:nvie/git-toolbelt.git

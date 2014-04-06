@@ -4,6 +4,11 @@
 # base
 export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 
+# git toolbelt
+if [ -d "$HOME/.files/git-toolbelt" ]; then
+    export PATH="$HOME/.files/git-toolbelt:$PATH"
+fi
+
 # postgres
 if [ -d "/Applications/Postgres.app" ]; then
     export PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
