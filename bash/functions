@@ -24,8 +24,8 @@ function take() {
 }
 
 function vc() {
-    if [ git-modified ]; then
-        mvim `git-modified`;
+    if [ git modified ]; then
+        mvim `git modified`;
     else
         echo "(nothing changed)"
     fi
