@@ -32,5 +32,5 @@ function vc() {
 }
 
 function fae() {
-    vim `ag --nocolor --nobreak --noheading -l $1`
+    vim `ag --nocolor -l $1`
 }
