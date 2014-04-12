@@ -30,3 +30,7 @@ function vc() {
         echo "(nothing changed)"
     fi
 }
+
+function fae() {
+    vim `ag --nocolor --nobreak --noheading -l $1`
+}
