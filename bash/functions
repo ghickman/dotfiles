@@ -34,3 +34,7 @@ function vc() {
 function fae() {
     vim `ag --nocolor -l $1`
 }
+
+function ipnt() {
+    mktmpenv && pip install ipython jinja2 pyzmq tornado && ipython notebook
+}
