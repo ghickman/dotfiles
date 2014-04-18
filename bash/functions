@@ -11,7 +11,7 @@ function pipr {
 }
 
 function pipd {
-    run_at_repo_top_level "dev_requirements.txt"
+    run_at_repo_top_level "dev-requirements.txt"
 }
 
 function man() {
