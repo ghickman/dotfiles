@@ -10,6 +10,8 @@
 .ropeproject
 .sass-cache
 .env
+.envrc
+.direnv
 *.egg-info
 dist
 tags
