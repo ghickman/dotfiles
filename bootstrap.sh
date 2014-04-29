@@ -70,3 +70,6 @@ open "~/Downloads/"
 
 echo "========== configure preferences"
 ./osx
+
+echo "========== create maildir"
+mkdir -p ~/.mail/george-ghickman.co.uk
