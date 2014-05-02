@@ -38,6 +38,7 @@ alias solr="/usr/local/bin/solr $SOLR_CONF"
 
 # Mutt
 alias mutt="cd ~/Desktop && /usr/local/bin/mutt"
+alias ffs=`ps aux | grep offline | grep -v grep | awk {'print $2'} | xargs kill -9`
 
 if hash brew 2>/dev/null; then
     alias cask="brew cask"
