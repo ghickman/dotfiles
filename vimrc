@@ -445,6 +445,8 @@ augroup ft_less
     au!
 
     au FileType less setlocal tabstop=2 softtabstop=2 shiftwidth=2
+
+    au Filetype less inoremap <c-cr> <esc>A {<cr>}<esc>O
 augroup END
 
 " }}}
