@@ -32,7 +32,7 @@ function vc() {
 }
 
 function fae() {
-    vim `ag --nocolor -l "$1"`
+    mvim `ag --nocolor -l "$1"`
 }
 
 function ipnt() {
