@@ -25,7 +25,7 @@ set history=1000
 set laststatus=2
 set linebreak
 set list
-set listchars=tab:▸\ ,extends:❯,precedes:❮
+set listchars=tab:▸\ ,extends:❯,precedes:❮,trail:·,nbsp:·
 set modelines=0
 set noerrorbells
 set nojoinspaces
