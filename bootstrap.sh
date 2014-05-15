@@ -65,8 +65,11 @@ pip install --upgrade -r requirements.txt
 
 echo "========== textmate"
 curl -O --silent "http://archive.textmate.org/TextMate_1.5.11_r1635.zip"
+unzip TextMate_1.5.11_r1635.zip
+mv TextMate.app /Applications/
+rm TextMate_1.5.11_r1635.zip
 curl -O --silent "https://raw.githubusercontent.com/altercation/solarized/master/textmate-colors-solarized/Solarized%20(dark).tmTheme"
-open "~/Downloads/"
+open "$HOME/.files/Solarized%20(dark).tmTheme"
 
 echo "========== configure preferences"
 ./osx
