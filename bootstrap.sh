@@ -33,14 +33,6 @@ mkdir $themes
 ln -s $HOME/.files/limechat/solarized-dark.* $themes
 
 bucket="https://s3-eu-west-1.amazonaws.com/ghickman-misc/install"
-echo "========== install root cert bundle"
-certs_home="/System/Library/OpenSSL/certs/"
-if [ ! -d "$certs_home/cacert.org" ]; then
-    curl -O --silent "$bucket/certs.tar.gz"
-    tar xzf certs.tar.gz
-    sudo mv certs/* $certs_home
-    rm certs.tar.gz
-fi
 
 echo "========== install monaco powerline font"
 font="Monaco-Powerline.otf"
