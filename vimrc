@@ -25,7 +25,7 @@ set history=1000
 set laststatus=2
 set linebreak
 set list
-set listchars=tab:▸\ ,extends:❯,precedes:❮
+set listchars=tab:▸\ ,extends:❯,precedes:❮,trail:·,nbsp:·
 set modelines=0
 set noerrorbells
 set nojoinspaces
@@ -445,6 +445,8 @@ augroup ft_less
     au!
 
     au FileType less setlocal tabstop=2 softtabstop=2 shiftwidth=2
+
+    au Filetype less inoremap <c-cr> <esc>A {<cr>}<esc>O
 augroup END
 
 " }}}

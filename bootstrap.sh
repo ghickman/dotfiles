@@ -1,3 +1,5 @@
+sudo /usr/bin/xcodebuild -license
+
 echo "========== install homebrew"
 if ! hash brew 2>/dev/null; then
     ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
@@ -5,8 +7,6 @@ fi
 
 echo "========== brew the world"
 ./homebrew
-
-sudo /usr/bin/xcodebuild -license
 
 echo "========== link files"
 while read name; do
@@ -30,17 +30,9 @@ echo "========== cask all the things"
 echo "========== install limechat theme"
 themes="~/Library/Application Support/LimeChat/Themes/"
 mkdir $themes
-ln -s limechat/solarized-dark.* $themes
+ln -s $HOME/.files/limechat/solarized-dark.* $themes
 
 bucket="https://s3-eu-west-1.amazonaws.com/ghickman-misc/install"
-echo "========== install root cert bundle"
-certs_home="/System/Library/OpenSSL/certs/"
-if [ ! -d "$certs_home/cacert.org" ]; then
-    curl -O --silent "$bucket/certs.tar.gz"
-    tar xzf certs.tar.gz
-    sudo mv certs/* $certs_home
-    rm certs.tar.gz
-fi
 
 echo "========== install monaco powerline font"
 font="Monaco-Powerline.otf"
@@ -65,8 +57,11 @@ pip install --upgrade -r requirements.txt
 
 echo "========== textmate"
 curl -O --silent "http://archive.textmate.org/TextMate_1.5.11_r1635.zip"
+unzip TextMate_1.5.11_r1635.zip
+mv TextMate.app /Applications/
+rm TextMate_1.5.11_r1635.zip
 curl -O --silent "https://raw.githubusercontent.com/altercation/solarized/master/textmate-colors-solarized/Solarized%20(dark).tmTheme"
-open "~/Downloads/"
+open "$HOME/.files/Solarized%20(dark).tmTheme"
 
 echo "========== configure preferences"
 ./osx

@@ -45,5 +45,6 @@ if hash brew 2>/dev/null; then
 fi
 
 # Project Directories
+alias c="cd /Volumes/Media/Downloads/complete/"
 alias t="cd ~/Projects/tvr"
 alias y="cd ~/Projects/yes"
