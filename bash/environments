@@ -44,3 +44,7 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
         fi
     }
 fi
+
+if [ -f $HOME/.pythonz/etc/bashrc ]; then
+    source $HOME/.pythonz/etc/bashrc
+fi
