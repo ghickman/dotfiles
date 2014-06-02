@@ -38,3 +38,8 @@ function fae() {
 function ipnt() {
     mktmpenv && pip install ipython jinja2 pyzmq tornado && ipython notebook
 }
+
+function mkmc() {
+    mkdir "$1/management/commands"
+    touch "$1/management/{commands/,}__init__.py"
+}
