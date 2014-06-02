@@ -40,6 +40,12 @@ function ipnt() {
 }
 
 function mkmc() {
-    mkdir "$1/management/commands"
-    touch "$1/management/{commands/,}__init__.py"
+    if [ -z "$1" ]; then
+        echo "Please specify a directory." >&2
+        return 1
+    fi
+
+    mkdir -p "$1/management/commands"
+    touch "$1/management/__init__.py"
+    touch "$1/management/commands/__init__.py"
 }
