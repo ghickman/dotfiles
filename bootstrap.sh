@@ -62,6 +62,8 @@ mv TextMate.app /Applications/
 rm TextMate_1.5.11_r1635.zip
 curl -O --silent "https://raw.githubusercontent.com/altercation/solarized/master/textmate-colors-solarized/Solarized%20(dark).tmTheme"
 open "$HOME/.files/Solarized%20(dark).tmTheme"
+# set default lang to python
+defaults write com.macromates.textmate OakDefaultLanguage F23DB5B2-7D08-11D9-A709-000D93B6E43C
 
 echo "========== configure preferences"
 ./osx
