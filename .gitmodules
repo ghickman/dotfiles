@@ -102,3 +102,6 @@
 [submodule "git-toolbelt"]
 	path = git-toolbelt
 	url = git@github.com:nvie/git-toolbelt.git
+[submodule "vim/bundle/TextObjectify"]
+	path = vim/bundle/TextObjectify
+	url = https://github.com/paradigm/TextObjectify
