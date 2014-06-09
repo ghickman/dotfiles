@@ -48,3 +48,6 @@ fi
 alias c="cd /Volumes/Media/Downloads/complete/"
 alias t="cd ~/Projects/tvr"
 alias y="cd ~/Projects/yes"
+
+# Fileserver
+alias fs="ssh fs"
