@@ -307,8 +307,6 @@ inoremap <s-cr> <esc>A:<cr>
 " Requires gist (brew install gist)
 vnoremap <leader>G :w !gist -p -t %:e \| pbcopy<cr>
 
-nnoremap <leader>d oimport pdb;pdb.set_trace()<esc>
-
 nnoremap <leader>b :b#<cr>
 
 " Split/Join {{{
@@ -436,6 +434,8 @@ augroup ft_javascript
 
     au FileType javascript setlocal foldmethod=marker
     au FileType javascript setlocal foldmarker={,}
+
+    au FileType javascript nnoremap <leader>d odebugger<esc>
 augroup END
 
 " }}}
@@ -511,6 +511,8 @@ augroup ft_python
 
     " Insert a docstring
     au Filetype python nnoremap <leader>" o""""""<esc>hhi
+
+    au Filetype python nnoremap <leader>d oimport pdb;pdb.set_trace()<esc>
 augroup END
 
 " }}}
