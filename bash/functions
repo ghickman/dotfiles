@@ -49,3 +49,7 @@ function mkmc() {
     touch "$1/management/__init__.py"
     touch "$1/management/commands/__init__.py"
 }
+
+function p() {
+    cd $(find ~/Projects -maxdepth 1 -type d | selecta)
+}
