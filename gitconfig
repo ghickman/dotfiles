@@ -29,6 +29,7 @@
     select = "!git recent-branches | selecta | xargs git checkout"
     push-start = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`"
     fixup = commit --amend -C head
+    cb = checkout -b
 
 [branch]
     autosetuprebase = always
