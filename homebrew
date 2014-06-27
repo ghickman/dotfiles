@@ -8,7 +8,6 @@ brew install nvie-autoenv
 brew install bash
 brew install bash-completion
 brew install cowsay
-brew install gnu-typist
 brew install mobile-shell
 brew install mtr
 brew install nmap
@@ -55,3 +54,7 @@ brew install solr
 brew install python
 brew install python3
 brew install pypy
+
+# Typing
+brew install gnu-typist
+brew install typespeed
