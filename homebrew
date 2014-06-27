@@ -15,6 +15,7 @@ brew install nmap
 brew install s3cmd
 brew install watch
 brew install wget
+brew install youtube-dl
 
 # Git
 brew install git
