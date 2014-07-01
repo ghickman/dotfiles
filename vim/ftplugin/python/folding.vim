@@ -151,7 +151,7 @@ function! GetPythonFold(lnum)
         endif
     " Case E***: empty lines fold with previous
     " (***) change '=' to -1 if you want empty lines/comment out of a fold
-    elseif line == '' && getline(a:lnum-1) == '' | return '-1'
+    " elseif line == '' && getline(a:lnum-1) == '' | return '-1'
     elseif line == '' && getline(a:lnum-1) != '' | return '='
     endif
     " now we need the indent from previous
