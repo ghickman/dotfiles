@@ -8,6 +8,7 @@ brew install nvie-autoenv
 brew install bash
 brew install bash-completion
 brew install cowsay
+brew install gist
 brew install mobile-shell
 brew install mtr
 brew install nmap
