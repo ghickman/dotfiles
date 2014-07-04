@@ -99,6 +99,6 @@
 [submodule "git-toolbelt"]
 	path = git-toolbelt
 	url = git@github.com:nvie/git-toolbelt.git
-[submodule "jshint2.vim"]
-	path = jshint2.vim
+[submodule "vim/bundle/jshint"]
+	path = vim/bundle/jshint
 	url = https://github.com/Shutnik/jshint2.vim
