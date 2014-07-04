@@ -637,6 +637,12 @@ endif
 nnoremap <leader>u :GundoToggle<cr>
 
 " }}}
+" JSHint {{{
+
+let jshint2_command = '/usr/local/bin/jshint'
+let jshint2_save = 1
+
+" }}}
 " Khuno {{{
 
 let g:khuno_max_line_length=99
