@@ -582,8 +582,8 @@ endif
 " }}}
 " Commentary {{{
 
-nmap <leader>c <Plug>CommentaryLine
-xmap <leader>c <Plug>Commentary
+nmap <leader>c gcc
+xmap <leader>c gc
 au FileType htmldjango setlocal commentstring={#\ %s\ #}
 au FileType python setlocal commentstring=#\ %s
 
