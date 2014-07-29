@@ -353,6 +353,15 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " }}}
 " Filetype Specific Stuff ------------------------------------------------ {{{
 
+" Coffeescript {{{
+
+augroup ft_coffee
+    au!
+
+    au FileType coffee setlocal tabstop=2 softtabstop=2 shiftwidth=2
+augroup END
+
+" }}}
 " CSS and SCSS {{{
 
 augroup ft_css
