@@ -49,3 +49,6 @@ fi
 if [ -f $HOME/.pythonz/etc/bashrc ]; then
     source $HOME/.pythonz/etc/bashrc
 fi
+
+# pyenv
+eval "$(pyenv init -)"
