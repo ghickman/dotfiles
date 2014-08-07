@@ -51,3 +51,6 @@ alias y="cd ~/Projects/yes"
 
 # Fileserver
 alias fs="ssh fs"
+
+# Get first directory from path in previous commands final token
+alias lbb="echo !$ | awk -F "/" '{print $1}'"
