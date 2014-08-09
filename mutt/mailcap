@@ -4,6 +4,9 @@ text/plain; ~/.mutt/view_attachment.sh %s txt
 # MS Word documents
 application/msword; ~/.mutt/view_attachment.sh %s "-" '/Applications/TextEdit.app'
 
+# MS Excel documents
+application/vnd.ms-excel; ~/.mutt/view_attachment.sh %s "-" '/Applications/Numbers.app'
+
 # Images
 image/jpg; ~/.mutt/view_attachment.sh %s jpg
 image/jpeg; ~/.mutt/view_attachment.sh %s jpg
