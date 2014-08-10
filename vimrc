@@ -589,6 +589,11 @@ if executable("ag")
 endif
 
 " }}}
+" Bufferline {{{
+
+let g:bufferline_rotate = 1
+
+" }}}
 " Commentary {{{
 
 nmap <leader>c gcc
