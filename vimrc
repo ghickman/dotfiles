@@ -285,7 +285,7 @@ nnoremap <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Set filetype to htmldjango
-nnoremap <leader>sd setlocal ft=htmldjango<CR>
+nnoremap <leader>sd :setlocal ft=htmldjango<CR>
 
 " Add the two lines below to this one and get rid of the fucking spaces.
 nnoremap <leader>jl JxJxj<cr>
