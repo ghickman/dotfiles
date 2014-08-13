@@ -65,7 +65,8 @@ the it crowd:
   the: false
 
 the killing:
-  canonical: The Killing (2011)
+  canonical: The Killing (US)
+  show-override: The Killing (2011)
 
 the simpsons:
   the: false
