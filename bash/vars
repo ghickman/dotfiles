@@ -2,7 +2,7 @@
 
 # Path
 # base
-export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$HOME/.bin:$HOME/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # git toolbelt
 if [ -d "$HOME/.files/git-toolbelt" ]; then
