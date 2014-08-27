@@ -56,6 +56,9 @@ echo "========== install pip requirements"
 mkdir ~/.pip/{cache,wheels}
 pip install --upgrade -r requirements.txt
 
+echo "========== install python bins with pipsi"
+pipsi install flake8 httpie isort twine tvrenamr
+
 echo "========== textmate"
 curl -O --silent "http://archive.textmate.org/TextMate_1.5.11_r1635.zip"
 unzip TextMate_1.5.11_r1635.zip
