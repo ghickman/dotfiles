@@ -118,7 +118,6 @@ let maplocalleader = "\\"
 " Color Scheme ----------------------------------------------------------- {{{
 
 syntax on
-set background=dark
 colorscheme solarized
 
 " Highlight VCS conflict markers
