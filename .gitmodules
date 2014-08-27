@@ -39,9 +39,6 @@
     path = vim/bundle/nginx
     url = https://github.com/evanmiller/nginx-vim-syntax.git
     ignore = untracked
-[submodule "vim/bundle/powerline"]
-    path = vim/bundle/powerline
-    url = https://github.com/Lokaltog/vim-powerline
 [submodule "vim/bundle/pydoc"]
     path = vim/bundle/pydoc
     url = https://github.com/fs111/pydoc.vim.git
@@ -117,3 +114,6 @@
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar
+[submodule "vim/bundle/airline"]
+	path = vim/bundle/airline
+	url = https://github.com/bling/vim-airline

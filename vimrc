@@ -589,6 +589,16 @@ if executable("ag")
 endif
 
 " }}}
+" Airline {{{
+
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+
+if has('gui_running')
+    let g:airline_powerline_fonts = 1
+end
+
+" }}}
 " Bufferline {{{
 
 let g:bufferline_rotate = 1
@@ -663,12 +673,6 @@ let g:khuno_max_line_length=99
 let g:khuno_ignore="E501"
 
 nmap <silent><leader><cr> <esc>:Khuno show<cr>
-
-" }}}
-" Powerline {{{
-
-let g:Powerline_colorscheme = 'solarized256'
-let g:Powerline_symbols = 'fancy'
 
 " }}}
 " Scratch {{{
