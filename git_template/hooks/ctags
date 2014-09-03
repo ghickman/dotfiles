@@ -1,16 +1,16 @@
 #!/bin/sh
 set -e
-trap "rm -f .git/tags.$$" EXIT
 
-files=`find . -path *migrations -prune -o -name "*.py"`
-ctags \
-    --exclude={.tox,.venv,tags,.git,.sass-cache,.lib} \
-    --exclude={distribute,virtualenv}* \
-    --exclude={*.pyc} \
+trap "rm -f .git/tags.$$" EXIT
+dir="`git rev-parse --git-dir`"
+
+git ls-files | \
+    /usr/local/bin/ctags \
+    --tag-relative \
+    -L - \
     -f.git/tags.$$ \
     --language-force=python \
     --python-kinds=-ivm \
-    $files
+    --exclude={.tox}
 
-rm .git/tags.$$.bak
-mv .git/tags.$$ tags
+mv "$dir"/tags{.$$,}
