@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+
+import calendar
+import os
+import sys
+
+
+BASE = '/Volumes/Pictures'
+
+
+def get_month(path):
+    num = int(path.split('-')[1])
+    return '{} - {}'.format(num, calendar.month_name[num + 1])
+
+
+def get_year(path):
+    return path.split('-')[0]
+
+
+for path in sys.argv[1:]:
+    destination = os.path.join(BASE, get_year(path), get_month(path))
+    if not os.path.exists(destination):
+        os.makedirs(destination)
+
+    os.rename(path, os.path.join(destination, path))
