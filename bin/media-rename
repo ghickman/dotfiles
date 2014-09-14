@@ -1,11 +1,11 @@
-#!/usr/local/bin/bash
+#!/bin/bash
 
 set -e
 
 FORMAT="%Y-%m-%d_%H-%M-%S"
 
-# Video files
-exiftool -v -ext MOV -ext MP4 -ext AVI -ext 3GP -FileName\<CreateDate -d $FORMAT.%%e $1
+# Videos
+exiftool -v -ext MOV -ext MP4 -ext AVI -ext 3GP -FileName\<CreateDate -d $FORMAT.%%e .
 
 # Images
-jhead -autorot -ft -dt -n$FORMAT $1
+jhead -autorot -ft -dt -n$FORMAT *
