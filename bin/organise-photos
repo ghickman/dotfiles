@@ -10,7 +10,7 @@ BASE = '/Volumes/Pictures'
 
 def get_month(path):
     num = int(path.split('-')[1])
-    return '{} - {}'.format(num, calendar.month_name[num + 1])
+    return '{:02d} - {}'.format(num, calendar.month_name[num])
 
 
 def get_year(path):
