@@ -2,6 +2,7 @@
 
 import calendar
 import os
+import shutil
 import sys
 
 
@@ -22,4 +23,4 @@ for path in sys.argv[1:]:
     if not os.path.exists(destination):
         os.makedirs(destination)
 
-    os.rename(path, os.path.join(destination, path))
+    shutil.move(path, os.path.join(destination, path))
