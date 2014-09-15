@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # input: YYYY-MM-dd HH.mm.ss.ext
 # ouput: MM/dd/YYYY HH:mm:ss
 filename=$(basename "$1")
