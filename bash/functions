@@ -53,3 +53,7 @@ function mkmc() {
 function p() {
     cd $(find ~/Projects -maxdepth 1 -type d | selecta)
 }
+
+function y() {
+    cd $(find ~/Projects/yesgraph -maxdepth 1 -type d | selecta)
+}
