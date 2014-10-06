@@ -16,6 +16,9 @@ defaults:
 '24':
   format: '%n - %s%e'
 
+avengers assemble:
+  canonical: Avengers Assemble (2013)
+
 american dad:
   canonical: American Dad!
 
