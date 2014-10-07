@@ -3,7 +3,7 @@ defaults:
     - .avi
     - .mp4
     - .mkv
-  format: '%n - %s%e - %t%x'
+  format: '%n - %sx%e - %t%x'
   ignore:
     - .DS_Store
     - thumbs.db
