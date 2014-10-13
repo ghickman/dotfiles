@@ -120,3 +120,6 @@
 [submodule "vim/bundle/gitgutter"]
 	path = vim/bundle/gitgutter
 	url = https://github.com/airblade/vim-gitgutter
+[submodule "vim/bundle/pytest"]
+	path = vim/bundle/pytest
+	url = https://github.com/alfredodeza/pytest.vim
