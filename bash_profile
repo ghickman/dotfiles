@@ -13,4 +13,7 @@ shopt -s nocaseglob
 stty werase undef
 bind '"\C-w": unix-filename-rubout'
 
+# deal with aws cli completion bullshit
+complete -C aws_completer aws
+
 eval "$(direnv hook bash)"
