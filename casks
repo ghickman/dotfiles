@@ -7,16 +7,16 @@ brew cask install alfred
 brew cask install appcleaner
 brew cask install arq
 brew cask install colorschemer-studio
+brew cask install cloak
 brew cask install daisydisk
 brew cask install dropbox
 brew cask install evernote
 brew cask install flux
 brew cask install firefox
 brew cask install handbrake
-brew cask install hipchat
 brew cask install inc
 brew cask install iterm2
-brew cask install keyremap4macbook
+brew cask install karabiner
 brew cask install lastfm
 brew cask install licecap
 brew cask install limechat
@@ -24,6 +24,8 @@ brew cask install mactracker
 brew cask install minecraft
 brew cask install mumble
 brew cask install pixelstick
+brew cask install screenhero
+brew cask install slack
 brew cask install sketchup
 brew cask install skype
 brew cask install spotify

@@ -1,10 +1,6 @@
 #!/bin/bash
 
-# Taps
-brew tap nvie/autoenv
-
 # Basics
-brew install nvie-autoenv
 brew install bash
 brew install bash-completion
 brew install cowsay
@@ -39,13 +35,14 @@ brew install offline-imap
 brew install sqlite
 brew install urlview
 
-cur_dur=`pwd`
-cd /usr/local
-git checkout 0476235 Library/Formula/mutt.rb
-cd "$cur_dir"
-brew install mutt --sidebar-patch
+# cur_dur=`pwd`
+# cd /usr/local
+# git checkout 0476235 Library/Formula/mutt.rb
+# cd "$cur_dir"
+# brew install mutt --sidebar-patch
 
 # Dev
+brew install direnv
 brew install libmemcached
 brew install markdown
 brew install redis
@@ -55,6 +52,7 @@ brew install solr
 brew install python
 brew install python3
 brew install pypy
+brew install pyenv
 
 # Typing
 brew install gnu-typist
