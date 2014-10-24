@@ -523,6 +523,8 @@ augroup ft_python
 
     au Filetype python nnoremap <leader>d oimport pdb;pdb.set_trace()<esc>
     au Filetype python nnoremap <leader>id oimport ipdb;ipdb.set_trace()<esc>
+
+    au Filetype python nnoremap <leader>S :Isort<cr>
 augroup END
 
 " }}}

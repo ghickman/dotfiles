@@ -123,3 +123,6 @@
 [submodule "vim/bundle/pytest"]
 	path = vim/bundle/pytest
 	url = https://github.com/alfredodeza/pytest.vim
+[submodule "vim/bundle/isort"]
+	path = vim/bundle/isort
+	url = https://github.com/fisadev/vim-isort
