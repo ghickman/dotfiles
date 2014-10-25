@@ -35,12 +35,6 @@ brew install offline-imap
 brew install sqlite
 brew install urlview
 
-# cur_dur=`pwd`
-# cd /usr/local
-# git checkout 0476235 Library/Formula/mutt.rb
-# cd "$cur_dir"
-# brew install mutt --sidebar-patch
-
 # Dev
 brew install direnv
 brew install libmemcached
