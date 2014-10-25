@@ -53,7 +53,7 @@ rm "solarized-dark.itermcolors"
 # git submodule update --init
 
 echo "========== install pip requirements"
-mkdir ~/.pip/{cache,wheels}
+mkdir -p ~/.pip/{cache,wheels}
 pip install --upgrade -r requirements.txt
 
 echo "========== install python bins with pipsi"
