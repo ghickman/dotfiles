@@ -51,3 +51,7 @@ brew install pyenv
 # Typing
 brew install gnu-typist
 brew install typespeed
+
+# Organising Photos/Videos
+brew install exiftool
+brew install jhead
