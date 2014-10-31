@@ -1,0 +1,28 @@
+#!/bin/bash
+
+tmp="tmp.csv"
+
+# loop inputs
+for file; do
+    # remove header, uniq lines, sort lines, fix date order (dd/mm/yyyy -> yyyy/mm/dd)
+    tail -n +4 "$file" | sort | uniq | sed -E 's/^(..)(\/..\/)(....)(.*)/\3\2\1\4/' > "$tmp"
+
+    # Extract accounts and loop
+    for account in `gawk '{print $7}' FPAT="([^,]*)|(\"[^\"]+\")" "$tmp" | sort | uniq | tr -d "'\"" | sed '/^\s*$/d'`; do
+        # TODO: make sure $account exists
+        # Extract years from transaction in given account and loop
+        for year in `grep $account "$tmp" | awk -F '/' '{print $1}' | sort | uniq`; do
+            # extract transactions using year and account
+            egrep -i "$year.*$account" "$tmp" > tmp-sorted.csv
+
+            # TODO: make sure $target exists
+            # combine existing target file with output to avoid duplicates/overwriting
+            target=""$account"/"$year".csv"
+            cat $target >> tmp-sorted.csv
+            sort tmp-sorted.csv | uniq > $target
+        done
+    done
+done
+
+# tidy up
+rm tmp{,-sorted}.csv
