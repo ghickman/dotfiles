@@ -9,15 +9,18 @@ for file; do
 
     # Extract accounts and loop
     for account in `gawk '{print $7}' FPAT="([^,]*)|(\"[^\"]+\")" "$tmp" | sort | uniq | tr -d "'\"" | sed '/^\s*$/d'`; do
-        # TODO: make sure $account exists
+        # make sure account directory exists
+        mkdir -p $account
+
         # Extract years from transaction in given account and loop
         for year in `grep $account "$tmp" | awk -F '/' '{print $1}' | sort | uniq`; do
             # extract transactions using year and account
             egrep -i "$year.*$account" "$tmp" > tmp-sorted.csv
 
-            # TODO: make sure $target exists
-            # combine existing target file with output to avoid duplicates/overwriting
             target=""$account"/"$year".csv"
+            # make sure target file exists
+            touch $target
+            # combine existing target file with output to avoid duplicates/overwriting
             cat $target >> tmp-sorted.csv
             sort tmp-sorted.csv | uniq > $target
         done
