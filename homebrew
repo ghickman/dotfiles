@@ -8,7 +8,6 @@ brew install gist
 brew install mobile-shell
 brew install mtr
 brew install nmap
-brew install s3cmd
 brew install watch
 brew install wget
 brew install youtube-dl

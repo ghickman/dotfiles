@@ -60,7 +60,7 @@ echo "========== dem rubbies"
 sudo gem install tmuxinator
 
 echo "========== install python bins with pipsi"
-pipsi install flake8 httpie isort twine tvrenamr
+pipsi install flake8 httpie isort twine tvrenamr https://pypi.python.org/packages/source/s/s3cmd/s3cmd-1.5.0-alpha3.tar.gz#egg=s3cmd
 
 echo "========== textmate"
 curl -O --silent "http://archive.textmate.org/TextMate_1.5.11_r1635.zip"
