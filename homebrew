@@ -1,12 +1,14 @@
 #!/bin/bash
 
 # Basics
+brew install awscli
 brew install bash
 brew install bash-completion
 brew install cowsay
 brew install gist
 brew install mobile-shell
 brew install mtr
+brew install namebench
 brew install nmap
 brew install watch
 brew install wget
@@ -23,6 +25,8 @@ brew install macvim
 
 # Search
 brew install ack
+brew install ffind
+brew install gawk
 brew install selecta
 brew install the_silver_searcher
 
@@ -32,6 +36,7 @@ brew install msmtp
 brew install notmuch
 brew install offline-imap
 brew install sqlite
+brew install tokyo-cabinet
 brew install urlview
 
 # Dev
@@ -55,3 +60,7 @@ brew install typespeed
 # Organising Photos/Videos
 brew install exiftool
 brew install jhead
+
+# Crypto
+brew install gnupg
+brew install keybase
