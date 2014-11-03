@@ -56,6 +56,9 @@ echo "========== install pip requirements"
 mkdir -p ~/.pip/{cache,wheels}
 pip install --upgrade -r requirements.txt
 
+echo "========== dem rubbies"
+sudo gem install tmuxinator
+
 echo "========== install python bins with pipsi"
 pipsi install flake8 httpie isort twine tvrenamr
 
