@@ -7,7 +7,6 @@ defaults:
   ignore:
     - .DS_Store
     - thumbs.db
-  library: thetvdb
   organise: yes
   renamed: /Volumes/Media/TV/
   specials_folder: Specials
