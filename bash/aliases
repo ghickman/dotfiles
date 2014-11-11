@@ -60,3 +60,5 @@ alias serve="python -m http.server"
 
 # speed up direnv usage
 alias da="direnv allow"
+
+alias gt="gtypist -b ~/Dropbox/norman.typ"
