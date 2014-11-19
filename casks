@@ -13,6 +13,7 @@ brew cask install dropbox
 brew cask install evernote
 brew cask install flux
 brew cask install firefox
+brew cask install gpgtools
 brew cask install handbrake
 brew cask install inc
 brew cask install iterm2
