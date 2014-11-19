@@ -84,3 +84,7 @@ if ! grep -qe $bash4 "/etc/shells"; then
     echo $bash4 >> "/etc/shells"
     chsh -s /usr/local/bin/bash
 fi
+
+echo "========== symlink launchagents"
+ln -s ~/.files/launchagents/com.ghickman.offlineimap.plist ~/Library/LaunchAgents/
+ln -s ~/.files/launchagents/org.gnupg.gpg-agent.plist ~/Library/LaunchAgents/
