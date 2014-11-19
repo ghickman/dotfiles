@@ -16,6 +16,7 @@ endif
 " Basics ----------------------------------------------------------------- {{{
 
 set autoindent
+set autoread
 set backspace=indent,eol,start
 set backupcopy=yes " Preserve resource fork
 set dictionary=/usr/share/dict/words
