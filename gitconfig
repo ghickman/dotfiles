@@ -6,6 +6,7 @@
 [user]
     name = George Hickman
     email = george@ghickman.co.uk
+    signingkey = "093B01FD"
 
 [alias]
     ap = add -p
@@ -44,6 +45,9 @@
 
 [color "status"]
     untracked = cyan
+
+[commit]
+    gpgsign = true
 
 [help]
     autocorrect = 1
