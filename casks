@@ -24,6 +24,7 @@ brew cask install mactracker
 brew cask install minecraft
 brew cask install mumble
 brew cask install pixelstick
+brew cask install sequel-pro
 brew cask install screenhero
 brew cask install slack
 brew cask install sketchup
