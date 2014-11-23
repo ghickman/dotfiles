@@ -6,11 +6,9 @@
         <string>com.ghickman.offlineimap</string>
         <key>RunAtLoad</key>
         <true />
-        <key>StartInterval</key>
-        <integer>180</integer>
         <key>ProgramArguments</key>
         <array>
-            <string>/Users/george/.mutt/offlineimap.sh</string>
+            <string>/usr/local/bin/offlineimap</string>
         </array>
     </dict>
 </plist>
