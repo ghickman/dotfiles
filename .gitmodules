@@ -132,3 +132,6 @@
 [submodule "vim/bundle/livedown"]
 	path = vim/bundle/livedown
 	url = https://github.com/shime/vim-livedown
+[submodule "vim/bundle/easy-align"]
+	path = vim/bundle/easy-align
+	url = https://github.com/junegunn/vim-easy-align

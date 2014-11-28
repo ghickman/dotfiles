@@ -631,6 +631,11 @@ endif
 nnoremap <leader>. :CtrlPTag<cr>
 
 " }}}
+" EasyAlign {{{
+
+vmap <Enter> <Plug>(EasyAlign)
+
+" }}}
 " Fugitive {{{
 
 nnoremap <leader>gb :Gblame<cr>
