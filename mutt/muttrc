@@ -49,7 +49,6 @@ set spoolfile = "+george-ghickman.co.uk/INBOX"
 # Mailboxes to show in the sidebar.
 mailboxes +george-ghickman.co.uk/INBOX \
           +george-ghickman.co.uk/archive \
-          +george-ghickman.co.uk/house \
           +george-ghickman.co.uk/folks \
           +george-ghickman.co.uk/ghickman-ltd \
           +george-ghickman.co.uk/python-uk \
