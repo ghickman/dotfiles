@@ -629,6 +629,7 @@ if executable('ag')
 endif
 
 nnoremap <leader>. :CtrlPTag<cr>
+nnoremap <leader>f :CtrlPBuffer<cr>
 
 " }}}
 " EasyAlign {{{
