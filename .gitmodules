@@ -129,3 +129,6 @@
 [submodule "vim/bundle/splitjoin"]
 	path = vim/bundle/splitjoin
 	url = https://github.com/AndrewRadev/splitjoin.vim
+[submodule "vim/bundle/livedown"]
+	path = vim/bundle/livedown
+	url = https://github.com/shime/vim-livedown
