@@ -134,7 +134,7 @@ set foldlevelstart=0
 nnoremap <c-cr> zvzz
 
 " Toggle a fold
-nnoremap <leader>f za
+nnoremap <space> za
 
 " Open all Folds
 nnoremap <leader>F zR
