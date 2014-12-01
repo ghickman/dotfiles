@@ -5,7 +5,6 @@ pythonfile = ~/.mutt/offlineimap.py
 fsync = False
 
 [Account ghickman]
-autorefresh = 3
 localrepository = ghickman-local
 remoterepository = ghickman-remote
 status_backend = sqlite
