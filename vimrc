@@ -460,6 +460,15 @@ augroup ft_less
 augroup END
 
 " }}}
+" Mail {{{
+
+augroup ft_mail
+    au!
+
+    au FileType mail setlocal fo+=aw
+augroup END
+
+" }}}
 " Markdown {{{
 
 augroup ft_markdown
