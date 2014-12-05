@@ -13,7 +13,7 @@ fi
 alias j=jobs
 
 # Vim
-alias m="mvim"
+alias m="open -a VimR.app"
 alias v="mvim -v"
 alias vim="mvim -v"
 

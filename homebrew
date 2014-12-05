@@ -43,6 +43,7 @@ brew install urlview
 brew install direnv
 brew install libmemcached
 brew install markdown
+brew install reattach-to-user-namespace
 brew install redis
 brew install solr
 brew install tmux
