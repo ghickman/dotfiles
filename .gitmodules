@@ -47,7 +47,7 @@
     url = https://github.com/tpope/vim-repeat.git
 [submodule "vim/bundle/solarized"]
     path = vim/bundle/solarized
-    url = https://github.com/altercation/vim-colors-solarized
+    url = https://github.com/ghickman/vim-colors-solarized
 [submodule "vim/bundle/splice"]
     path = vim/bundle/splice
     url = https://github.com/sjl/splice.vim.git
