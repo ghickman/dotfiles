@@ -52,8 +52,9 @@ set ttimeoutlen=10
 
 " Autosave --------------------------------------------------------------- {{{
 
-" Save all buffers on GUI window focus lost
+" Save all buffers on focus lost and no input
 au FocusLost * :silent! wall
+au CursorHold * :silent! wall
 
 " Write to disk when navigating file
 set autowrite
