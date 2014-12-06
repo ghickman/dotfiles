@@ -176,16 +176,35 @@ autocmd VimResized * wincmd =
 " }}}
 " Trailing Whitespace ---------------------------------------------------- {{{
 
-hi link TrailingWhiteSpace Search
-au BufWinEnter * let w:twsm=matchadd('TrailingWhiteSpace', '\s\+$')
-" Setup a toggle.
-nnoremap <silent> <Leader>w
+" Based on https://github.com/bronson/vim-trailing-whitespace
+
+" Ignore some filetypes
+let g:whitespace_ignored_filetypes = ['mail']
+
+function! ShouldMatchWhitespace()
+    for ft in g:whitespace_ignored_filetypes
+        if ft ==# &filetype | return 0 | endif
+    endfor
+    return 1
+endfunction
+
+function! EnableWhitespace()
+    let w:twsm = matchadd('TrailingWhitespace', '\s\+$')
+endfunction
+
+highlight link TrailingWhitespace Search
+autocmd BufWinEnter * if ShouldMatchWhitespace() |
+  \ silent! call EnableWhitespace() |
+  \ endif
+
+" Toggle with ,w
+nnoremap <silent> <leader>w
   \ :if exists('w:twsm') <Bar>
   \   silent! call matchdelete(w:twsm) <Bar>
   \   unlet w:twsm <Bar>
   \ else <Bar>
-  \   let w:twsm = matchadd('TrailingWhiteSpace', '\s\+$') <Bar>
-  \ endif<CR>
+  \   silent! call EnableWhitespace() <Bar>
+  \ endif<cr>
 
 " }}}
 " Highlight cursor ------------------------------------------------------- {{{
@@ -467,6 +486,7 @@ augroup ft_mail
     au!
 
     au FileType mail setlocal fo+=aw
+    au FileType mail setlocal nolist
 augroup END
 
 " }}}
