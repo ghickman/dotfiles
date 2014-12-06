@@ -486,7 +486,7 @@ augroup ft_mail
     au!
 
     au FileType mail setlocal fo+=aw
-    au FileType mail setlocal nolist
+    au FileType mail setlocal listchars-=trail:·
 augroup END
 
 " }}}
