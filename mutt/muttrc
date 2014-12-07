@@ -122,6 +122,7 @@ bind pager R  group-reply
 macro pager M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 
 # View attachments properly.
+auto_view text/html                 # strip HTML tags
 bind attach <return> view-mailcap
 macro pager \Cu "|urlview<enter>" "call urlview to open links"
 

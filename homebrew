@@ -38,6 +38,7 @@ brew install offline-imap
 brew install sqlite
 brew install tokyo-cabinet
 brew install urlview
+brew install w3m
 
 # Dev
 brew install direnv
