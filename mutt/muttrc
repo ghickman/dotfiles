@@ -93,7 +93,6 @@ macro index O "<shell-escape>offlineimap >> ~/.offlineimap/sync.log<enter>"     
 macro index o "<shell-escape>offlineimap -qf INBOX >> ~/.offlineimap/sync.log<enter>" "run offlineimap to sync inbox"
 
  # Saner copy/move dialogs
-macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
 macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 
 # Sidebar Navigation ---------------------------------
