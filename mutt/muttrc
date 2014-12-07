@@ -2,7 +2,7 @@
 set realname         = 'George Hickman'
 
 # Paths ----------------------------------------------
-set folder           = ~/.mail
+set folder           = ~/.mail/george-ghickman.co.uk
 set alias_file       = ~/.mutt/alias         # where to store aliases
 set header_cache     = ~/.mutt/cache/headers # where to store headers
 set message_cachedir = ~/.mutt/cache/bodies  # where to store bodies
@@ -46,22 +46,22 @@ hdr_order from: to: cc: date: subject:  # and in this order
 
 # Account Settings -----------------------------------
 # Default inbox.
-set spoolfile = "+george-ghickman.co.uk/INBOX"
+set spoolfile = "+INBOX"
 
 # Mailboxes to show in the sidebar.
-mailboxes +george-ghickman.co.uk/INBOX \
-          +george-ghickman.co.uk/archive \
-          +george-ghickman.co.uk/folks \
-          +george-ghickman.co.uk/ghickman-ltd \
-          +george-ghickman.co.uk/python-uk \
-          +george-ghickman.co.uk/minecuna \
-          +george-ghickman.co.uk/sent \
-          +george-ghickman.co.uk/drafts \
+mailboxes +INBOX \
+          +archive \
+          +folks \
+          +ghickman-ltd \
+          +python-uk \
+          +minecuna \
+          +sent \
+          +drafts \
           +tmp/search \
 
 # Other special folders.
-set mbox      = '+george-ghickman.co.uk/archive'
-set postponed = '+george-ghickman.co.uk/drafts'
+set mbox      = '+archive'
+set postponed = '+drafts'
 
 # Colours -------------------------------------------
 source ~/.mutt/themes/solarized-dark-16.muttrc
