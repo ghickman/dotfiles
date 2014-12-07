@@ -25,6 +25,7 @@ set beep_new             # bell on new mails
 set pipe_decode          # strip headers and eval mimes when piping
 set thorough_search      # strip headers and eval mimes before searching
 set text_flowed          # format flowed text
+set read_inc = 1000      # Don't update read counts very frequently when loading large mailboxes
 
 # Sidebar Patch --------------------------------------
 set sidebar_delim   = '  │'
