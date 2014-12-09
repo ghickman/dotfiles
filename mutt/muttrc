@@ -55,6 +55,7 @@ mailboxes +INBOX \
           +ghickman-ltd \
           +python-uk \
           +minecuna \
+          +templates \
           +sent \
           +drafts \
           +tmp/search \
