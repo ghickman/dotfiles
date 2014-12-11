@@ -296,9 +296,6 @@ map <leader><space> :nohls<cr>
 " Sudo to write
 cmap w!! w !sudo tee % >/dev/null
 
-" Sort!
-nnoremap <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
-
 " Remove trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
