@@ -417,7 +417,7 @@ augroup END
 augroup ft_html
     au!
 
-    au BufNewFile,BufRead *.html setlocal filetype=angular
+    au BufNewFile,BufRead *.html setlocal filetype=htmldjango
     au BufNewFile,BufRead *jinja2.html setlocal filetype=htmldjango
 
     au FileType angular,html,htmldjango setlocal tabstop=2 softtabstop=2 shiftwidth=2
