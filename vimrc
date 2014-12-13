@@ -296,9 +296,6 @@ map <leader><space> :nohls<cr>
 " Sudo to write
 cmap w!! w !sudo tee % >/dev/null
 
-" Sort!
-nnoremap <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
-
 " Remove trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
@@ -420,7 +417,7 @@ augroup END
 augroup ft_html
     au!
 
-    au BufNewFile,BufRead *.html setlocal filetype=angular
+    au BufNewFile,BufRead *.html setlocal filetype=htmldjango
     au BufNewFile,BufRead *jinja2.html setlocal filetype=htmldjango
 
     au FileType angular,html,htmldjango setlocal tabstop=2 softtabstop=2 shiftwidth=2
@@ -552,7 +549,7 @@ augroup ft_python
     au Filetype python nnoremap <leader>d oimport pdb;pdb.set_trace()<esc>
     au Filetype python nnoremap <leader>id oimport ipdb;ipdb.set_trace()<esc>
 
-    au Filetype python nnoremap <leader>S :Isort<cr>
+    au Filetype python nnoremap <leader>S :!Isort %<cr>
 augroup END
 
 " }}}
