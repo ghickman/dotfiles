@@ -51,10 +51,7 @@ set spoolfile = "+INBOX"
 # Mailboxes to show in the sidebar.
 mailboxes +INBOX \
           +archive \
-          +folks \
           +ghickman-ltd \
-          +python-uk \
-          +minecuna \
           +templates \
           +sent \
           +drafts \
