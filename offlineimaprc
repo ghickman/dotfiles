@@ -6,39 +6,43 @@ fsync = False
 
 [Account ghickman]
 localrepository = ghickman-local
-remoterepository = ghickman-remote
+remoterepository = fastmail
 status_backend = sqlite
 postsynchook = /usr/local/bin/notmuch new
 
 [Repository ghickman-local]
 type = Maildir
 localfolders = ~/.mail/george-ghickman.co.uk
-sep = /
 nametrans = lambda folder: {
-                'drafts':  '[Gmail]/Drafts',
-                'sent':    '[Gmail]/Sent Mail',
-                'flagged': '[Gmail]/Starred',
-                'trash':   '[Gmail]/Trash',
-                'archive': '[Gmail]/All Mail',
+                'archive':      'INBOX.Archive',
+                'drafts':       'INBOX.Drafts',
+                'ghickman-ltd': 'INBOX.ghickman-ltd',
+                'sent':         'INBOX.Sent Items',
+                'spam':         'INBOX.Spam',
+                'templates':    'INBOX.templates',
+                'trash':        'INBOX.Trash',
             }.get(folder, folder)
 
-[Repository ghickman-remote]
-maxconnections = 3
-type = Gmail
-sslcacertfile = ~/.mutt/cacert.pem
+[Repository fastmail]
+maxconnections = 1
+type = IMAP
+remotehost = mail.messagingengine.com
+remoteport = 993
 remoteuser = george@ghickman.co.uk
-remotepasseval = get_keychain_pass(account="george@ghickman.co.uk", server="imap.gmail.com")
-realdelete = no
+remotepasseval = get_keychain_pass(account="george@ghickman.co.uk", server="mail.messagingengine.com")
+ssl = yes
+sslcacertfile = ~/.mutt/cacert.pem
 nametrans = lambda folder: {
-                '[Gmail]/Drafts':    'drafts',
-                '[Gmail]/Sent Mail': 'sent',
-                '[Gmail]/Starred':   'flagged',
-                '[Gmail]/Trash':     'trash',
-                '[Gmail]/All Mail':  'archive',
+                'INBOX.Archive':      'archive',
+                'INBOX.Drafts':       'drafts',
+                'INBOX.ghickman-ltd': 'ghickman-ltd',
+                'INBOX.Sent Items':   'sent',
+                'INBOX.Spam':         'spam',
+                'INBOX.templates':    'templates',
+                'INBOX.Trash':        'trash',
             }.get(folder, folder)
 folderfilter = lambda folder: folder not in [
-                   '[Gmail]/Trash',
-                   '[Gmail]/Important',
-                   '[Gmail]/Spam',
-               ]
-readonly = False
+                    'INBOX.Junk Mail',
+                    'INBOX.Spam',
+                    'INBOX.Trash',
+                ]
