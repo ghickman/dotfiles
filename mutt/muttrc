@@ -159,7 +159,7 @@ bind editor ^T    complete
 bind index N search-opposite
 bind pager N search-opposite
 macro index a "<limit>all\n" "show all messages (undo limit)"
-macro index S "<enter-command>unset wait_key<enter><shell-escape>mutt-notmuch-py ~/.mail/tmp/search<enter><change-folder-readonly>+tmp/search<enter>" "search mail (using notmuch)"
+macro index S "<enter-command>unset wait_key<enter><shell-escape>mutt-notmuch-py ~/.mail/george-ghickman.co.uk/tmp/search<enter><change-folder-readonly>+tmp/search<enter>" "search mail (using notmuch)"
 
 # pgp
 set pgp_sign_as=0x093B01FD
