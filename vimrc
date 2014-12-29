@@ -629,9 +629,11 @@ if has('gui_running')
 end
 
 " }}}
-" Bufferline {{{
+" Buftabline {{{
 
-let g:bufferline_rotate = 1
+let g:buftabline_indicators = 1
+let g:buftabline_numbers = 1
+let g:buftabline_separators = 1
 
 " }}}
 " Commentary {{{
