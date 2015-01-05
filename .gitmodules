@@ -105,9 +105,6 @@
 [submodule "vim/bundle/vim-mkdir-on-write"]
 	path = vim/bundle/vim-mkdir-on-write
 	url = https://github.com/scy/vim-mkdir-on-write
-[submodule "vim/bundle/bufferline"]
-	path = vim/bundle/bufferline
-	url = https://github.com/bling/vim-bufferline
 [submodule "vim/bundle/jedi-vim"]
 	path = vim/bundle/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim
@@ -135,3 +132,6 @@
 [submodule "vim/bundle/dockerfile"]
 	path = vim/bundle/dockerfile
 	url = https://github.com/honza/dockerfile.vim
+[submodule "vim/bundle/buftabline"]
+	path = vim/bundle/buftabline
+	url = https://github.com/ap/vim-buftabline
