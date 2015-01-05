@@ -4,7 +4,6 @@ filetype off
 call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
-set nocompatible
 
 " Remember last location in file
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
