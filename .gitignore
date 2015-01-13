@@ -1,4 +1,5 @@
 bash/local
+mutt/alias
 pip/cache
 pip/wheels
 pip/pip.log
