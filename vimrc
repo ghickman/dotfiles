@@ -323,6 +323,8 @@ vnoremap <leader>G :w !gist -p -t %:e \| pbcopy<cr>
 
 nnoremap <leader>b :b#<cr>
 
+nnoremap gp `[v`]
+
 " Split/Join {{{
 "
 " Basically this splits the current line into two new ones at the cursor position,
