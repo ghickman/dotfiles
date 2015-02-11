@@ -68,8 +68,9 @@ curl -O --silent "http://archive.textmate.org/TextMate_1.5.11_r1635.zip"
 unzip TextMate_1.5.11_r1635.zip
 mv TextMate.app /Applications/
 rm TextMate_1.5.11_r1635.zip
-curl -O --silent "https://raw.githubusercontent.com/altercation/solarized/master/textmate-colors-solarized/Solarized%20(dark).tmTheme"
+curl -O --silent "$bucket/solarized-dark.tmTheme"
 open "$HOME/.files/Solarized%20(dark).tmTheme"
+rm "solarized-dark.tmTheme"
 # set default lang to python
 defaults write com.macromates.textmate OakDefaultLanguage F23DB5B2-7D08-11D9-A709-000D93B6E43C
 
