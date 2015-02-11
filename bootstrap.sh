@@ -23,6 +23,7 @@ while read name; do
     echo "Linked $source to $target"
 
 done < "$PWD/link-files"
+chmod 400 "$HOME/.msmtp"
 
 echo "========== cask all the things"
 ./casks
