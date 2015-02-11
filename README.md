@@ -1,8 +1,6 @@
 My dotfiles repo.
 
 ## Installation
-
-    git clone git@github.com:ghickman/dotfiles
-
-    ./bootstrap.sh
-
+1. Install XCode
+2. `git clone git@github.com:ghickman/dotfiles .files --recursive`
+3. `./bootstrap.sh`
