@@ -3,6 +3,7 @@
 brew tap caskroom/cask
 brew install brew-cask
 
+brew cask install 1password
 brew cask install alfred
 brew cask install appcleaner
 brew cask install arq
@@ -23,8 +24,10 @@ brew cask install licecap
 brew cask install limechat
 brew cask install mactracker
 brew cask install minecraft
+brew cask install moom
 brew cask install mumble
 brew cask install pixelstick
+brew cask install pg-commander
 brew cask install sequel-pro
 brew cask install screenhero
 brew cask install slack
