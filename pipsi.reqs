@@ -1,0 +1,10 @@
+pipsi install cookiecutter
+pipsi install currency-converter
+pipsi install flake8
+pipsi install httpie
+pipsi install isort
+pipsi install pytest
+pipsi install tox
+pipsi install twine
+pipsi install tvrenamr
+pipsi install https://pypi.python.org/packages/source/s/s3cmd/s3cmd-1.5.0-alpha3.tar.gz#egg=s3cmd

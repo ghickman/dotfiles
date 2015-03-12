@@ -182,4 +182,7 @@ set pgp_timeout=1800
 set pgp_good_sign="^gpg: Good signature from"
 set pgp_use_gpg_agent = yes
 
-color index brightdefault default "~G"
+# automate encryption to the foil hat alumni
+send-hook . 'reset pgp_autoencrypt'
+send-hook "!~l ~t charlie@meshy\\.co\\.uk" "set crypt_autoencrypt crypt_autosign"
+send-hook "!~l ~t perryroper@gmail\\.com" "set crypt_autoencrypt crypt_autosign"

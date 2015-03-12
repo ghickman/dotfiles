@@ -1,5 +1,4 @@
 setuptools
 pip
-pipsi
 virtualenv
 virtualenvwrapper

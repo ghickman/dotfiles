@@ -2,7 +2,7 @@ sudo /usr/bin/xcodebuild -license
 
 echo "========== install homebrew"
 if ! hash brew 2>/dev/null; then
-    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 echo "========== brew the world"
@@ -23,6 +23,7 @@ while read name; do
     echo "Linked $source to $target"
 
 done < "$PWD/link-files"
+chmod 400 "$HOME/.msmtp"
 
 echo "========== cask all the things"
 ./casks
@@ -60,15 +61,17 @@ echo "========== dem rubbies"
 sudo gem install tmuxinator
 
 echo "========== install python bins with pipsi"
-pipsi install flake8 httpie isort twine tvrenamr https://pypi.python.org/packages/source/s/s3cmd/s3cmd-1.5.0-alpha3.tar.gz#egg=s3cmd
+curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python
+./pipsi.reqs
 
 echo "========== textmate"
 curl -O --silent "http://archive.textmate.org/TextMate_1.5.11_r1635.zip"
 unzip TextMate_1.5.11_r1635.zip
 mv TextMate.app /Applications/
 rm TextMate_1.5.11_r1635.zip
-curl -O --silent "https://raw.githubusercontent.com/altercation/solarized/master/textmate-colors-solarized/Solarized%20(dark).tmTheme"
+curl -O --silent "$bucket/solarized-dark.tmTheme"
 open "$HOME/.files/Solarized%20(dark).tmTheme"
+rm "solarized-dark.tmTheme"
 # set default lang to python
 defaults write com.macromates.textmate OakDefaultLanguage F23DB5B2-7D08-11D9-A709-000D93B6E43C
 
