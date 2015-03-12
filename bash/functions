@@ -3,6 +3,7 @@
 function run_at_repo_top_level {
     start=`pwd`
     top_level=`/usr/local/bin/git rev-parse --show-toplevel`
+    pip wheel -r $top_level/$1
     pip install -r $top_level/$1
 }
 
