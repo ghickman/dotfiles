@@ -25,6 +25,8 @@
     fixup = commit --amend -C head
     cb = checkout -b
 
+    git = status  # damn you muscle memory
+
 [branch]
     autosetuprebase = always
 
