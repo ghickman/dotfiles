@@ -17,7 +17,4 @@ export GIT_PS1_SHOWSTASHSTATE=1
 
 TIME="\[\$(date +%H:%M:%S)\]"
 
-light="$RED$TIME $GREEN\h $BLACK\W$YELLOW\$(__git_ps1)$BLACK\n$ "
-dark="$RED$TIME $GREEN\h $WHITE\W$YELLOW\$(__git_ps1)$WHITE\n$ "
-
-PS1="$dark"
+PS1="$RED$TIME $GREEN\h $WHITE\W$YELLOW\$(__git_ps1)$WHITE\n$ "

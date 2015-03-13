@@ -135,3 +135,6 @@
 [submodule "vim/bundle/buftabline"]
 	path = vim/bundle/buftabline
 	url = https://github.com/ap/vim-buftabline
+[submodule "vim/bundle/abolish"]
+	path = vim/bundle/abolish
+	url = https://github.com/tpope/vim-abolish
