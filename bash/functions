@@ -6,10 +6,19 @@ function pipi {
 }
 
 function run_at_repo_top_level {
-    start=`pwd`
-    top_level=`/usr/local/bin/git rev-parse --show-toplevel`
-    pip wheel -r $top_level/$1
-    pip install -r $top_level/$1
+    git_root=$(/usr/local/bin/git rev-parse --show-toplevel 2&>/dev/null)
+    if [ $git_root ]; then
+        path="$git_root/$1"
+    else
+        path="$1"
+    fi
+
+    if [ ! -d "$path" ]; then
+        echo "Can't find: $path"
+        return
+    fi
+
+    pipi -r "$path"
 }
 
 function pipr {
