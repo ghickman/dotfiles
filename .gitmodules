@@ -113,7 +113,7 @@
 	url = https://github.com/majutsushi/tagbar
 [submodule "vim/bundle/airline"]
 	path = vim/bundle/airline
-	url = https://github.com/bling/vim-airline
+	url = https://github.com/ghickman/vim-airline
 [submodule "vim/bundle/gitgutter"]
 	path = vim/bundle/gitgutter
 	url = https://github.com/airblade/vim-gitgutter
