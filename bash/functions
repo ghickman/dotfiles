@@ -9,7 +9,7 @@ function run_at_repo_top_level {
     git_root=$(/usr/local/bin/git rev-parse --show-toplevel 2>/dev/null) && path="$git_root/"
     path="$path$1"
 
-    if [ ! -d "$path" ]; then
+    if [ ! -f "$path" ]; then
         echo "Can't find: $path"
         return
     fi
