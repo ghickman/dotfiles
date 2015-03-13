@@ -1,5 +1,10 @@
 #!/bin/bash
 
+function pipi {
+    pip wheel "$1"
+    pip install "$1"
+}
+
 function run_at_repo_top_level {
     start=`pwd`
     top_level=`/usr/local/bin/git rev-parse --show-toplevel`
