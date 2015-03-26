@@ -27,7 +27,6 @@ brew install macvim
 brew install ack
 brew install ffind
 brew install gawk
-brew install pt
 brew install selecta
 brew install the_silver_searcher
 
