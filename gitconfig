@@ -24,6 +24,7 @@
     push-start = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`"
     fixup = commit --amend -C head
     cb = checkout -b
+    sb = checkout -
 
     git = status  # damn you muscle memory
 
