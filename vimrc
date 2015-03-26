@@ -612,8 +612,8 @@ augroup END
 
 " Ag {{{
 
-if executable("ag")
-    set grepprg=ag\ --nogroup\ --nocolor
+if executable("pt")
+    set grepprg=pt\ --nogroup\ --nocolor
     nnoremap <leader>a :Ag<space>
 endif
 
@@ -650,8 +650,8 @@ au FileType python setlocal commentstring=#\ %s
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_extensions = ['tag']
-if executable('ag')
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+if executable('pt')
+    let g:ctrlp_user_command = 'pt %s -l --nocolor -g ""'
     let g:ctrlp_use_caching = 0
 endif
 
