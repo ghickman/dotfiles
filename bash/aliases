@@ -62,3 +62,5 @@ alias serve="python -m http.server"
 alias da="direnv allow"
 
 alias gt="gtypist -b ~/Dropbox/norman.typ"
+
+alias ygp="yg-github-sync --pull"
