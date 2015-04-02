@@ -28,6 +28,9 @@
 
     git = status  # damn you muscle memory
 
+[apply]
+    whitespace = warn
+
 [branch]
     autosetuprebase = always
 
@@ -52,11 +55,18 @@
 [commit]
     gpgsign = true
 
+[diff]
+    algorithm = patience
+
 [help]
     autocorrect = 1
 
-[diff]
-    algorithm = patience
+[include]
+    path = .heroku/accounts/config
+    path = .ghi
+
+[init]
+    templatedir = ~/.git_template
 
 [merge]
     tool = splice
@@ -74,6 +84,7 @@
 [status]
     relativePaths = true
 
+# third party
 [achievement]
   upload = true
 
@@ -83,15 +94,5 @@
 [github]
     user = ghickman
 
-[include]
-    path = .heroku/accounts/config
-    path = .ghi
-
-[init]
-    templatedir = ~/.git_template
-
 [heroku]
     account = me
-
-[apply]
-    whitespace = warn
