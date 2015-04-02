@@ -92,3 +92,6 @@
 
 [heroku]
     account = me
+
+[apply]
+    whitespace = warn
