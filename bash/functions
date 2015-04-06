@@ -1,8 +1,8 @@
 #!/bin/bash
 
 function pipi {
-    pip wheel "$1"
-    pip install "$1"
+    pip wheel "$@"
+    pip install "$@"
 }
 
 function run_at_repo_top_level {
@@ -14,7 +14,7 @@ function run_at_repo_top_level {
         return
     fi
 
-    pipi -r "$path"
+    pipi -r $path
 }
 
 function pipr {
@@ -67,4 +67,12 @@ function p() {
 
 function y() {
     cd $(find ~/Projects/yesgraph -maxdepth 1 -type d | selecta)
+}
+
+function build-keyboard() {
+    cd ~/Projects/tmk_keyboard/keyboard/ergodox
+    PATH=/usr/local/CrossPack-AVR/bin:$PATH
+    make -f Makefile.lufa clean
+    make -f Makefile.lufa norman
+    mv ergodox_lufa.hex INSTALL_THIS.hex
 }
