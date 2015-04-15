@@ -28,6 +28,7 @@ brew cask install moom
 brew cask install mumble
 brew cask install pixelstick
 brew cask install pg-commander
+brew cask install postgres
 brew cask install sequel-pro
 brew cask install screenhero
 brew cask install slack
