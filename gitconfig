@@ -25,6 +25,7 @@
     fixup = commit --amend -C head
     cb = checkout -b
     sb = checkout -
+    start-pr = "!git push-start && hub browse"
 
     git = status  # damn you muscle memory
 
