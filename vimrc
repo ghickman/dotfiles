@@ -6,7 +6,11 @@ call pathogen#helptags()
 filetype plugin indent on
 
 " Remember last location in file
-au BufReadPost * if &filetype != "gitcommit" && line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
+au BufReadPost *
+    \ if &filetype != "gitcommit" &&
+    \   line("'\"") > 0 && line("'\"") <= line("$") |
+    \     exe "normal g'\"" |
+    \ endif
 
 " }}}
 " Basics ----------------------------------------------------------------- {{{
