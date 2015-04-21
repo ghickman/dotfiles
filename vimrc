@@ -6,7 +6,7 @@ call pathogen#helptags()
 filetype plugin indent on
 
 " Remember last location in file
-au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
+au BufReadPost * if &filetype != "gitcommit" && line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
 
 " }}}
 " Basics ----------------------------------------------------------------- {{{
@@ -410,6 +410,16 @@ augroup ft_css
     " Make {<cr> insert a pair of brackets in such a way that the cursor is correctly
     " positioned inside of them AND the following code doesn't get unfolded.
     au BufNewFile,BufRead *.sass,*.css inoremap <buffer> {<cr> {}<left><cr><space><space><space><space>.<cr><esc>kA<bs>
+augroup END
+
+" }}}
+" Git {{{
+
+augroup git_files
+    au!
+
+    " Don't remember last cursor position in git commit messages
+    autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
 augroup END
 
 " }}}
