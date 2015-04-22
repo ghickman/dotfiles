@@ -542,21 +542,12 @@ augroup ft_python
     " requirements files
     au BufNewFile,BufRead *requirements.txt setlocal filetype=text nospell
 
-    " au Filetype python noremap  <buffer> <localleader>rr :RopeRename<CR>
-    " au Filetype python vnoremap <buffer> <localleader>rm :RopeExtractMethod<CR>
-    " au Filetype python noremap  <buffer> <localleader>ri :RopeOrganizeImports<CR>
-
     au FileType python setlocal omnifunc=pythoncomplete#Complete
     au FileType python setlocal define=^\s*\\(def\\\\|class\\)
     au FileType python setlocal foldnestmax=1
-    " au FileType python compiler nose
-    " au FileType man nnoremap <buffer> <cr> :q<cr>
 
     " More syntax highlighting for Python
     let python_highlight_all = 1
-
-    " Run nosetests
-    au Filetype python noremap <leader>r :!nosetests %<cr>
 
     " Insert a docstring
     au Filetype python nnoremap <leader>" o""""""<esc>hhi
