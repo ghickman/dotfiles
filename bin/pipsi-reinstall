@@ -8,7 +8,7 @@ curl https://raw.githubusercontent.com/nvie/pipsi/master/get-pipsi.py | python2.
 # need to avoid the normal install instructions, and do this instead:
 (
     cd ~/.local/venvs/pipsi/
-    ./bin/pip uninstall pipsi
+    ./bin/pip uninstall pipsi -y
     git clone git@github.com:mitsuhiko/pipsi.git src
     (
         cd src/
