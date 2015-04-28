@@ -14,6 +14,10 @@ if [ -d "/Applications/Postgres.app" ]; then
     export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 fi
 
+if [ -d "$HOME/.pyenv" ]; then
+    export PATH="$HOME/.pyenv/shims:$PATH"
+fi
+
 # Heroku Toolbelt
 heroku="/usr/local/heroku/bin"
 if [ -d "$heroku" ]; then
