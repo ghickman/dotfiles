@@ -1,6 +1,6 @@
 pipsi install cookiecutter
 pipsi install currency-converter
-pipsi install flake8
+pipsi install --python=python3 flake8
 pipsi install httpie
 pipsi install isort
 pipsi install pytest
