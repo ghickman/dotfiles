@@ -8,3 +8,4 @@ pipsi install s3cmd
 pipsi install tox
 pipsi install twine
 pipsi install tvrenamr
+pipsi install watchdog
