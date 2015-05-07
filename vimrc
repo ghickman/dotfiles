@@ -756,7 +756,6 @@ let g:splice_wrap = "nowrap"
 " }}}
 " SuperTab {{{
 
-let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:SuperTabLongestHighlight = 1
 
 " }}}
