@@ -65,7 +65,7 @@ augroup AutoWrite
 augroup END
 
 " }}}
-" Wildmenu Completion ---------------------------------------------------- {{{
+" Completion ------------------------------------------------------------- {{{
 
 set complete=.,b,u,]
 set completeopt=menu,preview
@@ -84,7 +84,7 @@ set wildignore+=.tox                                     " Tox (virtualenv testi
 set wildignore+=.sass-cache                              " Sass cache folder
 
 " }}}
-" Tabs, spacing, etc ----------------------------------------------------- {{{
+" Spacing ---------------------------------------------------------------- {{{
 
 set nowrap
 set tabstop=4
