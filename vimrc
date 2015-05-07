@@ -50,6 +50,7 @@ set notimeout
 set ttimeout
 set ttimeoutlen=10
 
+" }}}
 " Autosave --------------------------------------------------------------- {{{
 
 " Save all buffers on focus lost and no input
@@ -222,8 +223,6 @@ augroup END
 " Toggle Paste Mode ------------------------------------------------------ {{{
 
 nnoremap <leader>p :set invpaste paste?<cr>
-
-" }}}
 
 " }}}
 " GUI -------------------------------------------------------------------- {{{
