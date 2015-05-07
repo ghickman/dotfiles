@@ -67,8 +67,11 @@ augroup END
 " }}}
 " Wildmenu Completion ---------------------------------------------------- {{{
 
+set complete=.,b,u,]
+set completeopt=menu,preview
+
 set wildmenu
-set wildmode=list:longest
+set wildmode=longest,list:longest
 
 set wildignore+=.git,.hg,.svn                            " Version control
 set wildignore+=*.bmp,*.gif,*.jpg,*.jpeg,*.png           " Binary images
