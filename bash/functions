@@ -1,10 +1,5 @@
 #!/bin/bash
 
-function pipi {
-    pip wheel "$@"
-    pip install "$@"
-}
-
 function run_at_repo_top_level {
     git_root=$(/usr/local/bin/git rev-parse --show-toplevel 2>/dev/null) && path="$git_root/"
     path="$path$1"
@@ -14,7 +9,7 @@ function run_at_repo_top_level {
         return
     fi
 
-    pipi -r $path
+    pip -r $path
 }
 
 function pipr {
