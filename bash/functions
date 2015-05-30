@@ -9,7 +9,7 @@ function run_at_repo_top_level {
         return
     fi
 
-    pip -r $path
+    pip install -r $path
 }
 
 function pipr {
