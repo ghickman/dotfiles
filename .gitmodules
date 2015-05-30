@@ -84,9 +84,6 @@
 [submodule "vim/bundle/eunuch"]
 	path = vim/bundle/eunuch
 	url = https://github.com/tpope/vim-eunuch.git
-[submodule "vim/bundle/swap-parameters"]
-	path = vim/bundle/swap-parameters
-	url = https://github.com/vim-scripts/swap-parameters.git
 [submodule "vim/bundle/khuno"]
 	path = vim/bundle/khuno
 	url = https://github.com/alfredodeza/khuno.vim.git
