@@ -20,6 +20,8 @@ bind '"\C-w": unix-filename-rubout'
 # deal with aws cli completion bullshit
 complete -C aws_completer aws
 
+eval "$(pyenv init -)"
+
 eval "$(direnv hook bash)"
 
 export GPG_TTY=$(tty)
