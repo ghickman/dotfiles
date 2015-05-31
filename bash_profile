@@ -22,8 +22,6 @@ complete -C aws_completer aws
 
 eval "$(pyenv init -)"
 
-eval "$(direnv hook bash)"
-
 export GPG_TTY=$(tty)
 if [ -f "${HOME}/.gpg-agent-info" ]; then
   . "${HOME}/.gpg-agent-info"
