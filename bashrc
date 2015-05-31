@@ -1,1 +1,1 @@
-eval "$(direnv hook bash)"
+source "$HOME"/.files/direnv
