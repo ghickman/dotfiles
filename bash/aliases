@@ -14,8 +14,8 @@ alias j=jobs
 
 # Vim
 alias m="open -a VimR.app"
-alias v="mvim -v"
-alias vim="mvim -v"
+alias v="nvim"
+alias vim="nvim"
 
 # Django
 alias pym="python manage.py"
