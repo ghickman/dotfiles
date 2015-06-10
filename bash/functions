@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function run_at_repo_top_level {
+run_at_repo_top_level() {
     git_root=$(/usr/local/bin/git rev-parse --show-toplevel 2>/dev/null) && path="$git_root/"
     path="$path$1"
 
@@ -12,24 +12,24 @@ function run_at_repo_top_level {
     pip install -r $path
 }
 
-function pipr {
+pipr() {
     run_at_repo_top_level "requirements.txt"
 }
 
-function pipd {
+pipd() {
     run_at_repo_top_level "dev-requirements.txt"
 }
 
-function man() {
+man() {
     open dash://man:$1
 }
 
-function take() {
+take() {
     mkdir -p "$1"
     cd "$1"
 }
 
-function vc() {
+vc() {
     if git modified; then
         mvim `git modified`;
     else
@@ -37,15 +37,15 @@ function vc() {
     fi
 }
 
-function fae() {
+fae() {
     mvim `ag --nocolor -l "$1"`
 }
 
-function ipnt() {
+ipnt() {
     mktmpenv && pip install ipython[notebook] && ipython notebook
 }
 
-function mkmc() {
+mkmc() {
     if [ -z "$1" ]; then
         echo "Please specify a directory." >&2
         return 1
@@ -56,15 +56,15 @@ function mkmc() {
     touch "$1/management/commands/__init__.py"
 }
 
-function p() {
+p() {
     cd $(find ~/Projects -maxdepth 1 -type d | selecta)
 }
 
-function y() {
+y() {
     cd $(find ~/Projects/yesgraph -maxdepth 1 -type d | selecta)
 }
 
-function build-keyboard() {
+build-keyboard() {
     cd ~/Projects/tmk_keyboard/keyboard/ergodox
     PATH=/usr/local/CrossPack-AVR/bin:$PATH
     make -f Makefile.lufa clean
