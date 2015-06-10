@@ -71,3 +71,10 @@ function build-keyboard() {
     make -f Makefile.lufa norman
     mv ergodox_lufa.hex INSTALL_THIS.hex
 }
+
+update-keybase-tracking() {
+    # update gpg keys locally with what keybase knows about
+    for u in $(keybase list-tracking); do
+        keybase track "$u";
+    done
+}
