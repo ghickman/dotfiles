@@ -1,21 +1,16 @@
 #!/bin/bash
 
-# Easier navigation: .., ..., ~ and -
+# Easier navigation
 alias ..="cd .."
 alias ...="cd ../.."
-
-# Use Hub
-if hash brew 2>/dev/null; then
-    alias git=hub
-fi
 
 # Jobs
 alias j=jobs
 
 # Vim
 alias m="open -a VimR.app"
-alias v="nvim"
 alias vim="nvim"
+alias v="vim"
 
 # Django
 alias pym="python manage.py"
@@ -37,7 +32,6 @@ alias flush="dscacheutil -flushcache"
 alias solr="/usr/local/bin/solr $SOLR_CONF"
 
 # Mutt
-alias mutt="cd ~/Desktop && ~/.bin/mutt"
 alias e="cd ~/Desktop && ~/.bin/mutt"
 alias ffs="ps aux | grep offlineimap | grep -v grep | awk '{print $2}' | xargs kill -9"
 
@@ -61,6 +55,5 @@ alias serve="python -m http.server"
 # speed up direnv usage
 alias da="direnv allow"
 
-alias gt="gtypist -b ~/Dropbox/norman.typ"
-
+# pull down all yg repos
 alias ygp="yg-github-sync --pull"
