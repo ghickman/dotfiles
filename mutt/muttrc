@@ -88,8 +88,7 @@ bind index p recall-message
 macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
 
 # Sync email
-macro index O "<shell-escape>offlineimap >> ~/.offlineimap/sync.log<enter>"           "run offlineimap to sync all mail"
-macro index o "<shell-escape>offlineimap -qf INBOX >> ~/.offlineimap/sync.log<enter>" "run offlineimap to sync inbox"
+macro index o "<shell-escape>offlineimap >> ~/.offlineimap/sync.log<enter>" "run offlineimap to sync mail"
 
  # Saner copy/move dialogs
 macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
