@@ -67,3 +67,7 @@ brew install jhead
 brew install gnupg
 brew install gnupg2
 brew install keybase
+
+# Parallel Compression
+brew install pixz
+brew install lbzip2
