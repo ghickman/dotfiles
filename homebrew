@@ -46,6 +46,7 @@ brew install libmemcached
 brew install markdown
 brew install reattach-to-user-namespace
 brew install redis
+brew install shellcheck
 brew install solr
 brew install tmux
 
