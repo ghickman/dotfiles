@@ -50,9 +50,6 @@ brew install solr
 brew install tmux
 
 # Python
-brew install python
-brew install python3
-brew install pypy
 brew install pyenv
 
 # Typing
