@@ -46,13 +46,11 @@ brew install libmemcached
 brew install markdown
 brew install reattach-to-user-namespace
 brew install redis
+brew install shellcheck
 brew install solr
 brew install tmux
 
 # Python
-brew install python
-brew install python3
-brew install pypy
 brew install pyenv
 
 # Typing
