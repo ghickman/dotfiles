@@ -1,6 +1,6 @@
 [general]
 ui = ttyui
-accounts = ghickman
+accounts = ghickman, yesgraph
 pythonfile = ~/.mutt/offlineimap.py
 fsync = False
 
@@ -47,4 +47,41 @@ folderfilter = lambda folder: folder not in [
                     'INBOX.Junk Mail',
                     'INBOX.Spam',
                     'INBOX.Trash',
+                ]
+
+[Account yesgraph]
+localrepository = yesgraph-local
+remoterepository = yesgraph-remote
+status_backend = sqlite
+postsynchook = /usr/local/bin/notmuch new
+
+[Repository yesgraph-local]
+type = Maildir
+localfolders = ~/.mail/george-yesgraph.com
+nametrans = lambda folder: {
+                'drafts':  '[Gmail]/Drafts',
+                'sent':    '[Gmail]/Sent Mail',
+                'flagged': '[Gmail]/Starred',
+                'trash':   '[Gmail]/Trash',
+                'archive': '[Gmail]/All Mail',
+            }.get(folder, folder)
+
+[Repository yesgraph-remote]
+maxconnections = 1
+type = Gmail
+sslcacertfile = ~/.mutt/cacert.pem
+remoteuser = george@yesgraph.com
+remotepasseval = get_keychain_pass(account="george@yesgraph.com", server="imap.gmail.com")
+realdelete = no
+nametrans = lambda folder: {
+                '[Gmail]/Drafts':    'drafts',
+                '[Gmail]/Sent Mail': 'sent',
+                '[Gmail]/Starred':   'flagged',
+                '[Gmail]/Trash':     'trash',
+                '[Gmail]/All Mail':  'archive',
+            }.get(folder, folder)
+folderfilter = lambda folder: folder not in [
+                    '[Gmail]/Important',
+                    '[Gmail]/Spam',
+                    '[Gmail]/Trash',
                 ]
