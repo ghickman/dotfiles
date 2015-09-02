@@ -1,11 +1,17 @@
-pipsi install cookiecutter
-pipsi install currency-converter
 pipsi install --python=python3 flake8
+pipsi install cookiecutter
+pipsi install devpi-client
+pipsi install django
+pipsi install fabric
+pipsi install glances
 pipsi install httpie
+pipsi install invoke
 pipsi install isort
+pipsi install pre-commit-hooks
 pipsi install pytest
 pipsi install s3cmd
+pipsi install supervisor
 pipsi install tox
-pipsi install twine
 pipsi install tvrenamr
+pipsi install twine
 pipsi install watchdog
