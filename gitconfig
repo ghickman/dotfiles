@@ -55,7 +55,6 @@
 
 [commit]
     gpgsign = true
-    template = ~/.gitmessage
 
 [diff]
     algorithm = patience
