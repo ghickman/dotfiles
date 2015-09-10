@@ -1,10 +1,55 @@
-" Preamble --------------------------------------------------------------- {{{
+" Plugins ---------------------------------------------------------------- {{{
 
-filetype off
-call pathogen#infect()
-call pathogen#helptags()
-filetype plugin indent on
+call plug#begin('~/.vim/plugged')
 
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'Shutnik/jshint2.vim'
+Plug 'Townk/vim-autoclose'
+Plug 'airblade/vim-gitgutter'
+Plug 'alfredodeza/khuno.vim'
+Plug 'alfredodeza/pytest.vim'
+Plug 'ap/vim-buftabline'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'curist/vim-angular-template'
+Plug 'davidhalter/jedi-vim'
+Plug 'docunext/closetag.vim'
+Plug 'ervandew/supertab'
+Plug 'evanmiller/nginx-vim-syntax'
+Plug 'fs111/pydoc.vim'
+Plug 'ghickman/vim-airline'
+Plug 'ghickman/vim-colors-solarized'
+Plug 'groenewege/vim-less'
+Plug 'hallettj/jslint.vim'
+Plug 'honza/dockerfile.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'kchmck/vim-coffee-script'
+Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
+Plug 'mileszs/ack.vim'
+Plug 'natw/keyboard_cat.vim'
+Plug 'rking/ag.vim'
+Plug 'scy/vim-mkdir-on-write'
+Plug 'shime/vim-livedown'
+Plug 'sjl/gundo.vim'
+Plug 'sjl/splice.vim'
+Plug 'sjl/strftimedammit.vim'
+Plug 'tmux-plugins/vim-tmux'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'vim-scripts/matchit.zip'
+Plug 'git@github.com:nvie/git-toolbelt'
+
+" Add plugins to &runtimepath
+call plug#end()
 
 " }}}
 " Basics ----------------------------------------------------------------- {{{

@@ -5,3 +5,4 @@ pip/wheels
 pip/pip.log
 tvrenamr/cache
 tvrenamr/*.log*
+vim/plugged
