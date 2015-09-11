@@ -1,0 +1,3 @@
+[submodule "git-toolbelt"]
+	path = git-toolbelt
+	url = git@github.com:nvie/git-toolbelt
