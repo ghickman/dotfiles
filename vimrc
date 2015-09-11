@@ -11,7 +11,6 @@ Plug 'alfredodeza/pytest.vim'
 Plug 'ap/vim-buftabline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'curist/vim-angular-template'
-Plug 'davidhalter/jedi-vim'
 Plug 'docunext/closetag.vim'
 Plug 'ervandew/supertab'
 Plug 'evanmiller/nginx-vim-syntax'
@@ -46,7 +45,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/matchit.zip'
-Plug 'git@github.com:nvie/git-toolbelt'
 
 " Add plugins to &runtimepath
 call plug#end()
