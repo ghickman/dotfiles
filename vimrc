@@ -801,6 +801,7 @@ let g:splice_wrap = "nowrap"
 " SuperTab {{{
 
 let g:SuperTabLongestHighlight = 1
+let g:SuperTabCrMapping = 1
 
 " }}}
 
