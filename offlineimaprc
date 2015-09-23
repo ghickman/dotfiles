@@ -1,6 +1,6 @@
 [general]
 ui = ttyui
-accounts = ghickman, yesgraph
+accounts = ghickman
 pythonfile = ~/.mutt/offlineimap.py
 fsync = False
 
@@ -18,6 +18,8 @@ nametrans = lambda folder: {
                 'drafts':       'INBOX.Drafts',
                 'ghickman-ltd': 'INBOX.ghickman-ltd',
                 'pyconuk-adm':  'INBOX.pyconuk-adm',
+                'psf-community':'INBOX.psf-community',
+                'microbit':     'INBOX.microbit-python',
                 'sent':         'INBOX.Sent Items',
                 'spam':         'INBOX.Spam',
                 'templates':    'INBOX.templates',
@@ -38,6 +40,8 @@ nametrans = lambda folder: {
                 'INBOX.Drafts':       'drafts',
                 'INBOX.ghickman-ltd': 'ghickman-ltd',
                 'INBOX.pyconuk-adm':  'pyconuk-adm',
+                'INBOX.psf-community':'psf-community',
+                'INBOX.microbit-python':'microbit',
                 'INBOX.Sent Items':   'sent',
                 'INBOX.Spam':         'spam',
                 'INBOX.templates':    'templates',
@@ -47,41 +51,4 @@ folderfilter = lambda folder: folder not in [
                     'INBOX.Junk Mail',
                     'INBOX.Spam',
                     'INBOX.Trash',
-                ]
-
-[Account yesgraph]
-localrepository = yesgraph-local
-remoterepository = yesgraph-remote
-status_backend = sqlite
-postsynchook = /usr/local/bin/notmuch new
-
-[Repository yesgraph-local]
-type = Maildir
-localfolders = ~/.mail/george-yesgraph.com
-nametrans = lambda folder: {
-                'drafts':  '[Gmail]/Drafts',
-                'sent':    '[Gmail]/Sent Mail',
-                'flagged': '[Gmail]/Starred',
-                'trash':   '[Gmail]/Trash',
-                'archive': '[Gmail]/All Mail',
-            }.get(folder, folder)
-
-[Repository yesgraph-remote]
-maxconnections = 1
-type = Gmail
-sslcacertfile = ~/.mutt/cacert.pem
-remoteuser = george@yesgraph.com
-remotepasseval = get_keychain_pass(account="george@yesgraph.com", server="imap.gmail.com")
-realdelete = no
-nametrans = lambda folder: {
-                '[Gmail]/Drafts':    'drafts',
-                '[Gmail]/Sent Mail': 'sent',
-                '[Gmail]/Starred':   'flagged',
-                '[Gmail]/Trash':     'trash',
-                '[Gmail]/All Mail':  'archive',
-            }.get(folder, folder)
-folderfilter = lambda folder: folder not in [
-                    '[Gmail]/Important',
-                    '[Gmail]/Spam',
-                    '[Gmail]/Trash',
                 ]
