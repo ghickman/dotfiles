@@ -61,6 +61,7 @@ set encoding=utf-8
 set hidden
 set history=1000
 set laststatus=2
+set lazyredraw
 set linebreak
 set list
 set listchars=tab:▸\ ,extends:❯,precedes:❮,trail:·,nbsp:·
