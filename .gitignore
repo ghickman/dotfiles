@@ -1,8 +1,9 @@
 bash/local
 mutt/alias
 pip/cache
-pip/wheels
 pip/pip.log
-tvrenamr/cache
+pip/wheels
 tvrenamr/*.log*
+tvrenamr/cache
 vim/plugged
+vim/shada
