@@ -223,6 +223,12 @@ autocmd WinEnter * wincmd =
 autocmd VimResized * wincmd =
 
 " }}}
+" Terminal --------------------------------------------------------------- {{{
+
+" Exit terminal insert mode with ,+e
+tnoremap <Leader>e <C-\><C-n>
+
+" }}}
 " Trailing Whitespace ---------------------------------------------------- {{{
 
 " Based on https://github.com/bronson/vim-trailing-whitespace
