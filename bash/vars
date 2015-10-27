@@ -25,7 +25,7 @@ if [ -d "$heroku" ]; then
 fi
 
 # Vim as Default Editor
-export EDITOR=`which vim`
+export EDITOR="/usr/local/bin/nvim"
 
 # Colours
 export CLICOLOR=1
