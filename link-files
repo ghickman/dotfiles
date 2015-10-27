@@ -8,8 +8,6 @@ gemrc
 git_template
 gitconfig
 gitignore
-hgignore
-hgrc
 inputrc
 msmtprc
 mutt
