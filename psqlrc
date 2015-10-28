@@ -1,1 +1,8 @@
+\pset null [NULL]
+\set COMP_KEYWORD_CASE upper
+\set HISTCONTROL ignoredups
+\set HISTFILE ~/.psql_history- :DBNAME
+\set PROMPT1 '%[%033[0;36m%]%M%[%033[0m%]:%> %n@%[%033[0;34m%]%/%[%033[0m%]%R%# '
+\set PROMPT2 '[more] %R > '
 \timing
+\x auto
