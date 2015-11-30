@@ -3,7 +3,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'Shutnik/jshint2.vim'
+Plug 'Shutnik/jshint2.vim', {'for': ['js', 'json']}
 Plug 'Townk/vim-autoclose'
 Plug 'airblade/vim-gitgutter'
 Plug 'alfredodeza/khuno.vim'
@@ -18,7 +18,6 @@ Plug 'fs111/pydoc.vim'
 Plug 'ghickman/vim-airline'
 Plug 'ghickman/vim-colors-solarized'
 Plug 'groenewege/vim-less'
-Plug 'hallettj/jslint.vim'
 Plug 'honza/dockerfile.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'kchmck/vim-coffee-script'
