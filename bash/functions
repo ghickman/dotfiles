@@ -64,6 +64,10 @@ wf() {
     cd $(find ~/Projects/wildfoundry -maxdepth 1 -type d | selecta)
 }
 
+gp() {
+    cd $(find ~/Projects/gitprime -maxdepth 1 -type d | selecta)
+}
+
 build-keyboard() {
     cd ~/Projects/tmk_keyboard/keyboard/ergodox
     PATH=/usr/local/CrossPack-AVR/bin:$PATH
