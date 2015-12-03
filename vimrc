@@ -54,7 +54,6 @@ set autoindent
 set autoread
 set backspace=indent,eol,start
 set backupcopy=yes " Preserve resource fork
-set clipboard=unnamedplus
 set dictionary=/usr/share/dict/words
 set encoding=utf-8
 set hidden
