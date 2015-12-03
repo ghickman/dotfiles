@@ -14,5 +14,5 @@ pipsi install supervisor
 pipsi install tox
 pipsi install tvrenamr
 pipsi install twine
-pipsi install update_plex
+pipsi install --python=python3 update_plex
 pipsi install watchdog
