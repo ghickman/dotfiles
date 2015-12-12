@@ -27,6 +27,7 @@ Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'natw/keyboard_cat.vim'
 Plug 'rking/ag.vim'
+Plug 'scrooloose/syntastic', {'for': ['js']}
 Plug 'scy/vim-mkdir-on-write'
 Plug 'shime/vim-livedown'
 Plug 'sjl/gundo.vim'
