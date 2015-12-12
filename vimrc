@@ -65,6 +65,7 @@ set linebreak
 set list
 set listchars=tab:▸\ ,extends:❯,precedes:❮,trail:·,nbsp:·
 set modelines=0
+set mouse=""
 set noerrorbells
 set nojoinspaces
 set nospell
