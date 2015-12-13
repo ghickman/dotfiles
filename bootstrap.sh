@@ -39,7 +39,7 @@ echo "========== install monaco powerline font"
 font="Monaco-Powerline.otf"
 fonts_location="~/Library/Fonts/"
 if [ ! -d "$fonts_location$font" ]; then
-    curl -O --silent "$bucket/Monaco-Powerline.otf"
+    curl -O --silent "$bucket/Monaco-for-Powerline.otf"
     mv $font $fonts_location
 fi
 

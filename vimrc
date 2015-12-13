@@ -680,14 +680,9 @@ endif
 " }}}
 " Airline {{{
 
-let g:airline_left_sep=''
-let g:airline_right_sep=''
 let g:airline#extensions#bufferline#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
-
-if has('gui_running')
-    let g:airline_powerline_fonts = 1
-end
+let g:airline_powerline_fonts = 1
 
 " }}}
 " Buftabline {{{
