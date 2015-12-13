@@ -31,7 +31,7 @@ Plug 'othree/yajs.vim', {'for': ['js']}
 Plug 'rking/ag.vim'
 Plug 'scy/vim-mkdir-on-write'
 Plug 'shime/vim-livedown'
-Plug 'sjl/gundo.vim'
+Plug 'simnalamburt/vim-mundo'
 Plug 'sjl/splice.vim'
 Plug 'sjl/strftimedammit.vim'
 Plug 'tmux-plugins/vim-tmux'
@@ -96,6 +96,10 @@ au BufReadPost *
     \   line("'\"") > 0 && line("'\"") <= line("$") |
     \     exe "normal g'\"" |
     \ endif
+
+" Python support
+let g:python_host_prog='/Users/george/.pyenv/shims/python2'
+let g:python3_host_prog='/Users/george/.pyenv/shims/python3'
 
 " }}}
 " Autosave --------------------------------------------------------------- {{{
