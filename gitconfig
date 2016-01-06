@@ -85,6 +85,9 @@
 [rerere]
     enabled = 1
 
+[stash]
+    showPatch = true
+
 [status]
     relativePaths = true
 
