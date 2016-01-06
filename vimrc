@@ -533,7 +533,7 @@ augroup ft_javascript
     au FileType javascript setlocal foldmethod=marker
     au FileType javascript setlocal foldmarker={,}
 
-    au FileType javascript nnoremap <leader>d odebugger<esc>
+    au FileType javascript nnoremap <leader>d odebugger;<esc>
 augroup END
 
 " }}}
