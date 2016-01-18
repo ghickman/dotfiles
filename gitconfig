@@ -79,8 +79,14 @@
 [push]
     default = upstream
 
+[rebase]
+    autostash = true
+
 [rerere]
     enabled = 1
+
+[stash]
+    showPatch = true
 
 [status]
     relativePaths = true

@@ -18,6 +18,7 @@ Plug 'evanmiller/nginx-vim-syntax'
 Plug 'fs111/pydoc.vim'
 Plug 'ghickman/vim-airline'
 Plug 'ghickman/vim-colors-solarized'
+Plug 'ghickman/vim-wombat-scheme'
 Plug 'groenewege/vim-less'
 Plug 'honza/dockerfile.vim'
 Plug 'junegunn/vim-easy-align'
@@ -175,8 +176,7 @@ let maplocalleader = "\\"
 " Color Scheme ----------------------------------------------------------- {{{
 
 syntax on
-set background=dark
-colorscheme solarized
+colorscheme wombat
 
 " Highlight VCS conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
@@ -533,7 +533,7 @@ augroup ft_javascript
     au FileType javascript setlocal foldmethod=marker
     au FileType javascript setlocal foldmarker={,}
 
-    au FileType javascript nnoremap <leader>d odebugger<esc>
+    au FileType javascript nnoremap <leader>d odebugger;<esc>
 augroup END
 
 " }}}

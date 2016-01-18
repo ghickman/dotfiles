@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+
+import datetime
+
+days = (datetime.datetime.now() - datetime.datetime(2015, 9, 26)).days
+print('{} weeks, {} days'.format(round(days / 7), days % 7))
