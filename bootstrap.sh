@@ -39,9 +39,10 @@ if [ ! -d "$fonts_location$font" ]; then
 fi
 
 # Install pretty iTerm colors
-curl -O --silent "$bucket/solarized-dark.itermcolors"
-open "solarized-dark.itermcolors"
-rm "solarized-dark.itermcolors"
+iterm_colourscheme="Wombat.itermcolors"
+curl -O --silent "$bucket/$iterm_colourscheme"
+open "$iterm_colourscheme"
+rm "$iterm_colourscheme"
 
 # This should be done by running --recursive on the initial clone
 # echo "========== init vim submodules"
