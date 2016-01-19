@@ -4,6 +4,7 @@ brew cask install 1password
 brew cask install alfred
 brew cask install appcleaner
 brew cask install arq
+brew cask install bartender
 brew cask install colorschemer-studio
 brew cask install cloak
 brew cask install daisydisk
