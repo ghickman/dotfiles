@@ -44,10 +44,9 @@ curl -O --silent "$bucket/$iterm_colourscheme"
 open "$iterm_colourscheme"
 rm "$iterm_colourscheme"
 
-# This should be done by running --recursive on the initial clone
-# echo "========== init vim submodules"
-# cd ~/.files
-# git submodule update --init
+echo "========== init vim submodules"
+cd ~/.files
+git submodule update --init
 
 echo "========== install pip requirements"
 mkdir -p ~/.pip/{cache,wheels}
