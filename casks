@@ -1,8 +1,5 @@
 #!/bin/bash
 
-brew tap caskroom/cask
-brew install brew-cask
-
 brew cask install 1password
 brew cask install alfred
 brew cask install appcleaner
