@@ -3,7 +3,6 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'andrewRadev/splitjoin.vim'
-Plug 'Shutnik/jshint2.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'alfredodeza/khuno.vim'
 Plug 'ap/vim-buftabline'
@@ -23,6 +22,7 @@ Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'rking/ag.vim'
 Plug 'scy/vim-mkdir-on-write'
+Plug 'shutnik/jshint2.vim'
 Plug 'simnalamburt/vim-mundo'
 Plug 'sjl/splice.vim'
 Plug 'townk/vim-autoclose'
