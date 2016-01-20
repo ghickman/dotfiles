@@ -745,6 +745,7 @@ nnoremap <leader>u :GundoToggle<cr>
 " JSHint {{{
 
 let jshint2_command = '/usr/local/bin/jshint'
+let jshint2_read = 1
 let jshint2_save = 1
 
 " }}}
