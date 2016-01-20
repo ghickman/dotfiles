@@ -38,7 +38,12 @@ vc() {
 }
 
 va() {
+    # search for pattern
+    # open vim with all files containing said pattern
+    # jump to location in file containing pattern
     pattern="$1"
+
+    # use second+ args to limit search locations
     if [ $# -gt 1 ]; then
         # drop first cli arg
         shift
