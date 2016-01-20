@@ -2,9 +2,8 @@
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'AndrewRadev/splitjoin.vim'
+Plug 'andrewRadev/splitjoin.vim'
 Plug 'Shutnik/jshint2.vim', {'for': ['js', 'json']}
-Plug 'Townk/vim-autoclose'
 Plug 'airblade/vim-gitgutter'
 Plug 'alfredodeza/khuno.vim'
 Plug 'alfredodeza/pytest.vim'
@@ -36,6 +35,7 @@ Plug 'simnalamburt/vim-mundo'
 Plug 'sjl/splice.vim'
 Plug 'sjl/strftimedammit.vim'
 Plug 'tmux-plugins/vim-tmux'
+Plug 'townk/vim-autoclose'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
