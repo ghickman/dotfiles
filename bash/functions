@@ -60,10 +60,6 @@ p() {
     cd $(find ~/Projects -maxdepth 1 -type d | selecta)
 }
 
-wf() {
-    cd $(find ~/Projects/wildfoundry -maxdepth 1 -type d | selecta)
-}
-
 gp() {
     cd $(find ~/Projects/gitprime -maxdepth 1 -type d | selecta)
 }
