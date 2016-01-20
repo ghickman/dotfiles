@@ -31,7 +31,7 @@ take() {
 
 vc() {
     if git modified; then
-        vim `git modified`;
+        vim $(git modified);
     else
         echo "(nothing changed)"
     fi
