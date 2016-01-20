@@ -751,7 +751,6 @@ let jshint2_save = 1
 " }}}
 " Khuno {{{
 
-let g:khuno_max_line_length=99
 let g:khuno_ignore="E501"
 
 nmap <silent><leader><cr> <esc>:Khuno show<cr>
