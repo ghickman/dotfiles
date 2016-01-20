@@ -37,8 +37,17 @@ vc() {
     fi
 }
 
-fae() {
-    mvim `ag --nocolor -l "$1"`
+va() {
+    pattern="$1"
+    if [ $# -gt 1 ]; then
+        # drop first cli arg
+        shift
+        argv="$@"
+    fi
+
+    ag_pattern=$(echo $pattern | sed -Ee 's/[<>]/\\\\b/g')
+    vim_pattern=$(echo $pattern | sed -E -e 's,([/=]),\\\\\1,g' -e 's,.*,/\\\v&,')
+    ag -l --smart-case --null $ag_pattern -- $argv 2>/dev/null | xargs -0 -o $EDITOR -c $vim_pattern
 }
 
 ipnt() {
