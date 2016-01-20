@@ -3,7 +3,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'andrewRadev/splitjoin.vim'
-Plug 'Shutnik/jshint2.vim', {'for': ['js', 'json']}
+Plug 'Shutnik/jshint2.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'alfredodeza/khuno.vim'
 Plug 'alfredodeza/pytest.vim'
@@ -27,7 +27,6 @@ Plug 'majutsushi/tagbar'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'natw/keyboard_cat.vim'
-Plug 'othree/yajs.vim', {'for': ['js']}
 Plug 'rking/ag.vim'
 Plug 'scy/vim-mkdir-on-write'
 Plug 'shime/vim-livedown'
