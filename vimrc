@@ -756,11 +756,6 @@ let g:khuno_ignore="E501"
 nmap <silent><leader><cr> <esc>:Khuno show<cr>
 
 " }}}
-" Scratch {{{
-
-nnoremap <silent> <leader><tab> :Sscratch<cr>
-
-" }}}
 " Selecta {{{
 
 " Run a given vim command on the results of fuzzy selecting from a given shell
