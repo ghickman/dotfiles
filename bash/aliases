@@ -57,3 +57,6 @@ alias da="direnv allow"
 
 # pull down all yg repos
 alias ygp="yg-github-sync --pull"
+
+# ffs
+alias p8="ping 8.8.8.8"
