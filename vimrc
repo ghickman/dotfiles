@@ -16,6 +16,7 @@ Plug 'ghickman/vim-colors-solarized'
 Plug 'ghickman/vim-wombat-scheme'
 Plug 'groenewege/vim-less'
 Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-peekaboo'
 Plug 'kien/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/gist-vim'
@@ -25,6 +26,7 @@ Plug 'scy/vim-mkdir-on-write'
 Plug 'shutnik/jshint2.vim'
 Plug 'simnalamburt/vim-mundo'
 Plug 'sjl/splice.vim'
+Plug 'terryma/vim-expand-region'
 Plug 'townk/vim-autoclose'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
@@ -711,6 +713,12 @@ nnoremap <leader>f :CtrlPBuffer<cr>
 " EasyAlign {{{
 
 vmap <Enter> <Plug>(EasyAlign)
+
+" }}}
+" Expand Region {{{
+
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
 
 " }}}
 " Fugitive {{{
