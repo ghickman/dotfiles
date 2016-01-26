@@ -12,6 +12,7 @@ inputrc
 msmtprc
 mutt
 notmuch-config
+npmrc
 offlineimaprc
 pip
 psqlrc
