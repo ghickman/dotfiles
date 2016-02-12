@@ -33,6 +33,7 @@ brew cask install slack
 brew cask install sketchup
 brew cask install skype
 brew cask install spotify
+brew cask install spotify-notifications
 brew cask install sqwiggle
 brew cask install steam
 brew cask install the-unarchiver
