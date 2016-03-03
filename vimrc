@@ -94,6 +94,10 @@ au BufReadPost *
 let g:python_host_prog='/Users/george/.pyenv/shims/python2'
 let g:python3_host_prog='/Users/george/.pyenv/shims/python3'
 
+" Flip ` & ', makes jumping back to specific place easier
+nnoremap ' `
+nnoremap ` '
+
 " }}}
 " Autosave --------------------------------------------------------------- {{{
 
