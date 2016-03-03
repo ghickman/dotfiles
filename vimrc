@@ -71,6 +71,7 @@ set showcmd
 set showmode
 set splitbelow
 set splitright
+set title
 set undofile
 set undoreload=10000
 
