@@ -327,6 +327,10 @@ set scrolloff=3
 set sidescroll=1
 set sidescrolloff=10
 
+" Make window navigation a little snappier
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+
 " }}}
 " Search ----------------------------------------------------------------- {{{
 
