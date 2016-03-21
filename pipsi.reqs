@@ -7,6 +7,7 @@ pipsi install glances
 pipsi install httpie
 pipsi install invoke
 pipsi install isort
+pipsi install pip-tools
 pipsi install pre-commit-hooks
 pipsi install pytest
 pipsi install s3cmd
