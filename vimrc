@@ -326,6 +326,12 @@ noremap <C-k>  <C-w>k
 noremap <C-l>  <C-w>l
 noremap <leader>v <C-w>v
 
+" Move splits around
+nnoremap <c-H> <c-w>H
+nnoremap <c-J> <c-w>j
+nnoremap <c-K> <c-w>K
+nnoremap <c-L> <c-w>l
+
 set scrolloff=3
 set sidescroll=1
 set sidescrolloff=10
