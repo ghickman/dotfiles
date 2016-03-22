@@ -132,6 +132,9 @@ set wildignore+=*.egg-info                               " Python deployment inf
 set wildignore+=.tox                                     " Tox (virtualenv testing)
 set wildignore+=.sass-cache                              " Sass cache folder
 
+" shortcut linewise completion
+inoremap <c-l> <c-x><c-l>
+
 " }}}
 " Spacing ---------------------------------------------------------------- {{{
 
