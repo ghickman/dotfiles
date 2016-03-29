@@ -74,10 +74,6 @@ p() {
     cd $(find ~/Projects -maxdepth 1 -type d | selecta)
 }
 
-gp() {
-    cd $(find ~/Projects/gitprime -maxdepth 1 -type d | selecta)
-}
-
 ssh_gp_ops() {
     ssh ghickman@$1.gitprime-ops.com
 }

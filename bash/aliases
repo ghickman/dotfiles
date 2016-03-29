@@ -41,6 +41,7 @@ fi
 
 # Project Directories
 alias c="cd /Volumes/Media/Downloads/complete/"
+alias g="cd ~/Projects/gitprime/gitprime"
 alias t="cd ~/Projects/tvr"
 
 # Fileserver
@@ -54,9 +55,6 @@ alias serve="python -m http.server"
 
 # speed up direnv usage
 alias da="direnv allow"
-
-# pull down all yg repos
-alias ygp="yg-github-sync --pull"
 
 # ffs
 alias p8="ping 8.8.8.8"
