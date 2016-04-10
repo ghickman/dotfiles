@@ -66,6 +66,7 @@ brew install jhead
 brew install gnupg
 brew install gnupg2
 brew install keybase
+brew install pinentry-mac
 
 # Parallel Compression
 brew install pixz
