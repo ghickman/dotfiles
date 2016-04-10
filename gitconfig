@@ -102,3 +102,6 @@
 
 [heroku]
     account = me
+
+[gpg]
+	program = gpg2

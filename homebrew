@@ -63,7 +63,6 @@ brew install exiftool
 brew install jhead
 
 # Crypto
-brew install gnupg
 brew install gnupg2
 brew install keybase
 brew install pinentry-mac
