@@ -4,7 +4,7 @@ set -e
 
 agent_info="$HOME/.gnupg/.gpg-agent-info"
 
-if test -f "$agent_info" && -n "$(pgrep gpg-agent)"; then
+if test -f "$agent_info" && test -n "$(pgrep gpg-agent)"; then
     . "$agent_info"
     export GPG_AGENT_INFO
 else
