@@ -23,8 +23,8 @@ brew cask install minecraft
 brew cask install moom
 brew cask install mumble
 brew cask install pixelstick
-brew cask install pg-commander
 brew cask install postgres
+brew cask install postico
 brew cask install screenhero
 brew cask install slack
 brew cask install skype
@@ -36,5 +36,6 @@ brew cask install unrarx
 brew cask install utorrent
 brew cask install vimr
 brew cask install vlc
+brew cask install zeplin
 
 brew cask alfred link
