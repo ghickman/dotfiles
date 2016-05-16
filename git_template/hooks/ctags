@@ -11,6 +11,10 @@ git ls-files | \
     -f.git/tags.$$ \
     --language-force=python \
     --python-kinds=-ivm \
-    --exclude={.tox}
+    --exclude=.tox \
+    --exclude=.direnv \
+    --exclude=bower_components \
+    --exclude=node_modules \
+    --exclude=README.*
 
 mv "$dir"/tags{.$$,}
