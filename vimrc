@@ -203,7 +203,7 @@ nnoremap <leader>F zR
 " 4. Pulse the cursor line.  My eyes are bad.
 "
 " This mapping wipes out the z mark, which I never use.
-nnoremap <leader>w mzzMzvzz15<c-e>`z:Pulse<cr>
+nnoremap <leader>z mzzMzvzz`z
 
 function! MyFoldText() " {{{
     let line = getline(v:foldstart)
