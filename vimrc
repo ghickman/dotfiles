@@ -11,6 +11,7 @@ Plug 'docunext/closetag.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
 Plug 'evanmiller/nginx-vim-syntax'
+Plug 'foosoft/vim-argwrap'
 Plug 'ghickman/vim-airline'
 Plug 'ghickman/vim-colors-solarized'
 Plug 'ghickman/vim-wombat-scheme'
@@ -256,15 +257,6 @@ highlight link TrailingWhitespace Search
 autocmd BufWinEnter * if ShouldMatchWhitespace() |
   \ silent! call EnableWhitespace() |
   \ endif
-
-" Toggle with ,w
-nnoremap <silent> <leader>w
-  \ :if exists('w:twsm') <Bar>
-  \   silent! call matchdelete(w:twsm) <Bar>
-  \   unlet w:twsm <Bar>
-  \ else <Bar>
-  \   silent! call EnableWhitespace() <Bar>
-  \ endif<cr>
 
 " }}}
 " Highlight cursor ------------------------------------------------------- {{{
@@ -691,6 +683,12 @@ let g:airline#extensions#bufferline#enabled = 0
 let g:airline#extensions#hunks#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_powerline_fonts = 1
+
+" }}}
+" ArgWrap {{{
+
+let g:argwrap_tail_comma = 1
+nnoremap <leader>w :ArgWrap<cr>
 
 " }}}
 " Buftabline {{{
