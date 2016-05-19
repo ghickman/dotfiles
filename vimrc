@@ -770,7 +770,7 @@ let jshint2_save = 1
 " }}}
 " Khuno {{{
 
-let g:khuno_ignore="E501"
+let g:khuno_ignore="E501,W503"
 
 nmap <silent><leader><cr> <esc>:Khuno show<cr>
 
