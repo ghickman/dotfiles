@@ -57,6 +57,7 @@
 
 [diff]
     algorithm = patience
+    compactionHeuristic = true
 
 [help]
     autocorrect = 1
