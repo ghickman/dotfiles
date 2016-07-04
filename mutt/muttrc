@@ -53,8 +53,6 @@ mailboxes +INBOX \
           +archive \
           +ghickman-ltd \
           +pyconuk-adm \
-          +psf-community \
-          +microbit \
           +templates \
           +sent \
           +drafts \
