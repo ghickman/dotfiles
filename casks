@@ -1,41 +1,42 @@
 #!/bin/bash
 
-brew cask install 1password
+set -e
+
 brew cask install alfred
 brew cask install appcleaner
 brew cask install bartender
-brew cask install colorschemer-studio
 brew cask install cloak
+brew cask install colorschemer-studio
+brew cask install crashplan
 brew cask install daisydisk
+brew cask install dash
 brew cask install dropbox
 brew cask install evernote
-brew cask install flux
 brew cask install firefox
+brew cask install flux
+brew cask install garagesale
+brew cask install google-chrome
 brew cask install gpgtools
 brew cask install handbrake
-brew cask install iterm2
+brew cask install iterm2-beta
 brew cask install karabiner
 brew cask install lastfm
 brew cask install licecap
-brew cask install limechat
-brew cask install mactracker
-brew cask install minecraft
-brew cask install moom
-brew cask install mumble
+brew cask install medis
+brew cask install ngrok
 brew cask install pixelstick
 brew cask install postgres
 brew cask install postico
 brew cask install screenhero
+brew cask install sketch
+brew cask install sketchup
 brew cask install slack
-brew cask install skype
 brew cask install spotify
 brew cask install spotify-notifications
 brew cask install steam
 brew cask install the-unarchiver
-brew cask install unrarx
-brew cask install utorrent
-brew cask install vimr
+brew cask install tripmode
+brew cask install viscosity
 brew cask install vlc
+brew cask install wireshark
 brew cask install zeplin
-
-brew cask alfred link
