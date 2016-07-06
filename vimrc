@@ -2,9 +2,9 @@
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'andrewRadev/splitjoin.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'alfredodeza/khuno.vim'
+Plug 'andrewRadev/splitjoin.vim'
 Plug 'ap/vim-buftabline'
 Plug 'curist/vim-angular-template'
 Plug 'docunext/closetag.vim'
