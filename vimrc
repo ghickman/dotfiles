@@ -37,6 +37,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/matchit.zip'
@@ -428,15 +429,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " }}}
 " Filetype Specific Stuff ------------------------------------------------ {{{
 
-" Coffeescript {{{
-
-augroup ft_coffee
-    au!
-
-    au FileType coffee setlocal tabstop=2 softtabstop=2 shiftwidth=2
-augroup END
-
-" }}}
 " CSS and SCSS {{{
 
 augroup ft_css
@@ -490,7 +482,6 @@ augroup ft_html
     au BufNewFile,BufRead *.html setlocal filetype=htmldjango
     au BufNewFile,BufRead *jinja2.html setlocal filetype=htmldjango
 
-    au FileType angular,html,htmldjango setlocal tabstop=2 softtabstop=2 shiftwidth=2
     au FileType angular,html,htmldjango setlocal foldmethod=manual
 
     autocmd FileType angular set commentstring=<!--\ %s\ -->
@@ -537,8 +528,6 @@ augroup END
 
 augroup ft_less
     au!
-
-    au FileType less setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
     au Filetype less inoremap <c-cr> <esc>A {<cr>}<esc>O
 augroup END
@@ -640,7 +629,6 @@ augroup ft_ruby
     au BufNewFile,BufRead *.sass setlocal filetype=sass
 
     au Filetype ruby,sass setlocal foldmethod=syntax
-    au FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
 " }}}
@@ -654,15 +642,6 @@ augroup ft_vim
 
     " Display help in a vsplit
     au BufWinEnter *.txt if &ft == 'help' | wincmd L | endif
-augroup END
-
-" }}}
-" YAML {{{
-
-augroup ft_yaml
-    au!
-
-    au FileType yaml,yml setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
 " }}}
