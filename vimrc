@@ -52,7 +52,6 @@ set autoread
 set backspace=indent,eol,start
 set backupcopy=yes " Preserve resource fork
 set dictionary=/usr/share/dict/words
-set encoding=utf-8
 set hidden
 set history=1000
 set laststatus=2
