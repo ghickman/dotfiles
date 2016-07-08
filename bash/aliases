@@ -32,7 +32,7 @@ alias flush="dscacheutil -flushcache"
 alias solr="/usr/local/bin/solr $SOLR_CONF"
 
 # Mutt
-alias e="cd ~/Desktop && ~/.bin/mutt"
+alias e="cd ~/Desktop && mutt"
 alias ffs="ps aux | grep offlineimap | grep -v grep | awk '{print $2}' | xargs kill -9"
 
 if hash brew 2>/dev/null; then

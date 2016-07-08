@@ -37,9 +37,9 @@ brew install msmtp
 brew install notmuch
 brew install offline-imap
 brew install sqlite
-brew install tokyo-cabinet
 brew install urlview
 brew install w3m
+brew install neomutt/homebrew-neomutt/neomutt --with-sidebar-patch --with-notmuch-patch --with-gpgme
 
 # Dev
 brew install direnv
