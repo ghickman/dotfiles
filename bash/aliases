@@ -41,7 +41,8 @@ fi
 
 # Project Directories
 alias c="cd /Volumes/Media/Downloads/complete/"
-alias g="cd ~/Projects/gitprime/gitprime"
+alias gcs="cd ~/Projects/gitprime/grand-central"
+alias gp="cd ~/Projects/gitprime/gitprime"
 alias t="cd ~/Projects/tvr"
 
 # Fileserver
