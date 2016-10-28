@@ -10,6 +10,7 @@
 
 [alias]
     ap = add -p
+    bd = branch -d
     c = commit
     cav = commit -av
     cb = checkout -b
