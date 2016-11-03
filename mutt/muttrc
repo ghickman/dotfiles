@@ -29,6 +29,7 @@ set read_inc = 1000      # Don't update read counts very frequently when loading
 
 # Sidebar Patch --------------------------------------
 set sidebar_divider_char = ' │ '
+set sidebar_format       = '%B%?F? [%F]?%* %?N?%N/?%S'
 set sidebar_short_path   = yes
 set sidebar_visible      = yes
 set sidebar_width        = 30

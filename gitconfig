@@ -10,22 +10,23 @@
 
 [alias]
     ap = add -p
+    bd = branch -d
     c = commit
-    cv = commit -v
     cav = commit -av
+    cb = checkout -b
+    ctags = "!.git/hooks/ctags"
+    cv = commit -v
     d = diff
     dc = diff --cached
-    s = status
+    dsf = "!f() { [ \"$GIT_PREFIX\" != \"\" ] && cd "$GIT_PREFIX"; git diff --color $@ | diff-so-fancy | less --tabs=4 -RFX; }; f"
+    fixup = commit --amend -C head
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     logo = log --oneline
-    ctags = "!.git/hooks/ctags"
     prune = remote prune origin
-    select = "!git recent-branches | selecta | xargs git checkout"
     push-start = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`"
-    fixup = commit --amend -C head
-    cb = checkout -b
+    s = status
     sb = checkout -
-    dsf = "!f() { [ \"$GIT_PREFIX\" != \"\" ] && cd "$GIT_PREFIX"; git diff --color $@ | diff-so-fancy | less --tabs=4 -RFX; }; f"
+    select = "!git recent-branches | selecta | xargs git checkout"
 
     git = status  # damn you muscle memory
 
