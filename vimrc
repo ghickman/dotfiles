@@ -73,6 +73,7 @@ set showcmd
 set showmode
 set splitbelow
 set splitright
+set termguicolors
 set title
 set undofile
 set undoreload=10000
