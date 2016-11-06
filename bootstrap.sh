@@ -2,11 +2,12 @@ sudo /usr/bin/xcodebuild -license
 
 echo "========== install homebrew"
 if ! hash brew 2>/dev/null; then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 echo "========== brew the world"
-./homebrew
+brew tap Homebrew/bundle
+brew bundle
 
 echo "========== link files"
 while read name; do
@@ -24,9 +25,6 @@ while read name; do
 
 done < "$PWD/link-files"
 chmod 400 "$HOME/.msmtp"
-
-echo "========== cask all the things"
-./casks
 
 bucket="https://s3-eu-west-1.amazonaws.com/ghickman-misc/install"
 
