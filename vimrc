@@ -3,7 +3,6 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
-Plug 'alfredodeza/khuno.vim'
 Plug 'andrewRadev/splitjoin.vim'
 Plug 'ap/vim-buftabline'
 Plug 'curist/vim-angular-template'
@@ -522,9 +521,6 @@ augroup ft_javascript
     au FileType javascript setlocal foldmarker={,}
 
     au FileType javascript nnoremap <leader>d odebugger;<esc>
-
-    au BufWritePost * Neomake
-
 augroup END
 
 " }}}
@@ -744,16 +740,13 @@ endif
 nnoremap <leader>u :GundoToggle<cr>
 
 " }}}
-" Khuno {{{
-
-let g:khuno_ignore="E501,W503"
-
-nmap <silent><leader><cr> <esc>:Khuno show<cr>
-
-" }}}
 " Neomake {{{
 
 let g:neomake_javascript_enabled_makers = ['eslint_d']
+let g:neomake_python_enabled_makers = ['flake8']
+let g:neomake_sh_enabled_makers = ['shellcheck']
+
+au BufWritePost * Neomake
 
 " }}}
 " Selecta {{{
