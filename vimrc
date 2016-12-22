@@ -23,9 +23,9 @@ Plug 'kien/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
+Plug 'neomake/neomake'
 Plug 'rking/ag.vim'
 Plug 'scy/vim-mkdir-on-write'
-Plug 'shutnik/jshint2.vim'
 Plug 'simnalamburt/vim-mundo'
 Plug 'sjl/splice.vim'
 Plug 'terryma/vim-expand-region'
@@ -522,6 +522,9 @@ augroup ft_javascript
     au FileType javascript setlocal foldmarker={,}
 
     au FileType javascript nnoremap <leader>d odebugger;<esc>
+
+    au BufWritePost * Neomake
+
 augroup END
 
 " }}}
@@ -741,18 +744,16 @@ endif
 nnoremap <leader>u :GundoToggle<cr>
 
 " }}}
-" JSHint {{{
-
-let jshint2_command = '/usr/local/bin/jshint'
-let jshint2_read = 1
-let jshint2_save = 1
-
-" }}}
 " Khuno {{{
 
 let g:khuno_ignore="E501,W503"
 
 nmap <silent><leader><cr> <esc>:Khuno show<cr>
+
+" }}}
+" Neomake {{{
+
+let g:neomake_javascript_enabled_makers = ['eslint_d']
 
 " }}}
 " Selecta {{{
