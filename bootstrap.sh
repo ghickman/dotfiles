@@ -10,14 +10,14 @@ brew tap Homebrew/bundle
 brew bundle
 
 echo "========== link files"
-while read name; do
+while read -r name; do
     source="$PWD/$name"
     target="$HOME/.$name"
 
-    if [ -h $target ]; then
-        rm $target
-    elif [ -d $target ]; then
-        rm -rf $target
+    if [ -h "$target" ]; then
+        rm "$target"
+    elif [ -d "$target" ]; then
+        rm -rf "$target"
     fi
 
     ln -s "$source" "$target"
@@ -30,10 +30,10 @@ bucket="https://s3-eu-west-1.amazonaws.com/ghickman-misc/install"
 
 echo "========== install monaco powerline font"
 font="Monaco-Powerline.otf"
-fonts_location="~/Library/Fonts/"
+fonts_location="$HOME/Library/Fonts/"
 if [ ! -d "$fonts_location$font" ]; then
     curl -O --silent "$bucket/Monaco-for-Powerline.otf"
-    mv $font $fonts_location
+    mv "$font" "$fonts_location"
 fi
 
 # Install pretty iTerm colors
@@ -41,10 +41,6 @@ iterm_colourscheme="wombat-evolved.itermcolors"
 curl -O --silent "$bucket/$iterm_colourscheme"
 open "$iterm_colourscheme"
 rm "$iterm_colourscheme"
-
-echo "========== init vim submodules"
-cd ~/.files
-git submodule update --init
 
 echo "========== install pip requirements"
 mkdir -p ~/.pip/{cache,wheels}
@@ -71,5 +67,5 @@ if ! grep -qe $bash4 "/etc/shells"; then
 fi
 
 echo "========== symlink launchagents"
-ln -s ~/.files/launchagents/com.ghickman.offlineimap.plist ~/Library/LaunchAgents/
-ln -s ~/.files/launchagents/org.gnupg.gpg-agent.plist ~/Library/LaunchAgents/
+ln -s "$HOME/.files/launchagents/com.ghickman.offlineimap.plist" "$HOME/Library/LaunchAgents/"
+ln -s "$HOME/.files/launchagents/org.gnupg.gpg-agent.plist" "$HOME/Library/LaunchAgents/"
