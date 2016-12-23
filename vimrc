@@ -745,6 +745,7 @@ nnoremap <leader>u :GundoToggle<cr>
 let g:neomake_javascript_enabled_makers = ['eslint_d']
 let g:neomake_python_enabled_makers = ['flake8']
 let g:neomake_sh_enabled_makers = ['shellcheck']
+let g:neomake_yaml_enabled_makers = ['yamllint']
 
 au BufWritePost * Neomake
 

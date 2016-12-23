@@ -28,6 +28,11 @@ chmod 400 "$HOME/.msmtp"
 
 ln -s "$PWD/flake8" "$HOME/.config/flake8"
 
+echo "========== set up yaml lint"
+yamllint_dir="$HOME/.config/yamllint/config"
+mkdir -p "$yamllint_dir"
+ln -s "$PWD/yamllint" "$yamllint_dir"
+
 bucket="https://s3-eu-west-1.amazonaws.com/ghickman-misc/install"
 
 echo "========== install monaco powerline font"
