@@ -26,6 +26,8 @@ while read -r name; do
 done < "$PWD/link-files"
 chmod 400 "$HOME/.msmtp"
 
+ln -s "$PWD/flake8" "$HOME/.config/flake8"
+
 bucket="https://s3-eu-west-1.amazonaws.com/ghickman-misc/install"
 
 echo "========== install monaco powerline font"
