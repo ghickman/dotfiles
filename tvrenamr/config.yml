@@ -1,8 +1,9 @@
 defaults:
   extension:
     - .avi
-    - .mp4
     - .mkv
+    - .mp4
+    - .webm
   format: '%n - %sx%e - %t%x'
   ignore:
     - .DS_Store
