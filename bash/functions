@@ -9,7 +9,7 @@ run_at_repo_top_level() {
         return
     fi
 
-    pip install -r $path
+    pip install -r "$path"
 }
 
 pipr() {
@@ -21,17 +21,17 @@ pipd() {
 }
 
 man() {
-    open dash://man:$1
+    open dash://man:"$1"
 }
 
 take() {
     mkdir -p "$1"
-    cd "$1"
+    cd "$1" || exit
 }
 
 vc() {
     if git modified; then
-        vim $(git modified);
+        vim "$(git modified)";
     else
         echo "(nothing changed)"
     fi
@@ -50,9 +50,9 @@ va() {
         argv="$@"
     fi
 
-    ag_pattern=$(echo $pattern | sed -Ee 's/[<>]/\\\\b/g')
-    vim_pattern=$(echo $pattern | sed -E -e 's,([/=]),\\\\\1,g' -e 's,.*,/\\\v&,')
-    ag -l --smart-case --null $ag_pattern -- $argv 2>/dev/null | xargs -0 -o $EDITOR -c $vim_pattern
+    ag_pattern=$(echo "$pattern" | sed -Ee 's/[<>]/\\\\b/g')
+    vim_pattern=$(echo "$pattern" | sed -E -e 's,([/=]),\\\\\1,g' -e 's,.*,/\\\v&,')
+    ag -l --smart-case --null "$ag_pattern" -- "$argv" 2>/dev/null | xargs -0 -o "$EDITOR" -c "$vim_pattern"
 }
 
 ipnt() {
@@ -71,11 +71,11 @@ mkmc() {
 }
 
 p() {
-    cd $(find ~/Projects -maxdepth 1 -type d | selecta)
+    cd "$(find ~/Projects -maxdepth 1 -type d | selecta)" || exit
 }
 
 ssh_gp_ops() {
-    ssh ghickman@$1.gitprime-ops.com
+    ssh "ghickman@$1.gitprime-ops.com"
 }
 
 build-keyboard() {
