@@ -70,9 +70,9 @@ brew 'youtube-dl'
 
 cask 'alfred'
 cask 'appcleaner'
+cask 'arq'
 cask 'bartender'
 cask 'cloak'
-cask 'crashplan'
 cask 'daisydisk'
 cask 'dash'
 cask 'dropbox'
@@ -84,17 +84,13 @@ cask 'google-chrome'
 cask 'gpgtools'
 cask 'handbrake'
 cask 'hazel'
-cask 'intellij-idea-ce'
-cask 'iterm2-beta'
+cask 'iterm2'
 cask 'karabiner'
 cask 'lastfm'
 cask 'licecap'
-cask 'mactracker'
 cask 'medis'
 cask 'minecraft'
-cask 'mumble'
 cask 'ngrok'
-cask 'paw'
 cask 'pixelstick'
 cask 'postgres'
 cask 'postico'
@@ -114,7 +110,6 @@ cask 'wireshark'
 cask 'xbench'
 
 mas '1Password', id: 443987910
-mas 'Airmail 3', id: 918858936
 mas 'CloudApp', id: 417602904
 mas 'Keynote', id: 409183694
 mas 'Moom', id: 419330170
@@ -122,6 +117,5 @@ mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 mas 'Shush', id: 496437906
 mas 'Textual', id: 896450579
-mas 'Todoist', id: 585829637
 mas 'Tweetbot', id: 557168941
 mas 'Xcode', id: 497799835
