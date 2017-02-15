@@ -100,6 +100,9 @@
 [status]
     relativePaths = true
 
+[transfer]
+    fsckobjects = true
+
 # third party
 [achievement]
   upload = true
