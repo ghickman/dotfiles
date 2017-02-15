@@ -14,6 +14,7 @@
     c = commit
     cav = commit -av
     cb = checkout -b
+    changes = "!git lg master.."
     ctags = "!.git/hooks/ctags"
     cv = commit -v
     d = diff
