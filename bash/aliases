@@ -46,7 +46,7 @@ alias t="cd ~/Projects/tvr"
 alias fs="ssh fs"
 
 # Get first directory from path in previous commands final token
-alias lbb="echo !$ | awk -F "/" '{print $1}'"
+alias lbb="echo !$ | awk -F \"/\" '{print $1}'"
 
 # Serve a directory
 alias serve="python -m http.server"
