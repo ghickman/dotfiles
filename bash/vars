@@ -47,11 +47,5 @@ export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
 export HISTTIMEFORMAT="%F %T "
 
-if hash brew 2>/dev/null; then
-    prefix=$(brew --prefix)
-    export SOLR_CONF="$prefix/Cellar/solr/3.5.0/libexec/example/solr/"
-    export SOLR_SCHEMA="$prefix/Cellar/solr/3.5.0/libexec/example/solr/conf/schema.xml"
-fi
-
 # No pycs
 export PYTHONDONTWRITEBYTECODE=1

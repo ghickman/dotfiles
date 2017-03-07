@@ -28,9 +28,6 @@ alias scr="screen -R"
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache"
 
-# Solr
-alias solr="/usr/local/bin/solr $SOLR_CONF"
-
 # Mutt
 alias e="cd ~/Desktop && mutt"
 alias ffs="ps aux | grep offlineimap | grep -v grep | awk '{print $2}' | xargs kill -9"

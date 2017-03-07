@@ -6,10 +6,6 @@ for file in `ls -1 $configs`; do
   [ -e "$file" ] && source "$file"
 done
 
-if [ -e ~/.extra ]; then
-    source ~/.extra
-fi
-
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
