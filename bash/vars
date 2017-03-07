@@ -48,8 +48,9 @@ export HISTFILESIZE=$HISTSIZE
 export HISTTIMEFORMAT="%F %T "
 
 if hash brew 2>/dev/null; then
-    export SOLR_CONF="`brew --prefix`/Cellar/solr/3.5.0/libexec/example/solr/"
-    export SOLR_SCHEMA="`brew --prefix`/Cellar/solr/3.5.0/libexec/example/solr/conf/schema.xml"
+    prefix=$(brew --prefix)
+    export SOLR_CONF="$prefix/Cellar/solr/3.5.0/libexec/example/solr/"
+    export SOLR_SCHEMA="$prefix/Cellar/solr/3.5.0/libexec/example/solr/conf/schema.xml"
 fi
 
 # No pycs
