@@ -152,7 +152,7 @@ bind compose p postpone-message
 
 
 # Contacts Autocomplete ------------------------------
-set query_command = "contacts -Sf '%eTOKEN%n' '%s' | sed -e 's/TOKEN/\t/g'"
+set query_command = "contacts -Sf '%eTOKEN%n' '%s' 2> /dev/null | sed -e 's/TOKEN/\t/g'"
 bind editor <Tab> complete-query
 bind editor ^T    complete
 
