@@ -86,7 +86,6 @@
     trustExitCode = true
 
 [push]
-    default = upstream
     followTags = true
 
 [rebase]
