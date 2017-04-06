@@ -87,6 +87,7 @@
 
 [push]
     default = upstream
+    followTags = true
 
 [rebase]
     autostash = true
