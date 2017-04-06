@@ -99,6 +99,7 @@
 
 [status]
     relativePaths = true
+    showUntrackedFiles = all
 
 [transfer]
     fsckobjects = true
