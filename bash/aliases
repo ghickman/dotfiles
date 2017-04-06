@@ -58,4 +58,4 @@ alias da="direnv allow"
 alias p8="ping 8.8.8.8"
 
 # Work
-alias start-the-day="git stash -u && git checkout master && git pull && pip-sync dev-requirements.txt requirements.txt && yarn && pym migrate && git remote prune origin"
+alias start-the-day="git fetch origin +master:master +production:production +canary:canary && pip-sync dev-requirements.txt requirements.txt && yarn && pym migrate && git fetch --prune"
