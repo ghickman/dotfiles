@@ -148,7 +148,6 @@ set from     = "george@ghickman.co.uk"
 set sendmail = "/usr/local/bin/msmtp -a ghickman"
 set sendmail_wait = 0
 unset record
-bind compose p postpone-message
 
 
 # Contacts Autocomplete ------------------------------
@@ -164,6 +163,7 @@ macro index S "<enter-command>unset wait_key<enter><shell-escape>mutt-notmuch-py
 
 # PLUGINS
 # PGP ------------------------------------------------
+bind compose p pgp-menu
 set crypt_use_gpgme=yes
 set crypt_verify_sig=yes
 set crypt_autosign=yes
