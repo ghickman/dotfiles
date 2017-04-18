@@ -24,6 +24,7 @@ Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'neomake/neomake'
 Plug 'rking/ag.vim'
+Plug 'sbdchd/neoformat'
 Plug 'scy/vim-mkdir-on-write'
 Plug 'simnalamburt/vim-mundo'
 Plug 'sjl/splice.vim'
@@ -522,6 +523,10 @@ augroup ft_javascript
     au FileType javascript setlocal foldmarker={,}
 
     au FileType javascript nnoremap <leader>d odebugger;<esc>
+
+    " Use prettier to format JS files
+    au FileType javascript set formatprg=bin/prettier-stdin
+    au BufWritePre *.js,*.jsx Neoformat
 augroup END
 
 " }}}
@@ -739,6 +744,11 @@ endif
 " Gundo {{{
 
 nnoremap <leader>u :GundoToggle<cr>
+
+" }}}
+" Neoformat {{{
+
+let g:neoformat_try_formatprg = 1
 
 " }}}
 " Neomake {{{
