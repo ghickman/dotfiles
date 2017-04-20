@@ -48,7 +48,7 @@ va() {
     if [ $# -gt 1 ]; then
         # drop first cli arg
         shift
-        argv="$@"
+        argv="$*"
     fi
 
     ag_pattern=$(echo "$pattern" | sed -Ee 's/[<>]/\\\\b/g')
