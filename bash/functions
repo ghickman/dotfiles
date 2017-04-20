@@ -44,10 +44,8 @@ va() {
     pattern="$1"
 
     argv="."
-    # use second+ args to limit search locations
-    if [ $# -gt 1 ]; then
-        # drop first cli arg
-        shift
+    if [ $# -gt 1 ]; then  # use second+ args to limit search locations
+        shift  # drop first cli arg
         argv="$*"
     fi
 
