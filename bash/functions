@@ -43,6 +43,7 @@ va() {
     # jump to location in file containing pattern
     pattern="$1"
 
+    argv="."
     # use second+ args to limit search locations
     if [ $# -gt 1 ]; then
         # drop first cli arg
