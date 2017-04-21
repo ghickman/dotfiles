@@ -12,7 +12,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
 Plug 'evanmiller/nginx-vim-syntax'
 Plug 'foosoft/vim-argwrap'
-Plug 'ghickman/vim-airline'
 Plug 'ghickman/vim-colors-solarized'
 Plug 'ghickman/vim-wombat-scheme'
 Plug 'groenewege/vim-less'
@@ -40,6 +39,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/matchit.zip'
 
 " Add plugins to &runtimepath
@@ -665,9 +665,6 @@ endif
 " }}}
 " Airline {{{
 
-let g:airline#extensions#bufferline#enabled = 0
-let g:airline#extensions#hunks#enabled = 0
-let g:airline#extensions#whitespace#enabled = 0
 let g:airline_powerline_fonts = 1
 
 " }}}
