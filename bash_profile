@@ -1,8 +1,6 @@
 #!/bin/bash
 
-configs="$HOME/.bash"
-for file in `ls -1 $configs`; do
-  file="$configs/$file"
+for file in $HOME/.bash/*; do
   # shellcheck disable=SC1090
   [ -e "$file" ] && source "$file"
 done
