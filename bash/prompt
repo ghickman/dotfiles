@@ -3,11 +3,11 @@
 if hash brew 2>/dev/null; then
     prefix=$(brew --prefix)
     if [ -f "$prefix/etc/bash_completion" ]; then
-      . "$prefix/etc/bash_completion"
+        # shellcheck disable=SC1090
+        . "$prefix/etc/bash_completion"
     fi
 fi
 
-BLACK="\[\033[0;30m\]"
 GREEN="\[\033[0;32m\]"
 RED="\[\033[0;31m\]"
 WHITE="\[\033[0;37m\]"

@@ -3,6 +3,7 @@
 configs="$HOME/.bash"
 for file in `ls -1 $configs`; do
   file="$configs/$file"
+  # shellcheck disable=SC1090
   [ -e "$file" ] && source "$file"
 done
 
@@ -18,11 +19,13 @@ complete -C aws_completer aws
 
 eval "$(pyenv init -)"
 
+# shellcheck disable=SC1090
 source "${HOME}/.files/direnv"
 
 GPG_TTY=$(tty)
 export GPG_TTY
 if [ -f "${HOME}/.gpg-agent-info" ]; then
+  # shellcheck disable=SC1090
   . "${HOME}/.gpg-agent-info"
   export GPG_AGENT_INFO
 fi
