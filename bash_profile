@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -o vi
+
 for file in $HOME/.bash/*; do
   # shellcheck disable=SC1090
   [ -e "$file" ] && source "$file"
