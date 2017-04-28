@@ -12,6 +12,7 @@ pipsi install pre-commit-hooks
 pipsi install pytest
 pipsi install s3cmd
 pipsi install supervisor
+pipsi install --python=python3 tmuxp
 pipsi install tox
 pipsi install tvrenamr
 pipsi install twine

@@ -53,9 +53,6 @@ echo "========== install pip requirements"
 mkdir -p ~/.pip/{cache,wheels}
 pip install --upgrade -r requirements.txt
 
-echo "========== dem rubbies"
-sudo gem install tmuxinator
-
 echo "========== install python bins with pipsi"
 curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python
 ./pipsi.reqs

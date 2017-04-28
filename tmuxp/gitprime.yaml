@@ -1,0 +1,22 @@
+session_name: gitprime
+start_directory: '~/Projects/gitprime/gitprime'
+windows:
+- window_name: servers
+  layout: tiled
+  panes:
+    - inv run-static
+    - inv run-scheduler
+    - inv run-rq-worker
+    - inv run-rpq-worker
+    - inv run-rpq-pull-requests
+    - inv run-rpq-tickets
+    - pymrs
+- window_name: workspace
+  layout: 8028,364x82,0,0{243x82,0,0,7,120x82,244,0,8}
+  panes:
+    - vim
+    - pane
+- window_name: ipython
+  panes:
+    - pyms+ --notebook
+
