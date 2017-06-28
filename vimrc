@@ -530,6 +530,9 @@ augroup ft_javascript
     " Use prettier to format JS files
     au FileType javascript set formatprg=bin/prettier-stdin
     au BufWritePre *.js,*.jsx Neoformat
+
+    " Defer to import-sort for sorting JavaScript imports (instead of using Unix sort)
+    au FileType javascript nnoremap <leader>S mX:!import-sort --overwrite %<cr>`X
 augroup END
 
 " }}}
