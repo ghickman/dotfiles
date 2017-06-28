@@ -1,8 +1,8 @@
-pipsi install --python=python3 flake8
 pipsi install cookiecutter
 pipsi install devpi-client
 pipsi install django
 pipsi install fabric
+pipsi install --python=python3 flake8
 pipsi install glances
 pipsi install httpie
 pipsi install invoke
