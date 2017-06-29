@@ -13,14 +13,9 @@ postsynchook = /usr/local/bin/notmuch new
 type = Maildir
 localfolders = ~/.mail/george-ghickman.co.uk
 nametrans = lambda folder: {
-                'archive':      'INBOX.Archive',
-                'drafts':       'INBOX.Drafts',
-                'ghickman-ltd': 'INBOX.ghickman-ltd',
-                'pyconuk-adm':  'INBOX.pyconuk-adm',
-                'sent':         'INBOX.Sent Items',
-                'spam':         'INBOX.Spam',
-                'templates':    'INBOX.templates',
-                'trash':        'INBOX.Trash',
+                'archive': 'Archive',
+                'drafts':  'Drafts',
+                'sent':    'Sent Items',
             }.get(folder, folder)
 
 [Repository fastmail]
@@ -33,17 +28,16 @@ remotepasseval = get_keychain_pass(account="george@ghickman.co.uk", server="imap
 ssl = yes
 sslcacertfile = ~/.mutt/cacert.pem
 nametrans = lambda folder: {
-                'INBOX.Archive':      'archive',
-                'INBOX.Drafts':       'drafts',
-                'INBOX.ghickman-ltd': 'ghickman-ltd',
-                'INBOX.pyconuk-adm':  'pyconuk-adm',
-                'INBOX.Sent Items':   'sent',
-                'INBOX.Spam':         'spam',
-                'INBOX.templates':    'templates',
-                'INBOX.Trash':        'trash',
+                'Archive':    'archive',
+                'Drafts':     'drafts',
+                'Sent Items': 'sent',
             }.get(folder, folder)
-folderfilter = lambda folder: folder not in [
-                    'INBOX.Junk Mail',
-                    'INBOX.Spam',
-                    'INBOX.Trash',
-                ]
+folderfilter = lambda folder: folder in [
+                        'Archive',
+                        'Drafts',
+                        'INBOX',
+                        'ghickman-ltd',
+                        'pyconuk-adm',
+                        'Sent Items',
+                        'templates',
+            ]
