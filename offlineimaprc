@@ -26,10 +26,10 @@ nametrans = lambda folder: {
 [Repository fastmail]
 maxconnections = 1
 type = IMAP
-remotehost = mail.messagingengine.com
+remotehost = imap.fastmail.com
 remoteport = 993
 remoteuser = george@ghickman.co.uk
-remotepasseval = get_keychain_pass(account="george@ghickman.co.uk", server="mail.messagingengine.com")
+remotepasseval = get_keychain_pass(account="george@ghickman.co.uk", server="imap.fastmail.com")
 ssl = yes
 sslcacertfile = ~/.mutt/cacert.pem
 nametrans = lambda folder: {
