@@ -49,13 +49,16 @@ curl -O --silent "$bucket/$iterm_colourscheme"
 open "$iterm_colourscheme"
 rm "$iterm_colourscheme"
 
+echo "========== install pythongs"
+./pythons.sh
+
 echo "========== install pip requirements"
 mkdir -p ~/.pip/{cache,wheels}
 pip install --upgrade -r requirements.txt
 
 echo "========== install python bins with pipsi"
 curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python
-./pipsi.reqs
+PATH=~/.local/bin:$PATH ./pipsi.reqs
 
 echo "========== configure preferences"
 ./osx
