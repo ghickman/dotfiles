@@ -27,6 +27,8 @@ done < "$PWD/link-files"
 chmod 400 "$HOME/.msmtp"
 
 ln -s "$PWD/flake8" "$HOME/.config/flake8"
+ln -s "$PWD/vim" "$HOME/.config/nvim"
+ln -s "$PWD/vimrc" "$HOME/.config/init.vim"
 
 echo "========== set up yaml lint"
 yamllint_dir="$HOME/.config/yamllint/config"
