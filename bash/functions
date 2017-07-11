@@ -51,7 +51,7 @@ va() {
 
     ag_pattern=$(echo "$pattern" | sed -Ee 's/[<>]/\\\\b/g')
     vim_pattern=$(echo "$pattern" | sed -E -e 's,([/=]),\\\\\1,g' -e 's,.*,/\\\v&,')
-    ag --files-with-matches --smart-case --null "$ag_pattern" -- "$argv" 2>/dev/null | xargs -0 -o "$EDITOR" -c "$vim_pattern"
+    ag --files-with-matches --smart-case "$ag_pattern" -- "$argv" 2>/dev/null | xargs "$EDITOR" -c "$vim_pattern"
 }
 
 ipnt() {
