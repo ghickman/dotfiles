@@ -39,5 +39,4 @@ folderfilter = lambda folder: folder in [
                         'ghickman-ltd',
                         'pyconuk-adm',
                         'Sent Items',
-                        'templates',
             ]
