@@ -11,10 +11,11 @@ windows:
     - inv run-rpq-pull-requests
     - inv run-rpq-tickets
     - pymrs
-- window_name: workspace
-  layout: 8028,364x82,0,0{243x82,0,0,7,120x82,244,0,8}
+- window_name: vim
   panes:
     - vim
+- window_name: terminal
+  panes:
     - pane
 - window_name: ipython
   panes:
