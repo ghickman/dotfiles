@@ -29,6 +29,7 @@ while read -r name; do
 done < "$PWD/link-files"
 chmod 400 "$HOME/.msmtp"
 
+mkdir -p "$HOME/.config"
 ln -s "$PWD/flake8" "$HOME/.config/flake8"
 ln -s "$PWD/vim" "$HOME/.config/nvim"
 ln -s "$PWD/vimrc" "$HOME/.config/init.vim"
