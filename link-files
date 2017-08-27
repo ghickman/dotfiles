@@ -16,6 +16,8 @@ npmrc
 offlineimaprc
 pip
 psqlrc
+tmux.conf
+tmuxp
 tvrenamr
 urlview
 vim
