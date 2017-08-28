@@ -71,7 +71,6 @@ set nojoinspaces
 set nospell
 set novisualbell
 set number
-set relativenumber
 set ruler
 set showcmd
 set showmode
