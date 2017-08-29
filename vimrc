@@ -527,7 +527,6 @@ augroup ft_javascript
     au FileType javascript nnoremap <leader>d odebugger;<esc>
 
     " Use prettier to format JS files
-    au FileType javascript set formatprg=bin/prettier-stdin
     au BufWritePre *.js,*.jsx Neoformat
 
     " Defer to import-sort for sorting JavaScript imports (instead of using Unix sort)
@@ -746,6 +745,9 @@ nnoremap <leader>u :GundoToggle<cr>
 " Neoformat {{{
 
 let g:neoformat_try_formatprg = 1
+
+let g:neoformat_javascript_prettier = {'exe': 'prettier', 'args': ['--write', '--config', '.prettierrc'], 'replace': 1}
+let g:neoformat_jsx_prettier        = {'exe': 'prettier', 'args': ['--write', '--config', '.prettierrc'], 'replace': 1}
 
 " }}}
 " Neomake {{{
