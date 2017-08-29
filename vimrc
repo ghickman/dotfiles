@@ -433,7 +433,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " }}}
 " Filetype Specific Stuff ------------------------------------------------ {{{
 
-" CSS and SCSS {{{
+" CSS and Style Preprocessors {{{
 
 augroup ft_css
     au!
@@ -465,6 +465,9 @@ augroup ft_css
     " Make {<cr> insert a pair of brackets in such a way that the cursor is correctly
     " positioned inside of them AND the following code doesn't get unfolded.
     au BufNewFile,BufRead *.sass,*.css inoremap <buffer> {<cr> {}<left><cr><space><space><space><space>.<cr><esc>kA<bs>
+
+    " Use prettier to format style files
+    au BufWritePre *.css,*.less Neoformat
 augroup END
 
 " }}}
@@ -746,8 +749,10 @@ nnoremap <leader>u :GundoToggle<cr>
 
 let g:neoformat_try_formatprg = 1
 
+let g:neoformat_css_prettier        = {'exe': 'prettier', 'args': ['--write', '--config', '.prettierrc'], 'replace': 1}
 let g:neoformat_javascript_prettier = {'exe': 'prettier', 'args': ['--write', '--config', '.prettierrc'], 'replace': 1}
 let g:neoformat_jsx_prettier        = {'exe': 'prettier', 'args': ['--write', '--config', '.prettierrc'], 'replace': 1}
+let g:neoformat_less_prettier       = {'exe': 'prettier', 'args': ['--write', '--config', '.prettierrc'], 'replace': 1}
 
 " }}}
 " Neomake {{{
