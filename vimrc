@@ -668,11 +668,6 @@ if executable("ag")
 endif
 
 " }}}
-" Airline {{{
-
-let g:airline_powerline_fonts = 1
-
-" }}}
 " ArgWrap {{{
 
 let g:argwrap_tail_comma = 1
