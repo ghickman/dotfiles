@@ -518,7 +518,7 @@ augroup END
 augroup ft_javascript
     au!
 
-    au BufRead,BufNewFile *.js set suffixesadd+=.js
+    au BufRead,BufNewFile *.js,*.jsx set suffixesadd+=.js
 
     " Pretty-print JSON files with Python (& remove the trailing whitespace that
     " Python <2.7 json module adds, sigh)
