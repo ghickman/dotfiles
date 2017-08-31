@@ -1,0 +1,19 @@
+// @flow
+
+import React from 'react';
+
+type Props = {};
+
+class ClassTemplate extends React.Component<Props> {
+    props: Props;
+
+    componentDidMount() {
+        //
+    }
+
+    render() {
+        return <div />;
+    }
+}
+
+export default ClassTemplate;

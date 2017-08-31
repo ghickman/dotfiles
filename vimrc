@@ -534,6 +534,9 @@ augroup ft_javascript
 
     " Defer to import-sort for sorting JavaScript imports (instead of using Unix sort)
     au FileType javascript nnoremap <leader>S mX:!import-sort --overwrite %<cr>`X
+
+    " Scaffold new files
+    au BufNewFile *.jsx 0r ~/.vim/templates/jsx
 augroup END
 
 " }}}
