@@ -22,10 +22,5 @@ source "${HOME}/.files/direnv"
 
 GPG_TTY=$(tty)
 export GPG_TTY
-if [ -f "${HOME}/.gpg-agent-info" ]; then
-  # shellcheck disable=SC1090
-  . "${HOME}/.gpg-agent-info"
-  export GPG_AGENT_INFO
-fi
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
