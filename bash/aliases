@@ -59,3 +59,6 @@ alias p8="ping 8.8.8.8"
 
 # Work
 alias start-the-day="git fetch origin +master:master +production:production +canary:canary && git stash -u && git checkout master && pip-sync dev-requirements.txt requirements.txt && yarn && pym migrate && git fetch --prune && git sb"
+
+# brew
+alias b="brew update && brew upgrade && brew cleanup"
