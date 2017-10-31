@@ -27,7 +27,7 @@
     push-start = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`"
     s = status
     sb = checkout -
-    select = "!git recent-branches | selecta | xargs git checkout"
+    select = "!git recent-branches | fzf | xargs git checkout"
     whatadded = "log --diff-filter=A"
 
     git = status  # damn you muscle memory

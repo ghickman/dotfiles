@@ -70,7 +70,7 @@ mkmc() {
 }
 
 p() {
-    cd "$(find ~/Projects -maxdepth 1 -type d | selecta)" || exit
+    cd "$(find ~/Projects -maxdepth 1 -type d | fzf)" || exit
 }
 
 ssh_gp_ops() {

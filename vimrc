@@ -6,7 +6,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'andrewRadev/splitjoin.vim'
 Plug 'ap/vim-buftabline'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'curist/vim-angular-template'
 Plug 'docunext/closetag.vim'
 Plug 'easymotion/vim-easymotion'
@@ -18,6 +17,8 @@ Plug 'ghickman/vim-wombat-scheme'
 Plug 'google/vim-searchindex'
 Plug 'groenewege/vim-less'
 Plug 'hynek/vim-python-pep8-indent'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-peekaboo'
 Plug 'majutsushi/tagbar'
@@ -694,20 +695,6 @@ au FileType htmldjango setlocal commentstring={#\ %s\ #}
 au FileType python setlocal commentstring=#\ %s
 
 " }}}
-" CtrlP {{{
-
-let g:ctrlp_map = '<leader>t'
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_extensions = ['tag']
-if executable('ag')
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-    let g:ctrlp_use_caching = 0
-endif
-
-nnoremap <leader>. :CtrlPTag<cr>
-nnoremap <leader>f :CtrlPBuffer<cr>
-
-" }}}
 " EasyAlign {{{
 
 vmap <Enter> <Plug>(EasyAlign)
@@ -732,6 +719,15 @@ augroup ft_fugitive
 
     au BufNewFile,BufRead .git/index setlocal nolist
 augroup END
+
+" }}}
+" FZF {{{
+
+let g:fzf_buffers_jump = 1
+
+nnoremap <leader>t :FZF<cr>
+nnoremap <leader>f :Buffers<cr>
+nnoremap <leader>. :Tags<cr>
 
 " }}}
 " Gist {{{
