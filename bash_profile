@@ -1,9 +1,7 @@
 #!/bin/bash
 
-for file in $HOME/.bash/*; do
-  # shellcheck disable=SC1090
-  [ -e "$file" ] && source "$file"
-done
+# shellcheck disable=SC1090
+source "${HOME}/.bashrc"
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
@@ -16,9 +14,6 @@ bind '"\C-w": unix-filename-rubout'
 complete -C aws_completer aws
 
 eval "$(pyenv init -)"
-
-# shellcheck disable=SC1090
-source "${HOME}/.files/direnv"
 
 GPG_TTY=$(tty)
 export GPG_TTY
