@@ -73,10 +73,6 @@ p() {
     cd "$(find ~/Projects -maxdepth 1 -type d | fzf)" || exit
 }
 
-ssh_gp_ops() {
-    ssh "ghickman@$1.gitprime-ops.com"
-}
-
 # built using http://blog.roastpotatoes.co/2015/03/22/ergodox/
 build-keyboard() {
     cd ~/Projects/tmk_keyboard/keyboard/ergodox || exit
