@@ -1,0 +1,12 @@
+---
+session_name: lambing
+start_directory: '~/Projects/lambing'
+windows:
+  - window_name: servers
+    layout: tiled
+    panes:
+      - pipenv run python manage.py runserver
+      - webpack-dev-server -d
+  - window_name: terminal
+    panes:
+      - pipenv shell --fancy
