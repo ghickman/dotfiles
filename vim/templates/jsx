@@ -4,11 +4,19 @@ import React from 'react';
 
 type Props = {};
 
-class ClassTemplate extends React.Component<Props> {
-    props: Props;
+type State = {
+};
 
-    componentDidMount() {
-        //
+class ClassTemplate extends React.Component<Props, State> {
+    props: Props;
+    state: State;
+
+    constructor(props: Props) {
+        super(props);
+
+        this.state = {
+
+        };
     }
 
     render() {
