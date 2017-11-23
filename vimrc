@@ -325,7 +325,7 @@ noremap <C-k>  <C-w>k
 noremap <C-l>  <C-w>l
 noremap <leader>v <C-w>v
 
-set scrolloff=3
+set scrolloff=999
 set sidescroll=1
 set sidescrolloff=10
 
