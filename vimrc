@@ -14,6 +14,7 @@ Plug 'ervandew/supertab'
 Plug 'foosoft/vim-argwrap'
 Plug 'ghickman/vim-colors-solarized'
 Plug 'ghickman/vim-wombat-scheme'
+Plug 'ghickman/vimroom'
 Plug 'google/vim-searchindex'
 Plug 'groenewege/vim-less'
 Plug 'hynek/vim-python-pep8-indent'
@@ -777,6 +778,32 @@ let g:splice_wrap = "nowrap"
 
 let g:SuperTabLongestHighlight = 1
 let g:SuperTabCrMapping = 1
+
+" }}}
+" Vimroom {{{
+
+let g:vimroom_create_mapping = 0
+let g:vimroom_sidebar_height = 0
+
+" Wrap VimroomToggle to make blank lines grey
+let s:active = 0
+function! VimroomWrapper()
+  if s:active == 1
+    let s:active = 0
+    :VimroomToggle
+
+    " restore NonText highlights
+    hi! link NonText LineNr
+  else
+    let s:active = 1
+    VimroomToggle
+
+    " override NonText to fix empty line marker
+    hi NonText guifg=Grey
+  endif
+endfunction
+
+nnoremap <leader>V :call VimroomWrapper()<cr>
 
 " }}}
 
