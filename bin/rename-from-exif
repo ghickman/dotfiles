@@ -25,8 +25,8 @@ date_format = '%Y-%m-%d_%H-%M-%S'
 jhead = 'jhead -autorot -ft -n"{}" "{}"'
 exiftool = 'exiftool -v -FileName\<DateCreated -d "{}.%%e" "{}"'
 
-if args.path.endswith('.jpg'):
+if args.path.lower().endswith('.jpg'):
     subprocess.check_call(jhead.format(date_format, args.path), shell=True)
 
-if args.path.endswith(('.mov', '.png')):
+if args.path.lower().endswith(('.mov', '.png')):
     subprocess.check_call(exiftool.format(date_format, args.path), shell=True)
