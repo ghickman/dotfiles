@@ -11,27 +11,27 @@ parser.add_argument('path')
 args = parser.parse_args()
 
 if not os.path.exists(args.path):
-    sys.stderr.write('Path does not exist: {}\n'.format(args.path))
+    sys.stderr.write(f'Path does not exist: {args.path}\n')
     sys.exit(1)
 
 _, filename = os.path.split(args.path)
 if not filename.startswith('img_'):
-    sys.stderr.write('File name does not start with "img_": {}'.format(filename))
+    sys.stderr.write(f'File name does not start with "img_": {filename}')
     sys.exit(1)
 
 # Set file names from EXIF data
 date_format = '%Y-%m-%d_%H-%M-%S'
-jhead = 'jhead -autorot -ft -n"{}" "{}"'
-exiftool = 'exiftool -v -FileName\<CreateDate -d "{}.%%e" "{}"'
+jhead = f'jhead -autorot -ft -n"{date_format}" "{args.path}"'
+exiftool = f'exiftool -v -FileName\<CreateDate -d "{date_format}.%%e" "{args.path}"'
 
 _, ext = os.path.splitext(args.path)
 
 if ext == '.jpg':
-    subprocess.check_call(jhead.format(date_format, args.path), shell=True)
+    subprocess.check_call(jhead, shell=True)
     sys.exit(0)
 
 if ext in ('.heic', '.mov', '.png'):
-    subprocess.check_call(exiftool.format(date_format, args.path), shell=True)
+    subprocess.check_call(exiftool, shell=True)
     sys.exit(0)
 
 sys.stderr.write(f'Not configured for "{ext}" extension, skipping: {args.path}\n')
