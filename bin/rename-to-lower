@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+
+import os
+import sys
+
+
+for origin in sys.argv[1:]:
+    head, tail = os.path.split(origin)
+    destination = os.path.join(head, tail.lower())
+    os.rename(origin, destination)
+    print(f'Renamed "{origin}" -> "{destination}"')

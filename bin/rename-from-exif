@@ -15,20 +15,23 @@ if not os.path.exists(args.path):
     sys.exit(1)
 
 _, filename = os.path.split(args.path)
-if not filename.startswith('IMG_'):
-    sys.stderr.write('File name does not start with "IMG_": {}'.format(filename))
+if not filename.startswith('img_'):
+    sys.stderr.write('File name does not start with "img_": {}'.format(filename))
     sys.exit(1)
-
-if not args.path.lower().endswith(('.jpg', 'mov', 'png')):
-    print('Skipping: {}'.format(args.path))
 
 # Set file names from EXIF data
 date_format = '%Y-%m-%d_%H-%M-%S'
 jhead = 'jhead -autorot -ft -n"{}" "{}"'
-exiftool = 'exiftool -v -FileName\<DateCreated -d "{}.%%e" "{}"'
+exiftool = 'exiftool -v -FileName\<CreateDate -d "{}.%%e" "{}"'
 
-if args.path.lower().endswith('.jpg'):
+_, ext = os.path.splitext(args.path)
+
+if ext == '.jpg':
     subprocess.check_call(jhead.format(date_format, args.path), shell=True)
+    sys.exit(0)
 
-if args.path.lower().endswith(('.mov', '.png')):
+if ext in ('.heic', '.mov', '.png'):
     subprocess.check_call(exiftool.format(date_format, args.path), shell=True)
+    sys.exit(0)
+
+sys.stderr.write(f'Not configured for "{ext}" extension, skipping: {args.path}\n')
