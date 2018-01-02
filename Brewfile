@@ -47,7 +47,7 @@ brew "libyaml"
 brew "docker-compose"
 brew "doxygen"
 brew "elasticsearch"
-brew "exiftool"
+brew "exiftool", args: ["devel"]
 brew "expect"
 brew "faac"
 brew "ffind"
