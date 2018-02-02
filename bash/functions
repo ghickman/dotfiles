@@ -69,8 +69,12 @@ mkmc() {
     touch "$1/management/commands/__init__.py"
 }
 
+d() {
+    cd "$(find "$HOME/Documents" -type "d" | fzf)" || exit
+}
+
 p() {
-    cd "$(find ~/Projects -maxdepth 1 -type d | fzf)" || exit
+    cd "$(find "$HOME/Projects" -maxdepth 1 -type "d" | fzf)" || exit
 }
 
 # built using http://blog.roastpotatoes.co/2015/03/22/ergodox/
