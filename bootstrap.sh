@@ -35,9 +35,9 @@ ln -s "$PWD/vim" "$HOME/.config/nvim"
 ln -s "$PWD/vimrc" "$HOME/.config/init.vim"
 
 echo "========== set up yaml lint"
-yamllint_dir="$HOME/.config/yamllint/config"
+yamllint_dir="$HOME/.config/yamllint"
 mkdir -p "$yamllint_dir"
-ln -s "$PWD/yamllint" "$yamllint_dir"
+ln -s "$PWD/yamllint" "$yamllint_dir/config"
 
 bucket="https://s3-eu-west-1.amazonaws.com/ghickman-misc/install"
 
