@@ -1,9 +1,12 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
 branch=$(git rev-parse --abbrev-ref HEAD)
-creds=$(git remote -v | grep origin | grep push | awk '{print $2}' | awk -F ':' '{print $2}' | rev | cut -c 5- | rev)
+creds=$(git remote -v | grep origin | grep push | awk '{print $2}' | awk -F ':' '{print $2}')
+if [[ "$creds" == *.git ]]; then
+    creds=$(echo "$creds" | rev | cut -c 5- | rev)
+fi
 
 git push-start
 open "https://github.com/$creds/compare/$branch?expand=1"
