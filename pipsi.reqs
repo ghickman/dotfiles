@@ -1,3 +1,4 @@
+pipsi install --python=python3 ansible
 pipsi install cookiecutter
 pipsi install devpi-client
 pipsi install django
