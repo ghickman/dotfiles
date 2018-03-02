@@ -54,3 +54,6 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 # FZF
 export FZF_DEFAULT_COMMAND="ag -g \"\""
+
+# No really, no fucking cows
+export ANSIBLE_NOCOWS=1
