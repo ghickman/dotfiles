@@ -1,9 +1,9 @@
-pipsi install --python=python3 ansible
+pipsi install ansible
 pipsi install cookiecutter
 pipsi install devpi-client
 pipsi install django
 pipsi install fabric
-pipsi install --python=python3 flake8
+pipsi install flake8
 pipsi install glances
 pipsi install httpie
 pipsi install invoke
@@ -12,11 +12,11 @@ pipsi install pip-tools
 pipsi install pre-commit-hooks
 pipsi install pytest
 pipsi install s3cmd
-pipsi install supervisor
-pipsi install --python=python3 tmuxp
+pipsi install --python=python2 supervisor
+pipsi install tmuxp
 pipsi install tox
 pipsi install tvrenamr
 pipsi install twine
-pipsi install --python=python3 update_plex
+pipsi install update_plex
 pipsi install watchdog
 pipsi install yamllint
