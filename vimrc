@@ -626,7 +626,7 @@ augroup END
 augroup ft_rest
     au!
 
-    au Filetype rst nnoremap <buffer> <localleader>1 yypVr=
+    au Filetype rst nnoremap <buffer> <localleader>1 yyPVr=jpVr=
     au Filetype rst nnoremap <buffer> <localleader>2 yypVr-
     au Filetype rst nnoremap <buffer> <localleader>3 yypVr^
     au Filetype rst nnoremap <buffer> <localleader>4 yypVr"
