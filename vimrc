@@ -631,6 +631,8 @@ augroup ft_rest
     au Filetype rst nnoremap <buffer> <localleader>3 yypVr^
     au Filetype rst nnoremap <buffer> <localleader>4 yypVr"
 
+    au Filetype rst nnoremap <buffer> <localleader>i 0vyPr*$vypr*
+
     au FileType rst setlocal wrap
     au FileType rst map j gj
     au FileType rst map k gk
