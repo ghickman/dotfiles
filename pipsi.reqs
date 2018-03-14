@@ -8,6 +8,8 @@ pipsi install glances
 pipsi install httpie
 pipsi install invoke
 pipsi install isort
+pipsi install pew
+pipsi install pipenv
 pipsi install pip-tools
 pipsi install pre-commit-hooks
 pipsi install pytest
