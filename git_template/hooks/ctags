@@ -1,14 +1,11 @@
 #!/bin/sh
-set -e
 
-trap "rm -f .git/tags.$$" EXIT
-dir="`git rev-parse --git-dir`"
+set -e
 
 git ls-files | \
     /usr/local/bin/ctags \
-    --tag-relative \
     -L - \
-    -f.git/tags.$$ \
+    -f tags \
     --language-force=python \
     --python-kinds=-ivm \
     --exclude=.tox \
@@ -16,5 +13,3 @@ git ls-files | \
     --exclude=bower_components \
     --exclude=node_modules \
     --exclude=README.*
-
-mv "$dir"/tags{.$$,}
