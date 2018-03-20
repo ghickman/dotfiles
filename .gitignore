@@ -6,5 +6,6 @@ pip/wheels
 tvrenamr/*.log*
 tvrenamr/cache
 vim/autoload/plug.old
+vim/init.vim
 vim/plugged
 vim/shada
