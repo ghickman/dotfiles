@@ -27,7 +27,7 @@ while read -r name; do
     echo "Linked $source to $target"
 
 done < "$PWD/link-files"
-chmod 400 "$HOME/.msmtp"
+chmod 400 "$HOME/.msmtprc"
 
 mkdir -p "$HOME/.config"
 ln -s "$PWD/flake8" "$HOME/.config/flake8"
