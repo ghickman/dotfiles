@@ -74,7 +74,7 @@ mkdir -p ~/.mail/george-ghickman.co.uk
 echo "========== set bash 4 as shell"
 bash4="/usr/local/bin/bash"
 if ! grep -qe $bash4 "/etc/shells"; then
-    echo $bash4 >> "/etc/shells"
+    echo $bash4 | sudo tee -a "/etc/shells"
     chsh -s /usr/local/bin/bash
 fi
 
