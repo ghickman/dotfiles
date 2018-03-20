@@ -63,8 +63,7 @@ mkdir -p ~/.pip/{cache,wheels}
 pip install --upgrade -r requirements.txt
 
 echo "========== install python bins with pipsi"
-curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python
-PATH=~/.local/bin:$PATH ./pipsi.reqs
+./pipsi-reinstall
 
 echo "========== configure preferences"
 ./osx
