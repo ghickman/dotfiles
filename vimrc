@@ -82,6 +82,7 @@ set termguicolors
 set title
 set undofile
 set undoreload=10000
+set updatetime=100
 
 " Resize splits when the window is resized
 au VimResized * exe "normal! \<c-w>="
