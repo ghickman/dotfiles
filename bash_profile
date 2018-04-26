@@ -19,3 +19,9 @@ GPG_TTY=$(tty)
 export GPG_TTY
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+lunchy_script=$(gem which lunchy)
+lunchy_dir=$(dirname "$lunchy_script")/../extras
+ if [ -f "$lunchy_dir/lunchy-completion.bash" ]; then
+   . "$lunchy_dir/lunchy-completion.bash"
+ fi
