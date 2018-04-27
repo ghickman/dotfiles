@@ -79,7 +79,7 @@ p() {
 
 # built using http://blog.roastpotatoes.co/2015/03/22/ergodox/
 build-keyboard() {
-    cd ~/Projects/tmk_keyboard/keyboard/ergodox || exit
+    cd "${HOME}/Projects/tmk_keyboard/keyboard/ergodox" || exit
     PATH=/usr/local/CrossPack-AVR/bin:$PATH
     make -f Makefile.lufa clean dvorak
     make -f Makefile.lufa qwerty teensy
