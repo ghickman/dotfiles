@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu
+
 # shellcheck disable=SC1090
 source "${HOME}/.bashrc"
 
@@ -18,10 +20,17 @@ eval "$(pyenv init -)"
 GPG_TTY=$(tty)
 export GPG_TTY
 
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+iterm_integration="${HOME}/.iterm2_shell_integration.bash"
+if [ -f "$iterm_integration" ]; then
+   # shellcheck disable=SC1090
+   source "$iterm_integration"
+fi
 
 lunchy_script=$(gem which lunchy)
-lunchy_dir=$(dirname "$lunchy_script")/../extras
- if [ -f "$lunchy_dir/lunchy-completion.bash" ]; then
-   . "$lunchy_dir/lunchy-completion.bash"
+lunchy_completion="$(dirname "$lunchy_script")/../extras/lunchy-completion.bash"
+ if [ -f "$lunchy_completion" ]; then
+   # shellcheck disable=SC1090
+   . "$lunchy_completion"
  fi
+
+set +eu

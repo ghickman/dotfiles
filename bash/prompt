@@ -1,21 +1,25 @@
-#!/bin/bash
+#!/bin/sh
+
+set +eu
 
 if hash brew 2>/dev/null; then
-    prefix=$(brew --prefix)
-    if [ -f "$prefix/etc/bash_completion" ]; then
+    bash_completion_path="$(brew --prefix)/etc/bash_completion"
+    if [ -f "$bash_completion_path" ]; then
         # shellcheck disable=SC1090
-        . "$prefix/etc/bash_completion"
+        . "$bash_completion_path"
     fi
 fi
 
-GREEN="\[\033[0;32m\]"
-RED="\[\033[0;31m\]"
-WHITE="\[\033[0;37m\]"
-YELLOW="\[\033[0;33m\]"
+set -eu
+
+GREEN="\\[\\033[0;32m\\]"
+RED="\\[\\033[0;31m\\]"
+WHITE="\\[\\033[0;37m\\]"
+YELLOW="\\[\\033[0;33m\\]"
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
 
-TIME="\[\$(date +%H:%M:%S)\]"
+TIME="\\[\$(date +%H:%M:%S)\\]"
 
-PS1="$RED$TIME $GREEN\h $WHITE\W$YELLOW\$(__git_ps1)$WHITE\n$ "
+PS1="$RED$TIME $GREEN\\h $WHITE\\W$YELLOW\$(__git_ps1)$WHITE\\n$ "
