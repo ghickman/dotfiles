@@ -41,3 +41,6 @@ alias p8="ping 8.8.8.8"
 
 # brew
 alias b="brew update && brew upgrade && brew cleanup"
+
+# work
+alias th='cd ${HOME}/Projects/treeherder'
