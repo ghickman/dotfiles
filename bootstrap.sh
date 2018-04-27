@@ -78,10 +78,6 @@ if ! grep -qe $bash4 "/etc/shells"; then
     chsh -s /usr/local/bin/bash
 fi
 
-echo "========== symlink launchagents"
-ln -s "$HOME/.files/launchagents/com.ghickman.offlineimap.plist" "$HOME/Library/LaunchAgents/"
-ln -s "$HOME/.files/launchagents/org.gnupg.gpg-agent.plist" "$HOME/Library/LaunchAgents/"
-
 echo "========== Setting up TPM"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "Run <prefix>+I in tmux now"
