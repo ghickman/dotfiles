@@ -1,14 +1,9 @@
 #!/bin/bash
 
-# Easier navigation
-alias ..="cd .."
-alias ...="cd ../.."
-
 # Jobs
 alias j=jobs
 
 # Vim
-alias m="open -a VimR.app"
 alias vim="nvim"
 alias v="vim"
 
@@ -19,9 +14,6 @@ alias pymrs+="python manage.py runserver_plus"
 alias pyms="python manage.py shell"
 alias pyms+="python manage.py shell_plus"
 
-# Heroku
-alias hpym="heroku run python manage.py"
-
 # Re-attach or start new Screen
 alias scr="screen -R"
 
@@ -29,30 +21,22 @@ alias scr="screen -R"
 alias flush="dscacheutil -flushcache"
 
 # Mutt
-alias e="cd ~/Desktop && neomutt"
-alias ffs="ps aux | grep offlineimap | grep -v grep | awk '{print $2}' | xargs kill -9"
+alias e='cd ${HOME}/Desktop && neomutt'
+alias ffs="pkill -9 -f offlineimap.py"
 
 if hash brew 2>/dev/null; then
     alias cask="brew cask"
 fi
 
 # Project Directories
-alias c="cd /Volumes/Media/Downloads/complete/"
-alias t="cd ~/Projects/tvr"
-
-# Fileserver
-alias fs="ssh fs"
-
-# Get first directory from path in previous commands final token
-alias lbb="echo !$ | awk -F \"/\" '{print $1}'"
-
-# Serve a directory
-alias serve="python -m http.server"
+alias t='cd ${HOME}/Projects/tvr'
 
 # speed up direnv usage
 alias da="direnv allow"
 
 # ffs
+alias p1="ping 192.168.0.1"
+alias p2="ping 192.168.10.1"
 alias p8="ping 8.8.8.8"
 
 # brew
