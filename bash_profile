@@ -3,7 +3,7 @@
 set -eu
 
 # shellcheck disable=SC1090
-source "${HOME}/.bashrc"
+source ~/.bashrc
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
@@ -20,7 +20,7 @@ eval "$(pyenv init -)"
 GPG_TTY=$(tty)
 export GPG_TTY
 
-iterm_integration="${HOME}/.iterm2_shell_integration.bash"
+iterm_integration="~/.iterm2_shell_integration.bash"
 if [ -f "$iterm_integration" ]; then
    # shellcheck disable=SC1090
    source "$iterm_integration"

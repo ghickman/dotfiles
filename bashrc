@@ -6,4 +6,4 @@ for file in $HOME/.bash/*; do
 done
 
 # shellcheck disable=SC1090
-source "${HOME}/.files/direnv"
+source ~/.files/direnv
