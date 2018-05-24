@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -eu
-
 # shellcheck disable=SC1090
 source ~/.bashrc
 
@@ -32,5 +30,3 @@ lunchy_completion="$(dirname "$lunchy_script")/../extras/lunchy-completion.bash"
    # shellcheck disable=SC1090
    . "$lunchy_completion"
  fi
-
-set +eu

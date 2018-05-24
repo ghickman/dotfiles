@@ -1,7 +1,5 @@
 #!/bin/sh
 
-set +eu
-
 if hash brew 2>/dev/null; then
     bash_completion_path="$(brew --prefix)/etc/bash_completion"
     if [ -f "$bash_completion_path" ]; then
@@ -9,8 +7,6 @@ if hash brew 2>/dev/null; then
         . "$bash_completion_path"
     fi
 fi
-
-set -eu
 
 GREEN="\\[\\033[0;32m\\]"
 RED="\\[\\033[0;31m\\]"
