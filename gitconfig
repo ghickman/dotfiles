@@ -69,6 +69,9 @@
     algorithm = patience
     indentHeuristic = true
 
+[gpg]
+    program = gpg
+
 [help]
     autocorrect = 1
 
@@ -105,9 +108,6 @@
     fsckobjects = true
 
 # third party
-[achievement]
-  upload = true
-
 [gist]
     private = yes
 
@@ -116,6 +116,3 @@
 
 [heroku]
     account = me
-
-[gpg]
-      program = gpg
