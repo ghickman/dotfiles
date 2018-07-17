@@ -162,7 +162,6 @@ set backup                        " enable backups
 set noswapfile                    " apparently it's 2012
 set undodir=~/.vim/tmp/undo//     " undo files
 set backupdir=~/.vim/tmp/backup// " backups
-set directory=~/.vim/tmp/swap//   " swap files
 
 " Make those folders automatically if they don't exist.
 if !isdirectory(expand(&undodir))
@@ -170,9 +169,6 @@ if !isdirectory(expand(&undodir))
 endif
 if !isdirectory(expand(&backupdir))
     call mkdir(expand(&backupdir), "p")
-endif
-if !isdirectory(expand(&directory))
-    call mkdir(expand(&directory), "p")
 endif
 
 " }}}
