@@ -350,11 +350,6 @@ nnoremap <leader>jl JxJxj<cr>
 cnoremap <c-a> <home>
 cnoremap <c-e> <end>
 
-" Map f1 to leave insert/visual mode
-inoremap <F1> <ESC>
-nnoremap <F1> <ESC>
-vnoremap <F1> <ESC>
-
 " Quick return
 inoremap <c-cr> <esc>A<cr>
 inoremap <s-cr> <esc>A:<cr>
