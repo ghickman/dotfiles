@@ -358,8 +358,6 @@ inoremap <s-cr> <esc>A:<cr>
 " Requires gist (brew install gist)
 vnoremap <leader>G :w !gist -p -t %:e \| pbcopy<cr>
 
-nnoremap <leader>b :b#<cr>
-
 nnoremap gp `[v`]
 
 " Split/Join {{{
