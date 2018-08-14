@@ -279,28 +279,6 @@ augroup END
 nnoremap <leader>p :set invpaste paste?<cr>
 
 " }}}
-" GUI -------------------------------------------------------------------- {{{
-
-if has('gui_running')
-    set guifont=Monaco\ for\ Powerline:h13
-
-    " Get rid of UI cruft
-    set guioptions-=b
-    set guioptions-=l
-    set guioptions-=L
-    set guioptions-=r
-    set guioptions-=R
-    set guioptions-=T
-
-    if has('gui_macvim')
-        " Fullscreen takes up entire screen
-        set fuoptions=maxhorz,maxvert
-
-        " Remove the tab bar
-        set showtabline=0
-    end
-end
-" }}}
 " Movement --------------------------------------------------------------- {{{
 
 " Destroy the arrow keys
