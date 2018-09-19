@@ -41,6 +41,3 @@ alias p8="ping 8.8.8.8"
 
 # brew
 alias b="brew update && brew upgrade && brew cleanup && heroku autocomplete --refresh-cache"
-
-# work
-alias th='cd ~/Projects/treeherder'
