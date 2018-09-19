@@ -589,6 +589,9 @@ augroup ft_python
     au Filetype python nnoremap <leader>id oimport ipdb;ipdb.set_trace()<esc>
 
     au Filetype python nnoremap <leader>S mX:%! isort -<cr>`X
+
+    " Use black to format Python files
+    au BufWritePre *.py Neoformat
 augroup END
 
 " }}}
@@ -723,9 +726,11 @@ nnoremap <leader>u :GundoToggle<cr>
 let g:neoformat_try_formatprg = 1
 
 let g:neoformat_css_prettier        = {'exe': 'prettier', 'args': ['--write', '--config', '.prettierrc'], 'replace': 1}
+let g:neoformat_htmldjango_prettier = {'exe': 'prettier', 'args': ['--write', '--config', '.prettierrc'], 'replace': 1}
 let g:neoformat_javascript_prettier = {'exe': 'prettier', 'args': ['--write', '--config', '.prettierrc'], 'replace': 1}
 let g:neoformat_jsx_prettier        = {'exe': 'prettier', 'args': ['--write', '--config', '.prettierrc'], 'replace': 1}
 let g:neoformat_less_prettier       = {'exe': 'prettier', 'args': ['--write', '--config', '.prettierrc'], 'replace': 1}
+let g:neoformat_enabled_python = ['black']
 
 " }}}
 " Neomake {{{
