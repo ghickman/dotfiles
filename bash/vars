@@ -38,13 +38,19 @@ export ARCHFLAGS="-arch x86_64"
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
 
-# Global Bash History
-export PROMPT_COMMAND="history -a"
+# Save commands to history immediately after they are run.
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+# Append to the history file, don't overwrite it
+shopt -s histappend
+
+# Don't put duplicate lines in the history, see bash(1) for more options.
+export HISTCONTROL=ignoredups:ignorespace
 
 # Larger bash history (allow 32³ entries; default is 500)
-export HISTCONTROL=ignoredups
-export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
+export HISTIGNORE="ls:fg:e:v"
+export HISTSIZE=32768
 export HISTTIMEFORMAT="%F %T "
 
 # No pycs
