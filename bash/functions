@@ -20,10 +20,6 @@ pipd() {
     run_at_repo_top_level "dev-requirements.txt"
 }
 
-man() {
-    open dash://man:"$1"
-}
-
 take() {
     mkdir -p "$1"
     cd "$1" || exit

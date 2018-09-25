@@ -29,8 +29,6 @@ export EDITOR="/usr/local/bin/nvim"
 
 # Colours
 export CLICOLOR=1
-export LS_COLORS='di=01;34'
-export DJANGO_COLORS="light"
 
 # force the use of correct arch flags
 export ARCHFLAGS="-arch x86_64"
