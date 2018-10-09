@@ -37,7 +37,7 @@ export ARCHFLAGS="-arch x86_64"
 export MANPAGER="less -X"
 
 # Save commands to history immediately after they are run.
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+export PROMPT_COMMAND="history -a"
 
 # Append to the history file, don't overwrite it
 shopt -s histappend
