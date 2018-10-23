@@ -14,7 +14,7 @@ if not os.path.exists(args.path):
     sys.stderr.write(f"Path does not exist: {args.path}\n")
     sys.exit(1)
 
-path_format = re.compile("\d{4}-\d{2}-\d{2}_\d{2}-\d{2}-\d{2}([a-z]{1})?.[a-z]{3,4}")
+path_format = re.compile("\d{4}-\d{2}-\d{2}_\d{2}-\d{2}-\d{2}([a-z]{1})?.[a-zA-Z]{3,4}")
 _, filename = os.path.split(args.path)
 if not path_format.match(filename):
     sys.stderr.write(f"Path does not match regex: {filename}\n")
