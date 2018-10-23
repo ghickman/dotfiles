@@ -7,24 +7,24 @@ import subprocess
 import sys
 
 parser = argparse.ArgumentParser()
-parser.add_argument('path')
+parser.add_argument("path")
 args = parser.parse_args()
 
 if not os.path.exists(args.path):
-    sys.stderr.write(f'Path does not exist: {args.path}\n')
+    sys.stderr.write(f"Path does not exist: {args.path}\n")
     sys.exit(1)
 
-path_format = re.compile('\d{4}-\d{2}-\d{2}_\d{2}-\d{2}-\d{2}([a-z]{1})?.[a-z]{3,4}')
+path_format = re.compile("\d{4}-\d{2}-\d{2}_\d{2}-\d{2}-\d{2}([a-z]{1})?.[a-z]{3,4}")
 _, filename = os.path.split(args.path)
 if not path_format.match(filename):
-    sys.stderr.write(f'Path does not match regex: {filename}\n')
+    sys.stderr.write(f"Path does not match regex: {filename}\n")
     sys.exit(1)
 
 path_root, _ = os.path.splitext(filename)
-date, _, time = path_root.partition('_')
-year, month, day = date.split('-')
-hour, minute, second = time.split('-')
-date_format = f'{month}/{day}/{year} {hour}:{minute}:{second}'
+date, _, time = path_root.partition("_")
+year, month, day = date.split("-")
+hour, minute, second = time.split("-")
+date_format = f"{month}/{day}/{year} {hour}:{minute}:{second}"
 
 # input: YYYY-MM-dd_HH-mm-ss.ext
 # ouput: MM/dd/YYYY HH:mm:ss
