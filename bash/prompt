@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if hash brew 2>/dev/null; then
-    bash_completion_path="$(brew --prefix)/etc/bash_completion"
+    bash_completion_path="$(brew --prefix)/share/bash-completion/bash_completion"
     if [ -f "$bash_completion_path" ]; then
         # shellcheck disable=SC1090
         . "$bash_completion_path"
