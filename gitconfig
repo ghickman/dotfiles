@@ -81,6 +81,9 @@
 [init]
     templatedir = ~/.git_template
 
+[interactive]
+    singleKey = true
+
 [merge]
     tool = splice
 
