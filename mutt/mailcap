@@ -22,5 +22,8 @@ application/pdf; ~/.mutt/view_attachment.sh %s pdf
 text/html; ~/.mutt/view_attachment.sh %s html
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
 
+# Calendar Invites
+application/ics; ~/.mutt/view_attachment.sh %s "-" '/Applications/Calendar.app'
+
 # Unidentified files
 application/octet-stream; ~/.mutt/view_attachment.sh %s "-"
