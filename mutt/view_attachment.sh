@@ -88,10 +88,10 @@ if [ $debug = "yes" ]; then
     touch "$debug_file"
 
     {
-        echo "1:" "$1" " 2:" "$2" " 3:" "$3"
-        echo "Filename: $filename"
-        echo "File: $file"
-        echo "==========================="
+        echo "1:" "$1" " 2:" "$2" " 3:" "$3" | ts
+        echo "Filename: $filename" | ts
+        echo "File: $file" | ts
+        echo "===========================" | ts
     } >> "$debug_file"
 fi
 
@@ -118,9 +118,9 @@ cp "$1" "$newfile"
 
 if [ $debug = "yes" ]; then
     {
-        echo "File: $file TYPE: $type"
-        echo "Newfile: $newfile"
-        echo "Open With: $open_with"
+        echo "File: $file TYPE: $type" | ts
+        echo "Newfile: $newfile" | ts
+        echo "Open With: $open_with" | ts
     } >> "$debug_file"
 fi
 
