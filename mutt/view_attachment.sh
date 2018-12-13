@@ -56,6 +56,8 @@
 # See Also:  The man pages for open, file, basename
 #
 
+set -eu
+
 # the tmp directory to use.
 tmpdir="$HOME/.tmp/mutt_attach"
 
