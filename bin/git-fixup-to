@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -eu
+
+main () {
+    sha="$1"
+
+    git commit --fixup "$sha" && git rebase --interactive --autosquash "$sha"^
+}
+
+main "$@"
