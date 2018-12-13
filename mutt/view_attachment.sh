@@ -118,6 +118,9 @@ newfile=$tmpdir/$newfile
 # before the app has a chance to view it.
 cp "$1" "$newfile"
 
+# Set permissions so we can delete files later
+chmod 700 "$newfile"
+
 if [ $debug = "yes" ]; then
     {
         echo "File: $file TYPE: $type" | ts
