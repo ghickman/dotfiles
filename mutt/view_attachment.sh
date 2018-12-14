@@ -69,7 +69,7 @@ debug_file=$tmpdir/debug
 debug="yes"
 
 type=$2
-open_with=$3
+open_with=${3:-""}
 
 # make sure the tmpdir exists.
 mkdir -p "$tmpdir"
