@@ -86,7 +86,7 @@ filename=$(basename "$1")
 file=$(echo "$filename" | cut -d"." -f1)
 
 if [ $debug = "yes" ]; then
-    rm "$debug_file"
+    rm -f "$debug_file"
     touch "$debug_file"
 
     {
