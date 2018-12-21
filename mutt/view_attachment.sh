@@ -90,7 +90,7 @@ if [ $debug = "yes" ]; then
     touch "$debug_file"
 
     {
-        echo "1:" "$1" " 2:" "$2" " 3:" "$3" | ts
+        echo "1:" "$1" " 2:" "$2" " 3:" "$open_with" | ts
         echo "Filename: $filename" | ts
         echo "File: $file" | ts
         echo "===========================" | ts
