@@ -1,3 +1,4 @@
+tap "cantino/mcfly", "https://github.com/cantino/mcfly"
 tap "dart-lang/dart"
 tap "ghickman/banking-tools", "https://github.com/ghickman/banking-tools.git"
 tap "heroku/brew"
@@ -149,6 +150,7 @@ brew "watchman"
 brew "wget"
 brew "yarn"
 brew "youtube-dl"
+brew "cantino/mcfly/mcfly"
 brew "ghickman/banking-tools/banking-tools", args: ["HEAD"]
 brew "heroku/brew/heroku"
 brew "nvie/tap/git-toolbelt"
