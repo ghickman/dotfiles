@@ -94,7 +94,7 @@ brew "memcached"
 brew "libmemcached"
 brew "librsvg"
 brew "libyaml"
-brew "ruby"
+brew "ruby", link: true
 brew "libtermkey"
 brew "libvo-aacenc"
 brew "libvterm"
