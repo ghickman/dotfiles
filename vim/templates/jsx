@@ -2,26 +2,14 @@
 
 import React from 'react';
 
-type Props = {};
-
-type State = {
+type Props = {
 };
 
-class ClassTemplate extends React.Component<Props, State> {
-    props: Props;
-    state: State;
-
-    constructor(props: Props) {
-        super(props);
-
-        this.state = {
-
-        };
-    }
-
-    render() {
-        return <div />;
-    }
+const Template = (props: Props) => {
+  return (
+    <div>
+    </div>
+  )
 }
 
-export default ClassTemplate;
+export default Template;
