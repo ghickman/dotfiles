@@ -5,16 +5,18 @@ import os
 import sys
 
 
-BASE = sys.argv[1] if len(sys.argv) > 1 else '.'
+BASE = sys.argv[1] if len(sys.argv) > 1 else "."
 
 
 for i, month in enumerate(calendar.month_name):
     if not month:
         continue
 
-    path = os.path.join(BASE, '{:02d} - {}'.format(i, month))
+    month_number = str(i).zfill(2)
+
+    path = os.path.join(BASE, f"{month_number} - {month}")
 
     try:
         os.mkdir(path)
     except OSError:
-        print('Path already exists: {}'.format(path))
+        print(f"Path already exists: {path}")
