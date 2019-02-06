@@ -2,10 +2,9 @@
 
 set -eu
 
-main () {
-    sha="$1"
+# Make sure the index is dirty, otherwise there isn't anything to fixup
+git is-dirty -i
 
-    git commit --fixup "$sha" && git rebase --interactive --autosquash "$sha"^
-}
+sha=$(git log --pretty='%h %s' | fzf | cut -d' ' -f1)
 
-main "$@"
+git commit --fixup "$sha" && git rebase --interactive --autosquash "$sha"^
