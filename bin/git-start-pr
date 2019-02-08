@@ -1,12 +1,15 @@
 #!/bin/bash
 
-set -e
+set -eu
 
-branch=$(git rev-parse --abbrev-ref HEAD)
-creds=$(git remote -v | grep origin | grep push | awk '{print $2}' | awk -F ':' '{print $2}')
-if [[ "$creds" == *.git ]]; then
-    creds=$(echo "$creds" | rev | cut -c 5- | rev)
+branch=$(git current-branch)
+repo=$(git remote get-url --push origin | awk -F ':' '{ print $2 }')
+
+# Remove trailing .git if it exists
+if [[ "$repo" == *.git ]]; then
+    repo=$(echo "$repo" | rev | cut -c 5- | rev)
 fi
 
 git push-start
-open "https://github.com/$creds/compare/$branch?expand=1"
+
+open "https://github.com/$repo/pull/new/$branch"
