@@ -724,6 +724,7 @@ nnoremap <leader>u :GundoToggle<cr>
 " }}}
 " Neoformat {{{
 
+let g:neoformat_run_all_formatters = 1
 let g:neoformat_try_formatprg = 1
 
 let g:neoformat_css_prettier        = {'exe': 'prettier', 'args': ['--write', '--config', '.prettierrc'], 'replace': 1}
@@ -731,7 +732,7 @@ let g:neoformat_htmldjango_prettier = {'exe': 'prettier', 'args': ['--write', '-
 let g:neoformat_javascript_prettier = {'exe': 'prettier', 'args': ['--write', '--config', '.prettierrc'], 'replace': 1}
 let g:neoformat_jsx_prettier        = {'exe': 'prettier', 'args': ['--write', '--config', '.prettierrc'], 'replace': 1}
 let g:neoformat_less_prettier       = {'exe': 'prettier', 'args': ['--write', '--config', '.prettierrc'], 'replace': 1}
-let g:neoformat_enabled_python = ['black']
+let g:neoformat_enabled_python = ['black', 'isort']
 
 " }}}
 " Neomake {{{
