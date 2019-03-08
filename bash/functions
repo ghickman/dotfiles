@@ -26,8 +26,8 @@ take() {
 }
 
 vc() {
-    if git modified; then
-        "$EDITOR" "$(git modified)";
+    if git modified -q "$@"; then
+        git modified "$@" | xargs "$EDITOR";
     else
         echo "(nothing changed)"
     fi
