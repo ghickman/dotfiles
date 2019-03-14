@@ -2,8 +2,8 @@
 
 import React from 'react';
 
-type Props = {
-};
+type Props = {|
+|};
 
 const Template = (props: Props) => {
   return (
