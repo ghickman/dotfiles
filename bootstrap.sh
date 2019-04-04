@@ -33,6 +33,7 @@ mkdir -p "$HOME/.config"
 ln -s "$PWD/flake8" "$HOME/.config/flake8"
 ln -s "$PWD/vim" "$HOME/.config/nvim"
 ln -s "$PWD/vimrc" "$HOME/.config/init.vim"
+ln -s "$PWD/mutt/mime.types" "$HOME/.mime.types"
 
 echo "========== set up yaml lint"
 yamllint_dir="$HOME/.config/yamllint"
