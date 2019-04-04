@@ -1,4 +1,5 @@
 pipsi install ansible
+pipsi install black
 pipsi install cookiecutter
 pipsi install devpi-client
 pipsi install django
