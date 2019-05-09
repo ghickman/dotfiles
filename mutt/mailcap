@@ -2,7 +2,7 @@
 text/plain; ~/.mutt/view_attachment.sh %s txt
 
 # MS Word documents
-application/msword; ~/.mutt/view_attachment.sh %s "-" '/Applications/TextEdit.app'
+application/msword; ~/.mutt/view_attachment.sh %s "-" '/Applications/Pages.app'
 application/vnd.openxmlformats-officedocument.wordprocessingml.document; ~/.mutt/view_attachment.sh %s "-" '/Applications/Pages.app'
 
 # MS Excel documents
