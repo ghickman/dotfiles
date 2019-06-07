@@ -118,6 +118,7 @@ brew "unibilium"
 brew "neovim"
 brew "nginx"
 brew "nmap"
+brew "nvm"
 brew "offlineimap", restart_service: true
 brew "openjpeg"
 brew "openssl@1.1"
