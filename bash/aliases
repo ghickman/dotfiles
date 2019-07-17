@@ -28,9 +28,6 @@ if hash brew 2>/dev/null; then
     alias cask="brew cask"
 fi
 
-# Project Directories
-alias t='cd ~/Projects/tvr'
-
 # speed up direnv usage
 alias da="direnv allow"
 
