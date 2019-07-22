@@ -54,7 +54,7 @@ export PYTHONDONTWRITEBYTECODE=1
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 # FZF
-export FZF_DEFAULT_COMMAND="ag -g \"\""
+export FZF_DEFAULT_COMMAND="ag --hidden --ignore-dir=".git" --filename-pattern \"\""
 
 # No really, no fucking cows
 export ANSIBLE_NOCOWS=1
