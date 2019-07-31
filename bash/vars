@@ -43,7 +43,7 @@ export HISTCONTROL=ignoredups:ignorespace
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTFILESIZE=$HISTSIZE
-export HISTIGNORE="ls:fg:e:v"
+export HISTIGNORE="ls:fg:e:v:p:b"
 export HISTSIZE=32768
 export HISTTIMEFORMAT="%F %T "
 
