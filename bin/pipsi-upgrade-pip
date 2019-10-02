@@ -1,9 +1,0 @@
-#!/bin/sh
-
-set -e
-
-venvs="$HOME/.local/venvs"
-
-for app in "$@"; do
-    "$venvs/$app/bin/pip" install pip -U
-done

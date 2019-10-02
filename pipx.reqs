@@ -1,0 +1,24 @@
+pipx install ansible
+pipx install black
+pipx install cookiecutter
+pipx install devpi-client
+pipx install django
+pipx install fabric
+pipx install flake8
+pipx install glances
+pipx install httpie
+pipx install invoke
+pipx install isort
+pipx install pipenv
+pipx install pip-tools
+pipx install pre-commit-hooks
+pipx install pytest
+pipx install s3cmd
+pipx install --python=python2 supervisor
+pipx install tmuxp
+pipx install tox
+pipx install tvrenamr
+pipx install twine
+pipx install update_plex
+pipx install watchdog
+pipx install yamllint
