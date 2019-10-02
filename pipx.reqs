@@ -5,16 +5,17 @@ pipx install devpi-client
 pipx install django
 pipx install fabric
 pipx install flake8
+pipx install git-revise
 pipx install glances
 pipx install httpie
 pipx install invoke
 pipx install isort
-pipx install pipenv
 pipx install pip-tools
-pipx install pre-commit-hooks
+pipx install pipenv
+pipx install pre-commit
 pipx install pytest
 pipx install s3cmd
-pipx install --python=python2 supervisor
+pipx install sceptre
 pipx install tmuxp
 pipx install tox
 pipx install tvrenamr
