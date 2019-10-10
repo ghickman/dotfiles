@@ -68,6 +68,7 @@
 [diff]
     algorithm = patience
     indentHeuristic = true
+    noprefix = true
 
 [gpg]
     program = gpg
