@@ -9,16 +9,17 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "homebrew/versions"
 tap "nvie/tap"
 tap "osx-cross/avr"
 tap "px4/px4"
 tap "sass/sass"
 tap "vitorgalvao/tiny-scripts"
 tap "wagoodman/dive"
+tap "wallix/awless"
 tap "wolever/git-blast"
 brew "ack"
 brew "gdbm"
+brew "openssl@1.1"
 brew "sqlite"
 brew "xz"
 brew "asciinema"
@@ -52,6 +53,7 @@ brew "libassuan"
 brew "libksba"
 brew "pth"
 brew "dirmngr"
+brew "dos2unix"
 brew "doxygen"
 brew "elasticsearch"
 brew "gmp"
@@ -62,7 +64,6 @@ brew "ffind"
 brew "lame"
 brew "little-cms2"
 brew "openjpeg"
-brew "x264"
 brew "xvid"
 brew "ffmpeg"
 brew "forego"
@@ -124,7 +125,6 @@ brew "nginx"
 brew "nmap"
 brew "nvm"
 brew "offlineimap", restart_service: true
-brew "openssl@1.1"
 brew "optipng"
 brew "pgcli"
 brew "pgloader"
@@ -140,6 +140,7 @@ brew "shellcheck"
 brew "ssh-copy-id"
 brew "swig"
 brew "teensy_loader_cli"
+brew "terraform"
 brew "the_silver_searcher"
 brew "tig"
 brew "tldr"
@@ -163,12 +164,14 @@ brew "px4/px4/gcc-arm-none-eabi"
 brew "sass/sass/sass"
 brew "vitorgalvao/tiny-scripts/cask-repair"
 brew "wagoodman/dive/dive"
+brew "wallix/awless/awless"
 brew "wolever/git-blast/git-blast"
 cask "1password"
 cask "adobe-acrobat-reader"
 cask "alfred"
 cask "amazon-drive"
 cask "appcleaner"
+cask "balenaetcher"
 cask "crosspack-avr"
 cask "daisydisk"
 cask "dash"
@@ -176,7 +179,7 @@ cask "discord"
 cask "docker"
 cask "doxie"
 cask "dropbox"
-cask "etcher"
+cask "figma"
 cask "firefox"
 cask "font-inconsolata-for-powerline"
 cask "garagesale"
@@ -202,6 +205,7 @@ cask "qlcolorcode"
 cask "qlmarkdown"
 cask "quicklook-json"
 cask "rocket"
+cask "signal"
 cask "sketch"
 cask "sketchup"
 cask "slack"
@@ -224,15 +228,15 @@ cask "wireshark"
 cask "xbench"
 cask "zeplin"
 cask "zoomus"
-mas "app.mastonaut.mac", id: 1450757574
-mas "com.apple.dt.Xcode", id: 497799835
-mas "com.apple.iWork.Keynote", id: 409183694
-mas "com.apple.iWork.Numbers", id: 409203825
-mas "com.apple.iWork.Pages", id: 409201541
-mas "com.blackmagic-design.DiskSpeedTest", id: 425264550
-mas "com.codeux.apps.textual-mas", id: 1262957439
 mas "com.linebreak.CloudAppMacOSX", id: 417602904
-mas "com.manytricks.Moom", id: 419330170
-mas "com.mizage.shush", id: 496437906
-mas "com.robinlu.mac.Tooth-Fairy", id: 1191449274
-mas "com.tapbots.Tweetbot3Mac", id: 1384080005
+mas "Disk Speed Test", id: 425264550
+mas "Keynote", id: 409183694
+mas "Mastonaut", id: 1450757574
+mas "Moom", id: 419330170
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Shush", id: 496437906
+mas "Textual IRC Client", id: 1262957439
+mas "ToothFairy", id: 1191449274
+mas "Tweetbot", id: 1384080005
+mas "Xcode", id: 497799835
