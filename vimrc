@@ -16,6 +16,7 @@ Plug 'ghickman/vim-wombat-scheme'
 Plug 'ghickman/vimroom'
 Plug 'google/vim-searchindex'
 Plug 'groenewege/vim-less'
+Plug 'hashivim/vim-terraform'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -758,6 +759,11 @@ let g:splice_wrap = "nowrap"
 
 let g:SuperTabLongestHighlight = 1
 let g:SuperTabCrMapping = 1
+
+" }}}
+" Terraform {{{
+
+let g:terraform_fmt_on_save=1
 
 " }}}
 " Vimroom {{{
