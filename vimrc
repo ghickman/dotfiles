@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'andrewRadev/splitjoin.vim'
 Plug 'ap/vim-buftabline'
+Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'curist/vim-angular-template'
