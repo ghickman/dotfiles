@@ -28,7 +28,7 @@ Plug 'konfekt/FastFold'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
-Plug 'mxw/vim-jsx'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'neomake/neomake'
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'rking/ag.vim'
@@ -51,6 +51,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/matchit.zip'
+Plug 'yuezk/vim-js'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -498,8 +499,7 @@ augroup ft_javascript
     " Python <2.7 json module adds, sigh)
     nmap <leader>J :%!python -m json.tool<CR>:%s/\s\+$//g<CR>
 
-    au FileType javascript setlocal foldmethod=marker
-    au FileType javascript setlocal foldmarker={,}
+    au FileType javascript,javascriptreact setlocal foldmethod=syntax
 
     au FileType javascript nnoremap <leader>d odebugger;<esc>
 
