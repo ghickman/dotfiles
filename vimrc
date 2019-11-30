@@ -507,7 +507,7 @@ augroup ft_javascript
     au BufWritePre *.js,*.jsx Neoformat
 
     " Defer to import-sort for sorting JavaScript imports (instead of using Unix sort)
-    au FileType javascript nnoremap <leader>S mX:!import-sort --write %<cr>`X
+    au FileType javascript,javascriptreact nnoremap <leader>S mX:!import-sort --write %<cr>`X
 
     " Scaffold new files
     au BufNewFile *.jsx 0r ~/.vim/templates/jsx
