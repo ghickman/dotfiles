@@ -1,4 +1,5 @@
 neovim
 setuptools
 pip
+pipx
 virtualenvwrapper
