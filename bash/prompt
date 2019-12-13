@@ -1,16 +1,11 @@
 #!/bin/sh
 
 if hash brew 2>/dev/null; then
+    export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
     bash_completion_path="$(brew --prefix)/etc/profile.d/bash_completion.sh"
     if [ -r "$bash_completion_path" ]; then
         # shellcheck disable=SC1090
         . "$bash_completion_path"
-    fi
-
-    git_prompt_path="$(brew --prefix)/etc/bash_completion.d/git-prompt.sh"
-    if [ -r "$git_prompt_path" ]; then
-        # shellcheck disable=SC1090
-        . "$git_prompt_path"
     fi
 fi
 
