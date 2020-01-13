@@ -14,6 +14,7 @@ bind '"\C-w": unix-filename-rubout'
 complete -C aws_completer aws
 
 eval "$(pyenv init -)"
+eval "$(register-python-argcomplete pipx)"
 
 GPG_TTY=$(tty)
 export GPG_TTY
