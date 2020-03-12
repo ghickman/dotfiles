@@ -59,7 +59,6 @@ export FZF_DEFAULT_COMMAND="ag --hidden --ignore-dir=".git" --filename-pattern \
 # No really, no fucking cows
 export ANSIBLE_NOCOWS=1
 
-
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh" --no-use  # This loads nvm
@@ -68,3 +67,8 @@ export NVM_DIR="$HOME/.nvm"
 # configure direnv to work with NVM
 export NODE_VERSIONS="$NVM_DIR/versions/node"
 export NODE_VERSION_PREFIX="v"
+
+# Docker
+# Enable buildkit builder
+export COMPOSE_DOCKER_CLI_BUILD=1
+export DOCKER_BUILDKIT=1
