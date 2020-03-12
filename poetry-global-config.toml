@@ -1,0 +1,6 @@
+[settings]
+
+[repositories]
+
+[virtualenvs]
+in-project = true
