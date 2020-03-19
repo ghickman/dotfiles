@@ -70,6 +70,9 @@
     indentHeuristic = true
     noprefix = true
 
+[fetch]
+    prune = true
+
 [gpg]
     program = gpg
 
