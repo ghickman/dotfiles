@@ -95,6 +95,9 @@
     cmd = "$EDITOR -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
     trustExitCode = true
 
+[pull]
+    rebase = true
+
 [push]
     followTags = true
 
