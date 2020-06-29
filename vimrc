@@ -14,13 +14,14 @@ Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
 Plug 'foosoft/vim-argwrap'
 Plug 'ghickman/vim-wombat-scheme'
-Plug 'ghickman/vimroom'
 Plug 'google/vim-searchindex'
 Plug 'groenewege/vim-less'
 Plug 'hashivim/vim-terraform'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kalekundert/vim-coiled-snake'
@@ -786,32 +787,6 @@ let g:SuperTabCrMapping = 1
 " Terraform {{{
 
 let g:terraform_fmt_on_save=1
-
-" }}}
-" Vimroom {{{
-
-let g:vimroom_create_mapping = 0
-let g:vimroom_sidebar_height = 0
-
-" Wrap VimroomToggle to make blank lines grey
-let s:active = 0
-function! VimroomWrapper()
-  if s:active == 1
-    let s:active = 0
-    :VimroomToggle
-
-    " restore NonText highlights
-    hi! link NonText LineNr
-  else
-    let s:active = 1
-    VimroomToggle
-
-    " override NonText to fix empty line marker
-    hi NonText guifg=Grey
-  endif
-endfunction
-
-nnoremap <leader>V :call VimroomWrapper()<cr>
 
 " }}}
 
