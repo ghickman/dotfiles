@@ -745,6 +745,7 @@ let g:neoformat_enabled_javascriptreact = ['prettier']
 " Neomake {{{
 
 let g:neomake_javascript_enabled_makers = ['eslint_d', 'flow']
+let g:neomake_dockerfile_enabled_makers = ['hadolint']
 let g:neomake_python_enabled_makers = ['flake8']
 let g:neomake_sh_enabled_makers = ['shellcheck']
 let g:neomake_yaml_enabled_makers = ['yamllint']
