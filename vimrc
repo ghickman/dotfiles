@@ -68,6 +68,7 @@ set backupcopy=yes " Preserve resource fork
 set dictionary=/usr/share/dict/words
 set hidden
 set history=1000
+set inccommand=nosplit
 set laststatus=2
 set lazyredraw
 set linebreak
