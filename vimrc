@@ -722,6 +722,11 @@ if executable("gist")
 endif
 
 " }}}
+" GitGutter {{{
+
+let g:gitgutter_set_sign_backgrounds = 1
+
+" }}}
 " Gundo {{{
 
 nnoremap <leader>u :GundoToggle<cr>
