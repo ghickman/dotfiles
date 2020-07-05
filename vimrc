@@ -10,10 +10,10 @@ Plug 'chr4/nginx.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'curist/vim-angular-template'
 Plug 'docunext/closetag.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
 Plug 'foosoft/vim-argwrap'
-Plug 'ghickman/vim-wombat-scheme'
 Plug 'google/vim-searchindex'
 Plug 'groenewege/vim-less'
 Plug 'hashivim/vim-terraform'
@@ -188,7 +188,7 @@ let maplocalleader = "\\"
 " Color Scheme ----------------------------------------------------------- {{{
 
 syntax on
-colorscheme wombat
+colorscheme dracula
 
 " Highlight VCS conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'

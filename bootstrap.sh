@@ -52,10 +52,9 @@ if [ ! -d "$fonts_location$font" ]; then
 fi
 
 # Install pretty iTerm colors
-iterm_colourscheme="wombat-evolved.itermcolors"
-curl -O --silent "$bucket/$iterm_colourscheme"
-open "$iterm_colourscheme"
-rm "$iterm_colourscheme"
+curl -O --silent https://raw.githubusercontent.com/dracula/iterm/master/Dracula.itermcolors
+open Dracula.itermcolors
+rm -rf Dracula.itermcolors
 
 echo "========== install pythongs"
 ./pythons.sh
