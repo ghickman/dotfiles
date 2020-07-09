@@ -6,15 +6,9 @@ pipx install git-revise
 pipx install httpie
 pipx install isort
 pipx install pip-tools
-pipx install pipenv
 pipx install poetry
 pipx install pre-commit
-pipx install s3cmd
-pipx install sceptre
 pipx install tmuxp
-pipx install tox
 pipx install tvrenamr
-pipx install twine
 pipx install update_plex
-pipx install watchdog
 pipx install yamllint
