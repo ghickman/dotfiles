@@ -1,0 +1,18 @@
+[aws]
+disabled = true
+
+[cmd_duration]
+style = "bold red"
+
+[git_status]
+modified = "*"
+untracked = ""
+
+[jobs]
+disabled = true
+
+[package]
+disabled = true
+
+[python]
+style = "bold green"

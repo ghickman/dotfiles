@@ -9,6 +9,7 @@ Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'curist/vim-angular-template'
+Plug 'dag/vim-fish'
 Plug 'docunext/closetag.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'easymotion/vim-easymotion'

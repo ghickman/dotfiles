@@ -1,9 +1,7 @@
 ackrc
 agignore
-bash
-bashrc
-bash_profile
 bin
+fish
 gemrc
 git_template
 gitconfig

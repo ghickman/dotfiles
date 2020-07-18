@@ -72,11 +72,11 @@ echo "========== configure preferences"
 echo "========== create maildir"
 mkdir -p ~/.mail/george-ghickman.co.uk
 
-echo "========== set bash 4 as shell"
-bash4="/usr/local/bin/bash"
-if ! grep -qe $bash4 "/etc/shells"; then
-    echo $bash4 | sudo tee -a "/etc/shells"
-    chsh -s $bash4
+echo "========== set fish as shell"
+fish="/usr/local/bin/fish"
+if ! grep -qe $fish "/etc/shells"; then
+    echo $fish | sudo tee -a "/etc/shells"
+    chsh -s $fish
 fi
 
 echo "========== Setting up TPM"
