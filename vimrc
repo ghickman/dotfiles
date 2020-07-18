@@ -679,6 +679,11 @@ au FileType htmldjango setlocal commentstring={#\ %s\ #}
 au FileType python setlocal commentstring=#\ %s
 
 " }}}
+" Dracula {{{
+
+" hi Folded guibg=#343746 guifg=#a0a8b0
+
+" }}}
 " EasyAlign {{{
 
 vmap <Enter> <Plug>(EasyAlign)
