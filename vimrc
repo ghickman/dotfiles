@@ -93,6 +93,11 @@ set undofile
 set undoreload=10000
 set updatetime=100
 
+" Tell vim to use bash
+if &shell =~# 'fish$'
+    set shell=bash
+endif
+
 " Resize splits when the window is resized
 au VimResized * exe "normal! \<c-w>="
 
