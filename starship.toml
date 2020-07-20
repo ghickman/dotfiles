@@ -5,6 +5,7 @@ disabled = true
 style = "bold red"
 
 [git_status]
+deleted = ""
 modified = "*"
 untracked = ""
 
