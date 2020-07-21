@@ -22,7 +22,7 @@ set --export PIP_REQUIRE_VIRTUALENV 1
 set --export HOMEBREW_NO_AUTO_UPDATE 1
 
 # FZF
-set --export FZF_DEFAULT_COMMAND "ag --hidden --ignore-dir='.git' --filename-pattern \"\""
+set --export FZF_DEFAULT_COMMAND "fd --exclude=.git --hidden --type f"
 
 # No really, no fucking cows
 set --export ANSIBLE_NOCOWS 1
