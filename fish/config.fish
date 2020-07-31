@@ -1,8 +1,10 @@
-eval (direnv hook fish)
-pyenv init - | source
-register-python-argcomplete --shell fish pipx | .
+if status --is-interactive
+    eval (direnv hook fish)
+    pyenv init - | source
+    register-python-argcomplete --shell fish pipx | .
 
-starship init fish | source
+    starship init fish | source
+end
 
 set fish_greeting
 
