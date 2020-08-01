@@ -15,9 +15,6 @@ set --export EDITOR /usr/local/bin/nvim
 # No pycs
 set --export PYTHONDONTWRITEBYTECODE 1
 
-# Force pip it only install packages inside a venv
-set --export PIP_REQUIRE_VIRTUALENV 1
-
 # brew
 set --export HOMEBREW_NO_AUTO_UPDATE 1
 
