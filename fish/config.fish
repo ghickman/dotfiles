@@ -10,6 +10,7 @@ set fish_greeting
 
 . ~/.config/fish/aliases.fish
 . ~/.config/fish/vars.fish
+. ~/.config/fish/nvm.fish
 
 
 fzf_key_bindings
