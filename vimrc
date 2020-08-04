@@ -10,6 +10,7 @@ Plug 'chr4/nginx.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'curist/vim-angular-template'
 Plug 'dag/vim-fish'
+Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'docunext/closetag.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'easymotion/vim-easymotion'
@@ -37,8 +38,10 @@ Plug 'pedrohdz/vim-yaml-folds'
 Plug 'rking/ag.vim'
 Plug 'sbdchd/neoformat'
 Plug 'scy/vim-mkdir-on-write'
+Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'simnalamburt/vim-mundo'
 Plug 'sjl/splice.vim'
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
 Plug 'terryma/vim-expand-region'
 Plug 'townk/vim-autoclose'
 Plug 'tpope/vim-abolish'
@@ -139,9 +142,12 @@ augroup END
 " }}}
 " Completion ------------------------------------------------------------- {{{
 
-set complete=.,b,u,]
-set completeopt=menu,preview
+let g:deoplete#enable_at_startup = 1
+let g:jedi#completions_enabled = 0
+set completeopt-=preview
+call deoplete#custom#option('auto_complete', v:false)
 
+" Enhance command completion
 set wildmenu
 set wildmode=longest,list:longest
 
@@ -800,6 +806,7 @@ let g:splice_wrap = "nowrap"
 
 let g:SuperTabLongestHighlight = 1
 let g:SuperTabCrMapping = 1
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " }}}
 " Terraform {{{
