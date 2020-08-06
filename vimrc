@@ -210,9 +210,6 @@ match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
 set foldlevelstart=0
 
-" Sane current location
-nnoremap <c-cr> zvzz
-
 " Toggle a fold
 nnoremap <space> za
 
