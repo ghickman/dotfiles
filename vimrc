@@ -376,26 +376,6 @@ vnoremap <leader>G :w !gist -p -t %:e \| pbcopy<cr>
 
 nnoremap gp `[v`]
 
-" Split/Join {{{
-"
-" Basically this splits the current line into two new ones at the cursor position,
-" then joins the second one with whatever comes next.
-"
-" Example:                      Cursor Here
-"                                    |
-"                                    V
-" foo = ('hello', 'world', 'a', 'b', 'c',
-"        'd', 'e')
-"
-"            becomes
-"
-" foo = ('hello', 'world', 'a', 'b',
-"        'c', 'd', 'e')
-"
-" Especially useful for adding items in the middle of long lists/tuples in Python
-" while maintaining a sane text width.
-nnoremap K h/[^ ]<cr>"zd$jyyP^v$h"zpJk:s/\v +$//<cr>:noh<cr>j^
-" }}}
 " Handle URL {{{
 " Stolen from https://github.com/askedrelic/homedir/blob/master/.vimrc
 " OSX only: Open a web-browser with the URL in the current line
