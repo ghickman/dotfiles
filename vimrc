@@ -680,12 +680,6 @@ vmap <C-v> <Plug>(expand_region_shrink)
 " }}}
 " Fugitive {{{
 
-nnoremap <leader>gb :Gblame<cr>
-nnoremap <leader>gd :Gdiff<cr>
-nnoremap <leader>gp :Git push<cr>
-nnoremap <leader>gpl :Git pull<cr>
-nnoremap <leader>gs :Gstatus<cr>
-
 augroup ft_fugitive
     au!
 
