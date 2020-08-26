@@ -128,7 +128,7 @@ macro pager \Cu "|urlview<enter>" "call urlview to open links"
 
 # Compose View Options -------------------------------
 set realname = "George Hickman"      # who am i?
-set envelope_from                    # which from?
+set use_envelope_from                # which from?
 set sig_dashes                       # dashes before sig
 set edit_headers                     # show headers when composing
 set fast_reply                       # skip to compose when replying
