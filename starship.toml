@@ -12,6 +12,9 @@ untracked = ""
 [jobs]
 disabled = true
 
+[nodejs]
+disabled = true
+
 [package]
 disabled = true
 
