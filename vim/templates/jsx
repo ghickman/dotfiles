@@ -1,11 +1,6 @@
-// @flow
-
 import React from 'react';
 
-type Props = {|
-|};
-
-const Template = (props: Props) => {
+const Template = (props) => {
   return (
     <div>
     </div>
