@@ -72,6 +72,7 @@
 
 [fetch]
     prune = true
+    writeCommitGraph = true
 
 [gpg]
     program = gpg
