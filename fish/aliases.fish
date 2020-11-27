@@ -2,7 +2,7 @@
 alias j jobs
 
 # Vim
-alias v vim
+alias v nvim
 alias vim nvim
 
 # Django

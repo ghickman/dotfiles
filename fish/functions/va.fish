@@ -20,5 +20,5 @@ function va
 
     set ag_pattern (echo $pattern | to_safe | sed -E -e 's/[<>]/\\\\b/g' | to_unsafe_rg)
     set vim_pattern (echo $pattern | to_safe | sed -E -e 's,([/=]),\\\\\1,g' -e 's,.*,/\\\\v&,' | to_unsafe_vim)
-    ag -l --smart-case --null $ag_pattern -- $argv 2>/dev/null | xargs -0 -o vim -c $vim_pattern
+    ag -l --smart-case --null $ag_pattern -- $argv 2>/dev/null | xargs -0 -o nvim -c $vim_pattern
 end
