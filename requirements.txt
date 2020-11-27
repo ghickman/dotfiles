@@ -1,5 +1,5 @@
+jedi
 neovim
 setuptools
 pip
-pipx
 virtualenvwrapper
