@@ -237,6 +237,8 @@ nnoremap <leader>F zR
 " This mapping wipes out the z mark, which I never use.
 nnoremap <leader>z mzzMzvzz`z
 
+let g:coiled_snake_explicit_sign_width=2
+
 " }}}
 " Buffer/Window Width ---------------------------------------------------- {{{
 
