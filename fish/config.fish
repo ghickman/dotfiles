@@ -1,5 +1,5 @@
 if status --is-interactive
-    eval (direnv hook fish)
+    direnv hook fish | source
     pyenv init - | source
     register-python-argcomplete --shell fish pipx | .
 
@@ -11,6 +11,5 @@ set fish_greeting
 . ~/.config/fish/aliases.fish
 . ~/.config/fish/vars.fish
 . ~/.config/fish/nvm.fish
-
 
 fzf_key_bindings
