@@ -2,4 +2,4 @@ jedi
 neovim
 setuptools
 pip
-virtualenvwrapper
+virtualenv
