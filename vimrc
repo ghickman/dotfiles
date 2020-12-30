@@ -722,8 +722,12 @@ let g:neoformat_javascript_prettier = {'exe': 'prettier', 'args': ['--write', '-
 let g:neoformat_javascriptreact_prettier = {'exe': 'prettier', 'args': ['--write', '--config', '.prettierrc'], 'replace': 1}
 let g:neoformat_jsx_prettier        = {'exe': 'prettier', 'args': ['--write', '--config', '.prettierrc'], 'replace': 1}
 let g:neoformat_less_prettier       = {'exe': 'prettier', 'args': ['--write', '--config', '.prettierrc'], 'replace': 1}
-let g:neoformat_enabled_python = ['black', 'isort']
+
+let g:neoformat_enabled_css = ['prettier']
+let g:neoformat_enabled_javascript = ['prettier']
 let g:neoformat_enabled_javascriptreact = ['prettier']
+let g:neoformat_enabled_jsx = ['prettier']
+let g:neoformat_enabled_python = ['black', 'isort']
 
 " }}}
 " Neomake {{{
