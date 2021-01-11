@@ -32,3 +32,6 @@ alias b 'brew update && brew upgrade'
 
 # offlineimap
 alias o 'PYTHONPATH="/usr/local/Cellar/offlineimap/7.3.3/libexec/vendor/lib/python2.7/site-packages" python2 /usr/local/Cellar/offlineimap/7.3.3/libexec/offlineimap.py'
+
+# pip
+alias pipr 'pip install -r requirements.txt'
