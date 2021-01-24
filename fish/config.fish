@@ -1,3 +1,5 @@
+. ~/.config/fish/vars.fish
+
 if status --is-interactive
     direnv hook fish | source
     pyenv init - | source
@@ -9,7 +11,6 @@ end
 set fish_greeting
 
 . ~/.config/fish/aliases.fish
-. ~/.config/fish/vars.fish
 . ~/.config/fish/nvm.fish
 
 fzf_key_bindings
