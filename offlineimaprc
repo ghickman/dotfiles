@@ -7,7 +7,7 @@ fsync = False
 [Account ghickman]
 localrepository = ghickman-local
 remoterepository = fastmail
-postsynchook = /usr/local/bin/notmuch new
+postsynchook = notmuch new
 
 [Repository ghickman-local]
 type = Maildir

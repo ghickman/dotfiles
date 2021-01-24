@@ -146,7 +146,7 @@ unset askcc                          # don't ask for CC:
 unset mime_forward                   # forward attachments as part of body
 
 set from     = "george@ghickman.co.uk"
-set sendmail = "/usr/local/bin/msmtp -a ghickman"
+set sendmail = "msmtp -a ghickman"
 set sendmail_wait = 0
 unset record
 
