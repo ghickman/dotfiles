@@ -80,6 +80,10 @@ if ! grep -qe $fish "/etc/shells"; then
     chsh -s $fish
 fi
 
+echo "========== Setting up Terminal profiles"
+tic -x .files/xterm-256color-italic.terminfo
+tic -x .files/tmux-256color.terminfo
+
 echo "========== Setting up TPM"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "Run <prefix>+I in tmux now"
