@@ -1,5 +1,5 @@
 # base
-set PATH $HOME/.bin $HOME/.local/bin /usr/local/sbin $PATH
+set PATH $HOME/.bin $HOME/.local/bin /opt/homebrew/bin /opt/homebrew/sbin /usr/local/sbin $PATH
 
 # git toolbelt
 set PATH $HOME/.files/git-toolbelt $PATH
