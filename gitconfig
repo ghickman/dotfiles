@@ -101,6 +101,7 @@
     rebase = true
 
 [push]
+    default = current
     followTags = true
 
 [rebase]
