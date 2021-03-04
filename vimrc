@@ -756,7 +756,8 @@ let g:neomake_javascriptreact_flow_maker = {
       \ }
 let g:neomake_javascriptreact_enabled_makers = ['eslint_d', 'flow']
 
-au BufWritePost * Neomake
+" When writing a buffer (no delay), and on normal mode changes (after 750ms).
+call neomake#configure#automake('nw', 750)
 
 " }}}
 " Splice {{{
