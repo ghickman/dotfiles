@@ -14,6 +14,7 @@ Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'docunext/closetag.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'easymotion/vim-easymotion'
+Plug 'ervandew/supertab'
 Plug 'foosoft/vim-argwrap'
 Plug 'google/vim-searchindex'
 Plug 'groenewege/vim-less'
@@ -143,20 +144,8 @@ augroup END
 
 let g:deoplete#enable_at_startup = 1
 let g:jedi#completions_enabled = 0
-set completeopt+=noinsert
 set completeopt-=preview
 call deoplete#custom#option('auto_complete', v:false)
-" inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ deoplete#manual_complete()
-function! s:check_back_space() abort "{{{
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction"}}}
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " Enhance command completion
 set wildmenu
@@ -767,6 +756,13 @@ call neomake#configure#automake('nw', 750)
 let g:splice_initial_mode = "grid"
 let g:splice_initial_layout_grid = "1"
 let g:splice_wrap = "nowrap"
+
+" }}}
+" SuperTab {{{
+
+let g:SuperTabLongestHighlight = 1
+let g:SuperTabCrMapping = 1
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " }}}
 " Terraform {{{
