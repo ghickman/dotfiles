@@ -35,3 +35,4 @@ alias o 'PYTHONPATH="/usr/local/Cellar/offlineimap/7.3.3/libexec/vendor/lib/pyth
 
 # pip
 alias pipr 'pip install -r requirements.txt'
+alias pipd 'pip install -r requirements.dev.txt'
