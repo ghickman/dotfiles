@@ -30,6 +30,8 @@
     select = "!git recent-branches | fzf | xargs git checkout"
     whatadded = "log --diff-filter=A"
 
+    swtich = switch  # ffs
+
     git = status  # damn you muscle memory
 
 [apply]
