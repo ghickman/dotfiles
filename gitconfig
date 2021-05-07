@@ -28,6 +28,7 @@
     s = status
     sb = checkout -
     select = "!git recent-branches | fzf | xargs git checkout"
+    sm = switch main
     whatadded = "log --diff-filter=A"
 
     swtich = switch  # ffs
