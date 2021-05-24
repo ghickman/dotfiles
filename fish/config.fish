@@ -2,7 +2,7 @@
 
 if status --is-interactive
     direnv hook fish | source
-    pyenv init - | source
+    pyenv init --path | source
     register-python-argcomplete --shell fish pipx | .
 
     starship init fish | source
