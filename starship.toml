@@ -4,6 +4,9 @@ disabled = true
 [cmd_duration]
 style = "bold red"
 
+[docker_context]
+disabled = true
+
 [gcloud]
 disabled = true
 
