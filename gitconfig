@@ -1,5 +1,5 @@
 [core]
-    editor = /usr/local/bin/nvim
+    editor = nvim
     excludesfile = ~/.gitignore
     whitespace = trailing-space
 
