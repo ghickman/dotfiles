@@ -3,7 +3,7 @@
 set -e
 
 git ls-files | \
-    $(which ctags) \
+    ctags \
     -L - \
     -f tags \
     --language-force=python \
