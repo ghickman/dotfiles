@@ -61,13 +61,9 @@ call plug#end()
 " }}}
 " Basics ----------------------------------------------------------------- {{{
 
-set autoindent
-set autoread
-set backspace=indent,eol,start
 set backupcopy=yes " Preserve resource fork
 set dictionary=/usr/share/dict/words
 set hidden
-set history=1000
 set inccommand=nosplit
 set laststatus=2
 set lazyredraw
@@ -81,8 +77,6 @@ set nomodeline
 set nospell
 set novisualbell
 set number
-set ruler
-set showcmd
 set showmode
 set splitbelow
 set splitright
@@ -141,7 +135,6 @@ augroup END
 set complete=.,b,u,]
 set completeopt=menu,preview
 
-set wildmenu
 set wildmode=longest,list:longest
 
 set wildignore+=.git,.hg,.svn                            " Version control
@@ -192,7 +185,6 @@ let maplocalleader = "\\"
 " }}}
 " Color Scheme ----------------------------------------------------------- {{{
 
-syntax on
 colorscheme dracula
 
 " Highlight VCS conflict markers
@@ -318,8 +310,6 @@ set ignorecase
 set smartcase
 
 " Match while typing
-set hlsearch
-set incsearch
 set showmatch
 
 " Clear search highlighting.
