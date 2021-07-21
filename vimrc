@@ -31,6 +31,7 @@ Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'neomake/neomake'
+Plug 'neovim/nvim-lspconfig'
 Plug 'pangloss/vim-javascript'
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'rking/ag.vim'
@@ -683,6 +684,53 @@ let g:gitgutter_set_sign_backgrounds = 1
 nnoremap <leader>u :GundoToggle<cr>
 
 " }}}
+" LSP {{{
+lua << EOF
+local on_attach = function(client, bufnr)
+  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+
+  --Enable completion triggered by <c-x><c-o>
+  buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+  -- Mappings.
+  local opts = { noremap=true, silent=true }
+
+  -- See `:help vim.lsp.*` for documentation on any of the below functions
+  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  buf_set_keymap('n', '<C-]>', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+end
+
+local nvim_lsp = require("lspconfig")
+nvim_lsp.pylsp.setup({
+  enable = true,
+  on_attach = on_attach,
+  settings = {
+    pylsp = {
+      configurationSources = {"pyls-flake8"},
+      plugins = {
+        flake8 = {enabled = true},
+        pyls_flake8 = {enabled = true},
+        jedi_completion = {fuzzy = true}
+      }
+    }
+  }
+})
+-- Use a loop to conveniently call 'setup' on multiple servers and
+-- map buffer local keybindings when the language server attaches
+local servers = { "flow", "tsserver" }
+for _, lsp in ipairs(servers) do
+  nvim_lsp[lsp].setup {
+    enable = true,
+    on_attach = on_attach,
+    flags = {
+      debounce_text_changes = 150,
+    }
+  }
+end
+EOF
+" }}}
 " Neoformat {{{
 
 let g:neoformat_run_all_formatters = 1
@@ -706,7 +754,6 @@ let g:neoformat_enabled_python = ['black', 'isort']
 
 let g:neomake_javascript_enabled_makers = ['eslint_d', 'flow']
 let g:neomake_dockerfile_enabled_makers = ['hadolint']
-let g:neomake_python_enabled_makers = ['flake8']
 let g:neomake_sh_enabled_makers = ['shellcheck']
 let g:neomake_yaml_enabled_makers = ['yamllint']
 

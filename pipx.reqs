@@ -8,6 +8,7 @@ pipx install isort
 pipx install pip-tools
 pipx install poetry
 pipx install pre-commit
+pipx install python-lsp-server
 pipx install tmuxp
 pipx install tvrenamr
 pipx install update_plex

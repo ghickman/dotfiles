@@ -1,6 +1,4 @@
 # base
-# set PATH="$HOME/.bin:$HOME/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
-
 set PATH $HOME/.bin $HOME/.local/bin /usr/local/sbin $PATH
 
 # git toolbelt

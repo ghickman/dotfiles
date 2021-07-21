@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -eu
+
+npm --global install \
+  flow-bin \
+  typescript-language-server
