@@ -6,12 +6,17 @@ import subprocess
 
 
 def get_keychain_pass(account=None, server=None):
+    keychain_path = os.path.expanduser("~/Library/Keychains/login.keychain")
+
+    if not os.path.exists(keychain_path):
+        raise Exception("Unknown keychain path: {}\n".format(keychain_path))
+
     params = {
         "security": "/usr/bin/security",
         "command": "find-internet-password",
         "account": account,
         "server": server,
-        "keychain": os.path.expanduser("~/Library/Keychains/login.keychain"),
+        "keychain": keychain_path,
     }
     command = (
         "sudo -u george {security} -v {command} -g -a {account} -s {server} {keychain}"
