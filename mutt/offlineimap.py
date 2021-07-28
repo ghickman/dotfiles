@@ -6,7 +6,7 @@ import subprocess
 
 
 def get_keychain_pass(account=None, server=None):
-    keychain_path = os.path.expanduser("~/Library/Keychains/login.keychain")
+    keychain_path = os.path.expanduser("~/Library/Keychains/login.keychain-db")
 
     if not os.path.exists(keychain_path):
         raise Exception("Unknown keychain path: {}\n".format(keychain_path))
