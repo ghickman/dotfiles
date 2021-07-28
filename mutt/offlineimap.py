@@ -14,9 +14,10 @@ def get_keychain_pass(account=None, server=None):
         "keychain": os.path.expanduser("~/Library/Keychains/login.keychain"),
     }
     command = (
-        "sudo -u george %(security)s -v %(command)s -g -a %(account)s -s %(server)s %(keychain)s"
-        % params
+        "sudo -u george {security} -v {command} -g -a {account} -s {server} {keychain}"
     )
+    command = command.format(**params)
+
     output = subprocess.check_output(command, shell=True, stderr=subprocess.STDOUT)
     outtext = [line for line in output.splitlines() if line.startswith("password: ")][0]
 
