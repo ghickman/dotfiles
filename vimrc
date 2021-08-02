@@ -331,10 +331,6 @@ nnoremap <leader>sd :setlocal ft=htmldjango<CR>
 " Add the two lines below to this one and get rid of the fucking spaces.
 nnoremap <leader>jl JxJxj<cr>
 
-" Emacs bindings in command line mode
-cnoremap <c-a> <home>
-cnoremap <c-e> <end>
-
 " Quick return
 inoremap <c-cr> <esc>A<cr>
 inoremap <s-cr> <esc>A:<cr>
