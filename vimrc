@@ -706,7 +706,6 @@ nvim_lsp.pylsp.setup({
     pylsp = {
       configurationSources = {"pyls-flake8"},
       plugins = {
-        flake8 = {enabled = true},
         pyls_flake8 = {enabled = true},
         jedi_completion = {fuzzy = true}
       }
