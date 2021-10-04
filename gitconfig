@@ -25,6 +25,7 @@
     logo = log --oneline
     prune = remote prune origin
     push-start = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`"
+    rc = rebase --continue
     s = status
     sb = checkout -
     select = "!git recent-branches | fzf | xargs git checkout"
