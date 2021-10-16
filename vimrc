@@ -33,6 +33,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'neomake/neomake'
 Plug 'neovim/nvim-lspconfig'
 Plug 'noahtheduke/vim-just'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'pangloss/vim-javascript'
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'rking/ag.vim'
@@ -457,7 +458,8 @@ augroup ft_javascript
     " Python <2.7 json module adds, sigh)
     nmap <leader>J :%!python -m json.tool<CR>:%s/\s\+$//g<CR>
 
-    au FileType javascript,javascriptreact setlocal foldmethod=syntax
+    au FileType javascript,javascriptreact setlocal foldmethod=expr
+    au FileType javascript,javascriptreact setlocal foldexpr=nvim_treesitter#foldexpr()
 
     au FileType javascript nnoremap <leader>d odebugger;<esc>
 
@@ -787,6 +789,22 @@ let g:SuperTabCrMapping = 1
 
 let g:terraform_fmt_on_save=1
 
+" }}}
+" Treesitter {{{
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained",
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+    disable = {"python", },
+  },
+  indent = {
+    enable = true,
+    disable = {"python", },
+  },
+}
+EOF
 " }}}
 
 " }}}
