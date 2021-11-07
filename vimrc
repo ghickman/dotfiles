@@ -743,28 +743,11 @@ let g:neoformat_enabled_python = ['black', 'isort']
 " }}}
 " Neomake {{{
 
-let g:neomake_javascript_enabled_makers = ['eslint_d', 'flow']
 let g:neomake_dockerfile_enabled_makers = ['hadolint']
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_javascriptreact_enabled_makers = ['eslint']
 let g:neomake_sh_enabled_makers = ['shellcheck']
 let g:neomake_yaml_enabled_makers = ['yamllint']
-
-let g:neomake_javascriptreact_eslint_d_maker = {
-      \ 'args': ['--format=compact'],
-      \ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
-      \   '%W%f: line %l\, col %c\, Warning - %m,%-G,%-G%*\d problems%#',
-      \ 'cwd': '%:p:h',
-      \ 'output_stream': 'stdout',
-      \ }
-let g:neomake_javascriptreact_flow_maker = {
-      \ 'args': ['--from=vim', '--show-all-errors'],
-      \ 'errorformat':
-      \   '%-GNo errors!,'
-      \   .'%EFile "%f"\, line %l\, characters %c-%m,'
-      \   .'%trror: File "%f"\, line %l\, characters %c-%m,'
-      \   .'%C%m,%Z',
-      \ 'postprocess': function('neomake#makers#ft#javascript#FlowProcess')
-      \ }
-let g:neomake_javascriptreact_enabled_makers = ['eslint_d', 'flow']
 
 " When writing a buffer (no delay), and on normal mode changes (after 750ms).
 call neomake#configure#automake('nw', 750)
