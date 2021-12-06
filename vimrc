@@ -707,10 +707,14 @@ nvim_lsp.pylsp.setup({
   on_attach = on_attach,
   settings = {
     pylsp = {
-      configurationSources = {"pyls-flake8"},
+      configurationSources = {
+        "pyls-flake8",
+        "pylsp-mypy",
+      },
       plugins = {
+        jedi_completion = {fuzzy = true},
         pyls_flake8 = {enabled = true},
-        jedi_completion = {fuzzy = true}
+        pylsp_mypy = {enabled = true},
       }
     }
   }
