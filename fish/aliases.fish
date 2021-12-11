@@ -30,9 +30,6 @@ alias p8 'ping 8.8.8.8 | ts'
 # brew
 alias b 'brew update && brew upgrade'
 
-# offlineimap
-alias o 'PYTHONPATH="/usr/local/Cellar/offlineimap/7.3.4/libexec/vendor/lib/python2.7/site-packages" python2 /usr/local/Cellar/offlineimap/7.3.4/libexec/offlineimap.py'
-
 # pip
 alias pipr 'pip install -r requirements.prod.txt'
 alias pipd 'pip install -r requirements.dev.txt'
