@@ -730,7 +730,6 @@ nvim_lsp.pylsp.setup({
 local servers = { "flow", "tsserver" }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
-    enable = true,
     on_attach = on_attach,
     flags = {
       debounce_text_changes = 150,
