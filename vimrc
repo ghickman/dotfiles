@@ -720,7 +720,6 @@ nvim_lsp.pylsp.setup({
       configurationSources = {"flake8"},
       plugins = {
         jedi_completion = {fuzzy = true},
-        pylsp_mypy = {enabled = true},
       }
     }
   }
