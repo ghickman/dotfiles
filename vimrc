@@ -474,6 +474,16 @@ augroup ft_javascript
 augroup END
 
 " }}}
+" JSON {{{
+
+augroup ft_json
+    au!
+
+    " set up folding for JSON files
+    au FileType json setlocal foldmethod=syntax
+augroup END
+
+" }}}
 " LESS {{{
 
 augroup ft_less
