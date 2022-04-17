@@ -556,7 +556,7 @@ augroup ft_python
     " Insert a docstring
     au Filetype python nnoremap <leader>" o""""""<esc>hhi
 
-    au Filetype python nnoremap <leader>d oimport pdb;pdb.set_trace()<esc>
+    au Filetype python nnoremap <leader>d obreakpoint()<esc>
     au Filetype python nnoremap <leader>id oimport ipdb;ipdb.set_trace()<esc>
 
     au Filetype python nnoremap <leader>S mX:%! isort -<cr>`X
