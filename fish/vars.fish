@@ -7,10 +7,6 @@ set PATH $HOME/.files/git-toolbelt $PATH
 # Postgres.app
 set PATH /Applications/Postgres.app/Contents/Versions/latest/bin $PATH
 
-# Volta
-set --export VOLTA_HOME $HOME/.volta
-set PATH $VOLTA_HOME/bin $PATH
-
 # Vim as Default Editor
 set --export EDITOR /usr/local/bin/nvim
 
