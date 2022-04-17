@@ -784,7 +784,19 @@ let g:terraform_fmt_on_save=1
 " Treesitter {{{
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained",
+  ensure_installed = {
+      "bash",
+      "dockerfile",
+      "fish",
+      "html",
+      "javascript",
+      "json",
+      "make",
+      "python",
+      "rst",
+      "toml",
+      "yaml",
+  },
   highlight = {
     additional_vim_regex_highlighting = false,
     disable = {"python", },
