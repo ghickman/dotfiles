@@ -19,6 +19,7 @@ Plug 'google/vim-searchindex'
 Plug 'groenewege/vim-less'
 Plug 'hashivim/vim-terraform'
 Plug 'hynek/vim-python-pep8-indent'
+Plug 'indianboy42/tree-sitter-just', {'do': ':TSUpdate'}
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
@@ -810,6 +811,8 @@ require'nvim-treesitter.configs'.setup {
     disable = {"python", },
   },
 }
+
+require('tree-sitter-just').setup{}
 EOF
 " }}}
 
