@@ -73,6 +73,7 @@
     algorithm = patience
     indentHeuristic = true
     noprefix = true
+    wsErrorHighlight = all
 
 [fetch]
     prune = true
