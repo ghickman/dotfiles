@@ -665,6 +665,11 @@ augroup ft_fugitive
 augroup END
 
 " }}}
+" EasyMotion {{{
+
+let g:EasyMotion_verbose = 0
+
+" }}}
 " FZF {{{
 
 let g:fzf_buffers_jump = 1
