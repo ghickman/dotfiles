@@ -118,6 +118,10 @@ let g:python3_host_prog='/Users/george/.pyenv/shims/python3'
 nnoremap ' `
 nnoremap ` '
 
+" NeoVim 0.7 started distinguishing modifier keys correctly so need to
+" manually map this to save retraining years of accidental muscle memory.
+nnoremap <C-;> :
+
 " }}}
 " Autosave --------------------------------------------------------------- {{{
 
