@@ -525,6 +525,8 @@ augroup ft_markdown
     au FileType markdown map j gj
     au FileType markdown map k gk
     au FileType markdown setlocal spell spelllang=en_gb
+
+    let g:markdown_fenced_languages = ["python", "sh"]
 augroup END
 
 " }}}
