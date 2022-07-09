@@ -24,7 +24,6 @@
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     logo = log --oneline
     prune = remote prune origin
-    push-start = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`"
     rc = rebase --continue
     s = status
     sb = checkout -
@@ -106,6 +105,7 @@
     rebase = true
 
 [push]
+    autoSetupRemote = true
     default = current
     followTags = true
 
