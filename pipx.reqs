@@ -1,4 +1,4 @@
-pipx install ansible
+pipx install ansible --include-deps
 pipx install black
 pipx install django
 pipx install flake8
