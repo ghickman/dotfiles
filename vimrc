@@ -809,10 +809,6 @@ require'nvim-treesitter.configs'.setup {
       "toml",
       "yaml",
   },
-  highlight = {
-    additional_vim_regex_highlighting = false,
-    disable = {"python", },
-  },
   indent = {
     disable = {"python", },
   },
