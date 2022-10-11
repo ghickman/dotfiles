@@ -16,4 +16,6 @@ set fish_greeting
 #
 # global NPM install
 # need to do this after fnm is set up earlier
-set PATH $HOME/.fnm/node-versions/(fnm current)/installation/bin $PATH
+if status --is-interactive
+    set PATH $HOME/.fnm/node-versions/(fnm current)/installation/bin $PATH
+end
