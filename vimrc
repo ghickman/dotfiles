@@ -724,6 +724,12 @@ local on_attach = function(client, bufnr)
 end
 
 local nvim_lsp = require("lspconfig")
+
+nvim_lsp.esbonio.setup({
+  on_attach = on_attach,
+  cmd = {"esbonio"}
+})
+
 nvim_lsp.pylsp.setup({
   enable = true,
   on_attach = on_attach,

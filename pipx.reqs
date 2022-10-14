@@ -1,6 +1,7 @@
 pipx install ansible --include-deps
 pipx install black
 pipx install django
+pipx install esbonio
 pipx install flake8
 pipx install git-revise
 pipx install httpie
