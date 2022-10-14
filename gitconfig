@@ -111,6 +111,7 @@
 
 [rebase]
     autostash = true
+    updateRefs = true
 
 [rerere]
     enabled = 1
