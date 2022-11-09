@@ -1,12 +1,16 @@
 [core]
     editor = nvim
     excludesfile = ~/.gitignore
+    pager = delta
     whitespace = trailing-space
 
 [user]
     name = George Hickman
     email = george@ghickman.co.uk
     signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC6KqfYi0acopfkUJ6vA0ZZry7WPl6aSZ4WlH6R51CB3x75depS5kCjpfIA98Lzd3sPCRYEH1I8GRz9F2Qf5Emxcdt4WywmgFpVmU3FQcIiYKJnfLDTzcJuMTbcSoTsYumycYiFt/YlY/ng/9ujIMzIgYTm0HQ3lJ5PSUCmLAxb5sAItx7veXO9UFUv0hO1B8/ISF0JcjuBGRjK9pgEsUJf1x7iJJ+TdfxzsFjbSliSpEMBxH2604eqQ/94D6Tw6slDYWG6l5knCYJ3WJZFa63us/yJcQsdxvP08nRifZHwSgRe49jSIEHcu/flbfAr7LFJLMVe30+h0zWS1kCjvOjodgZ2uaX5p/+3pq4A09Fw3HMhj1weOdzY7lQHtHvNS5HktBuposhy/sxCC+UTtFmlg6u5mkPDFwOBMAoZPiBknvEbuGRhzRYdCiYiF0HXFAl78Xz5jyEoki0uwFZBuqOCEp/k75RBYuGPR0tr2yYWJgwO6wsUufJbl74wuNUwU9OBjpGJBTPN0T/KaLh8t8k26HVdua1JClAGrJxB4mkyacdc+/sYTsP94zN+PRxHJg/M7dZMYTCYCi+867bbMe4H8IzWN/IOqUkY5uzpER9DCp0cL9defMi/albbot9BSNXll55Qxv8XGQEqOG2ftElHVK3cMxUJqusC2i9riknLRQ==
+
+[add.interactive]
+    useBuiltin = false
 
 [alias]
     ap = add -p
@@ -70,6 +74,7 @@
 
 [diff]
     algorithm = patience
+    colorMoved = default
     indentHeuristic = true
     noprefix = true
     wsErrorHighlight = all
@@ -95,9 +100,11 @@
     templatedir = ~/.git_template
 
 [interactive]
+    diffFilter = delta --color-only
     singleKey = true
 
 [merge]
+    conflictstyle = diff3
     tool = splice
 
 [mergetool "splice"]
@@ -130,6 +137,19 @@
     fsckobjects = true
 
 # third party
+[delta]
+    features = my-theme
+    light = false
+    line-numbers = true
+    navigate = true
+
+[delta "my-theme"]
+    syntax-theme = Dracula
+    line-numbers-minus-style = red bold
+    line-numbers-plus-style = green
+    minus-style = red bold
+    plus-style = green
+
 [gist]
     private = yes
 
