@@ -37,6 +37,8 @@
     select = "!git recent-branches | fzf | xargs git checkout"
     sm = switch main
     whatadded = "log --diff-filter=A"
+    add-unmerged = "!git diff --name-only --diff-filter U | xargs -r git add"
+    edit-unmerged = "!git diff --name-only --diff-filter U | xargs -r $(git var GIT_EDITOR)"
 
     swtich = switch  # ffs
 
