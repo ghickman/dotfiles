@@ -12,6 +12,9 @@
 [add.interactive]
     useBuiltin = false
 
+[advice]
+    statusHints = false
+
 [alias]
     ap = add -p
     bd = branch -d
