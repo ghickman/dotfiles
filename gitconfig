@@ -93,7 +93,7 @@
     program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 
 [help]
-    autocorrect = 1
+    autoCorrect = immediate
 
 [include]
     path = .heroku/accounts/config
