@@ -109,7 +109,6 @@
     singleKey = true
 
 [merge]
-    conflictstyle = diff3
     tool = splice
 
 [mergetool "splice"]
