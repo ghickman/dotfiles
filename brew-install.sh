@@ -64,7 +64,6 @@ brew install "xz"
 brew install "yarn"
 brew install "yt-dlp"
 brew install "ghickman/banking-tools/banking-tools", args: ["HEAD"]
-brew install "heroku/brew/heroku"
 brew install "jawshooah/pyenv/pyenv-default-packages", args: ["HEAD"]
 brew install "keith/formulae/contacts-cli"
 brew install "nvie/tap/git-toolbelt"
