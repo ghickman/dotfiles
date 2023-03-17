@@ -569,8 +569,8 @@ augroup ft_python
 
     au Filetype python nnoremap <leader>S mX:%! isort -<cr>`X
 
-    " Use black to format Python files
     au BufWritePre *.py Neoformat
+    au BufWritePre *.py lua vim.lsp.buf.format()
 augroup END
 
 " }}}
@@ -737,6 +737,7 @@ nvim_lsp.pylsp.setup({
     pylsp = {
       configurationSources = {"flake8"},
       plugins = {
+        black = { enabled = true },
         jedi_completion = {fuzzy = true},
       }
     }
@@ -764,7 +765,7 @@ let g:neoformat_enabled_css = ['prettier']
 let g:neoformat_enabled_javascript = ['prettier']
 let g:neoformat_enabled_javascriptreact = ['prettier']
 let g:neoformat_enabled_jsx = ['prettier']
-let g:neoformat_enabled_python = ['black', 'isort']
+let g:neoformat_enabled_python = ['isort']
 
 " }}}
 " Neomake {{{
