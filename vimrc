@@ -567,10 +567,9 @@ augroup ft_python
     au Filetype python nnoremap <leader>d obreakpoint()<esc>
     au Filetype python nnoremap <leader>id oimport ipdb;ipdb.set_trace()<esc>
 
-    au Filetype python nnoremap <leader>S mX:%! isort -<cr>`X
-
     au BufWritePre *.py Neoformat
     au BufWritePre *.py lua vim.lsp.buf.format()
+    au BufWritePre *.py lua vim.lsp.buf.execute_command({ command = 'ruff.applyOrganizeImports', arguments = { { uri = vim.uri_from_bufnr(0) } } })
 augroup END
 
 " }}}
@@ -735,7 +734,6 @@ nvim_lsp.pylsp.setup({
   on_attach = on_attach,
   settings = {
     pylsp = {
-      configurationSources = {"flake8"},
       plugins = {
         black = { enabled = true },
         jedi_completion = {fuzzy = true},
@@ -743,6 +741,15 @@ nvim_lsp.pylsp.setup({
     }
   }
 })
+
+nvim_lsp.ruff_lsp.setup{
+  init_options = {
+    settings = {
+      args = { "--ignore=I" }
+    }
+  }
+}
+
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local servers = { "flow", "tsserver" }
@@ -765,7 +772,7 @@ let g:neoformat_enabled_css = ['prettier']
 let g:neoformat_enabled_javascript = ['prettier']
 let g:neoformat_enabled_javascriptreact = ['prettier']
 let g:neoformat_enabled_jsx = ['prettier']
-let g:neoformat_enabled_python = ['isort']
+let g:neoformat_enabled_python = []
 
 " }}}
 " Neomake {{{
@@ -775,6 +782,7 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_javascriptreact_enabled_makers = ['eslint']
 let g:neomake_sh_enabled_makers = ['shellcheck']
 let g:neomake_yaml_enabled_makers = ['yamllint']
+let g:neomake_python_enabled_makers = []
 
 " When writing a buffer (no delay), and on normal mode changes (after 750ms).
 call neomake#configure#automake('nw', 750)
