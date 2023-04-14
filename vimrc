@@ -68,7 +68,6 @@ call plug#end()
 
 set backupcopy=yes " Preserve resource fork
 set dictionary=/usr/share/dict/words
-set lazyredraw
 set linebreak
 set list
 set listchars=tab:▸\ ,extends:❯,precedes:❮,trail:·,nbsp:·
