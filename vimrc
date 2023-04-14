@@ -78,8 +78,6 @@ set splitbelow
 set splitright
 set termguicolors
 set title
-set undofile
-set undoreload=10000
 set updatetime=100
 
 " Tell vim to use bash
@@ -163,10 +161,12 @@ set textwidth=0
 " }}}
 " Backups ---------------------------------------------------------------- {{{
 
-set backup                        " enable backups
 set noswapfile                    " apparently it's 2012
-set undodir=~/.vim/tmp/undo//     " undo files
-set backupdir=~/.vim/tmp/backup// " backups
+set backup                        " enable backups
+set backupdir=~/.vim/tmp/backup// " where to store backups
+set undofile                      " store undos in a file
+set undodir=~/.vim/tmp/undo//     " where to store undo files
+set undoreload=10000              " store lots of undos
 
 " Make those folders automatically if they don't exist.
 if !isdirectory(expand(&undodir))
