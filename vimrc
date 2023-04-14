@@ -72,7 +72,7 @@ set linebreak
 set list
 set listchars=tab:▸\ ,extends:❯,precedes:❮,trail:·,nbsp:·
 set mouse=""
-set nojoinspaces
+set joinspaces
 set number
 set splitbelow
 set splitright
