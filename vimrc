@@ -68,21 +68,13 @@ call plug#end()
 
 set backupcopy=yes " Preserve resource fork
 set dictionary=/usr/share/dict/words
-set hidden
-set inccommand=nosplit
-set laststatus=2
 set lazyredraw
 set linebreak
 set list
 set listchars=tab:▸\ ,extends:❯,precedes:❮,trail:·,nbsp:·
 set mouse=""
-set noerrorbells
 set nojoinspaces
-set nomodeline
-set nospell
-set novisualbell
 set number
-set showmode
 set splitbelow
 set splitright
 set termguicolors
