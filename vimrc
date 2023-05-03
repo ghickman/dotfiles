@@ -84,7 +84,6 @@ endif
 au VimResized * exe "normal! \<c-w>="
 
 " Time out on key codes but not mappings.
-set notimeout
 set ttimeout
 set ttimeoutlen=10
 
