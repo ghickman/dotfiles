@@ -15,7 +15,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
 Plug 'foosoft/vim-argwrap'
 Plug 'google/vim-searchindex'
-Plug 'hashivim/vim-terraform'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'indianboy42/tree-sitter-just', {'do': ':TSUpdate'}
 Plug 'junegunn/fzf'
@@ -778,11 +777,6 @@ let g:splice_wrap = "nowrap"
 
 let g:SuperTabLongestHighlight = 1
 let g:SuperTabCrMapping = 1
-
-" }}}
-" Terraform {{{
-
-let g:terraform_fmt_on_save=1
 
 " }}}
 " Treesitter {{{
