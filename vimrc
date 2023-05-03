@@ -24,8 +24,6 @@ Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kalekundert/vim-coiled-snake'
-Plug 'mattn/gist-vim'
-Plug 'mattn/webapi-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'mechatroner/rainbow_csv'
 Plug 'neomake/neomake'
@@ -327,10 +325,6 @@ nnoremap <leader>jl JxJxj<cr>
 " Quick return
 inoremap <c-cr> <esc>A<cr>
 inoremap <s-cr> <esc>A:<cr>
-
-" Send visual selection to gist.github.com
-" Requires gist (brew install gist)
-vnoremap <leader>G :w !gist -p -t %:e \| pbcopy<cr>
 
 nnoremap gp `[v`]
 
@@ -650,15 +644,6 @@ let g:fzf_buffers_jump = 1
 nnoremap <leader>t :FZF<cr>
 nnoremap <leader>f :Buffers<cr>
 nnoremap <leader>. :Tags<cr>
-
-" }}}
-" Gist {{{
-
-if executable("gist")
-    let g:gist_clip_command = 'pbcopy'
-    let g:gist_detect_filetype = 1
-    let g:gist_post_private = 1
-endif
 
 " }}}
 " GitGutter {{{
