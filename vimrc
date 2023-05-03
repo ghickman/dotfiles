@@ -8,7 +8,6 @@ Plug 'ap/vim-buftabline'
 Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'curist/vim-angular-template'
 Plug 'dag/vim-fish'
 Plug 'docunext/closetag.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -419,12 +418,10 @@ augroup ft_html
     au BufNewFile,BufRead *.html setlocal filetype=htmldjango
     au BufNewFile,BufRead *jinja2.html setlocal filetype=htmldjango
 
-    au FileType angular,html,htmldjango setlocal foldmethod=manual
-
-    autocmd FileType angular set commentstring=<!--\ %s\ -->
+    au FileType html,htmldjango setlocal foldmethod=manual
 
     " Use <localleader>f to fold the current tag.
-    au FileType angular,html,htmldjango nnoremap <buffer> <localleader>f Vatzf
+    au FileType html,htmldjango nnoremap <buffer> <localleader>f Vatzf
 
     " Use Shift-Return to turn this:
     "     <tag>|</tag>
@@ -433,13 +430,13 @@ augroup ft_html
     "     <tag>
     "         |
     "     </tag>
-    au FileType angular,html,htmldjango nnoremap <buffer> <s-cr> vit<esc>a<cr><esc>vito<esc>i<cr><esc>
+    au FileType html,htmldjango nnoremap <buffer> <s-cr> vit<esc>a<cr><esc>vito<esc>i<cr><esc>
 
     " Django tags
     au FileType htmldjango inoremap <buffer> <c-t> {%<space><space>%}<left><left><left>
 
-    " Angular and Django variables
-    au FileType angular,htmldjango inoremap <buffer> <c-f> {{<space><space>}}<left><left><left>
+    " Django variables
+    au FileType htmldjango inoremap <buffer> <c-f> {{<space><space>}}<left><left><left>
 augroup END
 
 " }}}
