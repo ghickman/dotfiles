@@ -15,7 +15,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
 Plug 'foosoft/vim-argwrap'
 Plug 'google/vim-searchindex'
-Plug 'groenewege/vim-less'
 Plug 'hashivim/vim-terraform'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'indianboy42/tree-sitter-just', {'do': ':TSUpdate'}
@@ -389,14 +388,14 @@ augroup ft_css
     "         height: 100px;
     "         width: 200px;
     "     }
-    " au BufNewFile,BufRead *.less,*.css nnoremap <buffer> <leader>S ?{<CR>jV/\v^\s*\}?$<CR>k:sort<CR>:noh<CR>
+    " au BufNewFile,BufRead *.css nnoremap <buffer> <leader>S ?{<CR>jV/\v^\s*\}?$<CR>k:sort<CR>:noh<CR>
 
     " Make {<cr> insert a pair of brackets in such a way that the cursor is correctly
     " positioned inside of them AND the following code doesn't get unfolded.
     au BufNewFile,BufRead *.sass,*.css inoremap <buffer> {<cr> {}<left><cr><space><space><space><space>.<cr><esc>kA<bs>
 
     " Use prettier to format style files
-    au BufWritePre *.css,*.less Neoformat
+    au BufWritePre *.css Neoformat
 augroup END
 
 " }}}
@@ -474,15 +473,6 @@ augroup ft_json
 
     " set up folding for JSON files
     au FileType json setlocal foldmethod=syntax
-augroup END
-
-" }}}
-" LESS {{{
-
-augroup ft_less
-    au!
-
-    au Filetype less inoremap <c-cr> <esc>A {<cr>}<esc>O
 augroup END
 
 " }}}
