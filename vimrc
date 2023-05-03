@@ -34,7 +34,6 @@ Plug 'noahtheduke/vim-just'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'pangloss/vim-javascript'
 Plug 'pedrohdz/vim-yaml-folds'
-Plug 'rking/ag.vim'
 Plug 'sbdchd/neoformat'
 Plug 'scy/vim-mkdir-on-write'
 Plug 'simnalamburt/vim-mundo'
@@ -599,14 +598,6 @@ augroup END
 " }}}
 " Plugin Specific stuff -------------------------------------------------- {{{
 
-" Ag {{{
-
-if executable("ag")
-    set grepprg=ag\ --nogroup\ --nocolor
-    nnoremap <leader>a :Ag<space>
-endif
-
-" }}}
 " ArgWrap {{{
 
 let g:argwrap_tail_comma = 1
