@@ -5,8 +5,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'andrewRadev/splitjoin.vim'
 Plug 'ap/vim-buftabline'
-Plug 'cespare/vim-toml'
-Plug 'chr4/nginx.vim'
+Plug 'cespare/vim-toml', { 'for': 'toml' }
+Plug 'chr4/nginx.vim', { 'for': 'nginx' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dag/vim-fish'
 Plug 'docunext/closetag.vim'
@@ -15,23 +15,23 @@ Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
 Plug 'foosoft/vim-argwrap'
 Plug 'google/vim-searchindex'
-Plug 'hynek/vim-python-pep8-indent'
-Plug 'indianboy42/tree-sitter-just', {'do': ':TSUpdate'}
+Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
+Plug 'indianboy42/tree-sitter-just', {'do': ':TSUpdate', 'for': 'just' }
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
+Plug 'junegunn/limelight.vim', { 'for': 'markdown' }
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-peekaboo'
-Plug 'kalekundert/vim-coiled-snake'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'mechatroner/rainbow_csv'
+Plug 'kalekundert/vim-coiled-snake', { 'for': 'python' }
+Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'javascriptreact'] }
+Plug 'mechatroner/rainbow_csv', { 'for': 'csv' }
 Plug 'neomake/neomake'
 Plug 'neovim/nvim-lspconfig'
-Plug 'noahtheduke/vim-just'
+Plug 'noahtheduke/vim-just', { 'for': 'just' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'pangloss/vim-javascript'
-Plug 'pedrohdz/vim-yaml-folds'
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascriptreact'] }
+Plug 'pedrohdz/vim-yaml-folds', { 'for': 'yaml' }
 Plug 'sbdchd/neoformat'
 Plug 'scy/vim-mkdir-on-write'
 Plug 'simnalamburt/vim-mundo'
@@ -51,7 +51,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/matchit.zip'
-Plug 'yuezk/vim-js'
+Plug 'yuezk/vim-js', { 'for': ['javascript', 'javascriptreact'] }
 
 " Add plugins to &runtimepath
 call plug#end()
