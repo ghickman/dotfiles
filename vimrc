@@ -777,6 +777,7 @@ require'nvim-treesitter.configs'.setup {
       "dockerfile",
       "fish",
       "html",
+      "htmldjango",
       "javascript",
       "json",
       "make",
