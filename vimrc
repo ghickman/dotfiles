@@ -37,7 +37,6 @@ Plug 'scy/vim-mkdir-on-write'
 Plug 'simnalamburt/vim-mundo'
 Plug 'sjl/splice.vim'
 Plug 'terryma/vim-expand-region'
-Plug 'townk/vim-autoclose'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
@@ -51,6 +50,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/matchit.zip'
+Plug 'windwp/nvim-autopairs'
 Plug 'yuezk/vim-js', { 'for': ['javascript', 'javascriptreact'] }
 
 " Add plugins to &runtimepath
@@ -596,6 +596,13 @@ augroup END
 let g:argwrap_tail_comma = 1
 nnoremap <leader>w :ArgWrap<cr>
 
+" }}}
+" Autoclose {{{
+lua << EOF
+
+require("nvim-autopairs").setup {}
+
+EOF
 " }}}
 " Buftabline {{{
 
