@@ -28,3 +28,6 @@ application/ics; ~/.mutt/view_attachment.sh %s "-" '/System/Applications/Calenda
 
 # Unidentified files
 application/octet-stream; ~/.mutt/view_attachment.sh %s "-"
+
+# Pages
+application/x-iwork-pages-sffpages; ~/.mutt/view_attachment.sh %s "-" '/Applications/Pages.app'
