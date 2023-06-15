@@ -1,5 +1,5 @@
-# Jobs
-alias j jobs
+# Just
+alias j 'just --choose'
 
 # Vim
 alias v nvim
