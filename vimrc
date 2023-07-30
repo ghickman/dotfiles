@@ -584,6 +584,8 @@ augroup ft_vim
 
     " Display help in a vsplit
     au BufWinEnter *.txt if &ft == 'help' | wincmd L | endif
+
+    au FileType vim lua vim.treesitter.start()
 augroup END
 
 " }}}
