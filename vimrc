@@ -14,6 +14,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
 Plug 'foosoft/vim-argwrap'
+Plug 'godlygeek/tabular'
 Plug 'google/vim-searchindex'
 Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
 Plug 'indianboy42/tree-sitter-just', {'do': ':TSUpdate', 'for': 'just' }
@@ -32,6 +33,7 @@ Plug 'noahtheduke/vim-just', { 'for': 'just' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascriptreact'] }
 Plug 'pedrohdz/vim-yaml-folds', { 'for': 'yaml' }
+Plug 'preservim/vim-markdown'
 Plug 'sbdchd/neoformat'
 Plug 'scy/vim-mkdir-on-write'
 Plug 'simnalamburt/vim-mundo'
@@ -494,6 +496,9 @@ augroup ft_markdown
     au FileType markdown map k gk
     au FileType markdown setlocal spell spelllang=en_gb
 
+    " Use custom wrapper around MacOS dictionary as keyword look-up
+    au FileType markdown setlocal keywordprg=open-dict.sh
+
     let g:markdown_fenced_languages = ["python", "sh"]
 augroup END
 
@@ -721,6 +726,36 @@ for _, lsp in ipairs(servers) do
   }
 end
 EOF
+" }}}
+" Markdown {{{
+
+" Enable folding.
+let g:vim_markdown_folding_disabled = 0
+
+" Fold heading in with the contents.
+let g:vim_markdown_folding_style_pythonic = 1
+
+" Autoshrink TOCs.
+let g:vim_markdown_toc_autofit = 1
+
+" Indentation for new lists. We don't insert bullets as it doesn't play
+" nicely with `gq` formatting. It relies on a hack of treating bullets
+" as comment characters.
+" See https://github.com/plasticboy/vim-markdown/issues/232
+let g:vim_markdown_new_list_item_indent = 0
+let g:vim_markdown_auto_insert_bullets = 0
+
+" Filetype names and aliases for fenced code blocks.
+let g:vim_markdown_fenced_languages = ['bash=sh', 'js=javascript', 'py=python']
+
+" Highlight front matter (useful for Hugo posts).
+let g:vim_markdown_toml_frontmatter = 1
+let g:vim_markdown_json_frontmatter = 1
+let g:vim_markdown_frontmatter = 1
+
+" Format strike-through text (wrapped in `~~`).
+let g:vim_markdown_strikethrough = 1
+
 " }}}
 " Neoformat {{{
 
