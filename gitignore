@@ -16,3 +16,4 @@ dist
 tags
 tags.bak
 *.ipynb*
+node_modules/*
