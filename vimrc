@@ -34,6 +34,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascriptreact'] }
 Plug 'pedrohdz/vim-yaml-folds', { 'for': 'yaml' }
 Plug 'preservim/vim-markdown'
+Plug 'rareitems/put_at_end.nvim'
 Plug 'sbdchd/neoformat'
 Plug 'scy/vim-mkdir-on-write'
 Plug 'simnalamburt/vim-mundo'
@@ -781,6 +782,15 @@ let g:neomake_python_enabled_makers = []
 " When writing a buffer (no delay), and on normal mode changes (after 750ms).
 call neomake#configure#automake('nw', 750)
 
+" }}}
+" Put at end {{{
+lua <<EOF
+
+local m = require("put_at_end")
+
+vim.keymap.set("n", "<C-,>", m.put_comma)
+
+EOF
 " }}}
 " Splice {{{
 
