@@ -2,10 +2,8 @@ pipx install ansible --include-deps
 pipx install black
 pipx install django
 pipx install esbonio
-pipx install flake8
 pipx install git-revise
 pipx install httpie
-pipx install isort
 pipx install pip-tools
 pipx install poetry
 pipx install pre-commit
