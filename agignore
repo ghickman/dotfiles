@@ -1,9 +1,0 @@
-.lib
-.ropeproject
-.sass-cache
-.venv
-tags
-tags.bak
-node_modules
-__pycache__
-.egg-info
