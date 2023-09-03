@@ -4,9 +4,6 @@ bin
 digrc
 fish
 gemrc
-git_template
-gitconfig
-gitignore
 inputrc
 msmtprc
 mutt

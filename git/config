@@ -1,6 +1,5 @@
 [core]
     editor = nvim
-    excludesfile = ~/.gitignore
     pager = delta
     whitespace = trailing-space
 
@@ -99,7 +98,7 @@
 
 [init]
     defaultBranch = main
-    templatedir = ~/.git_template
+    templatedir = ~/.config/git/template
 
 [interactive]
     diffFilter = delta --color-only
