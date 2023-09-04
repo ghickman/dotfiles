@@ -14,12 +14,6 @@ if [ -d "/Applications/Postgres.app" ]; then
     export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 fi
 
-# Heroku Toolbelt
-heroku="/usr/local/heroku/bin"
-if [ -d "$heroku" ]; then
-    export PATH="$heroku:$PATH"
-fi
-
 # Vim as Default Editor
 export EDITOR="/usr/local/bin/nvim"
 

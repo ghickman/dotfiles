@@ -93,9 +93,6 @@
 [help]
     autoCorrect = immediate
 
-[include]
-    path = .heroku/accounts/config
-
 [init]
     defaultBranch = main
     templatedir = ~/.config/git/template
@@ -155,6 +152,3 @@
 
 [github]
     user = ghickman
-
-[heroku]
-    account = me
