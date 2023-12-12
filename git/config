@@ -23,6 +23,7 @@
     d = diff
     dc = diff --cached
     dsf = "!f() { [ \"$GIT_PREFIX\" != \"\" ] && cd "$GIT_PREFIX"; git diff --color $@ | diff-so-fancy | less --tabs=4 -RFX; }; f"
+    fm = fetch origin main:main
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     logo = log --oneline
     prune = remote prune origin
@@ -152,3 +153,6 @@
 
 [github]
     user = ghickman
+
+[tig]
+    line-graphics = utf-8
