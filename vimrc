@@ -540,7 +540,6 @@ augroup ft_python
     au Filetype python nnoremap <leader>d obreakpoint()<esc>
     au Filetype python nnoremap <leader>id oimport ipdb;ipdb.set_trace()<esc>
 
-    au BufWritePre *.py Neoformat
     au BufWritePre *.py lua vim.lsp.buf.format()
     au BufWritePre *.py lua vim.lsp.buf.execute_command({ command = 'ruff.applyOrganizeImports', arguments = { { uri = vim.uri_from_bufnr(0) } } })
 augroup END
