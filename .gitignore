@@ -9,3 +9,5 @@ vim/autoload/plug.old
 vim/init.vim
 vim/plugged
 vim/shada
+fish/completions/docker.fish
+fish/completions/kubectl.fish
