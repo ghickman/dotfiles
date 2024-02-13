@@ -8,7 +8,7 @@ set PATH $HOME/.files/git-toolbelt $PATH
 set PATH /Applications/Postgres.app/Contents/Versions/latest/bin $PATH
 
 # Vim as Default Editor
-set --export EDITOR /usr/local/bin/nvim
+set --export EDITOR /opt/homebrew/bin/nvim
 
 # No pycs
 set --export PYTHONDONTWRITEBYTECODE 1
