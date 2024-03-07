@@ -151,8 +151,5 @@
 [gist]
     private = yes
 
-[github]
-    user = ghickman
-
 [tig]
     line-graphics = utf-8
