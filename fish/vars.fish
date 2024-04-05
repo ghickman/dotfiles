@@ -1,9 +1,6 @@
 # base
 set PATH $HOME/.bin $HOME/.local/bin /opt/homebrew/bin /opt/homebrew/sbin /usr/local/sbin $PATH
 
-# git toolbelt
-set PATH $HOME/.files/git-toolbelt $PATH
-
 # Postgres.app
 set PATH /Applications/Postgres.app/Contents/Versions/latest/bin $PATH
 
