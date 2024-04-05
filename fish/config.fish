@@ -11,10 +11,3 @@ end
 set fish_greeting
 
 . ~/.config/fish/aliases.fish
-
-#
-# global NPM install
-# need to do this after fnm is set up earlier
-if status --is-interactive
-    set PATH $HOME/.fnm/node-versions/(fnm current)/installation/bin $PATH
-end
