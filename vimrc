@@ -26,6 +26,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kalekundert/vim-coiled-snake', { 'for': 'python' }
 Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'javascriptreact'] }
+Plug 'mbbill/undotree'
 Plug 'mechatroner/rainbow_csv', { 'for': 'csv' }
 Plug 'neomake/neomake'
 Plug 'neovim/nvim-lspconfig'
@@ -37,7 +38,6 @@ Plug 'preservim/vim-markdown'
 Plug 'rareitems/put_at_end.nvim'
 Plug 'sbdchd/neoformat'
 Plug 'scy/vim-mkdir-on-write'
-Plug 'simnalamburt/vim-mundo'
 Plug 'sjl/splice.vim'
 Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-abolish'
