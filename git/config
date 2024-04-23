@@ -16,7 +16,7 @@
     bd = branch -d
     c = commit
     cav = commit -av
-    cb = checkout -b
+    cb = switch --create
     changes = lg main..
     ctags = "!.git/hooks/ctags"
     cv = commit -v
