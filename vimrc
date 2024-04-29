@@ -24,7 +24,7 @@ Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 Plug 'junegunn/limelight.vim', { 'for': 'markdown' }
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-peekaboo'
-Plug 'kalekundert/vim-coiled-snake', { 'for': 'python' }
+Plug 'kalekundert/vim-coiled-snake', { 'for': 'python' , 'branch': 'fix-37' }
 Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'javascriptreact'] }
 Plug 'mbbill/undotree'
 Plug 'mechatroner/rainbow_csv', { 'for': 'csv' }
