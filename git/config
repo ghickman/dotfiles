@@ -29,8 +29,8 @@
     prune = remote prune origin
     rc = rebase --continue
     s = status
-    sb = checkout -
-    select = "!git recent-branches | fzf | xargs git checkout"
+    sb = switch -
+    select = "!git recent-branches | fzf | xargs git switch"
     sm = switch main
     whatadded = "log --diff-filter=A"
     add-unmerged = "!git diff --name-only --diff-filter U | xargs -r git add"
