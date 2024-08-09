@@ -2,8 +2,8 @@
 text/plain; ~/.mutt/view_attachment.sh %s txt
 
 # MS Word documents
-application/msword; ~/.mutt/view_attachment.sh %s "-" '/Applications/Pages.app'
-application/vnd.openxmlformats-officedocument.wordprocessingml.document; ~/.mutt/view_attachment.sh %s "-" '/Applications/Pages.app'
+application/msword; ~/.mutt/view_attachment.sh %s "-" '/Applications/Microsoft Word.app'
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; ~/.mutt/view_attachment.sh %s "-" '/Applications/Microsoft Word.app'
 
 # MS Excel documents
 application/vnd.ms-excel; ~/.mutt/view_attachment.sh %s "-" '/Applications/Numbers.app'
@@ -32,3 +32,6 @@ application/octet-stream; ~/.mutt/view_attachment.sh %s "-"
 
 # Pages
 application/x-iwork-pages-sffpages; ~/.mutt/view_attachment.sh %s "-" '/Applications/Pages.app'
+
+# ODT
+application/vnd.oasis.opendocument.text; ~/.mutt/view_attachment.sh %s "-" '/Applications/Microsoft Word.app'
