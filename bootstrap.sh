@@ -35,7 +35,7 @@ ln -s "$PWD/vim" "$HOME/.config/nvim"
 ln -s "$PWD/vimrc" "$HOME/.config/init.vim"
 ln -s "$PWD/mutt/mime.types" "$HOME/.mime.types"
 ln -s "$PWD/poetry-global-config.toml" "$HOME/Library/Application Support/pypoetry/config.toml"
-ln -s "$PWD/direnvrc" "$HOME/.config/direnv/direnvrc"
+ln -s "$PWD/direnv" "$HOME/.config/direnv"
 ln -s "$PWD/pyenv-default-packages" "$HOME/.pyenv/default-packages"
 ln -s "$PWD/git" "$HOME/.config/git"
 
