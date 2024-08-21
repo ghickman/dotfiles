@@ -6,7 +6,6 @@ pipx install git-revise
 pipx install httpie
 pipx install justpath
 pipx install pip-tools
-pipx install poetry
 pipx install pre-commit
 pipx install python-lsp-server
 pipx inject python-lsp-server python-lsp-black
