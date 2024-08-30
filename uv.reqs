@@ -1,0 +1,16 @@
+uv tool install ansible
+uv tool install ansible-core
+uv tool install black
+uv tool install db-to-sqlite
+uv tool install django
+uv tool install doc2dash
+uv tool install esbonio
+uv tool install git-revise
+uv tool install httpie
+uv tool install justpath
+uv tool install python-lsp-server --with python-lsp-black
+uv tool install ruff-lsp
+uv tool install tvrenamr
+uv tool install update-plex
+uv tool install validate-pyproject
+uv tool install yamllint

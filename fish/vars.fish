@@ -27,6 +27,3 @@ set --export MANPAGER "nvim +Man!"
 
 # Configure the pyenv directory
 set --export PYENV_ROOT $HOME/.pyenv
-
-# Tell pipx which Python to use
-set --export PIPX_DEFAULT_PYTHON (which python3)
