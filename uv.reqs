@@ -9,7 +9,7 @@ uv tool install git-revise
 uv tool install httpie
 uv tool install justpath
 uv tool install python-lsp-server --with python-lsp-black
-uv tool install ruff-lsp
+uv tool install ruff
 uv tool install tvrenamr
 uv tool install update-plex
 uv tool install validate-pyproject
