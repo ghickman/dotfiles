@@ -32,6 +32,7 @@ Plug 'neomake/neomake'
 Plug 'neovim/nvim-lspconfig'
 Plug 'noahtheduke/vim-just', { 'for': 'just' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascriptreact'] }
 Plug 'pedrohdz/vim-yaml-folds', { 'for': 'yaml' }
 Plug 'preservim/vim-markdown'
@@ -825,6 +826,17 @@ require'nvim-treesitter.configs'.setup {
   },
   indent = {
     disable = {"python", },
+  },
+textobjects = {
+    swap = {
+      enable = true,
+      swap_next = {
+        ["<leader>l"] = "@parameter.inner",
+      },
+      swap_previous = {
+        ["<leader>h"] = "@parameter.inner",
+      },
+    },
   },
 }
 
