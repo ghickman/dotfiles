@@ -2,7 +2,6 @@
 
 if status --is-interactive
     direnv hook fish | source
-    pyenv init --path | source
     fnm env | source
 
     starship init fish | source

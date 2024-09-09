@@ -25,5 +25,5 @@ set --export GPG_TTY (tty)
 # Use vim to view man pages
 set --export MANPAGER "nvim +Man!"
 
-# Configure the pyenv directory
-set --export PYENV_ROOT $HOME/.pyenv
+# Always use uv managed python so we don't pick up a homebrew one by accident
+set --export UV_PYTHON_PREFERENCE only-managed
