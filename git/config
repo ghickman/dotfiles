@@ -75,7 +75,7 @@
     verbose = true
 
 [diff]
-    algorithm = patience
+    algorithm = histogram
     colorMoved = default
     indentHeuristic = true
     noprefix = true
