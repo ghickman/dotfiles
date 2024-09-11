@@ -707,13 +707,7 @@ nvim_lsp.pylsp.setup({
   }
 })
 
-nvim_lsp.ruff.setup({
-  init_options = {
-    settings = {
-      args = { "--ignore=I" }
-    }
-  }
-})
+nvim_lsp.ruff.setup({})
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
