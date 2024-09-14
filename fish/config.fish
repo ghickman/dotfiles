@@ -10,3 +10,4 @@ end
 set fish_greeting
 
 . ~/.config/fish/aliases.fish
+. ~/.config/fish/abbreviations.fish
