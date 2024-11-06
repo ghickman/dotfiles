@@ -1,7 +1,5 @@
 layout_uv() {
-    if [[ -d ".venv" ]]; then
-        VIRTUAL_ENV="$(pwd)/.venv"
-    fi
+    VIRTUAL_ENV="${VIRTUAL_ENV:-$(pwd)/.venv}"
 
     if [[ -z $VIRTUAL_ENV || ! -d $VIRTUAL_ENV ]]; then
         log_status "No virtual environment exists. Executing \`uv venv\` to create one."
