@@ -709,6 +709,8 @@ nvim_lsp.pylsp.setup({
 
 nvim_lsp.ruff.setup({})
 
+nvim_lsp.biome.setup({})
+
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local servers = { "flow", "ts_ls" }
