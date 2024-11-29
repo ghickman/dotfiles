@@ -1,4 +1,3 @@
-uv tool install black
 uv tool install db-to-sqlite
 uv tool install django
 uv tool install doc2dash
