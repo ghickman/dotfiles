@@ -1,0 +1,4 @@
+# https://aider.chat/docs/config/aider_conf.html
+
+architect: true
+auto-commits: false
