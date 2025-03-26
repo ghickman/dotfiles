@@ -3,8 +3,8 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
+Plug 'akinsho/bufferline.nvim'
 Plug 'andrewRadev/splitjoin.vim'
-Plug 'ap/vim-buftabline'
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'chr4/nginx.vim', { 'for': 'nginx' }
 Plug 'christoomey/vim-tmux-navigator'
@@ -17,7 +17,7 @@ Plug 'foosoft/vim-argwrap'
 Plug 'godlygeek/tabular'
 Plug 'google/vim-searchindex'
 Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
-Plug 'indianboy42/tree-sitter-just', {'do': ':TSUpdate', 'for': 'just' }
+Plug 'indianboy42/tree-sitter-just', { 'do': ':TSUpdate', 'for': 'just' }
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
@@ -31,6 +31,7 @@ Plug 'mechatroner/rainbow_csv', { 'for': 'csv' }
 Plug 'neomake/neomake'
 Plug 'neovim/nvim-lspconfig'
 Plug 'noahtheduke/vim-just', { 'for': 'just' }
+Plug 'nvim-tree/nvim-web-devicons'  " for bufferline icons
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascriptreact'] }
@@ -611,11 +612,15 @@ require("nvim-autopairs").setup {}
 
 EOF
 " }}}
-" Buftabline {{{
+" Bufferline {{{
 
-let g:buftabline_indicators = 1
-let g:buftabline_numbers = 1
-let g:buftabline_separators = 1
+lua << EOF
+require("bufferline").setup {
+    options = {
+        show_buffer_close_icons = false,
+    }
+}
+EOF
 
 " }}}
 " Commentary {{{
