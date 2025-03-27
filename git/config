@@ -108,6 +108,7 @@
 
 [log]
     date = iso
+    follow = true
 
 [merge]
     tool = splice
