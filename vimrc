@@ -126,7 +126,6 @@ augroup END
 " }}}
 " Completion ------------------------------------------------------------- {{{
 
-set complete=.,b,u,]
 set completeopt=menu,preview
 
 set wildmode=longest,list:longest
