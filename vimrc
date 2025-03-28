@@ -126,8 +126,6 @@ augroup END
 " }}}
 " Completion ------------------------------------------------------------- {{{
 
-set completeopt=menu,preview
-
 set wildmode=longest,list:longest
 
 set wildignore+=.git,.hg,.svn                            " Version control
