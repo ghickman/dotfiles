@@ -12,7 +12,6 @@ Plug 'dag/vim-fish'
 Plug 'docunext/closetag.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'easymotion/vim-easymotion'
-Plug 'ervandew/supertab'
 Plug 'foosoft/vim-argwrap'
 Plug 'godlygeek/tabular'
 Plug 'google/vim-searchindex'
@@ -38,6 +37,7 @@ Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascriptreact'] }
 Plug 'pedrohdz/vim-yaml-folds', { 'for': 'yaml' }
 Plug 'preservim/vim-markdown'
 Plug 'rareitems/put_at_end.nvim'
+Plug 'saghen/blink.cmp'
 Plug 'sbdchd/neoformat'
 Plug 'scy/vim-mkdir-on-write'
 Plug 'sjl/splice.vim'
@@ -612,6 +612,34 @@ require("nvim-autopairs").setup {}
 
 EOF
 " }}}
+" Blink {{{
+
+lua << EOF
+require("blink.cmp").setup({
+    cmdline = { enabled = false },
+    keymap = {
+      preset = "none",
+
+      ["<tab>"] = { "select_next", "fallback"  },
+      ["<s-tab>"] = { "select_prev", "fallback" },
+
+      ["<down>"] = { "select_next", "fallback"  },
+      ["<up>"] = { "select_prev", "fallback" },
+
+      ["<cr>"] = { "accept", "fallback"  },
+    },
+    fuzzy = {
+      implementation = "lua",
+      prebuilt_binaries = { download = false },
+    },
+    signature = { enabled = true },
+    sources = {
+      default = { "lsp", "path", "buffer" },
+    },
+})
+EOF
+
+" }}}
 " Bufferline {{{
 
 lua << EOF
@@ -692,15 +720,18 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 end
 
+local capabilities = require("blink.cmp").get_lsp_capabilities()
 local nvim_lsp = require("lspconfig")
 
 nvim_lsp.esbonio.setup({
+  capabilities = capabilities,
   on_attach = on_attach,
   cmd = {"esbonio"}
 })
 
 nvim_lsp.pylsp.setup({
   enable = true,
+  capabilities = capabilities,
   on_attach = on_attach,
   settings = {
     pylsp = {
@@ -712,15 +743,20 @@ nvim_lsp.pylsp.setup({
   }
 })
 
-nvim_lsp.ruff.setup({})
+nvim_lsp.ruff.setup({
+  capabilities = capabilities,
+})
 
-nvim_lsp.biome.setup({})
+nvim_lsp.biome.setup({
+  capabilities = capabilities,
+})
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local servers = { "flow", "ts_ls" }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
+    capabilities = capabilities,
     on_attach = on_attach,
     flags = {
       debounce_text_changes = 150,
@@ -800,12 +836,6 @@ EOF
 let g:splice_initial_mode = "grid"
 let g:splice_initial_layout_grid = "1"
 let g:splice_wrap = "nowrap"
-
-" }}}
-" SuperTab {{{
-
-let g:SuperTabLongestHighlight = 1
-let g:SuperTabCrMapping = 1
 
 " }}}
 " Treesitter {{{
