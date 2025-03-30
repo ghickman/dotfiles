@@ -1,0 +1,16 @@
+cursor-style-blink = false
+
+font-family = Operator Mono Book
+font-family-bold = Operator Mono Bold
+font-family-italic = Operator Mono Book Italic
+font-family-bold-italic = Operator Mono Bold Italic
+
+font-size = 16
+
+shell-integration-features = no-cursor
+
+theme = dracula
+
+window-new-tab-position = end
+window-inherit-working-directory = false
+working-directory = home
