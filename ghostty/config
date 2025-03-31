@@ -1,3 +1,5 @@
+copy-on-select = clipboard
+
 cursor-style-blink = false
 
 font-family = Operator Mono Book
