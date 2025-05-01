@@ -9,6 +9,9 @@ font-family-bold-italic = Operator Mono Bold Italic
 
 font-size = 16
 
+# 10GB
+scrollback-limit = 10737418240
+
 shell-integration-features = no-cursor
 
 theme = dracula
