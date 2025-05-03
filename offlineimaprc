@@ -37,7 +37,7 @@ folderfilter = lambda folder: folder in [
                         'Drafts',
                         'INBOX',
                         'ghickman-ltd',
-                        'lv-internet',
+                        'gps',
                         'pyconuk-adm',
                         'Sent Items',
             ]

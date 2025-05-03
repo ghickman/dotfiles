@@ -52,7 +52,7 @@ set spoolfile = "+INBOX"
 mailboxes +INBOX \
           +archive \
           +ghickman-ltd \
-          +lv-internet \
+          +gps \
           +pyconuk-adm \
           +sent \
           +drafts \
