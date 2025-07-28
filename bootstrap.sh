@@ -38,6 +38,7 @@ ln -s "$PWD/mutt/mime.types" "$HOME/.mime.types"
 ln -s "$PWD/direnv" "$HOME/.config/direnv"
 ln -s "$PWD/pyenv-default-packages" "$HOME/.pyenv/default-packages"
 ln -s "$PWD/git" "$HOME/.config/git"
+ln -s "$PWD/habits" "$HOME/.local/habits"
 
 echo "========== set up yaml lint"
 yamllint_dir="$HOME/.config/yamllint"
