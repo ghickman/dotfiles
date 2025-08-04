@@ -27,3 +27,6 @@ set --export MANPAGER "nvim +Man!"
 
 # Always use uv managed python so we don't pick up a homebrew one by accident
 set --export UV_PYTHON_PREFERENCE only-managed
+
+# Yes, thank you Django, I am quite aware ಠ_ಠ
+set --export DJANGO_RUNSERVER_HIDE_WARNING "true"
