@@ -614,6 +614,9 @@ EOF
 lua << EOF
 require("blink.cmp").setup({
     cmdline = { enabled = false },
+    enabled = function()
+      return not vim.tbl_contains({ "mail" }, vim.bo.filetype)
+    end,
     keymap = {
       preset = "none",
 
