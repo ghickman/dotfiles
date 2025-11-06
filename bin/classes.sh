@@ -7,4 +7,4 @@ if [ $# -lt 1 ]; then
   exit 1
 fi
 
-rg "\bclass " -tpy "$1" | classes.py | sort > classes.txt
+rg "\bclass " -tpy "$1" | classes.py "$1" | sort > classes.txt
