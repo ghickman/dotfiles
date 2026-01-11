@@ -162,34 +162,6 @@ bind pager N search-opposite
 macro index a "<limit>all\n" "show all messages (undo limit)"
 macro index S "<enter-command>unset wait_key<enter><shell-escape>mutt-notmuch-py ~/.mail/george-ghickman.co.uk/tmp/search<enter><change-folder-readonly>+tmp/search<enter>" "search mail (using notmuch)"
 
-# PLUGINS
-# PGP ------------------------------------------------
-bind compose p pgp-menu
-set crypt_use_gpgme=yes
-set crypt_verify_sig=yes
-set crypt_autosign=yes
-set pgp_sign_as=0x093B01FD  # Explicitly set key
-set pgp_use_gpg_agent = yes  # Use the agent if we can
-
-# Do the right thing with replies
-set crypt_replysign=yes
-set crypt_replyencrypt=yes
-set crypt_replysignencrypted=yes
-
-# Add OpenPGP header
-# See: https://www.ietf.org/archive/id/draft-josefsson-openpgp-mailnews-header-07.txt
-my_hdr OpenPGP: url=https://keybase.io/ghickman/key.asc\; id=093B01FD
-
-# automate encryption to the foil hat alumni
-send-hook . 'reset crypt_autoencrypt'
-send-hook "!~l ~t charlie@meshy\\.co\\.uk" "set crypt_autoencrypt crypt_autosign"
-send-hook "!~l ~t perryroper@gmail\\.com" "set crypt_autoencrypt crypt_autosign"
-
-
 # Skip Quoted Text -----------------------------------
 # Set an offset for some context
 set skip_quoted_offset = 3
-
-
-# Progress Bar Colours -------------------------------
-# color progress white black
