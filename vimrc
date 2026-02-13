@@ -30,6 +30,7 @@ Plug 'mechatroner/rainbow_csv', { 'for': 'csv' }
 Plug 'neomake/neomake'
 Plug 'neovim/nvim-lspconfig'
 Plug 'noahtheduke/vim-just', { 'for': 'just' }
+Plug 'numEricL/table.vim'
 Plug 'nvim-tree/nvim-web-devicons'  " for bufferline icons
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
@@ -837,6 +838,17 @@ let g:splice_initial_mode = "grid"
 let g:splice_initial_layout_grid = "1"
 let g:splice_wrap = "nowrap"
 
+" }}}
+" Table.vim {{{
+lua << EOF
+require('table_vim').setup({
+  style = 'default',
+  options = {
+    multiline = true,
+    chunk_size = {-20, 20}
+  }
+})
+EOF
 " }}}
 " Treesitter {{{
 lua <<EOF
