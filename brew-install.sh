@@ -40,7 +40,6 @@ brew install "optipng"
 brew install "pgcli"
 brew install "pinentry-mac"
 brew install "pv"
-brew install "pyenv"
 brew install "python-yq"
 brew install "reattach-to-user-namespace"
 brew install "redis"
@@ -64,7 +63,6 @@ brew install "xz"
 brew install "yarn"
 brew install "yt-dlp"
 brew install "ghickman/banking-tools/banking-tools", args: ["HEAD"]
-brew install "jawshooah/pyenv/pyenv-default-packages", args: ["HEAD"]
 brew install "keith/formulae/contacts-cli"
 brew install "nvie/tap/git-toolbelt"
 brew services start offlineimap
