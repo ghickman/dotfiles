@@ -16,7 +16,6 @@ Plug 'foosoft/vim-argwrap'
 Plug 'godlygeek/tabular'
 Plug 'google/vim-searchindex'
 Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
-Plug 'indianboy42/tree-sitter-just', { 'do': ':TSUpdate', 'for': 'just' }
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
@@ -847,25 +846,29 @@ EOF
 " }}}
 " Treesitter {{{
 lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = {
-      "bash",
-      "dockerfile",
-      "fish",
-      "html",
-      "htmldjango",
-      "javascript",
-      "json",
-      "make",
-      "python",
-      "rst",
-      "toml",
-      "yaml",
-  },
+local treesitter = require("nvim-treesitter")
+
+treesitter.install({
+  "bash",
+  "dockerfile",
+  "fish",
+  "html",
+  "htmldjango",
+  "javascript",
+  "json",
+  "just",
+  "make",
+  "python",
+  "rst",
+  "toml",
+  "yaml",
+})
+
+treesitter.setup {
   indent = {
     disable = {"python", },
   },
-textobjects = {
+  textobjects = {
     swap = {
       enable = true,
       swap_next = {
@@ -877,8 +880,6 @@ textobjects = {
     },
   },
 }
-
-require('tree-sitter-just').setup{}
 EOF
 " }}}
 
