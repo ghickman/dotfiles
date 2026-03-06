@@ -716,15 +716,15 @@ local on_attach = function(client, bufnr)
 end
 
 local capabilities = require("blink.cmp").get_lsp_capabilities()
-local nvim_lsp = require("lspconfig")
 
-nvim_lsp.esbonio.setup({
+vim.lsp.config("esbonio", {
   capabilities = capabilities,
   on_attach = on_attach,
   cmd = {"esbonio"}
 })
+vim.lsp.enable("esbonio")
 
-nvim_lsp.pylsp.setup({
+vim.lsp.config("pylsp", {
   enable = true,
   capabilities = capabilities,
   on_attach = on_attach,
@@ -737,26 +737,30 @@ nvim_lsp.pylsp.setup({
     }
   }
 })
+vim.lsp.enable("pylsp")
 
-nvim_lsp.ruff.setup({
+vim.lsp.config("ruff", {
   capabilities = capabilities,
 })
+vim.lsp.enable("ruff")
 
-nvim_lsp.biome.setup({
+vim.lsp.config("biome", {
   capabilities = capabilities,
 })
+vim.lsp.enable("biome")
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local servers = { "flow", "ts_ls" }
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
+  vim.lsp.config(lsp, {
     capabilities = capabilities,
     on_attach = on_attach,
     flags = {
       debounce_text_changes = 150,
     }
-  }
+  })
+  vim.lsp.enable(lsp)
 end
 EOF
 " }}}
