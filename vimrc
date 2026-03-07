@@ -700,26 +700,24 @@ let g:gitgutter_set_sign_backgrounds = 1
 " }}}
 " LSP {{{
 lua << EOF
-local on_attach = function(client, bufnr)
-  --Enable completion triggered by <c-x><c-o>
-  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(args)
+    -- Mappings.
+    local opts = { noremap=true, silent=true, buffer=bufnr }
 
-  -- Mappings.
-  local opts = { noremap=true, silent=true, buffer=bufnr }
-
-  -- See `:help vim.lsp.*` for documentation on any of the below functions
-  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
-  vim.keymap.set('n', '<C-]>', vim.lsp.buf.definition, opts)
-  vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, opts)
-  vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
-  vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
-end
+    -- See `:help vim.lsp.*` for documentation on any of the below functions
+    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+    vim.keymap.set('n', '<C-]>', vim.lsp.buf.definition, opts)
+    vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, opts)
+    vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
+    vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
+  end,
+})
 
 local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 vim.lsp.config("esbonio", {
   capabilities = capabilities,
-  on_attach = on_attach,
   cmd = {"esbonio"}
 })
 vim.lsp.enable("esbonio")
@@ -727,7 +725,6 @@ vim.lsp.enable("esbonio")
 vim.lsp.config("pylsp", {
   enable = true,
   capabilities = capabilities,
-  on_attach = on_attach,
   settings = {
     pylsp = {
       plugins = {
@@ -755,7 +752,6 @@ local servers = { "flow", "ts_ls" }
 for _, lsp in ipairs(servers) do
   vim.lsp.config(lsp, {
     capabilities = capabilities,
-    on_attach = on_attach,
     flags = {
       debounce_text_changes = 150,
     }
