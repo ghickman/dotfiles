@@ -4,6 +4,9 @@ set PATH $HOME/.bin $HOME/.local/bin /opt/homebrew/bin /opt/homebrew/sbin /usr/l
 # Postgres.app
 set PATH /Applications/Postgres.app/Contents/Versions/latest/bin $PATH
 
+# Obsidian
+set PATH /Applications/Obsidian.app/Contents/MacOS $PATH
+
 # Vim as Default Editor
 set --export EDITOR /opt/homebrew/bin/nvim
 
