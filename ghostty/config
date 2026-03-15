@@ -19,5 +19,8 @@ shell-integration-features = no-cursor
 theme = dracula
 
 window-new-tab-position = end
+
+split-inherit-working-directory = false
+tab-inherit-working-directory = false
 window-inherit-working-directory = false
 working-directory = home
