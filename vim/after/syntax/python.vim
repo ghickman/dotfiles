@@ -13,3 +13,5 @@ syn keyword pythonSelf self cls
 hi pythonSelf ctermfg=136 guifg=#b58900
 
 hi Comment ctermfg=5 guifg=#d33682
+
+hi link pythonClass DraculaGreen
