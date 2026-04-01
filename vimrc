@@ -24,7 +24,6 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kalekundert/vim-coiled-snake', { 'for': 'python' , 'branch': 'fix-37' }
 Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'javascriptreact'] }
-Plug 'mbbill/undotree'
 Plug 'mechatroner/rainbow_csv', { 'for': 'csv' }
 Plug 'neomake/neomake'
 Plug 'neovim/nvim-lspconfig'
@@ -865,6 +864,12 @@ treesitter.setup {
   },
 }
 EOF
+" }}}
+" Undotree {{{
+"
+:packadd nvim.undotree
+:lua vim.keymap.set("n", "<leader>u", require("undotree").open)
+
 " }}}
 
 " }}}
