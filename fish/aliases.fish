@@ -28,7 +28,7 @@ alias p2 'ping 192.168.10.1 | ts'
 alias p8 'ping 8.8.8.8 | ts'
 
 # brew
-alias b 'brew update && brew upgrade'
+alias b 'brew update && brew upgrade --formulae'
 
 # pip
 alias pipr 'pip install -r requirements.prod.txt'
