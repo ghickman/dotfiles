@@ -18,3 +18,5 @@ tags.bak
 *.ipynb*
 node_modules/*
 .jj
+
+**/.claude/settings.local.json
