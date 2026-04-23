@@ -13,3 +13,4 @@ fish/completions/docker.fish
 fish/completions/kubectl.fish
 fish/completions/orbctl.fish
 /jj/repos
+/jj/workspaces
