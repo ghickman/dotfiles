@@ -149,6 +149,8 @@ set sendmail = "msmtp -a ghickman"
 set sendmail_wait = 0
 unset record
 
+set compose_show_preview = "no"      # disable message preview
+
 
 # Contacts Autocomplete ------------------------------
 set query_command = "contacts '%s'"
