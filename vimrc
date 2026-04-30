@@ -349,6 +349,13 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " }}}
 
 " }}}
+" Diagnostics ------------------------------------------------------------ {{{
+lua <<EOF
+vim.diagnostic.config({
+  jump = { float = true },
+})
+EOF
+" }}}
 " Filetype Specific Stuff ------------------------------------------------ {{{
 
 " CSS and Style Preprocessors {{{
@@ -707,8 +714,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
     vim.keymap.set('n', '<C-]>', vim.lsp.buf.definition, opts)
     vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, opts)
-    vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
-    vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
   end,
 })
