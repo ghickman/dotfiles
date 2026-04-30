@@ -353,6 +353,20 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 lua <<EOF
 vim.diagnostic.config({
   jump = { float = true },
+  float = {
+    border = 'rounded',  -- Set a rounded border
+    header = '',         -- remove the "Diagnostics:" header
+  },
+})
+
+vim.api.nvim_create_autocmd('ColorScheme', {
+  pattern = 'dracula',
+  callback = function()
+    -- Pop the float by going DARKER than the buffer (feels like a recessed panel)
+    -- and giving it a bright purple border:
+    vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#21222c' })
+    vim.api.nvim_set_hl(0, 'FloatBorder', { fg = '#bd93f9', bg = '#21222c' })
+  end,
 })
 EOF
 " }}}
