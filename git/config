@@ -142,6 +142,9 @@
     relativePaths = true
     showUntrackedFiles = all
 
+[submodule]
+    recurse = true
+
 [transfer]
     fsckobjects = true
 
