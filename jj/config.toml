@@ -4,6 +4,14 @@
 name = "George Hickman"
 email = "george@ghickman.co.uk"
 
+[git]
+private-commits = "denylist()"
+
+[revset-aliases]
+"denylist()" = "wip() | private()"
+"private()" = "description(glob:'private:*')"
+"wip()" = "description(glob-i:'wip:*')"
+
 [signing]
 behavior = "own"
 backend = "ssh"
