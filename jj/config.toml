@@ -7,7 +7,12 @@ email = "george@ghickman.co.uk"
 [git]
 private-commits = "denylist()"
 
+[revsets]
+bookmark-advance-to = "closest_pushable(@)"
+
 [revset-aliases]
+"closest_pushable(to)" = "heads(::to & mutable() & ~denylist() & ~description(exact:'') & (~empty() | merges()))"
+
 "denylist()" = "wip() | private()"
 "private()" = "description(glob:'private:*')"
 "wip()" = "description(glob-i:'wip:*')"
