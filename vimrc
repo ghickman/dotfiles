@@ -758,7 +758,7 @@ vim.lsp.enable("pylsp")
 
 vim.lsp.enable("biome")
 vim.lsp.enable("ruff")
-vim.lsp.enable("ts_ls")
+vim.lsp.enable("vtsls")
 vim.lsp.enable("zizmor")
 EOF
 " }}}

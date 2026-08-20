@@ -4,4 +4,4 @@ set -eu
 
 npm --global install \
   flow-bin \
-  typescript-language-server
+  @vtsls/language-server
