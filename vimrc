@@ -467,7 +467,7 @@ augroup ft_javascript
     au FileType javascript nnoremap <leader>d odebugger;<esc>
 
     " Use prettier to format JS files
-    au BufWritePre *.js,*.jsx Neoformat
+    au BufWritePre *.js lua vim.lsp.buf.format()
 
     " Defer to import-sort for sorting JavaScript imports (instead of using Unix sort)
     au FileType javascript,javascriptreact nnoremap <leader>S mX:!import-sort --write %<cr>`X
@@ -798,7 +798,6 @@ let g:neoformat_run_all_formatters = 1
 let g:neoformat_try_formatprg = 1
 
 let g:neoformat_enabled_css = ['prettier']
-let g:neoformat_enabled_javascript = ['prettier']
 let g:neoformat_enabled_javascriptreact = ['prettier']
 let g:neoformat_enabled_jsx = ['prettier']
 let g:neoformat_enabled_python = []
