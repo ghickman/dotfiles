@@ -749,7 +749,7 @@ vim.lsp.config("pylsp", {
     pylsp = {
       plugins = {
         black = { enabled = true },
-        jedi_completion = {fuzzy = true},
+        jedi_completion = { fuzzy = true },
       }
     }
   }
