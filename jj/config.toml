@@ -17,6 +17,8 @@ bookmark-advance-to = "closest_pushable(@)"
 "private()" = "description(glob:'private:*')"
 "wip()" = "description(glob-i:'wip:*')"
 
+"branch" = "trunk()..@"
+
 [signing]
 behavior = "own"
 backend = "ssh"
