@@ -1,6 +1,10 @@
 import os
 import re
+import ssl
 import subprocess
+
+if not hasattr(ssl, "PROTOCOL_TLSv1"):
+    ssl.PROTOCOL_TLSv1 = ssl.PROTOCOL_TLS
 
 
 def get_keychain_pass(account, server):
