@@ -4,6 +4,19 @@
 name = "George Hickman"
 email = "george@ghickman.co.uk"
 
+[aliases]
+# add an empty change between the current and previous changes
+add-before = ["new", "--no-edit", "--insert-before", "@", "--insert-after", "@-"]
+
+# `jj stack <revset>` to include specific revs
+stack = ["rebase", "--after", "trunk()", "--before", "closest_merge(@)", "--revision"]
+
+# `jj stage` to include the whole stack after a megamerge
+stage = ["stack", "closest_merge(@)+:: ~ empty()"]
+
+# `jj restack` to rebase changes onto `trunk()`
+restack = ["rebase", "--onto", "trunk()", "--source", "roots(trunk()..) & mutable()", "--simplify-parents"]
+
 [git]
 private-commits = "denylist()"
 
@@ -11,6 +24,7 @@ private-commits = "denylist()"
 bookmark-advance-to = "closest_pushable(@)"
 
 [revset-aliases]
+"closest_merge(to)" = "heads(::to & merges())"
 "closest_pushable(to)" = "heads(::to & mutable() & ~denylist() & ~description(exact:'') & (~empty() | merges()))"
 
 "denylist()" = "wip() | private()"
