@@ -36,7 +36,7 @@ Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascriptreact'] }
 Plug 'pedrohdz/vim-yaml-folds', { 'for': 'yaml' }
 Plug 'preservim/vim-markdown'
 Plug 'rareitems/put_at_end.nvim'
-Plug 'saghen/blink.cmp'
+Plug 'saghen/blink.cmp', { 'tag': 'v1.*' }
 Plug 'sbdchd/neoformat'
 Plug 'scy/vim-mkdir-on-write'
 Plug 'terryma/vim-expand-region'
